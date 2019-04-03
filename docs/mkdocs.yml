@@ -1,0 +1,38 @@
+site_name: LiquidApps
+site_url: https://liquidapps.io
+site_description: LiquidApps Documentation
+site_author: LiquidApps Team
+
+repo_url: https://github.com/liquidapps/docs/
+edit_uri: ""
+
+nav:
+    - Home: index.md
+    - Developers:
+        - Release Notes: developers/release-notes.md
+        - Contributing: developers/contributing.md
+        - License: developers/license.md
+    - DSPs:
+        - Writing Your Docs: dsps/writing-your-docs.md
+        - Styling Your Docs: dsps/styling-your-docs.md
+        - Configuration: dsps/configuration.md
+        - Deploying Your Docs: dsps/deploying-your-docs.md
+        - Custom Themes: dsps/custom-themes.md
+        - Plugins: dsps/plugins.md
+
+markdown_extensions:
+    - toc:
+        permalink: 
+    - admonition
+    - def_list
+    - mdx_gh_links:
+        user: mkdocs
+        repo: mkdocs
+
+google_analytics: []
+
+plugins:
+    - search
+
+docs_dir: docs
+site_dir: site_dir
