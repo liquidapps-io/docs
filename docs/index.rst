@@ -10,7 +10,6 @@ Welcome to LiquidApps's documentation!
    :maxdepth: 2
    dsps/getting-started
    developers/getting-started
-   :caption: Contents:
 
 
 
