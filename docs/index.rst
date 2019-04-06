@@ -8,11 +8,9 @@ Welcome to LiquidApps's documentation!
 
 .. toctree::
    :maxdepth: 2
-   developers/getting-started
-   developers/services/*
+   
+   developers/zeus-getting-started
    dsps/getting-started
-   dsps/services/*
-
 
 Indices and tables
 ==================
