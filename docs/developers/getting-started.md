@@ -13,9 +13,6 @@ Getting Started
 
 ### [Without Zeus](vram-getting-started-without-zeus)
 
-
-## vAccounts
-
 ## Testnet
 
 ### [kylin](kylin.md)

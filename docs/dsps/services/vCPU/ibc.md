@@ -1,7 +1,7 @@
-Log Service
+IBC Service
 ===========
 
 ## Overview
 ## Contract
 
-```logservices1```
+```ibcservices1```

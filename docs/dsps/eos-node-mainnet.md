@@ -1,14 +1,17 @@
 Mainnet EOS Node
 ==============
 
-## Configuration
+## Recommended Hardware
 
 m4.2xlarge machine - ubuntu 18.04
 500GB+ primary disk
 
+## Configuration
 
 ```bash
 # mainnet backup
+
+## WIP
 SNAPFILE=docker-20180712
 URL=https://osshkbk01.oss-cn-hongkong.aliyuncs.com/cryptokylin/$SNAPFILE.tar.bz2
 P2P_FILE=https://.../

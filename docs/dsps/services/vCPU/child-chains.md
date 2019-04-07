@@ -1,7 +1,7 @@
-Web Oracles Service
+Child Chain Service
 ===================
 
 ## Overview
 ## Contract
 
-```oracleservic```
+```childeossrvc```

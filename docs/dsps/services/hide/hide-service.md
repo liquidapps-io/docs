@@ -1,7 +1,7 @@
-Cron Service
+Hide Service
 ============
 
 ## Overview
 ## Contract
 
-```cronservices```
+```hideservices```

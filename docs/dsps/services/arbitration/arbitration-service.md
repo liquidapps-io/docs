@@ -1,7 +1,7 @@
-Web Oracles Service
+Arbitration Service
 ===================
 
 ## Overview
 ## Contract
 
-```oracleservic```
+```arbtrservice```
