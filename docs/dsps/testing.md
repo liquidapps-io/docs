@@ -32,7 +32,7 @@ cleos -u $MYAPI push action mycoldtoken1 coldissue '["talmuskaleos","1.0000 VTST
 
 ### Check logs
 ```bash
-journalctl -xe -u dsp.service 
+pm2 logs
 ```
 
 in kubernetes:
