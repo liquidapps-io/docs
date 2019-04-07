@@ -12,6 +12,8 @@ DSPs
    dsps/getting-started
    dsps/dsp-account
    dsps/eos-node
+   dsps/eos-node-mainnet
+   dsps/eos-node-kylin
    dsps/dsp-node
    dsps/getting-started
    dsps/architecture

@@ -1,4 +1,4 @@
-Mainnet EOS Node
+Mainnet DSP Node
 ================
 
 ## Pre-reqs
