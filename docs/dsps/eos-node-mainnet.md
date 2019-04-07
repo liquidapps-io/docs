@@ -39,3 +39,4 @@ cat p2p-config.ini >> $HOME/.local/share/eosio/nodeos/config/config.ini
 
 nodeos --disable-replay-opts --hard-replay-blockchain  
 ```
+

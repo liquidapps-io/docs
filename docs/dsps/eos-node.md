@@ -1,6 +1,7 @@
 EOS Node
 ========
 
+## Install EOSIO Node
 ```bash
 # install nodeos
 VERSION=1.7.0
@@ -51,8 +52,13 @@ state-history-endpoint = 0.0.0.0:8887
 EOF
 ```
 
-## Kylin
+### Kylin
 [Kylin EOS Node configuration](eos-node-kylin.html)
 
-## Mainnet
+### Mainnet
 [Mainnet EOS Node configuration](eos-node-mainnet.html)
+
+
+## Optimizations
+
+https://github.com/atticlab/eos-bp-performance/blob/master/cpu_perf_presentation.pdf
