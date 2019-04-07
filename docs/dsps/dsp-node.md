@@ -1,4 +1,6 @@
-# DSP node
+Mainnet EOS Node
+================
+
 ## Pre-reqs
 ### Ubuntu/Debian
 ```bash

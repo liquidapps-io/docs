@@ -3,19 +3,12 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-DSPs
-====
+Services
+========
 
 .. toctree::
    :glob:
    
-   dsps/getting-started
-   dsps/architecture
-   dsps/recovery
-   dsps/testing
-   dsps/packages
-   dsps/services
-   dsps/storage-backend
-   dsps/demux-backend
-   
+   services/ipfs/ipfs-service
+
 * :ref:`search`

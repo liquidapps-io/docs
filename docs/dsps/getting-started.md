@@ -1,6 +1,5 @@
-DSP getting started
-===================
-
+Getting started
+===============
 
 ## Architecture
 
