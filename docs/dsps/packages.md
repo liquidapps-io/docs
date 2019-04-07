@@ -69,13 +69,17 @@ Packages
     ]
 }
 ```
-
+### If not using Kubernetes
+```bash
+npm install @liquidapps@/zeus-cmd
+npm install @liquidapps@/dsp
+cd $(readlink -f `which setup-dsp` | xargs dirname)
+```
 ### Register Package
 
 **Warning: packages are read only and can't be removed yet.**
 
 ```bash
-
 zeus register dapp-service-provider-package \
     ipfs dspaccount package1 \
     --key yourdspprivatekey \

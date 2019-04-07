@@ -22,6 +22,7 @@ DSPs
    dsps/dsp-node
    dsps/packages
    dsps/testing
+   dsps/claim
    dsps/services
    dsps/recovery
    
