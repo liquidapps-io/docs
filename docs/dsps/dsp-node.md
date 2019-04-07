@@ -60,7 +60,8 @@ NODEOS_ZMQ_PORT (5557) - if using zmq_plugin
 NODEOS_WEBSOCKET_PORT (8887) - if using state_history_plugin
 
 NODEOS_CHAINID:
-    - mainnet chainID: aca376f206b8fc25a6ed44dbdc66547c36c6c33e3a119ffbeaef943642f0e906
-    - kylin chainID: 5fff1dae8dc8e2fc4d5b23b2c7665c97f9e9d8edf2b6485a86ba311c25639191
+
+ - mainnet chainID: aca376f206b8fc25a6ed44dbdc66547c36c6c33e3a119ffbeaef943642f0e906
+ - kylin chainID: 5fff1dae8dc8e2fc4d5b23b2c7665c97f9e9d8edf2b6485a86ba311c25639191
 
 
