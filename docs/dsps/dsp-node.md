@@ -1,4 +1,6 @@
-# DSP node
+DSP Node
+========
+
 ## Pre-reqs
 ### Ubuntu/Debian
 ```bash

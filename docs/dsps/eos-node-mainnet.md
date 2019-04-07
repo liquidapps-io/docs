@@ -1,3 +1,8 @@
+Mainnet EOS Node
+==============
+
+## Configuration
+
 m4.2xlarge machine - ubuntu 18.04
 500GB+ primary disk
 

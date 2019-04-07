@@ -1,6 +1,5 @@
-# EOS node
-
-
+EOS Node
+========
 
 ```bash
 # install nodeos
@@ -53,5 +52,7 @@ EOF
 ```
 
 ## Kylin
+[Kylin EOS Node configuration](eos-node-kylin.html)
 
 ## Mainnet
+[Mainnet EOS Node configuration](eos-node-mainnet.html)

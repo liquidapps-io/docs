@@ -1,3 +1,6 @@
+Kylin EOS Node
+==============
+
 account and faucet:
 https://tools.cryptokylin.io/#/tools/create
 
@@ -8,6 +11,7 @@ https://tools.cryptokylin.io/#/tools/create
 m4.2xlarge machine - ubuntu 18.04
 500GB+ primary disk
 
+## Configuration
 
 ```bash
 # kylin backup
@@ -56,3 +60,6 @@ EOF
 
 nodeos --disable-replay-opts --snapshot $HOME/.local/share/eosio/nodeos/data/snapshots/$SNAPFILE --delete-all-blocks
 ```
+
+
+## [Faucet](https://kylin-dapp-faucet.liquidapps.io/)
