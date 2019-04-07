@@ -23,9 +23,15 @@ sudo yum install make cmake3
 
 
 ## Install
+```bash
+sudo su -
+nvm use 10
 npm install -g @liquidapps/dsp
+```
 ## Configuration
-
+```bash
+setup-dsp
+```
 
 ### Storage backend
 ## Custom subdomain
