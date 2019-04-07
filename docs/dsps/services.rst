@@ -15,7 +15,18 @@ Services
    services/randomness/randomness-service
    services/custom/new-service
    services/web-oracles/web-oracles-service
+   services/zero-knowledge/zero-knowledge-service
    services/vAccounts/vaccounts-service
    services/vCPU/vcpu-services
-
+   services/hide/hide-services
+   services/gateway/gateway-services
+   services/donation/donation-service
+   services/guardians/guardians-service
+   services/arbitration/arbitration-service
+   services/identity/identity-service
+   services/build/build-service
+   services/key-management/key-management-service
+   services/history/history-service
+   
 * :ref:`search`
+

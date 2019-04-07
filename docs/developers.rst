@@ -9,6 +9,6 @@ Developers
 .. toctree::
    :glob:
    
-   developers/zeus-getting-started
+   developers/getting-started
 
 * :ref:`search`
