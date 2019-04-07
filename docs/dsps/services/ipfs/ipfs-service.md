@@ -1,8 +1,7 @@
 IPFS Service
 ============
 
-
-
+# Overview
 # Tools
-[Garbage Collection](garbage-collection)
-[Recovery](recovery.html)
+## [Garbage Collection](garbage-collection)
+## [Recovery](recovery)

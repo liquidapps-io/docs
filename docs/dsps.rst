@@ -10,6 +10,10 @@ DSPs
    :glob:
    
    dsps/getting-started
+   dsps/dsp-account
+   dsps/eos-node
+   dsps/dsp-node
+   dsps/getting-started
    dsps/architecture
    dsps/recovery
    dsps/testing
