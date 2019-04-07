@@ -10,5 +10,10 @@ Services
    :glob:
    
    services/ipfs/ipfs-service
+   services/logs/logs-service
+   services/cron/cron-service
+   services/custom/new-service
+   services/web-oracles/web-oracles-service
+   services/vAccounts/vaccounts-service
 
 * :ref:`search`
