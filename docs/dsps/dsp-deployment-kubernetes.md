@@ -1,4 +1,4 @@
-# Deploy & Register a full mainnet DAPP-DSP using K8S
+# Deploy mainnet DAPP-DSP using K8S
 This helm chart will install an full mainnet DSP cluster (Syncd Mainnet API Node, DAPP DSP Services, IPFS Cluster)
 
 This chart is using:
