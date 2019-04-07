@@ -11,7 +11,7 @@ https://tools.cryptokylin.io/#/tools/create
 m4.2xlarge machine - ubuntu 18.04
 500GB+ primary disk
 
-# Configuration
+## Configuration
 
 ```bash
 # kylin backup
@@ -62,4 +62,4 @@ nodeos --disable-replay-opts --snapshot $HOME/.local/share/eosio/nodeos/data/sna
 ```
 
 
-# [Faucet](https://kylin-dapp-faucet.liquidapps.io/)
+## [Faucet](https://kylin-dapp-faucet.liquidapps.io/)

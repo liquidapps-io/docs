@@ -1,4 +1,5 @@
-# EOS Node
+EOS Node
+========
 
 ```bash
 # install nodeos
