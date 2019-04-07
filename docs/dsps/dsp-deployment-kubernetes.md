@@ -84,28 +84,3 @@ GCP:
 MYAPI=$(kubectl get service dsp-dspnode -o jsonpath="{.status.loadBalancer.ingress[0].ip}"):3115
 echo $MYAPI
 ```
-
-
-
-
-## Misc:
-### Manually installing helm and zeus (boostrap container alternative)
-#### Install helm
-Download client from: https://docs.helm.sh/using_helm/#installing-helm
-##### Ubuntu
-```bash
-sudo snap install helm --classic
-```
-Run:
-```bash
-helm init --service-account tiller
-helm update repo
-```
-
-#### Install zeus
-https://github.com/liquidapps-io/zeus-cmd
-#### Unpack release box
-```bash
-zeus unbox dapp-cluster-k8s
-cd dapp-cluster-k8s
-```
