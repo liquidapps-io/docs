@@ -15,7 +15,6 @@ DSPs
    dsps/eos-node-mainnet
    dsps/eos-node-kylin
    dsps/dsp-node
-   dsps/getting-started
    dsps/architecture
    dsps/recovery
    dsps/testing
