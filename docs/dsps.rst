@@ -11,6 +11,7 @@ DSPs
    
    dsps/getting-started
    dsps/dsp-account
+   dsps/dsp-deployment-kubernetes
    dsps/eos-node
    dsps/eos-node-mainnet
    dsps/eos-node-kylin
