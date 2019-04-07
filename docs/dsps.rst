@@ -10,18 +10,19 @@ DSPs
    :glob:
    
    dsps/getting-started
+   dsps/architecture
+   dsps/storage-backend
+   dsps/demux-backend
    dsps/dsp-account
    dsps/dsp-deployment-kubernetes
    dsps/eos-node
    dsps/eos-node-mainnet
    dsps/eos-node-kylin
+   dsps/ipfs-cluster
    dsps/dsp-node
-   dsps/architecture
-   dsps/recovery
-   dsps/testing
    dsps/packages
+   dsps/testing
    dsps/services
-   dsps/storage-backend
-   dsps/demux-backend
+   dsps/recovery
    
 * :ref:`search`
