@@ -1,5 +1,5 @@
-Mainnet DSP Node
-================
+DSP Node
+========
 
 ## Pre-reqs
 ### Ubuntu/Debian
