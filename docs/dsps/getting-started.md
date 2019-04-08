@@ -11,7 +11,7 @@ Getting started
 
 ## Manual
 
-[EOSIO Node](eos-node)
+[EOSIO Node](eosio-node)
 
 [IPFS Cluster](ipfs-cluster)
 

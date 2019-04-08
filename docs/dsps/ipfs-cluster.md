@@ -18,7 +18,7 @@ mv go-ipfs/ipfs /usr/local/bin/ipfs
 exit
 ```
 
-### Configure
+### Configure systemd
 ```bash
 sudo su -
 ipfs init
