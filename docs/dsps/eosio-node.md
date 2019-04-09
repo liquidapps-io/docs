@@ -133,7 +133,7 @@ nodeos --disable-replay-opts --snapshot $HOME/.local/share/eosio/nodeos/data/sna
 ```bash
 export NODEOS_EXEC=`which nodeos`
 export NODEOS_USER=$USER
-sudo su -
+sudo -E su - -p
 cat <<EOF > /lib/systemd/system/nodeos.service
 [Unit]
 Description=nodeos
