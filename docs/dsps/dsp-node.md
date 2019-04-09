@@ -27,6 +27,7 @@ sudo yum install make cmake3
 ```bash
 sudo su -
 nvm use 10
+npm install -g pm2
 npm install -g @liquidapps/dsp --unsafe-perm=true
 ```
 ## Configuration
