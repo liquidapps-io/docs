@@ -26,15 +26,15 @@ export DSP_PUBLIC_KEY=`cat keys.txt | tail -n 1 | cut -d ":" -f 2 | xargs echo`
 *Save keys.txt somewhere safe!*
 
 #### Have an exising EOS Account
-https://hackernoon.com/getting-started-on-eos-mainnet-in-10-minutes-bf61dd9ec787
+- [Getting started on eos mainnet](https://hackernoon.com/getting-started-on-eos-mainnet-in-10-minutes-bf61dd9ec787)
 
-#### Don't have an exising EOS Account
+#### First EOS Account
 Fiat:
-- https://eos-account-creator.com/
-- https://eoslynx.com/
+- [EOS Account Creator](https://eos-account-creator.com/)
+- [EOS Lynx](https://eoslynx.com/)
 
 Bitcoin/ETH/Bitcoin Cash/ALFAcoins:
-- https://www.zeos.co/
+- [ZEOS](https://www.zeos.co/)
 
 ### Kylin
 Create an account
