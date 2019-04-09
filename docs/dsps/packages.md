@@ -80,8 +80,10 @@ cd $(readlink -f `which setup-dsp` | xargs dirname)
 **Warning: packages are read only and can't be removed yet.**
 
 ```bash
+export PACKAGE_ID=package1
+
 zeus register dapp-service-provider-package \
-    ipfs dspaccount package1 \
+    ipfs $DSP_ACCOUNT $PACKAGE_ID \
     --key yourdspprivatekey \
     --min-stake-quantity "10.0000" \
     --package-period 86400 \
@@ -99,5 +101,11 @@ zeus register dapp-service-provider-package --help
 ```
 
 #### Modify Package metadata:
-Currently only package_json_uri & api_endpoint are modifyable.
-To modify package metadata: use the "modifypkg" action of the dappservices contract. (https://bloks.io/account/dappservices)
+Currently only `package_json_uri` and `api_endpoint` are modifyable.
+
+To modify package metadata: use the "modifypkg" action of the dappservices contract.
+
+Using cleos:
+```bash
+cleos -u $EOS_ENDPONT push action dappservices modifypkg "[\"$DSP_ACCOUNT\",\"$PACKAGE_ID\",\"ipfsservice1\",\"$MYAPI\",\"https://acme-dsp.com/modified-package1.dsp-package.json\"]" -p $DSP_ACCOUNT@active
+```
