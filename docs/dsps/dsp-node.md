@@ -33,7 +33,9 @@ exit
 ```
 ## Configuration
 ```bash
-sudo setup-dsp
+sudo su -
+setup-dsp
+exit
 ```
 
 And fill in the following details:
