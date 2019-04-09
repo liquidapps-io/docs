@@ -1,7 +1,7 @@
 EOSIO Node
 ==========
 
-## Prerequisites:
+## Prerequisites
 
 - jq
 - wget
@@ -43,7 +43,6 @@ INSTALL_TOOL=yum
 wget https://github.com/EOSIO/eos/releases/download/v$VERSION/$FILENAME
 sudo $INSTALL_TOOL install ./$FILENAME
 ```
-
 
 
 ## Prepare Directories

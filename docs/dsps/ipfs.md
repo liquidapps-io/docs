@@ -1,16 +1,31 @@
-IPFS Cluster
-============
+IPFS
+====
 
 ## Standalone
+
 https://dist.ipfs.io/#go-ipfs
 
-### Install - Ubuntu
+### Prerequisites 
+
+- golang
+- systemd
+
+#### Ubuntu/Debian
+```bash
+sudo apt-get update
+sudo apt-get install golang-go -y
+```
+
+#### Centos/Fedora/AWS Linux v2
+```bash
+sudo yum install golang -y
+```
+
+### Install 
 ```bash
 sudo su -
 VERS=0.4.19
 DIST="go-ipfs_v${VERS}_linux-amd64.tar.gz"
-apt-get update
-apt-get install golang-go -y
 wget https://dist.ipfs.io/go-ipfs/v$VERS/$DIST
 tar xvfz $DIST
 rm *.gz
@@ -38,4 +53,10 @@ exit
 
 ## Cluster
 
+### IPFS-Cluster
+
 https://cluster.ipfs.io/documentation/
+
+### Kubernetes
+
+https://github.com/helm/charts/tree/master/stable/ipfs

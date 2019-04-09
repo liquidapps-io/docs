@@ -10,5 +10,11 @@ Developers
    :glob:
    
    developers/getting-started
+   developers/overview
+   developers/kylin
+   developers/zeus-getting-started
+   developers/vram-getting-started
+   developers/vram-getting-started-without-zeus
+   developers/dsp-packages-and-staking
 
 * :ref:`search`
