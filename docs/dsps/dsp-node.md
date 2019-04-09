@@ -1,7 +1,7 @@
 DSP Node
 ========
 
-## Pre-reqs
+## Prerequisites
 ### Linux
 ```bash
 sudo su -
@@ -35,7 +35,10 @@ setup-dsp
 
 And fill in the following details:
 ### Demux Backend
-DEMUX_BACKEND - state_history_plugin or zmq_plugin only if using nodeos with eosrio's version of the ZMQ plugin: https://github.com/eosrio/eos_zmq_plugin
+DEMUX_BACKEND 
+
+- state_history_plugin 
+- zmq_plugin - only if using nodeos with eosrio's version of the ZMQ plugin: https://github.com/eosrio/eos_zmq_plugin
 
 ### IPFS Cluster
 IPFS_HOST - ipfs hostname
@@ -48,8 +51,8 @@ hostname, port and protocol of [IPFS Cluster](ipfs-cluster)
 ### DSP Account
 DSP_ACCOUNT and DSP_PRIVATE_KEY - Account and private key of [Generated DSP Account](dsp-account)
 
-### NODEOS ENVS
-[EOS Node Settings](eos-node)
+### nodeos ENVS
+[EOS Node Settings](eosio-node)
 
 NODEOS_HOST - nodeos hostname
 
