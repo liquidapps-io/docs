@@ -84,7 +84,7 @@ export PACKAGE_ID=package1
 
 zeus register dapp-service-provider-package \
     ipfs $DSP_ACCOUNT $PACKAGE_ID \
-    --key yourdspprivatekey \
+    --key $DSP_PRIVATE_KEY \
     --min-stake-quantity "10.0000" \
     --package-period 86400 \
     --quota "1.0000" \
