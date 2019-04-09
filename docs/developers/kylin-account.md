@@ -13,6 +13,9 @@ curl http://faucet.cryptokylin.io/create_account?$KYLIN_TEST_ACCOUNT > keys.json
 export KYLIN_TEST_PRIVATE_KEY=`cat keys.json | jq -e '.keys.active_key.private'`
 export KYLIN_TEST_PUBLIC_KEY=`cat keys.json | jq -e '.keys.active_key.public'`
 cleos wallet import $KYLIN_TEST_PRIVATE_KEY
+
+# Configure endpoint
+export EOS_ENDPONT=https://kylin.eoscanada.com
 ```
 *Save wallet_password.pwd and keys.json somewhere safe!*
 
