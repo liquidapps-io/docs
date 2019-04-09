@@ -8,14 +8,8 @@ zeus-cmd is an Extensible command line tool. SDK extensions come packaged in "bo
 
 * EOSIO dApp development support
 * DAPP Services support
-* coldtoken  - vRAM based eosio.token https://github.com/liquidapps-io/zeus-coldtoken-sample
-* deepfreeze - vRAM based cold storage contract for multiple tokens https://github.com/liquidapps-io/deepfreeze
-* vgrab      - vRAM based airgrab for eosio.token https://github.com/liquidapps-io/vgrab
 
-Getting started
---------------
-
-### Prerequisites:
+## Prerequisites:
 
 * nodejs == 10.x (nvm recommended)
 * curl
@@ -25,58 +19,68 @@ Recommended (otherwise falling back to docker)
 * [eosio.cdt v1.6.1](https://github.com/EOSIO/eosio.cdt/releases/tag/v1.6.1)
 * [eosio v1.7.1](https://github.com/EOSIO/eos/releases/tag/v1.7.1)
 
-### Install Zeus
+## Install Zeus
 
 ```bash
 npm install -g @liquidapps/zeus-cmd
 ```
 
-#### Notes regarding docker on mac:
+### Notes regarding docker on mac:
 Recommended version: 18.06.1-ce-mac73
 
-### Upgrade
+## Upgrade
 
 ```bash
 npm update -g @liquidapps/zeus-cmd
 ```
 
-### Test
+## Test
 ```bash
 zeus unbox helloworld
 cd helloworld
 zeus test
 ```
 
-### Other Options
+## Samples Boxes
+### vRAM
+* [coldtoken](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/sample/coldtoken) - vRAM based eosio.token
+* [deepfreeze](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/sample/deepfreeze) - vRAM based cold storage contract
+* [vgrab](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/sample/vgrab) - vRAM based airgrab for eosio.token
+* [cardgame](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/sample/cardgame) - vRAM supported elemental battles
+* [registry](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/eos-framework/registry) - Generic Registry - the1registry
+
+### Zeus Extensions
+* [contract-migrations-extensions](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/core/contract-migrations-extensions)
+* [build-extensions](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/core/build-extensions)
+* [test-extensions](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/core/test-extensions)
+* [eos-extensions](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/eos-sdk/eos-extensions)
+* [unbox-extensions](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/repos/unbox-extensions)
+* [demux](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/microservices/demux)
+
+### DAPP Services
+* [ipfs-dapp-service](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/services/ipfs-dapp-service)
+* [log-dapp-service](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/services/log-dapp-service)
+* [cron-dapp-service](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/services/cron-dapp-service)
+* [oracle-dapp-service](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/services/oracle-dapp-service)
+
+### Misc.
+* [microauctions](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/economics/microauctions) - Micro Auctions
+* [eos-detective-reports](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/economics/eos-detective-reports) - EOS Detective Reports - by EOSNation
+* [helloworld](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/eos-sdk/sample-eos-cpp) - Hello World
+* [token](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/eos-framework/token) - Standard eosio.token
+
+## Other Options
 ```bash
-zeus compile #compile sample contracts
-zeus migrate #migrate sample contracts (deploy to local eos.node)
+zeus compile #compile contracts
+zeus migrate #migrate contracts (deploy to local eos.node)
 ```
 
-### Notes regarding permissions errors:
-Recommend using Node Version Manager (nvm)
-```bash
-sudo apt install curl
-curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.34.0/install.sh | bash
-exec bash
-nvm install 10
-nvm use 10
-```
-Or you can try the following:
-```bash
-sudo groupadd docker
-sudo usermod -aG docker $USER
-
-#If still getting error:
-sudo chmod 666 /var/run/docker.sock
-```
-
-### Usage inside a project
+## Usage inside a project
 ```bash
 zeus --help 
 ```
 
-#### List Boxes
+### List Boxes
 ```bash
 zeus list-boxes
 ```
@@ -149,4 +153,22 @@ zeus list-boxes
             }
         }
     };
+```
+
+## Notes regarding permissions errors:
+Recommend using Node Version Manager (nvm)
+```bash
+sudo apt install curl
+curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.34.0/install.sh | bash
+exec bash
+nvm install 10
+nvm use 10
+```
+Or you can try the following:
+```bash
+sudo groupadd docker
+sudo usermod -aG docker $USER
+
+#If still getting error:
+sudo chmod 666 /var/run/docker.sock
 ```

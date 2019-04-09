@@ -3,11 +3,22 @@ IPFS Service
 
 ## Overview
 
+### Articles
+
+- [vRAM guide for experts](https://medium.com/@liquidapps/vram-guide-for-experts-f809c8f82a27)
+
+### Videos
+
+- [Developer Explains - Decentralized Dapp Scaling w/ IPFS! How LiquidApps Dapp Service Providers Work](https://www.youtube.com/watch?v=-XdVnK22mZc)
+
 ## Contract
 
 ```ipfsservice1```
 
 ## Contract Libraries
+
+### Zeus Boxes
+* [ipfs-dapp-service](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/services/ipfs-dapp-service)
 
 ### Raw IPFS Access
 ```cpp
