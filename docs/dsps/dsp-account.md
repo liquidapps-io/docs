@@ -7,7 +7,7 @@ Install cleos from: https://github.com/EOSIO/eos/releases
 ## Account Name
 
 ```bash
-# Create a new free account name (replace 'yourdspaccount' with your account name):
+# Create a new available account name (replace 'yourdspaccount' with your account name):
 export DSP_ACCOUNT=yourdspaccount
 
 # Create wallet
@@ -42,7 +42,7 @@ Create an account
 curl http://faucet.cryptokylin.io/create_account?$DSP_ACCOUNT > keys.json
 curl http://faucet.cryptokylin.io/get_token?$DSP_ACCOUNT
 export DSP_PRIVATE_KEY=`cat keys.json | jq -e '.keys.active_key.private'`
-export DSP_PUBLIC_KEY=`cat keys.json | jq -e '.keys.active_key.private'`
+export DSP_PUBLIC_KEY=`cat keys.json | jq -e '.keys.active_key.public'`
 ```
 *Save keys.json somewhere safe!*
 
