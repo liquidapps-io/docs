@@ -15,13 +15,12 @@ DSPs
    dsps/demux-backend
    dsps/dsp-account
    dsps/dsp-deployment-kubernetes
-   dsps/eos-node
-   dsps/eos-node-mainnet
-   dsps/eos-node-kylin
+   dsps/eosio-node
    dsps/ipfs-cluster
    dsps/dsp-node
    dsps/packages
    dsps/testing
+   dsps/claim
    dsps/services
    dsps/recovery
    
