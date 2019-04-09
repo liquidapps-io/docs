@@ -73,10 +73,10 @@ NODEOS_CHAINID:
 
 ## Check logs
 ```bash
-pm2 logs
+sudo pm2 logs
 ```
 
-result should look something like:
+output should look like:
 ```
 1|demux    | demux listening on port 3195!
 1|demux    | ws connected
