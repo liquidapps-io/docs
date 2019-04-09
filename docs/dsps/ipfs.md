@@ -3,7 +3,7 @@ IPFS
 
 ## Standalone
 
-https://dist.ipfs.io/#go-ipfs
+[go-ipfs](https://dist.ipfs.io/#go-ipfs)
 
 ### Prerequisites 
 
@@ -55,8 +55,8 @@ exit
 
 ### IPFS-Cluster
 
-https://cluster.ipfs.io/documentation/
+[IPFS-Cluster Documentation](https://cluster.ipfs.io/documentation/)
 
 ### Kubernetes
 
-https://github.com/helm/charts/tree/master/stable/ipfs
+[IPFS Helm Chart](https://github.com/helm/charts/tree/master/stable/ipfs)

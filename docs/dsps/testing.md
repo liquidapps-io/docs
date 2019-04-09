@@ -40,7 +40,7 @@ in kubernetes:
 kubectl logs dsp-dspnode-0 -c dspnode-ipfs-svc
 ```
 
-### look for "xcommit" and "xcleanup" actions for your contract:
+### Look for "xcommit" and "xcleanup" actions for your contract:
 
-https://bloks.io/account/mycoltoken1
+(https://bloks.io/account/mycoltoken1)
 

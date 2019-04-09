@@ -2,7 +2,7 @@ DSP Node
 ========
 
 ## Pre-reqs
-### Linux:
+### Linux
 ```bash
 sudo su -
 curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.34.0/install.sh | bash
@@ -12,12 +12,12 @@ nvm install 10
 nvm use 10
 ```
 
-### Ubuntu/Debian
+#### Ubuntu/Debian
 ```bash
 sudo apt install make cmake build-essential
 ```
 
-### Centos/Fedora/AWS Linux:
+#### Centos/Fedora/AWS Linux:
 ```bash
 sudo yum install make cmake3
 ```

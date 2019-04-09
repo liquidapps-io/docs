@@ -1,2 +1,73 @@
 vRAM Getting Started
 ====================
+
+```            
+       _____            __  __ 
+      |  __ \     /\   |  \/  |
+__   _| |__) |   /  \  | \  / |
+\ \ / /  _  /   / /\ \ | |\/| |
+ \ V /| | \ \  / ____ \| |  | |
+  \_/ |_|  \_\/_/    \_\_|  |_|
+            
+```
+## Prerequisites
+
+* [Zeus](zeus-getting-started.md)
+* [Kylin Account](kylin-account.md)
+
+## Unbox template
+```bash
+zeus unbox vram-getting-started
+```
+## Add your contract logic
+in contract/eos/mycontract/mycontract.cpp
+```cpp
+/* TODO */
+```
+
+## Add your contract test
+in tests/mycontract.spec.js
+```javascript
+// TODO
+```
+## Compile and test
+```bash
+zeus test
+```
+
+## Deploy Contract
+```bash
+export EOS_ENDPONT=https://kylin.eoscanada.com
+# Buy RAM:
+cleos -u $EOS_ENDPONT system buyram $KYLIN_TEST_ACCOUNT $KYLIN_TEST_ACCOUNT "50.0000 EOS" -p $KYLIN_TEST_ACCOUNT@active
+# Set contract code and abi
+cleos -u $EOS_ENDPONT set contract $KYLIN_TEST_ACCOUNT ../contract -p $KYLIN_TEST_ACCOUNT@active
+```
+
+
+```bash
+# TBD: 
+#   zeus import key $KYLIN_TEST_ACCOUNT $KYLIN_TEST_PRIVATE_KEY
+#   zeus migrate --network=kylin
+```
+
+## Select and stake DAPP for DSP package
+
+[DSP Package and staking](dsp-packages-and-staking.md)
+
+## Test
+Finally you can now test your vRAM implementation by sending an action through your DSP's API endpoint.  
+
+The endpoint can be found in the [package table](https://kylin.eosx.io/account/dappservices?mode=contract&sub=tables&table=package&lowerBound=&upperBound=&limit=100) of the dappservices account on all chains.
+
+```bash
+export EOS_ENDPONT=https://dspendpoint
+cleos -u $EOS_ENDPONT push action $KYLIN_TEST_ACCOUNT youraction1 "[\"param1\",\"param2\"]" -p $KYLIN_TEST_ACCOUNT@active
+```
+
+The result should look like:
+```
+executed transaction: 865a3779b3623eab94aa2e2672b36dfec9627c2983c379717f5225e43ac2b74a  104 bytes  67049 us
+#  yourcontract <= yourcontract::youraction1         {"param1":"param1","param2":"param2"}
+>> {"version":"1.0","etype":"service_request","payer":"yourcontract","service":"ipfsservice1","action":"commit","provider":"","data":"DH......"}
+```

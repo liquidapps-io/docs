@@ -17,83 +17,72 @@ Getting started
 
 ### Prerequisites:
 
-* Docker
-* nodejs >= 10.x
+* nodejs == 10.x (nvm recommended)
 * curl
+* nodeos 
 
-### Recommended (otherwise falling back to docker)
-* eosio.cdt v1.6.1 https://github.com/EOSIO/eosio.cdt/releases/tag/v1.6.1
+Recommended (otherwise falling back to docker)
+* [eosio.cdt v1.6.1](https://github.com/EOSIO/eosio.cdt/releases/tag/v1.6.1)
+* [eosio v1.7.1](https://github.com/EOSIO/eos/releases/tag/v1.7.1)
 
-### Install 
+### Install Zeus
 
 ```bash
-    npm install -g @liquidapps/zeus-cmd
+npm install -g @liquidapps/zeus-cmd
 ```
 
-
-#### Additional installation steps on windows:
-```bash
-    @"%SystemRoot%\System32\WindowsPowerShell\v1.0\powershell.exe" -NoProfile -InputFormat None -ExecutionPolicy Bypass -Command "iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))" && SET "PATH=%PATH%;%ALLUSERSPROFILE%\chocolatey\bin"
-    choco install -y vcbuildtools docker docker-machine docker-compose
-    docker-machine create -d hyperv default
-```
 #### Notes regarding docker on mac:
 Recommended version: 18.06.1-ce-mac73
 
 ### Upgrade
 
 ```bash
-    npm update -g @liquidapps/zeus-cmd
+npm update -g @liquidapps/zeus-cmd
 ```
 
 ### Test
 ```bash
-    zeus unbox helloworld
-    cd helloworld
-    zeus test
+zeus unbox helloworld
+cd helloworld
+zeus test
 ```
 
 ### Other Options
 ```bash
-    zeus compile #compile sample contracts
-    zeus migrate #migrate sample contracts (deploy to local eos.node)
+zeus compile #compile sample contracts
+zeus migrate #migrate sample contracts (deploy to local eos.node)
 ```
 
 ### Notes regarding permissions errors:
 Recommend using Node Version Manager (nvm)
 ```bash
-    sudo apt install curl
-    curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.34.0/install.sh | bash
-    exec bash
-    nvm install 10
-    nvm use 10
+sudo apt install curl
+curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.34.0/install.sh | bash
+exec bash
+nvm install 10
+nvm use 10
 ```
 Or you can try the following:
 ```bash
-    sudo groupadd docker
-    sudo usermod -aG docker $USER
+sudo groupadd docker
+sudo usermod -aG docker $USER
 
-    */ If still getting error: */
-    sudo chmod 666 /var/run/docker.sock
+#If still getting error:
+sudo chmod 666 /var/run/docker.sock
 ```
 
 ### Usage inside a project
 ```bash
-    zeus --help 
+zeus --help 
 ```
 
 #### List Boxes
 ```bash
-    zeus list-boxes
-```
-
-#### Update Boxes Repo
-```bash
-    zeus update --repos
+zeus list-boxes
 ```
 
 ## Project structure
-### Directory structure:
+### Directory structure
 ```
     extensions/
     contracts/
@@ -106,7 +95,7 @@ Or you can try the following:
     zeus-box.json
     zeus-config.js
 ```
-### zeus-box.json:
+### zeus-box.json
 ```
     {
       "ignore": [
