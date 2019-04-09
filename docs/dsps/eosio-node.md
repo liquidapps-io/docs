@@ -119,7 +119,7 @@ state-history-endpoint = 0.0.0.0:8887
 chain-state-db-size-mb = $CHAIN_STATE_SIZE
 EOF
 
-curl $P2P_FILE > p2p.ini
+curl $P2P_FILE > p2p-config.ini
 cat p2p-config.ini | grep "p2p-peer-address" >> $HOME/.local/share/eosio/nodeos/config/config.ini
 ```
 
