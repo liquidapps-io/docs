@@ -1,10 +1,6 @@
 # Deploy mainnet DAPP-DSP using K8S
 This helm chart will install an full mainnet DSP cluster (Syncd Mainnet API Node, DAPP DSP Services, IPFS Cluster)
 
-This chart is using:
-- https://github.com/helm/charts/tree/master/stable/ipfs
-- https://github.com/liquidapps-io/eosio-node-k8s-helm
-
 ## Minimum cluster requirements
 
 * CPU: 4x2.2GHz Cores
@@ -14,10 +10,10 @@ This chart is using:
 
 ## Getting started
 ### AWS
-https://docs.aws.amazon.com/eks/latest/userguide/getting-started.html
+[EKS](https://docs.aws.amazon.com/eks/latest/userguide/getting-started.html)
 
 ### GCP 
-https://cloud.google.com/kubernetes-engine/docs/quickstart
+[GKE](https://cloud.google.com/kubernetes-engine/docs/quickstart)
 
 ## Deployment
 ### Make sure kubectl is installed and configured and nodes are running
