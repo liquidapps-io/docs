@@ -10,6 +10,9 @@ __   _| |__) |   /  \  | \  / |
   \_/ |_|  \_\/_/    \_\_|  |_|
             
 ```
+
+## Hardware Requirements
+
 ## Prerequisites
 
 * [eosio.cdt v1.6.1](https://github.com/EOSIO/eosio.cdt/releases/tag/v1.6.1)

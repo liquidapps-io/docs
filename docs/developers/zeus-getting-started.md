@@ -11,7 +11,7 @@ zeus-cmd is an Extensible command line tool. SDK extensions come packaged in "bo
 
 ## Hardware Requirements
 
-## Prerequisites:
+## Prerequisites
 
 * nodejs == 10.x (nvm recommended)
 * curl
