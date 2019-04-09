@@ -37,7 +37,7 @@ zeus test
 
 ## Deploy Contract
 ```bash
-export EOS_ENDPONT=https://kylin.eoscanada.com
+export EOS_ENDPONT=https://kylin-dsp-1.liquidapps.io
 # Buy RAM:
 cleos -u $EOS_ENDPONT system buyram $KYLIN_TEST_ACCOUNT $KYLIN_TEST_ACCOUNT "50.0000 EOS" -p $KYLIN_TEST_ACCOUNT@active
 # Set contract code and abi
@@ -48,20 +48,31 @@ cleos -u $EOS_ENDPONT set contract $KYLIN_TEST_ACCOUNT ../contract -p $KYLIN_TES
 ```bash
 # TBD: 
 #   zeus import key $KYLIN_TEST_ACCOUNT $KYLIN_TEST_PRIVATE_KEY
+#   zeus create contract-deployment contractcode $KYLIN_TEST_ACCOUNT
 #   zeus migrate --network=kylin
 ```
 
 ## Select and stake DAPP for DSP package
 
+```bash
+export PROVIDER=uuddlrlrbass
+export PACKAGE_ID=package1
+export MY_ACCOUNT=$KYLIN_TEST_ACCOUNT
+
+# select your package: 
+export SERVICE=ipfsservice1
+cleos -u $EOS_ENDPONT push action dappservices selectpkg "[\"$MY_ACCOUNT\",\"$PROVIDER\",\"$SERVICE\",\"$PACKAGE_ID\"]" -p $MY_ACCOUNT@active
+
+# Stake your DAPP to the DSP that you selected the service package for:
+cleos -u $EOS_ENDPONT push action dappservices stake "[\"$MY_ACCOUNT\",\"$PROVIDER\",\"$SERVICE\",\"50.0000 DAPP\"]' -p $MY_ACCOUNT@active
+```
+
 [DSP Package and staking](dsp-packages-and-staking.md)
 
 ## Test
-Finally you can now test your vRAM implementation by sending an action through your DSP's API endpoint.  
-
-The endpoint can be found in the [package table](https://kylin.eosx.io/account/dappservices?mode=contract&sub=tables&table=package&lowerBound=&upperBound=&limit=100) of the dappservices account on all chains.
+Finally you can now test your vRAM implementation by sending an action through your DSP's API endpoint
 
 ```bash
-export EOS_ENDPONT=https://dspendpoint
 cleos -u $EOS_ENDPONT push action $KYLIN_TEST_ACCOUNT youraction1 "[\"param1\",\"param2\"]" -p $KYLIN_TEST_ACCOUNT@active
 ```
 
