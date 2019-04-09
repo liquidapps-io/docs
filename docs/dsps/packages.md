@@ -93,7 +93,11 @@ zeus register dapp-service-provider-package \
     --package-json-uri https://acme-dsp.com/package1.dsp-package.json
 ```
 
-replace https://api.acme-dsp.com with the service endpoint from 
+output should be:
+```
+⚡registering package:package1
+✔️package:package1 registered successfully
+```
 
 For more options:
 ```bash
