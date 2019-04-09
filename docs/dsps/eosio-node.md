@@ -147,6 +147,7 @@ WantedBy=multiuser.target
 EOF
 
 systemctl start nodeos
+exit
 ```
 
 ## Optimizations
