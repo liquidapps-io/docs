@@ -128,6 +128,7 @@ First run (from snapshot)
 ```bash
 nodeos --disable-replay-opts --snapshot $HOME/.local/share/eosio/nodeos/data/snapshots/boot.bin --delete-all-blocks
 ```
+Wait until the node fully syncs, then press CTRL+C once, wait for the node to shutdown and proceed to the next step.
 
 ## systemd
 ```bash
