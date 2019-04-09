@@ -1,4 +1,6 @@
-## vRAM Getting Started - without zeus
+vRAM Getting Started - without zeus
+===================================
+
 ```            
        _____            __  __ 
       |  __ \     /\   |  \/  |
@@ -8,14 +10,14 @@ __   _| |__) |   /  \  | \  / |
   \_/ |_|  \_\/_/    \_\_|  |_|
             
 ```
-## Prerequisites:
+## Prerequisites
 
 * eosio.cdt - recommend: v1.6.1 https://github.com/EOSIO/eosio.cdt/releases/tag/v1.6.1
 * CryptoKylin Testnet Account - https://www.cryptokylin.io/
   * Account: `http://faucet.cryptokylin.io/create_account?**ACCOUNT_NAME**`
   * Faucet: `http://faucet.cryptokylin.io/get_token?**ACCOUNT_NAME**`
 
-## Install:
+## Install
 
 Clone into your `/contracts` directory:
 ```sh
@@ -93,13 +95,3 @@ executed transaction: 865a3779b3623eab94aa2e2672b36dfec9627c2983c379717f5225e43a
 #  natdeveloper <= natdeveloper::upsert         {"user":"natdeveloper","first_name":"nat"}
 >> {"version":"1.0","etype":"service_request","payer":"natdeveloper","service":"ipfsservice1","action":"commit","provider":"","data":"DHBVpVFtlbKZA25hdAA="}
 ```
-
----
-
-## Have questions?
-
-Join our Telegram channel: https://t.me/LiquidAppsOfficial
-
-## Want more information?
-
-Read our [whitepaper](https://liquidapps.io/DAPP%20Network%20and%20DAPP%20Token%20Whitepaper%20v2.0.pdf) and subscribe to our [Medium](https://medium.com/@liquidapps/) posts.
