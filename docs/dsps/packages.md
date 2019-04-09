@@ -80,6 +80,11 @@ cd $(readlink -f `which setup-dsp` | xargs dirname)
 
 ```bash
 export PACKAGE_ID=package1
+export EOS_CHAIN=mainnet
+#or
+export EOS_CHAIN=kylin
+
+export DSP_ENDPOINT=https://acme-dsp.com
 
 zeus register dapp-service-provider-package \
     ipfs $DSP_ACCOUNT $PACKAGE_ID \
@@ -87,8 +92,8 @@ zeus register dapp-service-provider-package \
     --min-stake-quantity "10.0000" \
     --package-period 86400 \
     --quota "1.0000" \
-    --network mainnet \
-    --api-endpoint $MYAPI \
+    --network $EOS_CHAIN \
+    --api-endpoint $DSP_ENDPOINT \
     --package-json-uri https://acme-dsp.com/package1.dsp-package.json
 ```
 
@@ -110,5 +115,5 @@ To modify package metadata: use the "modifypkg" action of the dappservices contr
 
 Using cleos:
 ```bash
-cleos -u $EOS_ENDPONT push action dappservices modifypkg "[\"$DSP_ACCOUNT\",\"$PACKAGE_ID\",\"ipfsservice1\",\"$MYAPI\",\"https://acme-dsp.com/modified-package1.dsp-package.json\"]" -p $DSP_ACCOUNT@active
+cleos -u $EOS_ENDPONT push action dappservices modifypkg "[\"$DSP_ACCOUNT\",\"$PACKAGE_ID\",\"ipfsservice1\",\"$DSP_ENDPOINT\",\"https://acme-dsp.com/modified-package1.dsp-package.json\"]" -p $DSP_ACCOUNT@active
 ```

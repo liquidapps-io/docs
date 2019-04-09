@@ -71,12 +71,12 @@ kubectl logs -f dsp-nodeos-0 --all-containers
 ### Get your API endpoint 
 AWS:
 ```bash
-MYAPI=$(kubectl get service dsp-dspnode -o jsonpath="{.status.loadBalancer.ingress[?(@.hostname)].hostname}"):3115
-echo $MYAPI
+DSP_ENDPOINT=$(kubectl get service dsp-dspnode -o jsonpath="{.status.loadBalancer.ingress[?(@.hostname)].hostname}"):3115
+echo $DSP_ENDPOINT
 ```
 
 GCP:
 ```bash
-MYAPI=$(kubectl get service dsp-dspnode -o jsonpath="{.status.loadBalancer.ingress[0].ip}"):3115
-echo $MYAPI
+DSP_ENDPOINT=$(kubectl get service dsp-dspnode -o jsonpath="{.status.loadBalancer.ingress[0].ip}"):3115
+echo $DSP_ENDPOINT
 ```
