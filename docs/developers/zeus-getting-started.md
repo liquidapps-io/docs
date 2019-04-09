@@ -1,10 +1,10 @@
 Zeus Getting Started
 ====================
 
-# Overview
+## Overview
 zeus-cmd is an Extensible command line tool. SDK extensions come packaged in "boxes".
 
-# Boxes
+## Boxes
 
 * EOSIO dApp development support
 * DAPP Services support
@@ -15,53 +15,53 @@ zeus-cmd is an Extensible command line tool. SDK extensions come packaged in "bo
 Getting started
 --------------
 
-## Prerequisites:
+### Prerequisites:
 
 * Docker
 * nodejs >= 10.x
 * curl
 
-## Recommended (otherwise falling back to docker): 
+### Recommended (otherwise falling back to docker)
 * eosio.cdt v1.6.1 https://github.com/EOSIO/eosio.cdt/releases/tag/v1.6.1
 
-## Install 
+### Install 
 
-```
+```bash
     npm install -g @liquidapps/zeus-cmd
 ```
 
 
-### Additional installation steps on windows:
-```
+#### Additional installation steps on windows:
+```bash
     @"%SystemRoot%\System32\WindowsPowerShell\v1.0\powershell.exe" -NoProfile -InputFormat None -ExecutionPolicy Bypass -Command "iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))" && SET "PATH=%PATH%;%ALLUSERSPROFILE%\chocolatey\bin"
     choco install -y vcbuildtools docker docker-machine docker-compose
     docker-machine create -d hyperv default
 ```
-### Notes regarding docker on mac:
+#### Notes regarding docker on mac:
 Recommended version: 18.06.1-ce-mac73
 
-## Upgrade
+### Upgrade
 
-```
+```bash
     npm update -g @liquidapps/zeus-cmd
 ```
 
-## Test
-```
+### Test
+```bash
     zeus unbox helloworld
     cd helloworld
     zeus test
 ```
 
-## Other Options
-```
-    zeus compile - compile sample contracts
-    zeus migrate - migrate sample contracts (deploy to local eos.node)
+### Other Options
+```bash
+    zeus compile #compile sample contracts
+    zeus migrate #migrate sample contracts (deploy to local eos.node)
 ```
 
-## Notes regarding permissions errors:
+### Notes regarding permissions errors:
 Recommend using Node Version Manager (nvm)
-```
+```bash
     sudo apt install curl
     curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.34.0/install.sh | bash
     exec bash
@@ -69,7 +69,7 @@ Recommend using Node Version Manager (nvm)
     nvm use 10
 ```
 Or you can try the following:
-```
+```bash
     sudo groupadd docker
     sudo usermod -aG docker $USER
 
@@ -77,23 +77,23 @@ Or you can try the following:
     sudo chmod 666 /var/run/docker.sock
 ```
 
-## Usage inside a project
-```
+### Usage inside a project
+```bash
     zeus --help 
 ```
 
-### List Boxes
-```
+#### List Boxes
+```bash
     zeus list-boxes
 ```
 
-### Update Boxes Repo
-```
+#### Update Boxes Repo
+```bash
     zeus update --repos
 ```
 
-# Project structure
-## Directory structure:
+## Project structure
+### Directory structure:
 ```
     extensions/
     contracts/
@@ -106,7 +106,7 @@ Or you can try the following:
     zeus-box.json
     zeus-config.js
 ```
-## zeus-box.json:
+### zeus-box.json:
 ```
     {
       "ignore": [
@@ -128,7 +128,7 @@ Or you can try the following:
     }
 ```
 
-## zeus-config.js
+### zeus-config.js
 ```
     module.exports = {
         defaultArgs:{

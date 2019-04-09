@@ -10,18 +10,18 @@ DSPs
    :glob:
    
    dsps/getting-started
+   dsps/overview
    dsps/architecture
    dsps/storage-backend
    dsps/demux-backend
    dsps/dsp-account
    dsps/dsp-deployment-kubernetes
    dsps/eosio-node
-   dsps/ipfs-cluster
+   dsps/ipfs
    dsps/dsp-node
    dsps/packages
    dsps/testing
    dsps/claim
-   dsps/services
    dsps/recovery
    
 * :ref:`search`

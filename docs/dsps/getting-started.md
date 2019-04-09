@@ -3,6 +3,8 @@ Getting started
 
 ## Overview
 
+[Overview](overview)
+
 [Architecture](architecture)
 
 ## Prerequisites
@@ -13,7 +15,7 @@ Getting started
 
 [EOSIO Node](eosio-node)
 
-[IPFS Cluster](ipfs-cluster)
+[IPFS](ipfs)
 
 [DSP Service Node](dsp-node)
 
@@ -28,3 +30,6 @@ Getting started
 
 [Testing](testing)
 
+## Claiming Rewards
+
+[Claim](claim)

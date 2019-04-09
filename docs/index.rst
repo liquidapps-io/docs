@@ -11,6 +11,8 @@ Welcome to LiquidApps's documentation!
    
    developers
    dsps
+   services
    tokens
+   
 
 * :ref:`search`

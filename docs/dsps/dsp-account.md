@@ -1,7 +1,7 @@
 Account
 =======
 
-## Prerequisites:
+## Prerequisites
 Install cleos from: https://github.com/EOSIO/eos/releases
 
 ## Account Name
@@ -25,10 +25,10 @@ export DSP_PUBLIC_KEY=`cat keys.txt | tail -n 1 | cut -d ":" -f 2 | xargs echo`
 ```
 *Save keys.txt somewhere safe!*
 
-#### Have an exising EOS Account:
+#### Have an exising EOS Account
 https://hackernoon.com/getting-started-on-eos-mainnet-in-10-minutes-bf61dd9ec787
 
-#### Don't have an exising EOS Account:
+#### Don't have an exising EOS Account
 Fiat:
 - https://eos-account-creator.com/
 - https://eoslynx.com/
@@ -46,7 +46,7 @@ export DSP_PUBLIC_KEY=`cat keys.json | jq -e '.keys.active_key.private'`
 ```
 *Save keys.json somewhere safe!*
 
-## Import account:
+## Import account
 ```bash
 cleos wallet import $DSP_PRIVATE_KEY
 ```

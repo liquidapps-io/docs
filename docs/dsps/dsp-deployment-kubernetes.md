@@ -16,7 +16,7 @@ This chart is using:
 ### AWS
 https://docs.aws.amazon.com/eks/latest/userguide/getting-started.html
 
-### GCP - Untested
+### GCP 
 https://cloud.google.com/kubernetes-engine/docs/quickstart
 
 ## Deployment

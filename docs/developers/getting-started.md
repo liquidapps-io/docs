@@ -1,6 +1,8 @@
 Getting Started
 ===============
 
+## [Overview](overview)
+
 ## [Packages and Staking](dsp-packages-and-staking.md)
 
 ## Zeus SDK
