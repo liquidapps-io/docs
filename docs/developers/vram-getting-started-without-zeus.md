@@ -12,7 +12,8 @@ __   _| |__) |   /  \  | \  / |
 ```
 ## Prerequisites
 
-* eosio.cdt - recommend: v1.6.1 (https://github.com/EOSIO/eosio.cdt/releases/tag/v1.6.1)
+* [eosio.cdt v1.6.1](https://github.com/EOSIO/eosio.cdt/releases/tag/v1.6.1)
+* [eosio v1.7.1](https://github.com/EOSIO/eos/releases/tag/v1.7.1)
 
 ### Kylin Testnet
 #### Account
