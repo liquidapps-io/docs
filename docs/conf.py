@@ -49,7 +49,7 @@ pygments_style = 'sphinx'
 html_theme_options = {
     'canonical_url': '',
     'analytics_id': 'UA-132400878-1',  
-    'logo_only': True,
+    'logo_only': False,
     'display_version': True,
     'prev_next_buttons_location': 'bottom',
     'style_external_links': False,
@@ -63,7 +63,6 @@ html_theme_options = {
     'titles_only': False
 }
 
-html_logo = 'logoWhite.svg'
 # Add any paths that contain custom static files (such as style sheets) here,
 # relative to this directory. They are copied after the builtin static files,
 # so a file named "default.css" will overwrite the builtin "default.css".
