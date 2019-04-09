@@ -131,14 +131,15 @@ nodeos --disable-replay-opts --snapshot $HOME/.local/share/eosio/nodeos/data/sna
 
 ## systemd
 ```bash
-NODEOS_EXEC=`which nodeos`
+export NODEOS_EXEC=`which nodeos`
+export NODEOS_USER=$USER
 sudo su -
 cat <<EOF > /lib/systemd/system/nodeos.service
 [Unit]
 Description=nodeos
 After=network.target
 [Service]
-User=$USER
+User=$NODEOS_USER
 ExecStart=$NODEOS_EXEC --disable-replay-opts
 [Install]
 WantedBy=multiuser.target

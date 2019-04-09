@@ -15,12 +15,12 @@ nvm use 10
 
 #### Ubuntu/Debian
 ```bash
-sudo apt install make cmake build-essential
+sudo apt install -y make cmake build-essential python
 ```
 
 #### Centos/Fedora/AWS Linux:
 ```bash
-sudo yum install make cmake3
+sudo yum install -y make cmake3 python
 ```
 
 ## Install
