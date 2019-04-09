@@ -29,10 +29,11 @@ sudo su -
 nvm use 10
 npm install -g pm2
 npm install -g @liquidapps/dsp --unsafe-perm=true
+exit
 ```
 ## Configuration
 ```bash
-setup-dsp
+sudo setup-dsp
 ```
 
 And fill in the following details:
