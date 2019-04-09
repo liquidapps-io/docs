@@ -1,6 +1,6 @@
 EOSIO Node
 ==========
-
+## Hardware Requirements
 ## Prerequisites
 
 - jq

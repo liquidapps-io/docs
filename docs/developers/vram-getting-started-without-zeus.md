@@ -10,36 +10,14 @@ __   _| |__) |   /  \  | \  / |
   \_/ |_|  \_\/_/    \_\_|  |_|
             
 ```
+
+## Hardware Requirements
+
 ## Prerequisites
 
-* eosio.cdt - recommend: v1.6.1 (https://github.com/EOSIO/eosio.cdt/releases/tag/v1.6.1)
-
-### Kylin Testnet
-#### Account
-
-```bash
-# Create a new available account name (replace 'yourtestaccount' with your account name):
-export KYLIN_TEST_ACCOUNT=yourtestaccount
-# Create wallet
-cleos wallet create --file wallet_password.pwd
-
-# Create Account
-curl http://faucet.cryptokylin.io/create_account?$KYLIN_TEST_ACCOUNT > keys.json
-export KYLIN_TEST_PRIVATE_KEY=`cat keys.json | jq -e '.keys.active_key.private'`
-export KYLIN_TEST_PUBLIC_KEY=`cat keys.json | jq -e '.keys.active_key.public'`
-cleos wallet import $KYLIN_TEST_PRIVATE_KEY
-```
-*Save wallet_password.pwd and keys.json somewhere safe!*
-
-#### Kylin EOS Tokens
-```bash
-# Get some Kylin EOS tokens
-curl http://faucet.cryptokylin.io/get_token?$KYLIN_TEST_ACCOUNT
-```
-
-#### Kylin DAPP Tokens
-
-[DAPP Faucet](https://kylin-dapp-faucet.liquidapps.io/)
+* [eosio.cdt v1.6.1](https://github.com/EOSIO/eosio.cdt/releases/tag/v1.6.1)
+* [eosio v1.7.1](https://github.com/EOSIO/eos/releases/tag/v1.7.1)
+* [Kylin Account](kylin-account.md)
 
 ## Install
 
@@ -89,7 +67,6 @@ eosio-cpp -abigen -o contract.wasm contract.cpp
 
 ## Deploy Contract
 ```bash
-export EOS_ENDPONT=https://kylin.eoscanada.com
 # Buy RAM:
 cleos -u $EOS_ENDPONT system buyram $KYLIN_TEST_ACCOUNT $KYLIN_TEST_ACCOUNT "50.0000 EOS" -p $KYLIN_TEST_ACCOUNT@active
 # Set contract code and abi
