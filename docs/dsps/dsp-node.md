@@ -1,5 +1,6 @@
 DSP Node
 ========
+## Hardware Requirements
 
 ## Prerequisites
 ### Linux

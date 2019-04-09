@@ -4,6 +4,7 @@ IPFS
 ## Standalone
 
 [go-ipfs](https://dist.ipfs.io/#go-ipfs)
+### Hardware Requirements
 
 ### Prerequisites 
 

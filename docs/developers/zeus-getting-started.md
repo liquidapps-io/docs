@@ -9,6 +9,8 @@ zeus-cmd is an Extensible command line tool. SDK extensions come packaged in "bo
 * EOSIO dApp development support
 * DAPP Services support
 
+## Hardware Requirements
+
 ## Prerequisites:
 
 * nodejs == 10.x (nvm recommended)
