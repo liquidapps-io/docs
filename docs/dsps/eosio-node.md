@@ -149,4 +149,4 @@ systemctl start nodeos
 
 ## Optimizations
 
-- https://github.com/atticlab/eos-bp-performance/blob/master/cpu_perf_presentation.pdf
+- [atticlab - cpu performance presentation](https://github.com/atticlab/eos-bp-performance/blob/master/cpu_perf_presentation.pdf)
