@@ -36,6 +36,8 @@ exit
 ```bash
 sudo su -
 setup-dsp
+systemctl stop dsp
+systemctl start dsp
 systemctl enable dsp
 exit
 ```
