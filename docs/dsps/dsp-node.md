@@ -11,27 +11,35 @@ export NVM_DIR="${XDG_CONFIG_HOME/:-$HOME/.}nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
 nvm install 10
 nvm use 10
+exit
 ```
 
 #### Ubuntu/Debian
 ```bash
-sudo apt install make cmake build-essential
+sudo apt install -y make cmake build-essential python
 ```
 
 #### Centos/Fedora/AWS Linux:
 ```bash
-sudo yum install make cmake3
+sudo yum install -y make cmake3 python
 ```
 
 ## Install
 ```bash
 sudo su -
 nvm use 10
+npm install -g pm2
 npm install -g @liquidapps/dsp --unsafe-perm=true
+exit
 ```
 ## Configuration
 ```bash
+sudo su -
 setup-dsp
+systemctl stop dsp
+systemctl start dsp
+systemctl enable dsp
+exit
 ```
 
 And fill in the following details:
@@ -69,3 +77,19 @@ NODEOS_CHAINID:
  - kylin chainID: 5fff1dae8dc8e2fc4d5b23b2c7665c97f9e9d8edf2b6485a86ba311c25639191
 
 
+## Check logs
+```bash
+sudo pm2 logs
+```
+
+output should look like:
+```
+1|demux    | demux listening on port 3195!
+1|demux    | ws connected
+1|demux    | got abi
+0|dapp-services-node  | services listening on port 3115!
+0|dapp-services-node  | service node webhook listening on port 8812!
+2|ipfs-dapp-service-node  | ipfs listening on port 13115!
+2|ipfs-dapp-service-node  | commited to: ipfs://zb2rhmy65F3REf8SZp7De11gxtECBGgUKaLdiDj7MCGCHxbDW
+2|ipfs-dapp-service-node  | ipfs connection established
+```

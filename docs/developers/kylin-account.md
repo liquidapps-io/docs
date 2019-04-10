@@ -15,7 +15,7 @@ export KYLIN_TEST_PUBLIC_KEY=`cat keys.json | jq -e '.keys.active_key.public'`
 cleos wallet import $KYLIN_TEST_PRIVATE_KEY
 
 # Configure endpoint
-export EOS_ENDPONT=https://kylin.eoscanada.com
+export EOS_ENDPOINT=https://kylin-dsp-1.liquidapps.io
 ```
 *Save wallet_password.pwd and keys.json somewhere safe!*
 

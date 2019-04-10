@@ -71,8 +71,7 @@ Packages
 ```
 ### If not using Kubernetes
 ```bash
-npm install @liquidapps@/zeus-cmd
-npm install @liquidapps@/dsp
+npm install -g @liquidapps/zeus-cmd
 cd $(readlink -f `which setup-dsp` | xargs dirname)
 ```
 ### Register Package
@@ -81,19 +80,27 @@ cd $(readlink -f `which setup-dsp` | xargs dirname)
 
 ```bash
 export PACKAGE_ID=package1
+export EOS_CHAIN=mainnet
+#or
+export EOS_CHAIN=kylin
 
+export DSP_ENDPOINT=https://acme-dsp.com
 zeus register dapp-service-provider-package \
     ipfs $DSP_ACCOUNT $PACKAGE_ID \
-    --key yourdspprivatekey \
+    --key $DSP_PRIVATE_KEY \
     --min-stake-quantity "10.0000" \
     --package-period 86400 \
     --quota "1.0000" \
-    --network mainnet \
-    --api-endpoint $MYAPI \
+    --network $EOS_CHAIN \
+    --api-endpoint $DSP_ENDPOINT \
     --package-json-uri https://acme-dsp.com/package1.dsp-package.json
 ```
 
-replace https://api.acme-dsp.com with the service endpoint from 
+output should be:
+```
+⚡registering package:package1
+✔️package:package1 registered successfully
+```
 
 For more options:
 ```bash
@@ -107,5 +114,5 @@ To modify package metadata: use the "modifypkg" action of the dappservices contr
 
 Using cleos:
 ```bash
-cleos -u $EOS_ENDPONT push action dappservices modifypkg "[\"$DSP_ACCOUNT\",\"$PACKAGE_ID\",\"ipfsservice1\",\"$MYAPI\",\"https://acme-dsp.com/modified-package1.dsp-package.json\"]" -p $DSP_ACCOUNT@active
+cleos -u $EOS_ENDPOINT push action dappservices modifypkg "[\"$DSP_ACCOUNT\",\"$PACKAGE_ID\",\"ipfsservice1\",\"$DSP_ENDPOINT\",\"https://acme-dsp.com/modified-package1.dsp-package.json\"]" -p $DSP_ACCOUNT@active
 ```

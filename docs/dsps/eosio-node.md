@@ -93,6 +93,7 @@ http-server-address = 0.0.0.0:8888
 p2p-listen-endpoint = 0.0.0.0:9876
 blocks-dir = "blocks"
 abi-serializer-max-time-ms = 3000
+max-transaction-time = 150000
 wasm-runtime = wabt
 reversible-blocks-db-size-mb = 1024
 contracts-console = true
@@ -119,7 +120,7 @@ state-history-endpoint = 0.0.0.0:8887
 chain-state-db-size-mb = $CHAIN_STATE_SIZE
 EOF
 
-curl $P2P_FILE > p2p.ini
+curl $P2P_FILE > p2p-config.ini
 cat p2p-config.ini | grep "p2p-peer-address" >> $HOME/.local/share/eosio/nodeos/config/config.ini
 ```
 
@@ -128,23 +129,29 @@ First run (from snapshot)
 ```bash
 nodeos --disable-replay-opts --snapshot $HOME/.local/share/eosio/nodeos/data/snapshots/boot.bin --delete-all-blocks
 ```
+Wait until the node fully syncs, then press CTRL+C once, wait for the node to shutdown and proceed to the next step.
 
 ## systemd
 ```bash
-NODEOS_EXEC=`which nodeos`
-sudo su -
+export NODEOS_EXEC=`which nodeos`
+export NODEOS_USER=$USER
+sudo -E su - -p
 cat <<EOF > /lib/systemd/system/nodeos.service
 [Unit]
 Description=nodeos
 After=network.target
 [Service]
-User=$USER
+User=$NODEOS_USER
 ExecStart=$NODEOS_EXEC --disable-replay-opts
 [Install]
 WantedBy=multiuser.target
 EOF
 
 systemctl start nodeos
+systemctl enable nodeos
+exit
+sleep 3
+systemctl status nodeos
 ```
 
 ## Optimizations
