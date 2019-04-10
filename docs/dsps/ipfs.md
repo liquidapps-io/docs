@@ -49,6 +49,8 @@ WantedBy=multiuser.target
 EOF
 
 systemctl start ipfs
+systemctl enable ipfs
+
 exit
 ```
 

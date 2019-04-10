@@ -147,6 +147,7 @@ WantedBy=multiuser.target
 EOF
 
 systemctl start nodeos
+systemctl enable nodeos
 exit
 sleep 3
 systemctl status nodeos
