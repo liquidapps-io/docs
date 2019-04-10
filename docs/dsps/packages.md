@@ -85,7 +85,6 @@ export EOS_CHAIN=mainnet
 export EOS_CHAIN=kylin
 
 export DSP_ENDPOINT=https://acme-dsp.com
-
 zeus register dapp-service-provider-package \
     ipfs $DSP_ACCOUNT $PACKAGE_ID \
     --key $DSP_PRIVATE_KEY \
@@ -115,5 +114,5 @@ To modify package metadata: use the "modifypkg" action of the dappservices contr
 
 Using cleos:
 ```bash
-cleos -u $EOS_ENDPONT push action dappservices modifypkg "[\"$DSP_ACCOUNT\",\"$PACKAGE_ID\",\"ipfsservice1\",\"$DSP_ENDPOINT\",\"https://acme-dsp.com/modified-package1.dsp-package.json\"]" -p $DSP_ACCOUNT@active
+cleos -u $EOS_ENDPOINT push action dappservices modifypkg "[\"$DSP_ACCOUNT\",\"$PACKAGE_ID\",\"ipfsservice1\",\"$DSP_ENDPOINT\",\"https://acme-dsp.com/modified-package1.dsp-package.json\"]" -p $DSP_ACCOUNT@active
 ```
