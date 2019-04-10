@@ -2,7 +2,6 @@ Getting started
 ===============
 
 ## Overview
-
 [Overview](overview)
 
 [Architecture](architecture)

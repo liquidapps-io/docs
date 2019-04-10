@@ -93,6 +93,7 @@ http-server-address = 0.0.0.0:8888
 p2p-listen-endpoint = 0.0.0.0:9876
 blocks-dir = "blocks"
 abi-serializer-max-time-ms = 3000
+max-transaction-time = 150000
 wasm-runtime = wabt
 reversible-blocks-db-size-mb = 1024
 contracts-console = true
