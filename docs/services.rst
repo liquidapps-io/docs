@@ -12,11 +12,9 @@ Services
    services/ipfs/ipfs-service
    services/logs/logs-service
    services/cron/cron-service
-   services/randomness/randomness-service
-   services/custom/new-service
-   services/web-oracles/web-oracles-service
-   services/zero-knowledge/zero-knowledge-service
+   services/oracles/oracles-service
    services/vAccounts/vaccounts-service
+   services/zero-knowledge/zero-knowledge-service
    services/vCPU/vcpu-services
    services/hide/hide-services
    services/gateway/gateway-services
@@ -27,6 +25,7 @@ Services
    services/build/build-service
    services/key-management/key-management-service
    services/history/history-service
+   services/custom/new-service
    
 * :ref:`search`
 
