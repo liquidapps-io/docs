@@ -20,5 +20,5 @@ cleos -u $EOS_ENDPOINT push action dappservices selectpkg "[\"$MY_ACCOUNT\",\"$P
 ## Stake DAPP Tokens for DSP Package
 ```bash
 # Stake your DAPP to the DSP that you selected the service package for:
-cleos -u $EOS_ENDPOINT push action dappservices stake "[\"$MY_ACCOUNT\",\"$PROVIDER\",\"$SERVICE\",\"50.0000 DAPP\"]' -p $MY_ACCOUNT@active
+cleos -u $EOS_ENDPOINT push action dappservices stake "[\"$MY_ACCOUNT\",\"$PROVIDER\",\"$SERVICE\",\"50.0000 DAPP\"]" -p $MY_ACCOUNT@active
 ```
