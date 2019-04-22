@@ -18,7 +18,7 @@ zeus-cmd is an Extensible command line tool. SDK extensions come packaged in "bo
 
 Recommended (otherwise falling back to docker)
 * [eosio.cdt v1.6.1](https://github.com/EOSIO/eosio.cdt/releases/tag/v1.6.1)
-* [eosio v1.7.1](https://github.com/EOSIO/eos/releases/tag/v1.7.1)
+* [eosio v1.7.2](https://github.com/EOSIO/eos/releases/tag/v1.7.2)
 
 
 ## Install Zeus
