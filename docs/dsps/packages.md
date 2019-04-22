@@ -52,7 +52,7 @@ Packages
             "uptime_9s": 5
         },
         "performance":{
-            "95": 500,
+            "95": 500
         }
     },
     "pinning":{
