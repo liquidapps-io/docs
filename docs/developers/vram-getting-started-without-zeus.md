@@ -23,7 +23,7 @@ __   _| |__) |   /  \  | \  / |
 
 Clone into your project directory:
 ```bash
-git clone --recursive https://github.com/liquidapps-io/dist
+git clone  --single-branch --branch v1.2 --recursive https://github.com/liquidapps-io/dist
 ```
 
 
