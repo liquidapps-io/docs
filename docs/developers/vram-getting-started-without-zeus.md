@@ -21,9 +21,9 @@ __   _| |__) |   /  \  | \  / |
 
 ## Install
 
-Clone into your `/contracts` directory:
+Clone into your project directory:
 ```bash
-git clone --recursive https://github.com/liquidapps-io/****UPDATE_THIS****
+git clone --recursive https://github.com/liquidapps-io/dist
 ```
 
 
@@ -33,31 +33,54 @@ vRAM provides a drop in replacement for the multi_index table that is also inter
 
 To access the vRAM table, add the following lines to your smart contract:
 
+### At header:
 ```cpp
-#include "../dappservices/log.hpp"
-#include "../dappservices/multi_index.hpp"
+#include "../dist/contracts/eos/dappservices/multi_index.hpp"
 
 #define DAPPSERVICES_ACTIONS()
     XSIGNAL_DAPPSERVICE_ACTION
-    LOG_DAPPSERVICE_ACTIONS
     IPFS_DAPPSERVICE_ACTIONS
 
 #define DAPPSERVICE_ACTIONS_COMMANDS()
-    IPFS_SVC_COMMANDS()LOG_SVC_COMMANDS()
+    IPFS_SVC_COMMANDS()
+    
+#define CONTRACT_NAME() mycontract
+```
+### After contract class header
+```cpp
+CONTRACT mycontract : public eosio::contract { 
+  using contract::contract; 
+public: 
 
-CONTRACT_START()
+/*** ADD HERE ***/
+DAPPSERVICES_ACTIONS()
+```
 
-...
+### Replace eosio::multi_index
+```cpp
+/*** REPLACE ***/
+    typedef eosio::multi_index<"accounts"_n, account> accounts_t;
 
-/*** REPLACE eosio : ***/
-typedef eosio::multi_index<"accounts"_n, account> accounts_t;
+/*** WITH ***/
+      typedef dapp::multi_index<"accounts"_n, account> accounts_t;
+      
+/*** ADD (for client side query support): ***/
+      typedef eosio::multi_index<".accounts"_n, account> accounts_t_v_abi;
+      TABLE shardbucket {
+          std::vector<char> shard_uri;
+          uint64_t shard;
+          uint64_t primary_key() const { return shard; }
+      };
+      typedef eosio::multi_index<"accounts"_n, shardbucket> accounts_t_abi;
+```
 
-/*** WITH    dapp  : ***/
-typedef dapp::multi_index<"accounts"_n, account> accounts_t;
+### Add DSP actions dispatcher
+```cpp
+/*** REPLACE ***/
+EOSIO_DISPATCH(mycontract,(youraction1)(youraction2)(youraction2))
 
-...
-
-CONTRACT_END((youraction1)(youraction2)(youraction2))
+/*** WITH ***/
+EOSIO_DISPATCH_SVC(mycontract,(youraction1)(youraction2)(youraction2))
 ```
 
 ## Compile
