@@ -10,18 +10,13 @@ Getting started
 
 [Account](dsp-account)
 
-## Manual
+## Deploy
 
 [EOSIO Node](eosio-node)
 
-[IPFS](ipfs)
+[IPFS Node](ipfs)
 
 [DSP Service Node](dsp-node)
-
-
-## Kubernetes
-[Kubernetes](dsp-deployment-kubernetes)
-
 
 ## Configuration
 
@@ -32,3 +27,6 @@ Getting started
 ## Claiming Rewards
 
 [Claim](claim)
+
+## Upgrade Version
+[Upgrade](upgrade)

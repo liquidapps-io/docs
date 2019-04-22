@@ -15,7 +15,6 @@ DSPs
    dsps/storage-backend
    dsps/demux-backend
    dsps/dsp-account
-   dsps/dsp-deployment-kubernetes
    dsps/eosio-node
    dsps/ipfs
    dsps/dsp-node
@@ -23,5 +22,6 @@ DSPs
    dsps/testing
    dsps/claim
    dsps/recovery
+   dsps/upgrade
    
 * :ref:`search`
