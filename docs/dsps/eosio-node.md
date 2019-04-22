@@ -11,7 +11,7 @@ EOSIO Node
 
 ```bash
 # install nodeos
-VERSION=1.7.1
+VERSION=1.7.2
 ```
 
 ### Ubuntu 18.04
