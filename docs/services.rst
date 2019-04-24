@@ -14,7 +14,7 @@ Services
    services/cron/cron-service
    services/oracles/oracles-service
    services/vAccounts/vaccounts-service
-   services/donation/donation-service
+   services/donations/donations-service
 
 * :ref:`search`
 
