@@ -3,17 +3,14 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-Welcome to LiquidApps's documentation!
-======================================
+FAQs
+====
 
 .. toctree::
-   :maxdepth: 2
+   :glob:
    
-   developers
-   dsps
-   services
-   tokens
-   faqs
+   faqs/dapptoken
+   faqs/dsps
+   faqs/vram
    
-
 * :ref:`search`
