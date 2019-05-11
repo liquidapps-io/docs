@@ -29,7 +29,7 @@ git clone  --single-branch --branch v1.2 --recursive https://github.com/liquidap
 
 ## Modify your contract
 
-vRAM provides a drop in replacement for the multi_index table that is also interacted with in the same way as the traditional multi_index table making it very easy and familiar to use.  
+vRAM provides a drop in replacement for the multi_index table that is also interacted with in the same way as the traditional multi_index table making it very easy and familiar to use. Please note that secondary indexes are not currently implemented for dapp::multi_index tables. 
 
 To access the vRAM table, add the following lines to your smart contract:
 

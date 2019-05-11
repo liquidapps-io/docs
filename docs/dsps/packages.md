@@ -107,6 +107,11 @@ For more options:
 zeus register dapp-service-provider-package --help 
 ```
 
+Don't forget to stake CPU/NET to your DSP account:
+```bash
+cleos -u $EOS_ENDPOINT system delegatebw $DSP_ACCOUNT $DSP_ACCOUNT "5.000 EOS" "95.000 EOS" -p $DSP_ACCOUNT@active
+```
+
 #### Modify Package metadata:
 Currently only `package_json_uri` and `api_endpoint` are modifyable.
 

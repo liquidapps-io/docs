@@ -17,19 +17,192 @@ __   _| |__) |   /  \  | \  / |
 
 ## Unbox template
 ```bash
-zeus unbox vram-getting-started
+mkdir mydapp; cd mydapp
+zeus unbox dapp --no-create-dir
+zeus create contract mycontract
 ```
 ## Add your contract logic
 in contract/eos/mycontract/mycontract.cpp
 ```cpp
-/* TODO */
+#pragma once
+
+#include "../dappservices/log.hpp"
+#include "../dappservices/plist.hpp"
+#include "../dappservices/plisttree.hpp"
+#include "../dappservices/multi_index.hpp"
+
+#define DAPPSERVICES_ACTIONS() \
+  XSIGNAL_DAPPSERVICE_ACTION \
+  LOG_DAPPSERVICE_ACTIONS \
+  IPFS_DAPPSERVICE_ACTIONS
+
+/*** IPFS: (xcommit)(xcleanup)(xwarmup) | LOG: (xlogevent)(xlogclear) ***/
+#define DAPPSERVICE_ACTIONS_COMMANDS() \
+  IPFS_SVC_COMMANDS()LOG_SVC_COMMANDS() 
+
+/*** UPDATE CONTRACT NAME ***/
+#define CONTRACT_NAME() mycontract
+
+using std::string;
+
+CONTRACT_START()
+  public:
+
+  /*** YOUR LOGIC ***/
+
+  private:
+    struct [[eosio::table]] vramaccounts {
+      asset    balance;
+      uint64_t primary_key()const { return balance.symbol.code().raw(); }
+    };
+
+    /*** VRAM MULTI_INDEX TABLE ***/
+    typedef dapp::multi_index<"vaccounts"_n, vramaccounts> cold_accounts_t;
+
+    /*** FOR CLIENT SIDE QUERY SUPPORT ***/
+    typedef eosio::multi_index<".vaccounts"_n, vramaccounts> cold_accounts_t_v_abi;
+    TABLE shardbucket {
+      std::vector<char> shard_uri;
+      uint64_t shard;
+      uint64_t primary_key() const { return shard; }
+    };
+    typedef eosio::multi_index<"vaccounts"_n, shardbucket> cold_accounts_t_abi;
+
+/*** ADD ACTIONS ***/
+CONTRACT_END((your)(actions)(here))
 ```
 
 ## Add your contract test
 in tests/mycontract.spec.js
 ```javascript
-// TODO
+import 'mocha';
+require('babel-core/register');
+require('babel-polyfill');
+const { assert } = require('chai');
+const { getNetwork, getCreateKeys } = require('../extensions/tools/eos/utils');
+var Eos = require('eosjs');
+const getDefaultArgs = require('../extensions/helpers/getDefaultArgs');
+const artifacts = require('../extensions/tools/eos/artifacts');
+const deployer = require('../extensions/tools/eos/deployer');
+const { genAllocateDAPPTokens } = require('../extensions/tools/eos/dapp-services');
+
+/*** UPDATE CONTRACT CODE ***/
+var contractCode = 'mycontract';
+
+var ctrt = artifacts.require(`./${contractCode}/`);
+const delay = ms => new Promise(res => setTimeout(res, ms));
+
+describe(`${contractCode} Contract`, () => {
+  var testcontract;
+
+  /*** SET CONTRACT NAME(S) ***/
+  const code = 'airairairai1';
+  const code2 = 'testuser5';
+  var account = code;
+
+  before(done => {
+    (async () => {
+      try {
+        
+        /*** DEPLOY CONTRACT ***/
+        var deployedContract = await deployer.deploy(ctrt, code);
+        
+        /*** DEPLOY ADDITIONAL CONTRACTS ***/
+        var deployedContract2 = await deployer.deploy(ctrt, code2);
+        
+        await genAllocateDAPPTokens(deployedContract, 'ipfs');
+        var selectedNetwork = getNetwork(getDefaultArgs());
+        var config = {
+          expireInSeconds: 120,
+          sign: true,
+          chainId: selectedNetwork.chainId
+        };
+        if (account) {
+          var keys = await getCreateKeys(account);
+          config.keyProvider = keys.privateKey;
+        }
+        var eosvram = deployedContract.eos;
+        config.httpEndpoint = 'http://localhost:13015';
+        eosvram = new Eos(config);
+        testcontract = await eosvram.contract(code);
+        done();
+      } catch (e) {
+        done(e);
+      }
+    })();
+  });
+        
+  /*** DISPLAY NAME FOR TEST, REPLACE 'coldissue' WITH ANYTHING ***/
+  it('coldissue', done => {
+    (async () => {
+      try {        
+       
+        /*** SETUP VARIABLES ***/
+        var symbol = 'AIR';
+                
+        /*** DEFAULT failed = false, SET failed = true IN TRY/CATCH BLOCK TO FAIL TEST ***/
+        var failed = false;
+                    
+        /*** SETUP CHAIN OF ACTIONS ***/
+        await testcontract.create({
+          issuer: code2,
+          maximum_supply: `1000000000.0000 ${symbol}`
+        }, {
+          authorization: `${code}@active`,
+          broadcast: true,
+          sign: true
+        });
+
+        /*** CREATE ADDITIONAL KEYS AS NEEDED ***/
+        var key = await getCreateKeys(code2);
+        
+        var testtoken = testcontract;
+        await testtoken.coldissue({
+          to: code2,
+          quantity: `1000.0000 ${symbol}`,
+          memo: ''
+        }, {
+          authorization: `${code2}@active`,
+          broadcast: true,
+          keyProvider: [key.privateKey],
+          sign: true
+        });
+        
+        /*** ADD DELAY BETWEEN ACTIONS ***/
+        await delay(3000);
+        
+        /*** EXAMPLE TRY/CATCH failed = true ***/
+        try {
+          await testtoken.transfer({
+            from: code2,
+            to: code,
+            quantity: `100.0000 ${symbol}`,
+            memo: ''
+          }, {
+            authorization: `${code2}@active`,
+            broadcast: true,
+            keyProvider: [key.privateKey],
+            sign: true
+          });
+        } catch (e) {
+          failed = true;
+        }
+        
+        /*** ADD CUSTOM FAILURE MESSAGE ***/
+        assert(failed, 'should have failed before withdraw');
+        
+        /*** ADDITIONAL ACTIONS ... ***/
+
+        done();
+      } catch (e) {
+        done(e);
+      }
+    })();
+  });
+});
+
 ```
+
 ## Compile and test
 ```bash
 zeus test
