@@ -37,13 +37,13 @@ To access the vRAM table, add the following lines to your smart contract:
 ```cpp
 #include "../dist/contracts/eos/dappservices/multi_index.hpp"
 
-#define DAPPSERVICES_ACTIONS()
-    XSIGNAL_DAPPSERVICE_ACTION
+#define DAPPSERVICES_ACTIONS() \
+    XSIGNAL_DAPPSERVICE_ACTION \
     IPFS_DAPPSERVICE_ACTIONS
 
-#define DAPPSERVICE_ACTIONS_COMMANDS()
+#define DAPPSERVICE_ACTIONS_COMMANDS() \
     IPFS_SVC_COMMANDS()
-    
+  
 #define CONTRACT_NAME() mycontract
 ```
 ### After contract class header
