@@ -96,7 +96,7 @@ cleos -u $EOS_ENDPOINT system buyram $KYLIN_TEST_ACCOUNT $KYLIN_TEST_ACCOUNT "50
 cleos -u $EOS_ENDPOINT set contract $KYLIN_TEST_ACCOUNT ../contract -p $KYLIN_TEST_ACCOUNT@active
 
 # Set contract permissions
-cleos -u $EOS_ENDPOINT set account permission $KYLIN_TEST_ACCOUNT active "{\"threshold\":1,\"keys\":[\"$KYLIN_TEST_PUBLIC_KEY\"],\"accounts\":[{\"permission\":{\"actor\":\"eosio.code\",\"permission\":\"active\"},\"weight\":1}]}" active -p $KYLIN_TEST_ACCOUNT@active
+cleos -u $EOS_ENDPOINT set account permission $KYLIN_TEST_ACCOUNT active "{"threshold":1,"keys":[{"key":"$KYLIN_TEST_PUBLIC_KEY"}],"accounts":[{"permission":{"actor":"$KYLIN_TEST_ACCOUNT","permission":"eosio.code"},"weight":1}]}" -p $KYLIN_TEST_ACCOUNT@active
 ```
 
 ## Select and stake DAPP for DSP package
