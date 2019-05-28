@@ -46,6 +46,7 @@ Description=IPFS daemon
 After=network.target
 [Service]
 ExecStart=/usr/local/bin/ipfs daemon
+Restart=always
 [Install]
 WantedBy=multiuser.target
 EOF
