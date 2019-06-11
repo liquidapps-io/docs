@@ -1,6 +1,5 @@
 DSP Node
 ========
-## Hardware Requirements
 
 ## Prerequisites
 ### Linux
@@ -32,7 +31,54 @@ npm install -g pm2
 npm install -g @liquidapps/dsp --unsafe-perm=true
 exit
 ```
-## Configuration
+
+## Configure Settings
+```bash
+sudo su -
+mkdir ~/.dsp
+cp $(readlink -f `which setup-dsp` | xargs dirname)/sample-config.toml ~/.dsp/config.toml
+nano ~/.dsp/config.toml
+# edit based on config below
+exit
+```
+
+###sample.config.toml:
+```bash
+[dsp]
+# enter account
+account = "<DSP ACCOUNT>"
+# enter account private key
+private_key = "<DSP PRIVATE KEY>"
+port = 3115
+# configure available services: 
+services_enabled = "ipfs,log,vaccounts,oracle,cron,readfn"
+
+[nodeos]
+host = "localhost"
+port = 8888
+secured = false
+
+# mainnet:
+chainid = "aca376f206b8fc25a6ed44dbdc66547c36c6c33e3a119ffbeaef943642f0e906"
+# kylin: "5fff1dae8dc8e2fc4d5b23b2c7665c97f9e9d8edf2b6485a86ba311c25639191"
+
+# if using zmq_plugin: 
+zmq_port = 5557
+# if using state_history_plugin: 
+websocket_port = 8887
+
+[demux]
+backend = "state_history_plugin"
+# zmq: "zmq_plugin" only if using nodeos with eosrio's version of the ZMQ plugin: https://github.com/eosrio/eos_zmq_plugin
+socket_mode = "sub"
+
+[ipfs]
+protocol = "http"
+host = "localhost"
+port = 5001
+```
+
+## Launch DSP Services
 ```bash
 sudo su -
 setup-dsp
@@ -42,54 +88,38 @@ systemctl enable dsp
 exit
 ```
 
-And fill in the following details:
-### Demux Backend
-DEMUX_BACKEND 
-
-- state_history_plugin 
-- zmq_plugin - only if using nodeos with eosrio's version of the ZMQ plugin: https://github.com/eosrio/eos_zmq_plugin
-
-### IPFS Cluster
-IPFS_HOST - ipfs hostname
-IPFS_PORT (5001) - ipfs port
-IPFS_PROTOCOL (http) - ipfs protocol
-
-hostname, port and protocol of [IPFS Cluster](ipfs-cluster)
-
-
-### DSP Account
-DSP_ACCOUNT and DSP_PRIVATE_KEY - Account and private key of [Generated DSP Account](dsp-account)
-
-### nodeos ENVS
-[EOS Node Settings](eosio-node)
-
-NODEOS_HOST - nodeos hostname
-
-NODEOS_PORT (8888) - nodeos port 
-
-NODEOS_ZMQ_PORT (5557) - if using zmq_plugin
-
-NODEOS_WEBSOCKET_PORT (8887) - if using state_history_plugin
-
-NODEOS_CHAINID:
-
- - mainnet chainID: aca376f206b8fc25a6ed44dbdc66547c36c6c33e3a119ffbeaef943642f0e906
- - kylin chainID: 5fff1dae8dc8e2fc4d5b23b2c7665c97f9e9d8edf2b6485a86ba311c25639191
-
-
 ## Check logs
 ```bash
 sudo pm2 logs
 ```
 
-output should look like:
+###Output sample:
 ```
-1|demux    | demux listening on port 3195!
-1|demux    | ws connected
-1|demux    | got abi
-0|dapp-services-node  | services listening on port 3115!
-0|dapp-services-node  | service node webhook listening on port 8812!
-2|ipfs-dapp-service-node  | ipfs listening on port 13115!
-2|ipfs-dapp-service-node  | commited to: ipfs://zb2rhmy65F3REf8SZp7De11gxtECBGgUKaLdiDj7MCGCHxbDW
-2|ipfs-dapp-service-node  | ipfs connection established
+/root/.pm2/logs/readfn-dapp-service-node-error.log last 15 lines:
+/root/.pm2/logs/dapp-services-node-out.log last 15 lines:
+0|dapp-ser | 2019-06-03T00:46:49: services listening on port 3115!
+0|dapp-ser | 2019-06-03T00:46:49: service node webhook listening on port 8812!
+
+/root/.pm2/logs/demux-out.log last 15 lines:
+1|demux    | 2019-06-05T14:41:12: count 1
+
+/root/.pm2/logs/ipfs-dapp-service-node-out.log last 15 lines:
+2|ipfs-dap | 2019-06-04T19:03:04: commited to: ipfs://zb2rhXKc8zSVppFhKm8pHLBuyGb7vPeCnpZqcmjFnDLA9LLBb
+
+/root/.pm2/logs/log-dapp-service-node-out.log last 15 lines:
+3|log-dapp | 2019-06-03T00:46:49: log listening on port 13110!
+3|log-dapp | 2019-06-03T00:46:52: LOG SVC NODE 2019-06-03T00:46:52.413Z INFO  index.js:global:0             Started Service
+
+/root/.pm2/logs/vaccounts-dapp-service-node-out.log last 15 lines:
+4|vaccount | 2019-06-03T00:46:50: vaccounts listening on port 13129!
+
+/root/.pm2/logs/oracle-dapp-service-node-out.log last 15 lines:
+5|oracle-d | 2019-06-03T00:46:50: oracle listening on port 13112!
+
+/root/.pm2/logs/cron-dapp-service-node-out.log last 15 lines:
+6|cron-dap | 2019-06-03T00:46:50: cron listening on port 13131!
+
+/root/.pm2/logs/readfn-dapp-service-node-out.log last 15 lines:
+7|readfn-d | 2019-06-03T00:46:50: readfn listening on port 13141!
+
 ```
