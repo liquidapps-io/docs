@@ -42,7 +42,7 @@ nano ~/.dsp/config.toml
 exit
 ```
 
-###sample.config.toml:
+### sample.config.toml:
 ```bash
 [dsp]
 # enter account
@@ -93,7 +93,7 @@ exit
 sudo pm2 logs
 ```
 
-###Output sample:
+### Output sample:
 ```
 /root/.pm2/logs/readfn-dapp-service-node-error.log last 15 lines:
 /root/.pm2/logs/dapp-services-node-out.log last 15 lines:
