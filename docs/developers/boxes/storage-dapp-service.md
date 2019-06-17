@@ -32,4 +32,4 @@ zeus unbox storage-dapp-service
 * ```zeus storage put --help```
 
 
-## (Source)[https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups//opt/atlassian/pipelines/agent/build/zeus/boxes/groups/services/storage-dapp-service]
+## [Source](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/undefined/storage-dapp-service)

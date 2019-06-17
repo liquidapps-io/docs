@@ -53,4 +53,4 @@ zeus unbox dapp-services
 * ```zeus start-localenv 21-eos-local-services-all-dapp-services --help```
 
 
-## (Source)[https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups//opt/atlassian/pipelines/agent/build/zeus/boxes/groups/dapp-network/dapp-services]
+## [Source](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/undefined/dapp-services)

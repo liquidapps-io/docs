@@ -30,4 +30,4 @@ zeus run frontend main
 
 
 
-## (Source)[https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups//opt/atlassian/pipelines/agent/build/zeus/boxes/groups/devenv/ide]
+## [Source](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/undefined/ide)

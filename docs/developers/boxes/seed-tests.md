@@ -24,4 +24,4 @@ zeus unbox seed-tests
 
 
 
-## (Source)[https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups//opt/atlassian/pipelines/agent/build/zeus/boxes/groups/seeds/seed-tests]
+## [Source](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/undefined/seed-tests)

@@ -64,4 +64,4 @@ zeus airdrop cleanup myairdrop
 * ```zeus airdrop transform-snapshot --help```
 
 
-## (Source)[https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups//opt/atlassian/pipelines/agent/build/zeus/boxes/groups/economics/airdrop]
+## [Source](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/undefined/airdrop)

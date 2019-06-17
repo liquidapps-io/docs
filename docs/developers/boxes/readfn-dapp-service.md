@@ -28,4 +28,4 @@ zeus unbox readfn-dapp-service
 
 
 
-## (Source)[https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups//opt/atlassian/pipelines/agent/build/zeus/boxes/groups/services/readfn-dapp-service]
+## [Source](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/undefined/readfn-dapp-service)

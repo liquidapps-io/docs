@@ -27,4 +27,4 @@ zeus unbox sample-zeus-extension
 * ```zeus sample-parentcmd sample-subcmd --help```
 
 
-## (Source)[https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups//opt/atlassian/pipelines/agent/build/zeus/boxes/groups/sample/sample-zeus-extension]
+## [Source](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/undefined/sample-zeus-extension)

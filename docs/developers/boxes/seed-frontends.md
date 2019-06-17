@@ -29,4 +29,4 @@ zeus unbox seed-frontends
 * ```zeus run frontend --help```
 
 
-## (Source)[https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups//opt/atlassian/pipelines/agent/build/zeus/boxes/groups/frontends/seed-frontends]
+## [Source](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/undefined/seed-frontends)
