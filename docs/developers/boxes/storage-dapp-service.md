@@ -36,8 +36,7 @@ zeus unbox storage-dapp-service
 
 
 ### Model Instances
-#### dapp-services
-##### storage
+#### dapp-services/storage.json
 ```json
 {
   "name": "storage",
@@ -77,6 +76,4 @@ zeus unbox storage-dapp-service
   }
 }
 ```
-
-
 ## [Source](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/services/storage-dapp-service)

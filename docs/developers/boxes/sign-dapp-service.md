@@ -31,8 +31,7 @@ zeus unbox sign-dapp-service
 
 
 ### Model Instances
-#### dapp-services
-##### sign
+#### dapp-services/sign.json
 ```json
 {
   "name": "sign",
@@ -90,6 +89,4 @@ zeus unbox sign-dapp-service
   }
 }
 ```
-
-
 ## [Source](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/services/sign-dapp-service)

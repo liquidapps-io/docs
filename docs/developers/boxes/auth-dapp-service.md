@@ -31,8 +31,7 @@ zeus unbox auth-dapp-service
 
 
 ### Model Instances
-#### dapp-services
-##### auth
+#### dapp-services/auth.json
 ```json
 {
   "name": "auth",
@@ -66,6 +65,4 @@ zeus unbox auth-dapp-service
   }
 }
 ```
-
-
 ## [Source](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/services/auth-dapp-service)

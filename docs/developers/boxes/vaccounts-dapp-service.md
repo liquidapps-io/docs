@@ -32,8 +32,7 @@ zeus unbox vaccounts-dapp-service
 
 
 ### Model Instances
-#### dapp-services
-##### vaccounts
+#### dapp-services/vaccounts.json
 ```json
 {
   "name": "vaccounts",
@@ -56,6 +55,4 @@ zeus unbox vaccounts-dapp-service
   }
 }
 ```
-
-
 ## [Source](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/services/vaccounts-dapp-service)

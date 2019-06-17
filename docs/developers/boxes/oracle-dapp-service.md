@@ -33,8 +33,7 @@ zeus unbox oracle-dapp-service
 
 
 ### Model Instances
-#### dapp-services
-##### oracle
+#### dapp-services/oracle.json
 ```json
 {
   "name": "oracle",
@@ -73,6 +72,4 @@ zeus unbox oracle-dapp-service
   }
 }
 ```
-
-
 ## [Source](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/services/oracle-dapp-service)

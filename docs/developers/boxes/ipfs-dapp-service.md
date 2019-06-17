@@ -35,8 +35,7 @@ zeus unbox ipfs-dapp-service
 
 
 ### Model Instances
-#### dapp-services
-##### ipfs
+#### dapp-services/ipfs.json
 ```json
 {
   "name": "ipfs",
@@ -89,6 +88,4 @@ zeus unbox ipfs-dapp-service
   }
 }
 ```
-
-
 ## [Source](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/services/ipfs-dapp-service)

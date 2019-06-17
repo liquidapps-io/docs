@@ -34,8 +34,7 @@ zeus unbox history-dapp-service
 
 
 ### Model Instances
-#### dapp-services
-##### history
+#### dapp-services/history.json
 ```json
 {
   "name": "history",
@@ -85,6 +84,4 @@ zeus unbox history-dapp-service
   }
 }
 ```
-
-
 ## [Source](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/services/history-dapp-service)

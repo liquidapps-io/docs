@@ -28,8 +28,7 @@ zeus unbox log-dapp-service
 
 
 ### Model Instances
-#### dapp-services
-##### log
+#### dapp-services/log.json
 ```json
 {
   "name": "log",
@@ -70,6 +69,4 @@ zeus unbox log-dapp-service
   }
 }
 ```
-
-
 ## [Source](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/services/log-dapp-service)

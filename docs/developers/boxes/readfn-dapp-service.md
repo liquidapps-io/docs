@@ -32,8 +32,7 @@ zeus unbox readfn-dapp-service
 
 
 ### Model Instances
-#### dapp-services
-##### readfn
+#### dapp-services/readfn.json
 ```json
 {
   "name": "readfn",
@@ -53,6 +52,4 @@ zeus unbox readfn-dapp-service
   }
 }
 ```
-
-
 ## [Source](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/services/readfn-dapp-service)

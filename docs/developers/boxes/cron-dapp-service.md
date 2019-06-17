@@ -30,8 +30,7 @@ zeus unbox cron-dapp-service
 
 
 ### Model Instances
-#### dapp-services
-##### cron
+#### dapp-services/cron.json
 ```json
 {
   "name": "cron",
@@ -58,6 +57,4 @@ zeus unbox cron-dapp-service
   }
 }
 ```
-
-
 ## [Source](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/services/cron-dapp-service)

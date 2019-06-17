@@ -54,14 +54,11 @@ zeus deploy frontend main --ipfs --register cardgame1111
 
 
 ### Model Instances
-#### contract-deployments
-##### cardgame
+#### contract-deployments/cardgame.json
 ```json
 {
   "contract": "cardgame",
   "account": "cardgame1111"
 }
 ```
-
-
 ## [Source](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/sample/cardgame)

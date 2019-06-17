@@ -35,8 +35,7 @@ zeus unbox helloworld
 
 
 ### Model Instances
-#### boxmaps
-##### 00-mapping
+#### boxmaps/00-mapping.json
 ```json
 {
   "create-extensions": "ipfs://QmTU9sudGztiCQot9m95z1BP9b1qUvKH36q8Hz9sj4nDCL",
@@ -97,6 +96,4 @@ zeus unbox helloworld
   "dapp-services": "ipfs://QmPdbayaUjvGhNjeVsvy4v8FaHEwzNrr9eAGi3i8zJnj8m"
 }
 ```
-
-
 ## [Source](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/repos/unbox-extensions)
