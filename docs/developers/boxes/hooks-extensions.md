@@ -1,7 +1,9 @@
 
-hooks-extensions 
+hooks-extensions
 ====================
 
+
+undefined
 
 
 
@@ -19,6 +21,7 @@ zeus unbox hooks-extensions
 ```
 
 
+
 ## Zeus Command Extensions
 
 ### Subcommands
@@ -27,7 +30,6 @@ zeus unbox hooks-extensions
 * ```zeus hook post-stage --help```
 
 * ```zeus hook post-unpack --help```
-
 
 
 

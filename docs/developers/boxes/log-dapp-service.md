@@ -1,7 +1,9 @@
 
-log-dapp-service 
+log-dapp-service
 ====================
 
+
+undefined
 
 
 
@@ -10,8 +12,9 @@ log-dapp-service
 * [`dapp-services`](dapp-services.md)
 
 
+
 ## Contracts
-* [`logservice`](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/services/log-dapp-service/contracts/eos/logservice)
+* [`logservice`](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/services/log-dapp-service/contracts/eos/dappservices)
 * [`logconsumer`](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/services/log-dapp-service/contracts/eos/logconsumer)
 ## Install
 ```bash

@@ -1,7 +1,9 @@
 
-oracle-dapp-service 
+oracle-dapp-service
 ====================
 
+
+undefined
 
 
 
@@ -15,8 +17,9 @@ oracle-dapp-service
 * [`tronweb`](http://npmjs.com/package/tronweb)
 * [`ripple-lib`](http://npmjs.com/package/ripple-lib)
 * [`bitcoin-core`](http://npmjs.com/package/bitcoin-core)
+
 ## Contracts
-* [`oracleservice`](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/services/oracle-dapp-service/contracts/eos/oracleservice)
+* [`oracleservice`](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/services/oracle-dapp-service/contracts/eos/dappservices)
 * [`oracleconsumer`](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/services/oracle-dapp-service/contracts/eos/oracleconsumer)
 ## Install
 ```bash

@@ -1,7 +1,9 @@
 
-vaccounts-dapp-service 
+vaccounts-dapp-service
 ====================
 
+
+undefined
 
 
 
@@ -14,8 +16,9 @@ vaccounts-dapp-service
 * [`ipfs-dapp-service`](ipfs-dapp-service.md)
 ### npm packages
 * [`node-fetch`](http://npmjs.com/package/node-fetch)
+
 ## Contracts
-* [`vaccountsservice`](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/services/vaccounts-dapp-service/contracts/eos/vaccountsservice)
+* [`vaccountsservice`](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/services/vaccounts-dapp-service/contracts/eos/dappservices)
 * [`vaccountsconsumer`](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/services/vaccounts-dapp-service/contracts/eos/vaccountsconsumer)
 ## Install
 ```bash

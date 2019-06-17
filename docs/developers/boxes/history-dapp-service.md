@@ -1,7 +1,9 @@
 
-history-dapp-service 
+history-dapp-service
 ====================
 
+
+undefined
 
 
 
@@ -13,22 +15,22 @@ history-dapp-service
 * [`hooks-cpp-contracts`](hooks-cpp-contracts.md)
 
 
+
 ## Contracts
-* [`historyservice`](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/services/history-dapp-service/contracts/eos/historyservice)
+* [`historyservice`](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/services/history-dapp-service/contracts/eos/dappservices)
 ## Install
 ```bash
 zeus unbox history-dapp-service
 ```
 
 
+
 ## Zeus Command Extensions
 * ```zeus history  --help```
-
 ### Subcommands
 * ```zeus history get --help```
 
 * ```zeus history subscribe --help```
-
 
 
 

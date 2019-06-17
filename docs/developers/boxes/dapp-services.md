@@ -1,7 +1,9 @@
 
-dapp-services 
+dapp-services
 ====================
 
+
+undefined
 
 
 
@@ -29,12 +31,14 @@ dapp-services
 * [`js-sha256`](http://npmjs.com/package/js-sha256)
 * [`body-parser`](http://npmjs.com/package/body-parser)
 * [`mkdirp`](http://npmjs.com/package/mkdirp)
+
 ## Contracts
 * [`dappservices`](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/dapp-network/dapp-services/contracts/eos/dappservices)
 ## Install
 ```bash
 zeus unbox dapp-services
 ```
+
 
 
 ## Zeus Command Extensions
@@ -51,7 +55,6 @@ zeus unbox dapp-services
 * ```zeus start-localenv 20-eos-local-dapp-services --help```
 
 * ```zeus start-localenv 21-eos-local-services-all-dapp-services --help```
-
 
 ## Models
 ### New Model Types

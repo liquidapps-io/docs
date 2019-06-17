@@ -1,7 +1,9 @@
 
-storage-dapp-service 
+storage-dapp-service
 ====================
 
+
+undefined
 
 
 
@@ -13,24 +15,24 @@ storage-dapp-service
 * [`hooks-cpp-contracts`](hooks-cpp-contracts.md)
 
 
+
 ## Contracts
-* [`storageservice`](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/services/storage-dapp-service/contracts/eos/storageservice)
+* [`storageservice`](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/services/storage-dapp-service/contracts/eos/dappservices)
 ## Install
 ```bash
 zeus unbox storage-dapp-service
 ```
 
 
+
 ## Zeus Command Extensions
 * ```zeus storage  --help```
-
 ### Subcommands
 * ```zeus storage get --help```
 
 * ```zeus storage migrate-provider --help```
 
 * ```zeus storage put --help```
-
 
 
 

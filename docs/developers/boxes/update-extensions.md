@@ -1,7 +1,9 @@
 
-update-extensions 
+update-extensions
 ====================
 
+
+undefined
 
 
 
@@ -25,12 +27,11 @@ zeus unbox update-extensions
 ```bash
 zeus update
 ```
+
 ## Zeus Command Extensions
 * ```zeus update  --help```
-
 ### Subcommands
 * ```zeus update eos --help```
-
 
 
 

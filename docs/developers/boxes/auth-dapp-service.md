@@ -1,7 +1,9 @@
 
-auth-dapp-service 
+auth-dapp-service
 ====================
 
+
+undefined
 
 
 
@@ -13,8 +15,9 @@ auth-dapp-service
 * [`hooks-cpp-contracts`](hooks-cpp-contracts.md)
 
 
+
 ## Contracts
-* [`authservice`](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/services/auth-dapp-service/contracts/eos/authservice)
+* [`authservice`](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/services/auth-dapp-service/contracts/eos/dappservices)
 * [`authenticator`](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/services/auth-dapp-service/contracts/eos/authenticator)
 ## Install
 ```bash

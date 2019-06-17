@@ -1,7 +1,9 @@
 
-eos-detective-reports 
+eos-detective-reports
 ====================
 
+
+undefined
 
 
 
@@ -13,6 +15,7 @@ eos-detective-reports
 * [`mocha`](mocha.md)
 * [`eos-common`](eos-common.md)
 * [`hooks-cpp-contracts`](hooks-cpp-contracts.md)
+
 
 
 ## Contracts

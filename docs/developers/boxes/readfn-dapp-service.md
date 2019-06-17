@@ -1,7 +1,9 @@
 
-readfn-dapp-service 
+readfn-dapp-service
 ====================
 
+
+undefined
 
 
 
@@ -13,8 +15,9 @@ readfn-dapp-service
 * [`hooks-cpp-contracts`](hooks-cpp-contracts.md)
 
 
+
 ## Contracts
-* [`readfnservice`](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/services/readfn-dapp-service/contracts/eos/readfnservice)
+* [`readfnservice`](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/services/readfn-dapp-service/contracts/eos/dappservices)
 * [`readfnconsumer`](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/services/readfn-dapp-service/contracts/eos/readfnconsumer)
 ## Install
 ```bash
@@ -22,10 +25,9 @@ zeus unbox readfn-dapp-service
 ```
 
 
+
 ## Zeus Command Extensions
 * ```zeus readfn  --help```
-
-
 
 
 

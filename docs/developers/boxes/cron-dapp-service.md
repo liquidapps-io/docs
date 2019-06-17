@@ -1,7 +1,9 @@
 
-cron-dapp-service 
+cron-dapp-service
 ====================
 
+
+undefined
 
 
 
@@ -12,8 +14,9 @@ cron-dapp-service
 * [`hooks-cpp-contracts`](hooks-cpp-contracts.md)
 ### npm packages
 * [`node-fetch`](http://npmjs.com/package/node-fetch)
+
 ## Contracts
-* [`cronservice`](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/services/cron-dapp-service/contracts/eos/cronservice)
+* [`cronservice`](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/services/cron-dapp-service/contracts/eos/dappservices)
 * [`cronconsumer`](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/services/cron-dapp-service/contracts/eos/cronconsumer)
 ## Install
 ```bash

@@ -1,7 +1,9 @@
 
-upgrade-extensions 
+upgrade-extensions
 ====================
 
+
+undefined
 
 
 
@@ -21,10 +23,9 @@ zeus unbox upgrade-extensions
 ```bash
 zeus upgrade
 ```
+
 ## Zeus Command Extensions
 * ```zeus upgrade  --help```
-
-
 
 
 

@@ -1,7 +1,9 @@
 
-templates-emptycontract-eos-cpp 
+templates-emptycontract-eos-cpp
 ====================
 
+
+undefined
 
 
 
@@ -29,11 +31,11 @@ zeus unbox templates-emptycontract-eos-cpp
 ```bash
 zeus create contract somecontract
 ```
+
 ## Zeus Command Extensions
 
 ### Subcommands
 * ```zeus create contract --help```
-
 
 
 

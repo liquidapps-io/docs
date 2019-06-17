@@ -1,7 +1,9 @@
 
-eos-extensions 
+eos-extensions
 ====================
 
+
+undefined
 
 
 
@@ -21,6 +23,7 @@ zeus unbox eos-extensions
 ```bash
 zeus start-localenv
 ```
+
 ## Zeus Command Extensions
 
 ### Subcommands
@@ -35,7 +38,6 @@ zeus start-localenv
 * ```zeus start-localenv 02-eos-local-nodeos --help```
 
 * ```zeus start-localenv 05-eos-local-bios --help```
-
 
 
 

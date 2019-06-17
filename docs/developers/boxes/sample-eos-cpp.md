@@ -1,7 +1,9 @@
 
-sample-eos-cpp 
+sample-eos-cpp
 ====================
 
+
+undefined
 
 
 
@@ -12,6 +14,7 @@ sample-eos-cpp
 * [`seed-migrations`](seed-migrations.md)
 * [`hooks-cpp-contracts`](hooks-cpp-contracts.md)
 * [`eos-common`](eos-common.md)
+
 
 
 ## Contracts

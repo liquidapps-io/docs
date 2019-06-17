@@ -1,7 +1,9 @@
 
-token 
+token
 ====================
 
+
+undefined
 
 
 
@@ -11,6 +13,7 @@ token
 * [`seed-eos`](seed-eos.md)
 * [`seed-models`](seed-models.md)
 * [`hooks-cpp-contracts`](hooks-cpp-contracts.md)
+
 
 
 ## Contracts
@@ -28,11 +31,11 @@ zeus create token ...
 ```bash
 zeus migrate
 ```
+
 ## Zeus Command Extensions
 
 ### Subcommands
 * ```zeus create token --help```
-
 
 ## Models
 ### New Model Types

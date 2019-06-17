@@ -1,7 +1,9 @@
 
-seed-frontends 
+seed-frontends
 ====================
 
+
+undefined
 
 
 
@@ -19,6 +21,7 @@ zeus unbox seed-frontends
 ```
 
 
+
 ## Zeus Command Extensions
 
 ### Subcommands
@@ -27,7 +30,6 @@ zeus unbox seed-frontends
 * ```zeus deploy frontend --help```
 
 * ```zeus run frontend --help```
-
 
 
 

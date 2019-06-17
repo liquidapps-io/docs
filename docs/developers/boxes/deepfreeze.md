@@ -1,7 +1,9 @@
 
-deepfreeze 
+deepfreeze
 ====================
 
+
+undefined
 
 
 
@@ -16,6 +18,7 @@ deepfreeze
 * [`all-dapp-services`](all-dapp-services.md)
 * [`token`](token.md)
 * [`seed-models`](seed-models.md)
+
 
 
 ## Contracts

@@ -1,7 +1,9 @@
 
-airdrop 
+airdrop
 ====================
 
+
+undefined
 
 
 
@@ -14,6 +16,7 @@ airdrop
 * [`aws-sdk`](http://npmjs.com/package/aws-sdk)
 * [`node-fetch`](http://npmjs.com/package/node-fetch)
 * [`async-csv`](http://npmjs.com/package/async-csv)
+
 ## Contracts
 * [`airdrop`](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/economics/airdrop/contracts/eos/airdrop)
 ## Install
@@ -45,9 +48,9 @@ zeus airdrop init myairdrop
 ```bash
 zeus airdrop cleanup myairdrop
 ```
+
 ## Zeus Command Extensions
 * ```zeus airdrop  --help```
-
 ### Subcommands
 * ```zeus airdrop cleanup --help```
 
@@ -62,7 +65,6 @@ zeus airdrop cleanup myairdrop
 * ```zeus airdrop populate-entries --help```
 
 * ```zeus airdrop transform-snapshot --help```
-
 
 ## Models
 ### New Model Types

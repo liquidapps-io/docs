@@ -1,7 +1,9 @@
 
-migrations-extensions 
+migrations-extensions
 ====================
 
+
+undefined
 
 
 
@@ -27,10 +29,9 @@ zeus migrate
 ```bash
 zeus migrate --no-reset
 ```
+
 ## Zeus Command Extensions
 * ```zeus migrate  --help```
-
-
 
 
 

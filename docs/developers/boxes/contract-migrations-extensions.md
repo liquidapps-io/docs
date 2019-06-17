@@ -1,7 +1,9 @@
 
-contract-migrations-extensions 
+contract-migrations-extensions
 ====================
 
+
+undefined
 
 
 
@@ -26,11 +28,11 @@ zeus migrate
 ```bash
 zeus migrate --no-reset
 ```
+
 ## Zeus Command Extensions
 
 ### Subcommands
 * ```zeus create contract-deployment --help```
-
 
 ## Models
 ### New Model Types

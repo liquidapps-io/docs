@@ -1,7 +1,9 @@
 
-sign-dapp-service 
+sign-dapp-service
 ====================
 
+
+undefined
 
 
 
@@ -13,8 +15,9 @@ sign-dapp-service
 * [`hooks-cpp-contracts`](hooks-cpp-contracts.md)
 
 
+
 ## Contracts
-* [`signservice`](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/services/sign-dapp-service/contracts/eos/signservice)
+* [`signservice`](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/services/sign-dapp-service/contracts/eos/dappservices)
 * [`signer`](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/services/sign-dapp-service/contracts/eos/signer)
 ## Install
 ```bash

@@ -1,7 +1,9 @@
 
-ipfs-dapp-service 
+ipfs-dapp-service
 ====================
 
+
+undefined
 
 
 
@@ -16,8 +18,9 @@ ipfs-dapp-service
 * [`lru-cache`](http://npmjs.com/package/lru-cache)
 * [`dfuse-eoshttp-js`](http://npmjs.com/package/dfuse-eoshttp-js)
 * [`node-fetch`](http://npmjs.com/package/node-fetch)
+
 ## Contracts
-* [`ipfsservice`](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/services/ipfs-dapp-service/contracts/eos/ipfsservice)
+* [`ipfsservice`](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/services/ipfs-dapp-service/contracts/eos/dappservices)
 * [`ipfsconsumer`](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/services/ipfs-dapp-service/contracts/eos/ipfsconsumer)
 ## Install
 ```bash
@@ -25,10 +28,9 @@ zeus unbox ipfs-dapp-service
 ```
 
 
+
 ## Zeus Command Extensions
 * ```zeus get-table.row  --help```
-
-
 
 
 
