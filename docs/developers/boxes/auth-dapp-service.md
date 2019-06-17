@@ -71,5 +71,5 @@ zeus unbox auth-dapp-service
 }
 ```
 ## Tests 
-* [authenticator.spec.js](undefined/test/authenticator.spec.js)
+* [authenticator.spec.js](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/services/auth-dapp-service/test/authenticator.spec.js)
 ## [Source](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/services/auth-dapp-service)

@@ -48,5 +48,5 @@ zeus test
 
 
 ## Tests 
-* [helloworld.spec.js](undefined/test/helloworld.spec.js)
+* [helloworld.spec.js](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/eos-sdk/sample-eos-cpp/test/helloworld.spec.js)
 ## [Source](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/eos-sdk/sample-eos-cpp)

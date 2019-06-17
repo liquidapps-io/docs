@@ -81,5 +81,5 @@ zeus unbox storage-dapp-service
 }
 ```
 ## Tests 
-* [storage.spec.js](undefined/test/storage.spec.js)
+* [storage.spec.js](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/services/storage-dapp-service/test/storage.spec.js)
 ## [Source](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/services/storage-dapp-service)

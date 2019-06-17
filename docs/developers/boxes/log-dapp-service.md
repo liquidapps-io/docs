@@ -75,5 +75,5 @@ zeus unbox log-dapp-service
 }
 ```
 ## Tests 
-* [logconsumer.spec.js](undefined/test/logconsumer.spec.js)
+* [logconsumer.spec.js](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/services/log-dapp-service/test/logconsumer.spec.js)
 ## [Source](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/services/log-dapp-service)

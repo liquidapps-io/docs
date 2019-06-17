@@ -93,6 +93,6 @@ zeus unbox ipfs-dapp-service
 }
 ```
 ## Tests 
-* [dappservices.spec.js](undefined/test/dappservices.spec.js)
-* [ipfsconsumer.spec.js](undefined/test/ipfsconsumer.spec.js)
+* [dappservices.spec.js](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/services/ipfs-dapp-service/test/dappservices.spec.js)
+* [ipfsconsumer.spec.js](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/services/ipfs-dapp-service/test/ipfsconsumer.spec.js)
 ## [Source](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/services/ipfs-dapp-service)
