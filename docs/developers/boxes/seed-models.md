@@ -9,7 +9,7 @@ seed-models
 ### Boxes
 * [`seed`](seed.md)
 ### npm packages
-* `js-yaml`
+* [`js-yaml`](http://npmjs.com/package/js-yaml)
 
 
 ## Install

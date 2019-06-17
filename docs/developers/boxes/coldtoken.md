@@ -18,7 +18,7 @@ coldtoken
 
 
 ## Contracts
-* `coldtoken`
+* [`coldtoken`](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/sample/coldtoken/contracts/eos/coldtoken)
 ## Install
 ```bash
 zeus unbox coldtoken

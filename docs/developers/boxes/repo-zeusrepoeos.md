@@ -27,7 +27,7 @@ zeus unbox repo-zeusrepoeos
 
 
 ### Model Instances
-#### repos/zeusrepoeos.json
+#### [repos/zeusrepoeos.json](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/repos/repo-zeusrepoeos/models/repos/zeusrepoeos.json)
 ```json
 {
   "type": "eos",

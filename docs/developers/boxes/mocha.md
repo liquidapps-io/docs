@@ -10,9 +10,9 @@ mocha
 * [`seed-tests`](seed-tests.md)
 * [`hooks-npm`](hooks-npm.md)
 ### npm packages
-* `mocha`
-* `mocha-junit-and-console-reporter`
-* `chai`
+* [`mocha`](http://npmjs.com/package/mocha)
+* [`mocha-junit-and-console-reporter`](http://npmjs.com/package/mocha-junit-and-console-reporter)
+* [`chai`](http://npmjs.com/package/chai)
 
 
 ## Install

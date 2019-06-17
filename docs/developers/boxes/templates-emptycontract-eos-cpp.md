@@ -39,7 +39,7 @@ zeus create contract somecontract
 
 
 ### Model Instances
-#### templates/emptycontract-eos-cpp.json
+#### [templates/emptycontract-eos-cpp.json](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/templates/templates-emptycontract-eos-cpp/models/templates/emptycontract-eos-cpp.json)
 ```json
 {
   "name": "emptycontract-eos-cpp",

@@ -14,8 +14,8 @@ auth-dapp-service
 
 
 ## Contracts
-* `authservice`
-* `authenticator`
+* [`authservice`](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/services/auth-dapp-service/contracts/eos/authservice)
+* [`authenticator`](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/services/auth-dapp-service/contracts/eos/authenticator)
 ## Install
 ```bash
 zeus unbox auth-dapp-service
@@ -31,7 +31,7 @@ zeus unbox auth-dapp-service
 
 
 ### Model Instances
-#### dapp-services/auth.json
+#### [dapp-services/auth.json](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/services/auth-dapp-service/models/dapp-services/auth.json)
 ```json
 {
   "name": "auth",

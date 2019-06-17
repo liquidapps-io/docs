@@ -17,20 +17,20 @@ dapp-services
 * [`hooks-cpp-contracts`](hooks-cpp-contracts.md)
 * [`mocha`](mocha.md)
 ### npm packages
-* `big-integer`
-* `bytebuffer`
-* `cors`
-* `eosjs@16.0.9`
-* `express`
-* `ipfs-api`
-* `http-proxy`
-* `raw-body`
-* `content-type`
-* `js-sha256`
-* `body-parser`
-* `mkdirp`
+* [`big-integer`](http://npmjs.com/package/big-integer)
+* [`bytebuffer`](http://npmjs.com/package/bytebuffer)
+* [`cors`](http://npmjs.com/package/cors)
+* [`eosjs@16.0.9`](http://npmjs.com/package/eosjs@16.0.9)
+* [`express`](http://npmjs.com/package/express)
+* [`ipfs-api`](http://npmjs.com/package/ipfs-api)
+* [`http-proxy`](http://npmjs.com/package/http-proxy)
+* [`raw-body`](http://npmjs.com/package/raw-body)
+* [`content-type`](http://npmjs.com/package/content-type)
+* [`js-sha256`](http://npmjs.com/package/js-sha256)
+* [`body-parser`](http://npmjs.com/package/body-parser)
+* [`mkdirp`](http://npmjs.com/package/mkdirp)
 ## Contracts
-* `dappservices`
+* [`dappservices`](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/dapp-network/dapp-services/contracts/eos/dappservices)
 ## Install
 ```bash
 zeus unbox dapp-services
@@ -58,40 +58,40 @@ zeus unbox dapp-services
 * dapp-services
 * deploy-dapp-services
 ### Model Instances
-#### captured-events/dappservice.request.1.json
+#### [captured-events/dappservice.request.1.json](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/dapp-network/dapp-services/models/captured-events/dappservice.request.1.json)
 ```json
 {
   "eventType": "service_request",
   "webhook": "http://localhost:17624",
   "testOnly": true
 }
-```,#### captured-events/dappservice.request.json
+```,#### [captured-events/dappservice.request.json](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/dapp-network/dapp-services/models/captured-events/dappservice.request.json)
 ```json
 {
   "eventType": "service_request",
   "webhook": "http://localhost:8812"
 }
-```,#### captured-events/dappservice.signal.1.json
+```,#### [captured-events/dappservice.signal.1.json](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/dapp-network/dapp-services/models/captured-events/dappservice.signal.1.json)
 ```json
 {
   "eventType": "service_signal",
   "webhook": "http://localhost:17624",
   "testOnly": true
 }
-```,#### captured-events/dappservice.signal.json
+```,#### [captured-events/dappservice.signal.json](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/dapp-network/dapp-services/models/captured-events/dappservice.signal.json)
 ```json
 {
   "eventType": "service_signal",
   "webhook": "http://localhost:8812"
 }
-```,#### captured-events/dappservice.usage.1.json
+```,#### [captured-events/dappservice.usage.1.json](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/dapp-network/dapp-services/models/captured-events/dappservice.usage.1.json)
 ```json
 {
   "eventType": "usage_report",
   "webhook": "http://localhost:17624",
   "testOnly": true
 }
-```,#### captured-events/dappservice.usage.json
+```,#### [captured-events/dappservice.usage.json](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/dapp-network/dapp-services/models/captured-events/dappservice.usage.json)
 ```json
 {
   "eventType": "usage_report",

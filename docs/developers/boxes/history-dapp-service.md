@@ -14,7 +14,7 @@ history-dapp-service
 
 
 ## Contracts
-* `historyservice`
+* [`historyservice`](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/services/history-dapp-service/contracts/eos/historyservice)
 ## Install
 ```bash
 zeus unbox history-dapp-service
@@ -34,7 +34,7 @@ zeus unbox history-dapp-service
 
 
 ### Model Instances
-#### dapp-services/history.json
+#### [dapp-services/history.json](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/services/history-dapp-service/models/dapp-services/history.json)
 ```json
 {
   "name": "history",

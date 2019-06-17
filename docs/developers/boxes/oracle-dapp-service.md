@@ -11,13 +11,13 @@ oracle-dapp-service
 * [`mocha`](mocha.md)
 * [`hooks-cpp-contracts`](hooks-cpp-contracts.md)
 ### npm packages
-* `node-fetch`
-* `tronweb`
-* `ripple-lib`
-* `bitcoin-core`
+* [`node-fetch`](http://npmjs.com/package/node-fetch)
+* [`tronweb`](http://npmjs.com/package/tronweb)
+* [`ripple-lib`](http://npmjs.com/package/ripple-lib)
+* [`bitcoin-core`](http://npmjs.com/package/bitcoin-core)
 ## Contracts
-* `oracleservice`
-* `oracleconsumer`
+* [`oracleservice`](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/services/oracle-dapp-service/contracts/eos/oracleservice)
+* [`oracleconsumer`](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/services/oracle-dapp-service/contracts/eos/oracleconsumer)
 ## Install
 ```bash
 zeus unbox oracle-dapp-service
@@ -33,7 +33,7 @@ zeus unbox oracle-dapp-service
 
 
 ### Model Instances
-#### dapp-services/oracle.json
+#### [dapp-services/oracle.json](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/services/oracle-dapp-service/models/dapp-services/oracle.json)
 ```json
 {
   "name": "oracle",

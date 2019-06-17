@@ -12,13 +12,13 @@ ipfs-dapp-service
 * [`mocha`](mocha.md)
 * [`hooks-cpp-contracts`](hooks-cpp-contracts.md)
 ### npm packages
-* `ipfs-api`
-* `lru-cache`
-* `dfuse-eoshttp-js`
-* `node-fetch`
+* [`ipfs-api`](http://npmjs.com/package/ipfs-api)
+* [`lru-cache`](http://npmjs.com/package/lru-cache)
+* [`dfuse-eoshttp-js`](http://npmjs.com/package/dfuse-eoshttp-js)
+* [`node-fetch`](http://npmjs.com/package/node-fetch)
 ## Contracts
-* `ipfsservice`
-* `ipfsconsumer`
+* [`ipfsservice`](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/services/ipfs-dapp-service/contracts/eos/ipfsservice)
+* [`ipfsconsumer`](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/services/ipfs-dapp-service/contracts/eos/ipfsconsumer)
 ## Install
 ```bash
 zeus unbox ipfs-dapp-service
@@ -35,7 +35,7 @@ zeus unbox ipfs-dapp-service
 
 
 ### Model Instances
-#### dapp-services/ipfs.json
+#### [dapp-services/ipfs.json](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/services/ipfs-dapp-service/models/dapp-services/ipfs.json)
 ```json
 {
   "name": "ipfs",

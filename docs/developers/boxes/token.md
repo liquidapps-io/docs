@@ -14,7 +14,7 @@ token
 
 
 ## Contracts
-* `Token`
+* [`Token`](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/eos-framework/token/contracts/eos/Token)
 ## Install
 ```bash
 zeus unbox token

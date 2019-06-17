@@ -11,14 +11,14 @@ demux
 * [`seed-microservices`](seed-microservices.md)
 * [`seed-models`](seed-models.md)
 ### npm packages
-* `zeromq`
-* `@types/jest`
-* `babel-polyfill`
-* `eosjs-ecc`
-* `text-encoding`
-* `ws`
-* `pako`
-* `node-fetch`
+* [`zeromq`](http://npmjs.com/package/zeromq)
+* [`@types/jest`](http://npmjs.com/package/@types/jest)
+* [`babel-polyfill`](http://npmjs.com/package/babel-polyfill)
+* [`eosjs-ecc`](http://npmjs.com/package/eosjs-ecc)
+* [`text-encoding`](http://npmjs.com/package/text-encoding)
+* [`ws`](http://npmjs.com/package/ws)
+* [`pako`](http://npmjs.com/package/pako)
+* [`node-fetch`](http://npmjs.com/package/node-fetch)
 
 
 ## Install

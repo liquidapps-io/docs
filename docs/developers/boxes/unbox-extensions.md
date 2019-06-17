@@ -10,7 +10,7 @@ unbox-extensions
 * [`seed-extensions`](seed-extensions.md)
 * [`seed-models`](seed-models.md)
 ### npm packages
-* `unzip`
+* [`unzip`](http://npmjs.com/package/unzip)
 
 
 ## Install
@@ -35,7 +35,7 @@ zeus unbox helloworld
 
 
 ### Model Instances
-#### boxmaps/00-mapping.json
+#### [boxmaps/00-mapping.json](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/repos/unbox-extensions/models/boxmaps/00-mapping.json)
 ```json
 {
   "create-extensions": "ipfs://QmTU9sudGztiCQot9m95z1BP9b1qUvKH36q8Hz9sj4nDCL",

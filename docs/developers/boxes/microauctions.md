@@ -17,7 +17,7 @@ microauctions
 
 
 ## Contracts
-* `microauctions`
+* [`microauctions`](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/economics/microauctions/contracts/eos/microauctions)
 ## Install
 ```bash
 zeus unbox microauctions

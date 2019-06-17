@@ -19,7 +19,7 @@ cardgame
 
 
 ## Contracts
-* `cardgame`
+* [`cardgame`](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/sample/cardgame/contracts/eos/cardgame)
 ## Install
 ```bash
 zeus unbox cardgame
@@ -54,7 +54,7 @@ zeus deploy frontend main --ipfs --register cardgame1111
 
 
 ### Model Instances
-#### contract-deployments/cardgame.json
+#### [contract-deployments/cardgame.json](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/sample/cardgame/models/contract-deployments/cardgame.json)
 ```json
 {
   "contract": "cardgame",

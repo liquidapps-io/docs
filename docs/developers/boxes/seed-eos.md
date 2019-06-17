@@ -12,8 +12,8 @@ seed-eos
 * [`eos-common`](eos-common.md)
 * [`eosio-system-contracts`](eosio-system-contracts.md)
 ### npm packages
-* `mkdirp`
-* `which`
+* [`mkdirp`](http://npmjs.com/package/mkdirp)
+* [`which`](http://npmjs.com/package/which)
 
 
 ## Install

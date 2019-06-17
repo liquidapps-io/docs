@@ -14,8 +14,8 @@ sign-dapp-service
 
 
 ## Contracts
-* `signservice`
-* `signer`
+* [`signservice`](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/services/sign-dapp-service/contracts/eos/signservice)
+* [`signer`](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/services/sign-dapp-service/contracts/eos/signer)
 ## Install
 ```bash
 zeus unbox sign-dapp-service
@@ -31,7 +31,7 @@ zeus unbox sign-dapp-service
 
 
 ### Model Instances
-#### dapp-services/sign.json
+#### [dapp-services/sign.json](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/services/sign-dapp-service/models/dapp-services/sign.json)
 ```json
 {
   "name": "sign",

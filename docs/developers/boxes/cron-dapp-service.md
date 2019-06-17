@@ -11,10 +11,10 @@ cron-dapp-service
 * [`mocha`](mocha.md)
 * [`hooks-cpp-contracts`](hooks-cpp-contracts.md)
 ### npm packages
-* `node-fetch`
+* [`node-fetch`](http://npmjs.com/package/node-fetch)
 ## Contracts
-* `cronservice`
-* `cronconsumer`
+* [`cronservice`](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/services/cron-dapp-service/contracts/eos/cronservice)
+* [`cronconsumer`](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/services/cron-dapp-service/contracts/eos/cronconsumer)
 ## Install
 ```bash
 zeus unbox cron-dapp-service
@@ -30,7 +30,7 @@ zeus unbox cron-dapp-service
 
 
 ### Model Instances
-#### dapp-services/cron.json
+#### [dapp-services/cron.json](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/services/cron-dapp-service/models/dapp-services/cron.json)
 ```json
 {
   "name": "cron",

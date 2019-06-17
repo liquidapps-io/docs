@@ -16,7 +16,7 @@ eos-detective-reports
 
 
 ## Contracts
-* `detective`
+* [`detective`](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/economics/eos-detective-reports/contracts/eos/detective)
 ## Install
 ```bash
 zeus unbox eos-detective-reports

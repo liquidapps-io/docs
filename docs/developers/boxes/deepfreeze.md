@@ -19,7 +19,7 @@ deepfreeze
 
 
 ## Contracts
-* `deepfreeze`
+* [`deepfreeze`](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/sample/deepfreeze/contracts/eos/deepfreeze)
 ## Install
 ```bash
 zeus unbox deepfreeze

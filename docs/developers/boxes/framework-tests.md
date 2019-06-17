@@ -16,7 +16,7 @@ framework-tests
 
 
 ## Contracts
-* `svcsconsumer`
+* [`svcsconsumer`](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/tests/framework-tests/contracts/eos/svcsconsumer)
 ## Install
 ```bash
 zeus unbox framework-tests

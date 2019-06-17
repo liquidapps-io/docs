@@ -10,8 +10,8 @@ seed-microservices
 * [`seed`](seed.md)
 * [`core-extensions`](core-extensions.md)
 ### npm packages
-* `daemonize-process`
-* `kill-port`
+* [`daemonize-process`](http://npmjs.com/package/daemonize-process)
+* [`kill-port`](http://npmjs.com/package/kill-port)
 
 
 ## Install

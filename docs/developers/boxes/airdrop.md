@@ -11,11 +11,11 @@ airdrop
 * [`readfn-dapp-service`](readfn-dapp-service.md)
 * [`token`](token.md)
 ### npm packages
-* `aws-sdk`
-* `node-fetch`
-* `async-csv`
+* [`aws-sdk`](http://npmjs.com/package/aws-sdk)
+* [`node-fetch`](http://npmjs.com/package/node-fetch)
+* [`async-csv`](http://npmjs.com/package/async-csv)
 ## Contracts
-* `airdrop`
+* [`airdrop`](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/economics/airdrop/contracts/eos/airdrop)
 ## Install
 ```bash
 zeus unbox airdrop

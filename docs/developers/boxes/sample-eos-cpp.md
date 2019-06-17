@@ -15,7 +15,7 @@ sample-eos-cpp
 
 
 ## Contracts
-* `helloworld`
+* [`helloworld`](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/eos-sdk/sample-eos-cpp/contracts/eos/helloworld)
 ## Install
 ```bash
 zeus unbox sample-eos-cpp

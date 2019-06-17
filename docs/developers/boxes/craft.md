@@ -18,7 +18,7 @@ craft
 
 
 ## Contracts
-* `craftcore`
+* [`craftcore`](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/game/craft/contracts/eos/craftcore)
 ## Install
 ```bash
 zeus unbox craft
@@ -37,7 +37,7 @@ zeus test
 
 
 ### Model Instances
-#### contract-deployments/craftcore.json
+#### [contract-deployments/craftcore.json](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/game/craft/models/contract-deployments/craftcore.json)
 ```json
 {
   "contract": "craftcore",

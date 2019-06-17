@@ -30,7 +30,7 @@ zeus unbox liquidapps-deployment
 
 
 ### Model Instances
-#### liquidapps-deployment-settings/production.json
+#### [liquidapps-deployment-settings/production.json](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/dapp-network/liquidapps-deployment/models/liquidapps-deployment-settings/production.json)
 ```json
 {
   "name": "production",
@@ -81,7 +81,7 @@ zeus unbox liquidapps-deployment
   },
   "testUsers": []
 }
-```,#### liquidapps-deployment-settings/staging.json
+```,#### [liquidapps-deployment-settings/staging.json](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/dapp-network/liquidapps-deployment/models/liquidapps-deployment-settings/staging.json)
 ```json
 {
   "name": "staging",

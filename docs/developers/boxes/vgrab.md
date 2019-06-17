@@ -18,7 +18,7 @@ vgrab
 
 
 ## Contracts
-* `vgrab`
+* [`vgrab`](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/sample/vgrab/contracts/eos/vgrab)
 ## Install
 ```bash
 zeus unbox vgrab

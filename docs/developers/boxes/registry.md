@@ -18,7 +18,7 @@ registry
 
 
 ## Contracts
-* `registry`
+* [`registry`](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/eos-framework/registry/contracts/eos/registry)
 ## Install
 ```bash
 zeus unbox registry

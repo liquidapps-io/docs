@@ -11,7 +11,7 @@ airhodl
 
 
 ## Contracts
-* `airhodl`
+* [`airhodl`](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/economics/airhodl/contracts/eos/airhodl)
 ## Install
 ```bash
 zeus unbox airhodl

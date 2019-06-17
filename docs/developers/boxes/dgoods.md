@@ -18,7 +18,7 @@ dgoods
 
 
 ## Contracts
-* `dgoods`
+* [`dgoods`](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/game/dgoods/contracts/eos/dgoods)
 ## Install
 ```bash
 zeus unbox dgoods
