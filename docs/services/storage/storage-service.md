@@ -4,7 +4,8 @@ LiquidStorage Service
 ## Overview
 Distributed storage and hosting
 
-
+## Stage
+WIP
 
 ## Contract
 

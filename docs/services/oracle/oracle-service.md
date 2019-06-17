@@ -4,7 +4,8 @@ LiquidOracle Service
 ## Overview
 Web/IBC/XIBC Oracle Service
 
-
+## Stage
+Beta
 
 ## Contract
 

@@ -4,7 +4,8 @@ LiquidVRAM Service
 ## Overview
 Virtual Memory Service
 
-
+## Stage
+Stable
 
 ## Contract
 

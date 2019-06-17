@@ -4,7 +4,8 @@ LiquidLog Service
 ## Overview
 Log Service
 
-
+## Stage
+Beta
 
 ## Contract
 
