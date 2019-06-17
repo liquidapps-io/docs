@@ -16,5 +16,6 @@ Developers
    developers/vram-getting-started
    developers/vram-getting-started-without-zeus
    developers/dsp-packages-and-staking
-
+   developers/boxes/zeus-boxes
+   
 * :ref:`search`
