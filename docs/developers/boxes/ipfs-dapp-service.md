@@ -29,3 +29,6 @@ zeus unbox ipfs-dapp-service
 * ```zeus get-table.row  --help```
 
 
+
+
+## (Source)[https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups//opt/atlassian/pipelines/agent/build/zeus/boxes/groups/services/ipfs-dapp-service]
