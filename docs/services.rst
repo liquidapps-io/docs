@@ -9,12 +9,7 @@ Services
 .. toctree::
    :glob:
    
-   services/ipfs/ipfs-service
-   services/logs/logs-service
-   services/cron/cron-service
-   services/oracles/oracles-service
-   services/vAccounts/vaccounts-service
-   services/donations/donations-service
+   services/*
 
 * :ref:`search`
 

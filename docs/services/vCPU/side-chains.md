@@ -1,4 +1,0 @@
-Side Chains
-===========
-
-## Overview
