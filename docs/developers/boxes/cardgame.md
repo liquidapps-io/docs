@@ -7,6 +7,7 @@ cardgame
 
 
 
+
 ## Dependencies
 ### Boxes
 * [`hooks-npm`](hooks-npm.md)
@@ -57,7 +58,7 @@ zeus deploy frontend main --ipfs --register cardgame1111
 
 
 ### Model Instances
-#### [contract-deployments/cardgame.json](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/sample/cardgame/models/contract-deployments/cardgame.json)
+#### [sample/cardgame.json](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/sample/cardgame/models/contract-deployments/cardgame.json)
 ```json
 {
   "contract": "cardgame",

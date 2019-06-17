@@ -7,6 +7,8 @@ history-dapp-service
 
 
 
+## Service Documentation
+    [history](../../services/history/history-service.md)
 ## Dependencies
 ### Boxes
 * [`dapp-services`](dapp-services.md)
@@ -36,7 +38,7 @@ zeus unbox history-dapp-service
 
 
 ### Model Instances
-#### [dapp-services/history.json](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/services/history-dapp-service/models/dapp-services/history.json)
+#### [services/history.json](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/services/history-dapp-service/models/dapp-services/history.json)
 ```json
 {
   "name": "history",

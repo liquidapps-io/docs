@@ -1,0 +1,19 @@
+vaccounts Service
+=================
+
+## Overview
+
+
+## Contract
+
+```accountless1```
+
+## Box
+[vaccounts-dapp-service](../../developers/boxes/vaccounts-dapp-service)
+
+## Service Commands
+### vexec
+## Tests 
+
+* [Consumer Contract Example](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/services/vaccounts-dapp-service/contracts/eos/vaccountsconsumer/vaccountsconsumer.cpp)
+## [Implementation](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/services/vaccounts-dapp-service/contracts/eos/dappservices/_vaccounts_impl.hpp)

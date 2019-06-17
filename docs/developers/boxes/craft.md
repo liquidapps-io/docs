@@ -7,6 +7,7 @@ craft
 
 
 
+
 ## Dependencies
 ### Boxes
 * [`hooks-npm`](hooks-npm.md)
@@ -40,7 +41,7 @@ zeus test
 
 
 ### Model Instances
-#### [contract-deployments/craftcore.json](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/game/craft/models/contract-deployments/craftcore.json)
+#### [game/craftcore.json](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/game/craft/models/contract-deployments/craftcore.json)
 ```json
 {
   "contract": "craftcore",

@@ -7,6 +7,7 @@ seed-eos
 
 
 
+
 ## Dependencies
 ### Boxes
 * [`eos-extensions`](eos-extensions.md)

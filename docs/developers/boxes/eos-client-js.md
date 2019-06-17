@@ -7,6 +7,7 @@ eos-client-js
 
 
 
+
 ## Dependencies
 ### Boxes
 * [`seed-eos`](seed-eos.md)

@@ -7,6 +7,8 @@ log-dapp-service
 
 
 
+## Service Documentation
+    [log](../../services/log/log-service.md)
 ## Dependencies
 ### Boxes
 * [`dapp-services`](dapp-services.md)
@@ -15,7 +17,7 @@ log-dapp-service
 
 ## Contracts
 * [`logservice`](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/services/log-dapp-service/contracts/eos/dappservices/_log_impl.hpp)
-* [`logconsumer`](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/services/log-dapp-service/contracts/eos/logconsumer)
+
 ## Install
 ```bash
 zeus unbox log-dapp-service
@@ -31,7 +33,7 @@ zeus unbox log-dapp-service
 
 
 ### Model Instances
-#### [dapp-services/log.json](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/services/log-dapp-service/models/dapp-services/log.json)
+#### [services/log.json](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/services/log-dapp-service/models/dapp-services/log.json)
 ```json
 {
   "name": "log",

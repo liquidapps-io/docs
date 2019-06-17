@@ -7,6 +7,7 @@ game
 
 
 
+
 ## Dependencies
 ### Boxes
 * [`templates-emptycontract-eos-cpp`](templates-emptycontract-eos-cpp.md)

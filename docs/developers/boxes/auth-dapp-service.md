@@ -7,6 +7,8 @@ auth-dapp-service
 
 
 
+## Service Documentation
+    [auth](../../services/auth/auth-service.md)
 ## Dependencies
 ### Boxes
 * [`dapp-services`](dapp-services.md)
@@ -34,7 +36,7 @@ zeus unbox auth-dapp-service
 
 
 ### Model Instances
-#### [dapp-services/auth.json](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/services/auth-dapp-service/models/dapp-services/auth.json)
+#### [services/auth.json](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/services/auth-dapp-service/models/dapp-services/auth.json)
 ```json
 {
   "name": "auth",

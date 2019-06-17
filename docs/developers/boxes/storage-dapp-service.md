@@ -7,6 +7,8 @@ storage-dapp-service
 
 
 
+## Service Documentation
+    [storage](../../services/storage/storage-service.md)
 ## Dependencies
 ### Boxes
 * [`dapp-services`](dapp-services.md)
@@ -38,7 +40,7 @@ zeus unbox storage-dapp-service
 
 
 ### Model Instances
-#### [dapp-services/storage.json](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/services/storage-dapp-service/models/dapp-services/storage.json)
+#### [services/storage.json](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/services/storage-dapp-service/models/dapp-services/storage.json)
 ```json
 {
   "name": "storage",

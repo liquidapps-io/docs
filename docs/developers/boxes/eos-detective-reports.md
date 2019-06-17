@@ -7,6 +7,7 @@ eos-detective-reports
 
 
 
+
 ## Dependencies
 ### Boxes
 * [`seed-eos`](seed-eos.md)

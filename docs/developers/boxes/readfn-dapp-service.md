@@ -7,6 +7,8 @@ readfn-dapp-service
 
 
 
+## Service Documentation
+    [readfn](../../services/readfn/readfn-service.md)
 ## Dependencies
 ### Boxes
 * [`dapp-services`](dapp-services.md)
@@ -18,7 +20,7 @@ readfn-dapp-service
 
 ## Contracts
 * [`readfnservice`](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/services/readfn-dapp-service/contracts/eos/dappservices/_readfn_impl.hpp)
-* [`readfnconsumer`](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/services/readfn-dapp-service/contracts/eos/readfnconsumer)
+
 ## Install
 ```bash
 zeus unbox readfn-dapp-service
@@ -34,7 +36,7 @@ zeus unbox readfn-dapp-service
 
 
 ### Model Instances
-#### [dapp-services/readfn.json](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/services/readfn-dapp-service/models/dapp-services/readfn.json)
+#### [services/readfn.json](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/services/readfn-dapp-service/models/dapp-services/readfn.json)
 ```json
 {
   "name": "readfn",

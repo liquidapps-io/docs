@@ -7,6 +7,7 @@ eoscraft-frontend
 
 
 
+
 ## Dependencies
 ### Boxes
 * [`frontend-phaser`](frontend-phaser.md)

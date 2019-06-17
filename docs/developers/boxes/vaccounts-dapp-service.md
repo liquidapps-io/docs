@@ -7,6 +7,8 @@ vaccounts-dapp-service
 
 
 
+## Service Documentation
+    [vaccounts](../../services/vaccounts/vaccounts-service.md)
 ## Dependencies
 ### Boxes
 * [`dapp-services`](dapp-services.md)
@@ -19,7 +21,7 @@ vaccounts-dapp-service
 
 ## Contracts
 * [`vaccountsservice`](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/services/vaccounts-dapp-service/contracts/eos/dappservices/_vaccounts_impl.hpp)
-* [`vaccountsconsumer`](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/services/vaccounts-dapp-service/contracts/eos/vaccountsconsumer)
+
 ## Install
 ```bash
 zeus unbox vaccounts-dapp-service
@@ -35,7 +37,7 @@ zeus unbox vaccounts-dapp-service
 
 
 ### Model Instances
-#### [dapp-services/vaccounts.json](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/services/vaccounts-dapp-service/models/dapp-services/vaccounts.json)
+#### [services/vaccounts.json](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/services/vaccounts-dapp-service/models/dapp-services/vaccounts.json)
 ```json
 {
   "name": "vaccounts",

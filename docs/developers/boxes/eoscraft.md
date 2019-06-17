@@ -7,6 +7,7 @@ eoscraft
 
 
 
+
 ## Dependencies
 ### Boxes
 * [`eoscraft-frontend`](eoscraft-frontend.md)

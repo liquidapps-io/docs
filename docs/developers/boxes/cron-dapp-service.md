@@ -7,6 +7,8 @@ cron-dapp-service
 
 
 
+## Service Documentation
+    [cron](../../services/cron/cron-service.md)
 ## Dependencies
 ### Boxes
 * [`dapp-services`](dapp-services.md)
@@ -17,7 +19,7 @@ cron-dapp-service
 
 ## Contracts
 * [`cronservice`](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/services/cron-dapp-service/contracts/eos/dappservices/_cron_impl.hpp)
-* [`cronconsumer`](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/services/cron-dapp-service/contracts/eos/cronconsumer)
+
 ## Install
 ```bash
 zeus unbox cron-dapp-service
@@ -33,7 +35,7 @@ zeus unbox cron-dapp-service
 
 
 ### Model Instances
-#### [dapp-services/cron.json](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/services/cron-dapp-service/models/dapp-services/cron.json)
+#### [services/cron.json](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/services/cron-dapp-service/models/dapp-services/cron.json)
 ```json
 {
   "name": "cron",

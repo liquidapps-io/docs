@@ -7,6 +7,7 @@ dapp-services
 
 
 
+
 ## Dependencies
 ### Boxes
 * [`seed`](seed.md)
@@ -61,40 +62,40 @@ zeus unbox dapp-services
 * dapp-services
 * deploy-dapp-services
 ### Model Instances
-#### [captured-events/dappservice.request.1.json](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/dapp-network/dapp-services/models/captured-events/dappservice.request.1.json)
+#### [dapp-network/dappservice.request.1.json](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/dapp-network/dapp-services/models/captured-events/dappservice.request.1.json)
 ```json
 {
   "eventType": "service_request",
   "webhook": "http://localhost:17624",
   "testOnly": true
 }
-```,#### [captured-events/dappservice.request.json](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/dapp-network/dapp-services/models/captured-events/dappservice.request.json)
+```,#### [dapp-network/dappservice.request.json](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/dapp-network/dapp-services/models/captured-events/dappservice.request.json)
 ```json
 {
   "eventType": "service_request",
   "webhook": "http://localhost:8812"
 }
-```,#### [captured-events/dappservice.signal.1.json](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/dapp-network/dapp-services/models/captured-events/dappservice.signal.1.json)
+```,#### [dapp-network/dappservice.signal.1.json](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/dapp-network/dapp-services/models/captured-events/dappservice.signal.1.json)
 ```json
 {
   "eventType": "service_signal",
   "webhook": "http://localhost:17624",
   "testOnly": true
 }
-```,#### [captured-events/dappservice.signal.json](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/dapp-network/dapp-services/models/captured-events/dappservice.signal.json)
+```,#### [dapp-network/dappservice.signal.json](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/dapp-network/dapp-services/models/captured-events/dappservice.signal.json)
 ```json
 {
   "eventType": "service_signal",
   "webhook": "http://localhost:8812"
 }
-```,#### [captured-events/dappservice.usage.1.json](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/dapp-network/dapp-services/models/captured-events/dappservice.usage.1.json)
+```,#### [dapp-network/dappservice.usage.1.json](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/dapp-network/dapp-services/models/captured-events/dappservice.usage.1.json)
 ```json
 {
   "eventType": "usage_report",
   "webhook": "http://localhost:17624",
   "testOnly": true
 }
-```,#### [captured-events/dappservice.usage.json](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/dapp-network/dapp-services/models/captured-events/dappservice.usage.json)
+```,#### [dapp-network/dappservice.usage.json](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/dapp-network/dapp-services/models/captured-events/dappservice.usage.json)
 ```json
 {
   "eventType": "usage_report",

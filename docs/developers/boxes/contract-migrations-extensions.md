@@ -7,6 +7,7 @@ contract-migrations-extensions
 
 
 
+
 ## Dependencies
 ### Boxes
 * [`migrations-extensions`](migrations-extensions.md)

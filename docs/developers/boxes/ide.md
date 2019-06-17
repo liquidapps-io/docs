@@ -7,6 +7,7 @@ ide
 
 
 
+
 ## Dependencies
 ### Boxes
 * [`frontend-vue`](frontend-vue.md)

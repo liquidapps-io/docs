@@ -7,6 +7,8 @@ sign-dapp-service
 
 
 
+## Service Documentation
+    [sign](../../services/sign/sign-service.md)
 ## Dependencies
 ### Boxes
 * [`dapp-services`](dapp-services.md)
@@ -34,7 +36,7 @@ zeus unbox sign-dapp-service
 
 
 ### Model Instances
-#### [dapp-services/sign.json](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/services/sign-dapp-service/models/dapp-services/sign.json)
+#### [services/sign.json](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/services/sign-dapp-service/models/dapp-services/sign.json)
 ```json
 {
   "name": "sign",

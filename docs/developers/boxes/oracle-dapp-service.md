@@ -7,6 +7,8 @@ oracle-dapp-service
 
 
 
+## Service Documentation
+    [oracle](../../services/oracle/oracle-service.md)
 ## Dependencies
 ### Boxes
 * [`dapp-services`](dapp-services.md)
@@ -20,7 +22,7 @@ oracle-dapp-service
 
 ## Contracts
 * [`oracleservice`](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/services/oracle-dapp-service/contracts/eos/dappservices/_oracle_impl.hpp)
-* [`oracleconsumer`](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/services/oracle-dapp-service/contracts/eos/oracleconsumer)
+
 ## Install
 ```bash
 zeus unbox oracle-dapp-service
@@ -36,7 +38,7 @@ zeus unbox oracle-dapp-service
 
 
 ### Model Instances
-#### [dapp-services/oracle.json](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/services/oracle-dapp-service/models/dapp-services/oracle.json)
+#### [services/oracle.json](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/services/oracle-dapp-service/models/dapp-services/oracle.json)
 ```json
 {
   "name": "oracle",
