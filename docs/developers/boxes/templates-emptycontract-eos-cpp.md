@@ -54,4 +54,5 @@ zeus create contract somecontract
   ]
 }
 ```
+
 ## [Source](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/templates/templates-emptycontract-eos-cpp)

@@ -65,4 +65,5 @@ zeus deploy frontend main --ipfs --register cardgame1111
   "account": "cardgame1111"
 }
 ```
+
 ## [Source](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/sample/cardgame)

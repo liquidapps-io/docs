@@ -88,4 +88,6 @@ zeus unbox history-dapp-service
   }
 }
 ```
+## Tests 
+* [history.spec.js](undefined/test/history.spec.js
 ## [Source](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/services/history-dapp-service)

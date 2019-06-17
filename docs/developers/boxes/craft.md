@@ -48,4 +48,5 @@ zeus test
   "account": "eoscraftcore"
 }
 ```
+
 ## [Source](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/game/craft)

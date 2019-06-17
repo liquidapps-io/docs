@@ -60,4 +60,6 @@ zeus unbox vaccounts-dapp-service
   }
 }
 ```
+## Tests 
+* [vaccountsconsumer.spec.js](undefined/test/vaccountsconsumer.spec.js
 ## [Source](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/services/vaccounts-dapp-service)

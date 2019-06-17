@@ -56,4 +56,6 @@ zeus unbox readfn-dapp-service
   }
 }
 ```
+## Tests 
+* [readfnconsumer.spec.js](undefined/test/readfnconsumer.spec.js
 ## [Source](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/services/readfn-dapp-service)

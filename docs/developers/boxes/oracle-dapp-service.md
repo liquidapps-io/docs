@@ -77,4 +77,6 @@ zeus unbox oracle-dapp-service
   }
 }
 ```
+## Tests 
+* [oracleconsumer.spec.js](undefined/test/oracleconsumer.spec.js
 ## [Source](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/services/oracle-dapp-service)

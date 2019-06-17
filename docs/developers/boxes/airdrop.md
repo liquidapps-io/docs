@@ -72,4 +72,6 @@ zeus airdrop cleanup myairdrop
 * airdrops
 
 
+## Tests 
+* [airdrop.spec.js](undefined/test/airdrop.spec.js
 ## [Source](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/economics/airdrop)

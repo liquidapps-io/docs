@@ -15,6 +15,6 @@ oracle Service
 ### geturi
 ### orcclean
 ## Tests 
-
+* [oracleconsumer.spec.js](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/services/oracle-dapp-service/test/oracleconsumer.spec.js
 * [Consumer Contract Example](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/services/oracle-dapp-service/contracts/eos/oracleconsumer/oracleconsumer.cpp)
 ## [Implementation](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/services/oracle-dapp-service/contracts/eos/dappservices/_oracle_impl.hpp)
