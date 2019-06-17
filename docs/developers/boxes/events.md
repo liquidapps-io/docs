@@ -28,4 +28,4 @@ zeus create event
 * ```zeus create event --help```
 
 
-## [Source](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/undefined/events)
+## [Source](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/eos-framework/events)

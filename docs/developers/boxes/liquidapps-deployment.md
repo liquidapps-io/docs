@@ -26,4 +26,4 @@ zeus unbox liquidapps-deployment
 
 
 
-## [Source](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/undefined/liquidapps-deployment)
+## [Source](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/dapp-network/liquidapps-deployment)

@@ -23,4 +23,4 @@ zeus unbox repo-zeusrepoeos
 
 
 
-## [Source](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/undefined/repo-zeusrepoeos)
+## [Source](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/repos/repo-zeusrepoeos)

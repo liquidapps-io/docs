@@ -29,4 +29,4 @@ zeus unbox oracle-dapp-service
 
 
 
-## [Source](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/undefined/oracle-dapp-service)
+## [Source](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/services/oracle-dapp-service)

@@ -24,4 +24,4 @@ zeus unbox seed-zeus-support
 
 
 
-## [Source](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/undefined/seed-zeus-support)
+## [Source](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/seeds/seed-zeus-support)

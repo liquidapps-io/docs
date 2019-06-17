@@ -33,4 +33,4 @@ zeus test
 
 
 
-## [Source](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/undefined/craft)
+## [Source](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/game/craft)

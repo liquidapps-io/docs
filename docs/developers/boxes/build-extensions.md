@@ -36,4 +36,4 @@ zeus unbox build-extensions
 * ```zeus build contract --help```
 
 
-## [Source](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/undefined/build-extensions)
+## [Source](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/core/build-extensions)

@@ -32,4 +32,4 @@ zeus migrate --no-reset
 * ```zeus create contract-deployment --help```
 
 
-## [Source](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/undefined/contract-migrations-extensions)
+## [Source](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/core/contract-migrations-extensions)

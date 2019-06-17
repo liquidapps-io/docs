@@ -23,4 +23,4 @@ zeus unbox seed-migrations
 
 
 
-## [Source](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/undefined/seed-migrations)
+## [Source](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/seeds/seed-migrations)

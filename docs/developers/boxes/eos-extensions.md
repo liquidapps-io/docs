@@ -37,4 +37,4 @@ zeus start-localenv
 * ```zeus start-localenv 05-eos-local-bios --help```
 
 
-## [Source](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/undefined/eos-extensions)
+## [Source](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/eos-sdk/eos-extensions)

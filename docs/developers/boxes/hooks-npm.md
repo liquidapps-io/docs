@@ -23,4 +23,4 @@ zeus unbox hooks-npm
 
 
 
-## [Source](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/undefined/hooks-npm)
+## [Source](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/eos-sdk/hooks-npm)

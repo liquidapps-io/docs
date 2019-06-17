@@ -38,4 +38,4 @@ zeus unbox demux
 * ```zeus start-localenv 15-eos-demux --help```
 
 
-## [Source](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/undefined/demux)
+## [Source](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/microservices/demux)

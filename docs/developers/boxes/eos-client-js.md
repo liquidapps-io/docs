@@ -25,4 +25,4 @@ zeus unbox eos-client-js
 
 
 
-## [Source](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/undefined/eos-client-js)
+## [Source](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/eos-sdk/eos-client-js)

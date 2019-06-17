@@ -31,4 +31,4 @@ zeus unbox ipfs-dapp-service
 
 
 
-## [Source](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/undefined/ipfs-dapp-service)
+## [Source](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/services/ipfs-dapp-service)

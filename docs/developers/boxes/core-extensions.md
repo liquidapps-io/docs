@@ -36,4 +36,4 @@ zeus watch
 
 
 
-## [Source](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/undefined/core-extensions)
+## [Source](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/core/core-extensions)

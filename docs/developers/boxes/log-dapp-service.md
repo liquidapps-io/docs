@@ -24,4 +24,4 @@ zeus unbox log-dapp-service
 
 
 
-## [Source](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/undefined/log-dapp-service)
+## [Source](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/services/log-dapp-service)
