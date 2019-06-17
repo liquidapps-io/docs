@@ -3,7 +3,7 @@ eoscraft-frontend
 ====================
 
 
-undefined
+
 
 
 

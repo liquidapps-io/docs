@@ -3,7 +3,7 @@ log-dapp-service
 ====================
 
 
-undefined
+
 
 
 

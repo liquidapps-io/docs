@@ -3,7 +3,7 @@ eos-client-js
 ====================
 
 
-undefined
+
 
 
 

@@ -3,7 +3,7 @@ templates-emptycontract-eos-cpp
 ====================
 
 
-undefined
+
 
 
 

@@ -3,7 +3,7 @@ vaccounts-dapp-service
 ====================
 
 
-undefined
+
 
 
 

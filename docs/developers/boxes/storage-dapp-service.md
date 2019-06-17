@@ -3,7 +3,7 @@ storage-dapp-service
 ====================
 
 
-undefined
+
 
 
 
