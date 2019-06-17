@@ -22,6 +22,6 @@ zeus unbox test-extensions
 zeus test
 ```
 ## Zeus Command Extensions
-* ```zeus test.js  --help```
+* ```zeus test  --help```
 
 

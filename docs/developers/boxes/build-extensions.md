@@ -20,17 +20,17 @@ zeus unbox build-extensions
 
 
 ## Zeus Command Extensions
-* ```zeus build.js  --help```
+* ```zeus build  --help```
 
-* ```zeus compile.js  --help```
+* ```zeus compile  --help```
 
-* ```zeus lint.js  --help```
+* ```zeus lint  --help```
 
-* ```zeus preprocess.js  --help```
+* ```zeus preprocess  --help```
 
-* ```zeus publish.js  --help```
+* ```zeus publish  --help```
 
-* ```zeus register.js  --help```
+* ```zeus register  --help```
 
 ### Subcommands
 * ```zeus build contract --help```

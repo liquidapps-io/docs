@@ -46,7 +46,7 @@ zeus airdrop init myairdrop
 zeus airdrop cleanup myairdrop
 ```
 ## Zeus Command Extensions
-* ```zeus airdrop.js  --help```
+* ```zeus airdrop  --help```
 
 ### Subcommands
 * ```zeus airdrop cleanup --help```

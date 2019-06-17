@@ -23,6 +23,6 @@ zeus unbox readfn-dapp-service
 
 
 ## Zeus Command Extensions
-* ```zeus readfn.js  --help```
+* ```zeus readfn  --help```
 
 

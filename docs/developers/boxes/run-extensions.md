@@ -23,6 +23,6 @@ zeus unbox run-extensions
 zeus run <type> <name>
 ```
 ## Zeus Command Extensions
-* ```zeus run.js  --help```
+* ```zeus run  --help```
 
 

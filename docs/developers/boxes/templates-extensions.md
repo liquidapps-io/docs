@@ -24,6 +24,6 @@ zeus unbox templates-extensions
 
 
 ## Zeus Command Extensions
-* ```zeus scaffold.js  --help```
+* ```zeus scaffold  --help```
 
 

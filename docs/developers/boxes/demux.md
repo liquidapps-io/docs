@@ -28,7 +28,7 @@ zeus unbox demux
 
 
 ## Zeus Command Extensions
-* ```zeus commands  --help```
+* ```zeus demux  --help```
 
 ### Subcommands
 * ```zeus create captured-event --help```

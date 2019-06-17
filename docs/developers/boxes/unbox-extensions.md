@@ -23,9 +23,9 @@ zeus unbox unbox-extensions
 zeus unbox helloworld
 ```
 ## Zeus Command Extensions
-* ```zeus list-boxes.js  --help```
+* ```zeus list-boxes  --help```
 
-* ```zeus unbox.js  --help```
+* ```zeus unbox  --help```
 
 ### Subcommands
 * ```zeus deploy box --help```

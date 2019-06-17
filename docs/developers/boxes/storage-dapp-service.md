@@ -22,7 +22,7 @@ zeus unbox storage-dapp-service
 
 
 ## Zeus Command Extensions
-* ```zeus storage.js  --help```
+* ```zeus storage  --help```
 
 ### Subcommands
 * ```zeus storage get --help```
