@@ -32,4 +32,9 @@ zeus migrate --no-reset
 * ```zeus create contract-deployment --help```
 
 
+## Models
+### New Model Types
+* contract-deployments
+
+
 ## [Source](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/core/contract-migrations-extensions)

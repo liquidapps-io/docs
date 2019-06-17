@@ -23,4 +23,22 @@ zeus unbox repo-zeusrepoeos
 
 
 
+
+
+
+### Model Instances
+#### repos
+##### zeusrepoeos
+```json
+{
+  "type": "eos",
+  "account": "zeusrepoeos",
+  "table": "boxes",
+  "scope": "zeusrepoeos",
+  "key": "zeusrepoeos",
+  "name": "zeusrepoeos"
+}
+```
+
+
 ## [Source](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/repos/repo-zeusrepoeos)

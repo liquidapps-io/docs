@@ -38,4 +38,9 @@ zeus unbox demux
 * ```zeus start-localenv 15-eos-demux --help```
 
 
+## Models
+### New Model Types
+* captured-events
+
+
 ## [Source](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/microservices/demux)

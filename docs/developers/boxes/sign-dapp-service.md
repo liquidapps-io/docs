@@ -27,4 +27,69 @@ zeus unbox sign-dapp-service
 
 
 
+
+
+
+### Model Instances
+#### dapp-services
+##### sign
+```json
+{
+  "name": "sign",
+  "port": 13128,
+  "contract": "signfndspsvc",
+  "commands": {
+    "signtrx": {
+      "blocking": true,
+      "request": {
+        "account": "name",
+        "permission": "name",
+        "client_code": "std::string",
+        "payload_hash": "checksum256",
+        "signature": "std::vector<char>"
+      },
+      "callback": {
+        "account": "name",
+        "permission": "name",
+        "client_code": "std::string",
+        "payload_hash": "checksum256",
+        "signature": "std::vector<char>"
+      },
+      "signal": {
+        "account": "name",
+        "permission": "name",
+        "client_code": "std::string",
+        "payload_hash": "checksum256",
+        "signature": "std::vector<char>"
+      }
+    },
+    "sgcleanup": {
+      "blocking": false,
+      "request": {
+        "account": "name",
+        "permission": "name",
+        "client_code": "std::string",
+        "payload_hash": "checksum256",
+        "signature": "std::vector<char>"
+      },
+      "callback": {
+        "account": "name",
+        "permission": "name",
+        "client_code": "std::string",
+        "payload_hash": "checksum256",
+        "signature": "std::vector<char>"
+      },
+      "signal": {
+        "account": "name",
+        "permission": "name",
+        "client_code": "std::string",
+        "payload_hash": "checksum256",
+        "signature": "std::vector<char>"
+      }
+    }
+  }
+}
+```
+
+
 ## [Source](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/services/sign-dapp-service)

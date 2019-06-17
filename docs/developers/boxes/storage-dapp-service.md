@@ -32,4 +32,51 @@ zeus unbox storage-dapp-service
 * ```zeus storage put --help```
 
 
+
+
+
+### Model Instances
+#### dapp-services
+##### storage
+```json
+{
+  "name": "storage",
+  "port": 13142,
+  "contract": "liquidstorag",
+  "commands": {
+    "strstore": {
+      "blocking": false,
+      "request": {},
+      "callback": {
+        "size": "uint64_t"
+      },
+      "signal": {
+        "size": "uint64_t"
+      }
+    },
+    "strhold": {
+      "blocking": false,
+      "request": {},
+      "callback": {
+        "size": "uint64_t"
+      },
+      "signal": {
+        "size": "uint64_t"
+      }
+    },
+    "strserve": {
+      "blocking": false,
+      "request": {},
+      "callback": {
+        "size": "uint64_t"
+      },
+      "signal": {
+        "size": "uint64_t"
+      }
+    }
+  }
+}
+```
+
+
 ## [Source](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/services/storage-dapp-service)

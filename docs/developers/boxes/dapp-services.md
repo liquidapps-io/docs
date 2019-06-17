@@ -53,4 +53,57 @@ zeus unbox dapp-services
 * ```zeus start-localenv 21-eos-local-services-all-dapp-services --help```
 
 
+## Models
+### New Model Types
+* dapp-services
+* deploy-dapp-services
+### Model Instances
+#### captured-events
+##### dappservice.request.1
+```json
+{
+  "eventType": "service_request",
+  "webhook": "http://localhost:17624",
+  "testOnly": true
+}
+```
+,##### dappservice.request
+```json
+{
+  "eventType": "service_request",
+  "webhook": "http://localhost:8812"
+}
+```
+,##### dappservice.signal.1
+```json
+{
+  "eventType": "service_signal",
+  "webhook": "http://localhost:17624",
+  "testOnly": true
+}
+```
+,##### dappservice.signal
+```json
+{
+  "eventType": "service_signal",
+  "webhook": "http://localhost:8812"
+}
+```
+,##### dappservice.usage.1
+```json
+{
+  "eventType": "usage_report",
+  "webhook": "http://localhost:17624",
+  "testOnly": true
+}
+```
+,##### dappservice.usage
+```json
+{
+  "eventType": "usage_report",
+  "webhook": "http://localhost:8812"
+}
+```
+
+
 ## [Source](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/dapp-network/dapp-services)

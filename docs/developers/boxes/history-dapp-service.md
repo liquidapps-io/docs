@@ -30,4 +30,61 @@ zeus unbox history-dapp-service
 * ```zeus history subscribe --help```
 
 
+
+
+
+### Model Instances
+#### dapp-services
+##### history
+```json
+{
+  "name": "history",
+  "port": 13143,
+  "contract": "historyservc",
+  "commands": {
+    "hststore": {
+      "blocking": false,
+      "request": {},
+      "callback": {
+        "size": "uint64_t"
+      },
+      "signal": {
+        "size": "uint64_t"
+      }
+    },
+    "hsthold": {
+      "blocking": false,
+      "request": {},
+      "callback": {
+        "size": "uint64_t"
+      },
+      "signal": {
+        "size": "uint64_t"
+      }
+    },
+    "hstserve": {
+      "blocking": false,
+      "request": {},
+      "callback": {
+        "size": "uint64_t"
+      },
+      "signal": {
+        "size": "uint64_t"
+      }
+    },
+    "hstreg": {
+      "blocking": false,
+      "request": {},
+      "callback": {
+        "size": "uint64_t"
+      },
+      "signal": {
+        "size": "uint64_t"
+      }
+    }
+  }
+}
+```
+
+
 ## [Source](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/services/history-dapp-service)

@@ -64,4 +64,9 @@ zeus airdrop cleanup myairdrop
 * ```zeus airdrop transform-snapshot --help```
 
 
-## [Source](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/undefined/airdrop)
+## Models
+### New Model Types
+* airdrops
+
+
+## [Source](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/economics/airdrop)

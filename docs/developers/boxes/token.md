@@ -34,4 +34,9 @@ zeus migrate
 * ```zeus create token --help```
 
 
+## Models
+### New Model Types
+* tokens
+
+
 ## [Source](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/eos-framework/token)

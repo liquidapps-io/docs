@@ -30,4 +30,9 @@ zeus run frontend main
 
 
 
-## [Source](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/undefined/frontend-vue)
+
+
+
+
+
+## [Source](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/frontends/frontend-vue)

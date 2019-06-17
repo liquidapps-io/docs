@@ -31,4 +31,64 @@ zeus unbox ipfs-dapp-service
 
 
 
+
+
+
+### Model Instances
+#### dapp-services
+##### ipfs
+```json
+{
+  "name": "ipfs",
+  "port": 13115,
+  "contract": "ipfsservice1",
+  "commands": {
+    "commit": {
+      "blocking": false,
+      "request": {
+        "data": "std::vector<char>"
+      },
+      "callback": {
+        "size": "uint32_t",
+        "uri": "std::string"
+      },
+      "signal": {
+        "size": "uint32_t",
+        "uri": "std::string"
+      }
+    },
+    "cleanup": {
+      "blocking": false,
+      "request": {
+        "uri": "std::string"
+      },
+      "callback": {
+        "size": "uint32_t",
+        "uri": "std::string"
+      },
+      "signal": {
+        "size": "uint32_t",
+        "uri": "std::string"
+      }
+    },
+    "warmup": {
+      "blocking": true,
+      "request": {
+        "uri": "std::string"
+      },
+      "callback": {
+        "size": "uint32_t",
+        "uri": "std::string",
+        "data": "std::vector<char>"
+      },
+      "signal": {
+        "size": "uint32_t",
+        "uri": "std::string"
+      }
+    }
+  }
+}
+```
+
+
 ## [Source](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/services/ipfs-dapp-service)

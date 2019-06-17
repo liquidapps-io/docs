@@ -28,4 +28,31 @@ zeus unbox readfn-dapp-service
 
 
 
+
+
+
+### Model Instances
+#### dapp-services
+##### readfn
+```json
+{
+  "name": "readfn",
+  "port": 13141,
+  "contract": "readfndspsvc",
+  "commands": {
+    "rfnuse": {
+      "blocking": false,
+      "request": {},
+      "callback": {
+        "size": "uint64_t"
+      },
+      "signal": {
+        "size": "uint64_t"
+      }
+    }
+  }
+}
+```
+
+
 ## [Source](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/services/readfn-dapp-service)

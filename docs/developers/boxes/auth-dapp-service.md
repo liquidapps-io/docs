@@ -27,4 +27,45 @@ zeus unbox auth-dapp-service
 
 
 
+
+
+
+### Model Instances
+#### dapp-services
+##### auth
+```json
+{
+  "name": "auth",
+  "port": 13127,
+  "contract": "authfndspsvc",
+  "commands": {
+    "authusage": {
+      "blocking": false,
+      "request": {
+        "account": "name",
+        "permission": "name",
+        "client_code": "std::string",
+        "payload_hash": "checksum256",
+        "signature": "std::vector<char>"
+      },
+      "callback": {
+        "account": "name",
+        "permission": "name",
+        "client_code": "std::string",
+        "payload_hash": "checksum256",
+        "signature": "std::vector<char>"
+      },
+      "signal": {
+        "account": "name",
+        "permission": "name",
+        "client_code": "std::string",
+        "payload_hash": "checksum256",
+        "signature": "std::vector<char>"
+      }
+    }
+  }
+}
+```
+
+
 ## [Source](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/services/auth-dapp-service)

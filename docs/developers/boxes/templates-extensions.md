@@ -29,4 +29,9 @@ zeus unbox templates-extensions
 
 
 
-## [Source](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/undefined/templates-extensions)
+## Models
+### New Model Types
+* templates
+
+
+## [Source](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/templates/templates-extensions)

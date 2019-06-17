@@ -28,4 +28,9 @@ zeus create event
 * ```zeus create event --help```
 
 
+## Models
+### New Model Types
+* events
+
+
 ## [Source](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/eos-framework/events)

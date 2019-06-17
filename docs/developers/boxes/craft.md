@@ -33,4 +33,18 @@ zeus test
 
 
 
+
+
+
+### Model Instances
+#### contract-deployments
+##### craftcore
+```json
+{
+  "contract": "craftcore",
+  "account": "eoscraftcore"
+}
+```
+
+
 ## [Source](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/game/craft)
