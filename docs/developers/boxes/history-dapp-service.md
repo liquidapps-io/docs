@@ -22,7 +22,7 @@ zeus unbox history-dapp-service
 
 
 ## Zeus Command Extensions
-* ```zeus commands  --help```
+* ```zeus history.js  --help```
 
 ### Subcommands
 * ```zeus history get --help```

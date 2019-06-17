@@ -26,6 +26,6 @@ zeus unbox ipfs-dapp-service
 
 
 ## Zeus Command Extensions
-* ```zeus commands  --help```
+* ```zeus get-table.row.js  --help```
 
 

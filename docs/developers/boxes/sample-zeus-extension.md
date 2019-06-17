@@ -19,9 +19,9 @@ zeus unbox sample-zeus-extension
 
 
 ## Zeus Command Extensions
-* ```zeus commands  --help```
+* ```zeus sample-cmd.js  --help```
 
-* ```zeus commands  --help```
+* ```zeus sample-parentcmd.js  --help```
 
 ### Subcommands
 * ```zeus sample-parentcmd sample-subcmd --help```

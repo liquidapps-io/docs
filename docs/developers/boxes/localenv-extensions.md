@@ -22,6 +22,6 @@ zeus unbox localenv-extensions
 zeus start-localenv
 ```
 ## Zeus Command Extensions
-* ```zeus commands  --help```
+* ```zeus start-localenv.js  --help```
 
 

@@ -26,7 +26,7 @@ zeus unbox update-extensions
 zeus update
 ```
 ## Zeus Command Extensions
-* ```zeus commands  --help```
+* ```zeus update.js  --help```
 
 ### Subcommands
 * ```zeus update eos --help```

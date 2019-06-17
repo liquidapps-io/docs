@@ -20,6 +20,6 @@ zeus unbox create-extensions
 
 
 ## Zeus Command Extensions
-* ```zeus commands  --help```
+* ```zeus create.js  --help```
 
 

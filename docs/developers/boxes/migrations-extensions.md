@@ -28,6 +28,6 @@ zeus migrate
 zeus migrate --no-reset
 ```
 ## Zeus Command Extensions
-* ```zeus commands  --help```
+* ```zeus migrate.js  --help```
 
 
