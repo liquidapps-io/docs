@@ -14,5 +14,5 @@ auth Service
 ## Service Commands
 ### authusage
 ## Tests 
-* [authenticator.spec.js](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/services/auth-dapp-service/test/authenticator.spec.js
+* [authenticator.spec.js](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/services/auth-dapp-service/test/authenticator.spec.js)
 ## [Implementation](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/services/auth-dapp-service/contracts/eos/dappservices/_auth_impl.hpp)

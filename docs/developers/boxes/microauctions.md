@@ -42,5 +42,5 @@ zeus test
 
 
 ## Tests 
-* [microauctions.spec.js](undefined/test/microauctions.spec.js
+* [microauctions.spec.js](undefined/test/microauctions.spec.js)
 ## [Source](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/economics/microauctions)

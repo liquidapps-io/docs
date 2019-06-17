@@ -41,5 +41,5 @@ zeus test
 
 
 ## Tests 
-* [svcsconsumer.spec.js](undefined/test/svcsconsumer.spec.js
+* [svcsconsumer.spec.js](undefined/test/svcsconsumer.spec.js)
 ## [Source](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/tests/framework-tests)
