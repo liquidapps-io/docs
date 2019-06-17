@@ -8,7 +8,7 @@ readfn-dapp-service
 
 
 ## Service Documentation
-    [readfn](../../services/readfn/readfn-service.md)
+[readfn](../../services/readfn/readfn-service.md)
 ## Dependencies
 ### Boxes
 * [`dapp-services`](dapp-services.md)

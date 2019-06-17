@@ -8,7 +8,7 @@ oracle-dapp-service
 
 
 ## Service Documentation
-    [oracle](../../services/oracle/oracle-service.md)
+[oracle](../../services/oracle/oracle-service.md)
 ## Dependencies
 ### Boxes
 * [`dapp-services`](dapp-services.md)

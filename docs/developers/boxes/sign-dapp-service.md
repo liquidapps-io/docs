@@ -8,7 +8,7 @@ sign-dapp-service
 
 
 ## Service Documentation
-    [sign](../../services/sign/sign-service.md)
+[sign](../../services/sign/sign-service.md)
 ## Dependencies
 ### Boxes
 * [`dapp-services`](dapp-services.md)

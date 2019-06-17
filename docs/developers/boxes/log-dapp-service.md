@@ -8,7 +8,7 @@ log-dapp-service
 
 
 ## Service Documentation
-    [log](../../services/log/log-service.md)
+[log](../../services/log/log-service.md)
 ## Dependencies
 ### Boxes
 * [`dapp-services`](dapp-services.md)

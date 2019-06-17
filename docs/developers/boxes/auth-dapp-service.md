@@ -8,7 +8,7 @@ auth-dapp-service
 
 
 ## Service Documentation
-    [auth](../../services/auth/auth-service.md)
+[auth](../../services/auth/auth-service.md)
 ## Dependencies
 ### Boxes
 * [`dapp-services`](dapp-services.md)

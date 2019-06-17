@@ -8,7 +8,7 @@ storage-dapp-service
 
 
 ## Service Documentation
-    [storage](../../services/storage/storage-service.md)
+[storage](../../services/storage/storage-service.md)
 ## Dependencies
 ### Boxes
 * [`dapp-services`](dapp-services.md)

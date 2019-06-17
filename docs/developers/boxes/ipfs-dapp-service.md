@@ -8,7 +8,7 @@ ipfs-dapp-service
 
 
 ## Service Documentation
-    [ipfs](../../services/ipfs/ipfs-service.md)
+[ipfs](../../services/ipfs/ipfs-service.md)
 ## Dependencies
 ### Boxes
 * [`dapp-services`](dapp-services.md)

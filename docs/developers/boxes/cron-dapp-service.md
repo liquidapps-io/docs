@@ -8,7 +8,7 @@ cron-dapp-service
 
 
 ## Service Documentation
-    [cron](../../services/cron/cron-service.md)
+[cron](../../services/cron/cron-service.md)
 ## Dependencies
 ### Boxes
 * [`dapp-services`](dapp-services.md)
