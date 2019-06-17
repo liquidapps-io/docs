@@ -8,7 +8,7 @@ sign-dapp-service
 
 
 ## Service Documentation
-[LiquidLink](../../services/sign/sign-service.md)
+[LiquidLink](../../services/sign-service.md)
 ## Dependencies
 ### Boxes
 * [`dapp-services`](dapp-services.md)

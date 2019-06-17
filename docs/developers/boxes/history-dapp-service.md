@@ -8,7 +8,7 @@ history-dapp-service
 
 
 ## Service Documentation
-[LiquidArchive](../../services/history/history-service.md)
+[LiquidArchive](../../services/history-service.md)
 ## Dependencies
 ### Boxes
 * [`dapp-services`](dapp-services.md)

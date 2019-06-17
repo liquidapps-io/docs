@@ -8,7 +8,7 @@ vaccounts-dapp-service
 
 
 ## Service Documentation
-[LiquidAccounts](../../services/vaccounts/vaccounts-service.md)
+[LiquidAccounts](../../services/vaccounts-service.md)
 ## Dependencies
 ### Boxes
 * [`dapp-services`](dapp-services.md)

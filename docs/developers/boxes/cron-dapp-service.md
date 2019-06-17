@@ -8,7 +8,7 @@ cron-dapp-service
 
 
 ## Service Documentation
-[LiquidScheduler](../../services/cron/cron-service.md)
+[LiquidScheduler](../../services/cron-service.md)
 ## Dependencies
 ### Boxes
 * [`dapp-services`](dapp-services.md)

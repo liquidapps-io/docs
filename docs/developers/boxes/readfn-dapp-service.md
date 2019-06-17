@@ -8,7 +8,7 @@ readfn-dapp-service
 
 
 ## Service Documentation
-[LiquidLens](../../services/readfn/readfn-service.md)
+[LiquidLens](../../services/readfn-service.md)
 ## Dependencies
 ### Boxes
 * [`dapp-services`](dapp-services.md)

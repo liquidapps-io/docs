@@ -8,7 +8,7 @@ ipfs-dapp-service
 
 
 ## Service Documentation
-[LiquidVRAM](../../services/ipfs/ipfs-service.md)
+[LiquidVRAM](../../services/ipfs-service.md)
 ## Dependencies
 ### Boxes
 * [`dapp-services`](dapp-services.md)

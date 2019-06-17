@@ -8,7 +8,7 @@ auth-dapp-service
 
 
 ## Service Documentation
-[LiquidAuthenticator](../../services/auth/auth-service.md)
+[LiquidAuthenticator](../../services/auth-service.md)
 ## Dependencies
 ### Boxes
 * [`dapp-services`](dapp-services.md)
