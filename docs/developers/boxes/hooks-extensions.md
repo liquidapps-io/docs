@@ -1,0 +1,29 @@
+
+hooks-extensions 
+====================
+
+
+
+
+## Dependencies
+### Boxes
+* [`seed-extensions`](seed-extensions.md)
+* [`seed-zeus-support`](seed-zeus-support.md)
+
+
+
+
+## Install
+```bash
+zeus unbox hooks-extensions
+```
+
+
+## Zeus Command Extensions
+
+### Subcommands
+* ```zeus hook post-install --help```
+
+* ```zeus hook post-stage --help```
+
+* ```zeus hook post-unpack --help```

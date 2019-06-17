@@ -9,7 +9,11 @@ zeus-cmd is an Extensible command line tool. SDK extensions come packaged in "bo
 * EOSIO dApp development support
 * DAPP Services support
 
+[Boxes overview](boxes/zeus-boxes.md)
+
 ## Hardware Requirements
+* 16GB RAM
+* 2 CPU Cores
 
 ## Prerequisites
 
