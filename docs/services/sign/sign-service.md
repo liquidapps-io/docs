@@ -1,7 +1,9 @@
-sign Service
+LiquidLink Service
 =================
 
 ## Overview
+IBC MultiSig Service
+
 
 
 ## Contract

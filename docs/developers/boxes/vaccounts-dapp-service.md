@@ -8,7 +8,7 @@ vaccounts-dapp-service
 
 
 ## Service Documentation
-[vaccounts](../../services/vaccounts/vaccounts-service.md)
+[LiquidAccounts](../../services/vaccounts/vaccounts-service.md)
 ## Dependencies
 ### Boxes
 * [`dapp-services`](dapp-services.md)
@@ -42,6 +42,9 @@ zeus unbox vaccounts-dapp-service
 {
   "name": "vaccounts",
   "port": 13129,
+  "prettyName": "LiquidAccounts",
+  "stage": "Alpha",
+  "description": "Allows interaction with contract without a native EOS Account",
   "contract": "accountless1",
   "commands": {
     "vexec": {

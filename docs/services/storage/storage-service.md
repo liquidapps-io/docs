@@ -1,7 +1,9 @@
-storage Service
+LiquidStorage Service
 =================
 
 ## Overview
+Distributed storage and hosting
+
 
 
 ## Contract

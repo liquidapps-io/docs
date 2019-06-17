@@ -8,7 +8,7 @@ auth-dapp-service
 
 
 ## Service Documentation
-[auth](../../services/auth/auth-service.md)
+[LiquidAuthenticator](../../services/auth/auth-service.md)
 ## Dependencies
 ### Boxes
 * [`dapp-services`](dapp-services.md)
@@ -42,6 +42,9 @@ zeus unbox auth-dapp-service
   "name": "auth",
   "port": 13127,
   "contract": "authfndspsvc",
+  "prettyName": "LiquidAuthenticator",
+  "stage": "WIP",
+  "description": "Authentication of offchain APIs and services using EOSIO permissions and contract",
   "commands": {
     "authusage": {
       "blocking": false,

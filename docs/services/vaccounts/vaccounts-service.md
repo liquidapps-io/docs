@@ -1,7 +1,9 @@
-vaccounts Service
+LiquidAccounts Service
 =================
 
 ## Overview
+Allows interaction with contract without a native EOS Account
+
 
 
 ## Contract

@@ -8,7 +8,7 @@ ipfs-dapp-service
 
 
 ## Service Documentation
-[ipfs](../../services/ipfs/ipfs-service.md)
+[LiquidVRAM](../../services/ipfs/ipfs-service.md)
 ## Dependencies
 ### Boxes
 * [`dapp-services`](dapp-services.md)
@@ -45,6 +45,9 @@ zeus unbox ipfs-dapp-service
   "name": "ipfs",
   "port": 13115,
   "contract": "ipfsservice1",
+  "prettyName": "LiquidVRAM",
+  "stage": "Stable",
+  "description": "Virtual Memory Service",
   "commands": {
     "commit": {
       "blocking": false,

@@ -8,7 +8,7 @@ cron-dapp-service
 
 
 ## Service Documentation
-[cron](../../services/cron/cron-service.md)
+[LiquidScheduler](../../services/cron/cron-service.md)
 ## Dependencies
 ### Boxes
 * [`dapp-services`](dapp-services.md)
@@ -41,6 +41,9 @@ zeus unbox cron-dapp-service
   "name": "cron",
   "port": 13131,
   "contract": "cronservices",
+  "prettyName": "LiquidScheduler",
+  "stage": "Alpha",
+  "description": "Scheduled Transactions",
   "commands": {
     "schedule": {
       "blocking": false,

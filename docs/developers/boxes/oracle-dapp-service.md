@@ -8,7 +8,7 @@ oracle-dapp-service
 
 
 ## Service Documentation
-[oracle](../../services/oracle/oracle-service.md)
+[LiquidOracle](../../services/oracle/oracle-service.md)
 ## Dependencies
 ### Boxes
 * [`dapp-services`](dapp-services.md)
@@ -44,6 +44,9 @@ zeus unbox oracle-dapp-service
   "name": "oracle",
   "port": 13112,
   "contract": "oracleservic",
+  "prettyName": "LiquidOracle",
+  "stage": "Beta",
+  "description": "Web/IBC/XIBC Oracle Service",
   "commands": {
     "geturi": {
       "blocking": true,

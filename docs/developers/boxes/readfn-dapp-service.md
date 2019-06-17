@@ -8,7 +8,7 @@ readfn-dapp-service
 
 
 ## Service Documentation
-[readfn](../../services/readfn/readfn-service.md)
+[LiquidLens](../../services/readfn/readfn-service.md)
 ## Dependencies
 ### Boxes
 * [`dapp-services`](dapp-services.md)
@@ -42,6 +42,9 @@ zeus unbox readfn-dapp-service
   "name": "readfn",
   "port": 13141,
   "contract": "readfndspsvc",
+  "prettyName": "LiquidLens",
+  "stage": "Alpha",
+  "description": "Read Functions Service",
   "commands": {
     "rfnuse": {
       "blocking": false,

@@ -1,7 +1,9 @@
-auth Service
+LiquidAuthenticator Service
 =================
 
 ## Overview
+Authentication of offchain APIs and services using EOSIO permissions and contract
+
 
 
 ## Contract

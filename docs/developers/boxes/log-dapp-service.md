@@ -8,7 +8,7 @@ log-dapp-service
 
 
 ## Service Documentation
-[log](../../services/log/log-service.md)
+[LiquidLog](../../services/log/log-service.md)
 ## Dependencies
 ### Boxes
 * [`dapp-services`](dapp-services.md)
@@ -39,6 +39,9 @@ zeus unbox log-dapp-service
   "name": "log",
   "port": 13110,
   "contract": "logservices1",
+  "prettyName": "LiquidLog",
+  "stage": "Beta",
+  "description": "Log Service",
   "commands": {
     "logevent": {
       "blocking": false,

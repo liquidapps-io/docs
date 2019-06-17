@@ -1,7 +1,9 @@
-ipfs Service
+LiquidVRAM Service
 =================
 
 ## Overview
+Virtual Memory Service
+
 
 
 ## Contract

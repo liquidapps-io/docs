@@ -1,7 +1,9 @@
-log Service
+LiquidLog Service
 =================
 
 ## Overview
+Log Service
+
 
 
 ## Contract

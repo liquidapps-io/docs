@@ -8,7 +8,7 @@ history-dapp-service
 
 
 ## Service Documentation
-[history](../../services/history/history-service.md)
+[LiquidArchive](../../services/history/history-service.md)
 ## Dependencies
 ### Boxes
 * [`dapp-services`](dapp-services.md)
@@ -44,6 +44,9 @@ zeus unbox history-dapp-service
   "name": "history",
   "port": 13143,
   "contract": "historyservc",
+  "prettyName": "LiquidArchive",
+  "stage": "WIP",
+  "description": "History API Provisioning",
   "commands": {
     "hststore": {
       "blocking": false,

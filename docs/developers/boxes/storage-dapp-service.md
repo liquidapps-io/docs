@@ -8,7 +8,7 @@ storage-dapp-service
 
 
 ## Service Documentation
-[storage](../../services/storage/storage-service.md)
+[LiquidStorage](../../services/storage/storage-service.md)
 ## Dependencies
 ### Boxes
 * [`dapp-services`](dapp-services.md)
@@ -46,6 +46,9 @@ zeus unbox storage-dapp-service
   "name": "storage",
   "port": 13142,
   "contract": "liquidstorag",
+  "prettyName": "LiquidStorage",
+  "stage": "WIP",
+  "description": "Distributed storage and hosting",
   "commands": {
     "strstore": {
       "blocking": false,

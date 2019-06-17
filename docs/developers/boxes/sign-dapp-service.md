@@ -8,7 +8,7 @@ sign-dapp-service
 
 
 ## Service Documentation
-[sign](../../services/sign/sign-service.md)
+[LiquidLink](../../services/sign/sign-service.md)
 ## Dependencies
 ### Boxes
 * [`dapp-services`](dapp-services.md)
@@ -42,6 +42,9 @@ zeus unbox sign-dapp-service
   "name": "sign",
   "port": 13128,
   "contract": "signfndspsvc",
+  "prettyName": "LiquidLink",
+  "stage": "WIP",
+  "description": "IBC MultiSig Service",
   "commands": {
     "signtrx": {
       "blocking": true,

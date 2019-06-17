@@ -1,7 +1,9 @@
-oracle Service
+LiquidOracle Service
 =================
 
 ## Overview
+Web/IBC/XIBC Oracle Service
+
 
 
 ## Contract
