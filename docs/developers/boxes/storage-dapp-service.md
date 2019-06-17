@@ -17,7 +17,7 @@ undefined
 
 
 ## Contracts
-* [`storageservice`](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/services/storage-dapp-service/contracts/eos/dappservices)
+* [`storageservice`](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/services/storage-dapp-service/contracts/eos/dappservices/_storage_impl.hpp)
 ## Install
 ```bash
 zeus unbox storage-dapp-service

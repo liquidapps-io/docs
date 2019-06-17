@@ -18,7 +18,7 @@ undefined
 * [`node-fetch`](http://npmjs.com/package/node-fetch)
 
 ## Contracts
-* [`vaccountsservice`](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/services/vaccounts-dapp-service/contracts/eos/dappservices)
+* [`vaccountsservice`](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/services/vaccounts-dapp-service/contracts/eos/dappservices/_vaccounts_impl.hpp)
 * [`vaccountsconsumer`](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/services/vaccounts-dapp-service/contracts/eos/vaccountsconsumer)
 ## Install
 ```bash

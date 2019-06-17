@@ -19,7 +19,7 @@ undefined
 * [`bitcoin-core`](http://npmjs.com/package/bitcoin-core)
 
 ## Contracts
-* [`oracleservice`](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/services/oracle-dapp-service/contracts/eos/dappservices)
+* [`oracleservice`](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/services/oracle-dapp-service/contracts/eos/dappservices/_oracle_impl.hpp)
 * [`oracleconsumer`](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/services/oracle-dapp-service/contracts/eos/oracleconsumer)
 ## Install
 ```bash

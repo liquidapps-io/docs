@@ -17,7 +17,7 @@ undefined
 
 
 ## Contracts
-* [`historyservice`](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/services/history-dapp-service/contracts/eos/dappservices)
+* [`historyservice`](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/services/history-dapp-service/contracts/eos/dappservices/_history_impl.hpp)
 ## Install
 ```bash
 zeus unbox history-dapp-service

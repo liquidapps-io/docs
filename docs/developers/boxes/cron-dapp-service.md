@@ -16,7 +16,7 @@ undefined
 * [`node-fetch`](http://npmjs.com/package/node-fetch)
 
 ## Contracts
-* [`cronservice`](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/services/cron-dapp-service/contracts/eos/dappservices)
+* [`cronservice`](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/services/cron-dapp-service/contracts/eos/dappservices/_cron_impl.hpp)
 * [`cronconsumer`](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/services/cron-dapp-service/contracts/eos/cronconsumer)
 ## Install
 ```bash

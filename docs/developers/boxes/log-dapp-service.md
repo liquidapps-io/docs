@@ -14,7 +14,7 @@ undefined
 
 
 ## Contracts
-* [`logservice`](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/services/log-dapp-service/contracts/eos/dappservices)
+* [`logservice`](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/services/log-dapp-service/contracts/eos/dappservices/_log_impl.hpp)
 * [`logconsumer`](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/services/log-dapp-service/contracts/eos/logconsumer)
 ## Install
 ```bash

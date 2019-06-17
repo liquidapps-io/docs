@@ -20,7 +20,7 @@ undefined
 * [`node-fetch`](http://npmjs.com/package/node-fetch)
 
 ## Contracts
-* [`ipfsservice`](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/services/ipfs-dapp-service/contracts/eos/dappservices)
+* [`ipfsservice`](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/services/ipfs-dapp-service/contracts/eos/dappservices/_ipfs_impl.hpp)
 * [`ipfsconsumer`](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/services/ipfs-dapp-service/contracts/eos/ipfsconsumer)
 ## Install
 ```bash
