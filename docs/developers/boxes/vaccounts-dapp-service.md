@@ -16,6 +16,7 @@ vaccounts-dapp-service
 * [`mocha`](mocha.md)
 * [`hooks-cpp-contracts`](hooks-cpp-contracts.md)
 * [`ipfs-dapp-service`](ipfs-dapp-service.md)
+* [`log-dapp-service`](log-dapp-service.md)
 ### npm packages
 * [`node-fetch`](http://npmjs.com/package/node-fetch)
 
