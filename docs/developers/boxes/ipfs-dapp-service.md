@@ -12,6 +12,7 @@ ipfs-dapp-service
 ## Dependencies
 ### Boxes
 * [`dapp-services`](dapp-services.md)
+* [`log-dapp-service`](log-dapp-service.md)
 * [`seed-utils`](seed-utils.md)
 * [`mocha`](mocha.md)
 * [`hooks-cpp-contracts`](hooks-cpp-contracts.md)
