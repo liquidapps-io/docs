@@ -12,7 +12,6 @@ regression-tests
 ### Boxes
 * [`helloworld`](helloworld.md)
 * [`all-dapp-services`](all-dapp-services.md)
-* [`microauctions`](microauctions.md)
 * [`cardgame`](cardgame.md)
 * [`airhodl`](airhodl.md)
 * [`coldtoken`](coldtoken.md)
