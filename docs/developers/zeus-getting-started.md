@@ -4,7 +4,7 @@ Zeus Getting Started
 ## Overview
 Zeus-cmd is an extensible command line tool. SDK extensions come packaged in "boxes" and are served through IPFS.  Zeus is currently in alpha.
 
-* zeus-sdk: https://github.com/liquidapps-io/zeus-sdk
+* [zeus-sdk](https://github.com/liquidapps-io/zeus-sdk)
 * [overview of boxes](boxes/zeus-boxes.md)
 
 ## Features:
@@ -37,7 +37,7 @@ Zeus-cmd is an extensible command line tool. SDK extensions come packaged in "bo
 Automatically installed with `zeus unbox helloworld`
 
 * [eosio.cdt v1.6.1](https://github.com/EOSIO/eosio.cdt/releases/tag/v1.6.1)
-* [eosio v1.7.3](https://github.com/EOSIO/eos/releases/tag/v1.7.3)
+* [eosio v1.7.4](https://github.com/EOSIO/eos/releases/tag/v1.7.4)
 
 
 ## Install Zeus

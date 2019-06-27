@@ -1,7 +1,6 @@
 Upgrade DSP Node
 ================
 
-## Upgrade
 ```bash
 sudo su -
 systemctl stop dsp

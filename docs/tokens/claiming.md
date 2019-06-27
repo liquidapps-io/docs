@@ -7,8 +7,8 @@ The auto claim mechanism does not require participants to push an action themsel
 ## Manual
 The manual claim function is always available and participants can claim their DAPP Tokens immediately after the cycle ends by sending an explicit action depending on the track they selected.
 
-Instant Registration Track: https://bloks.io/account/instanttrack?tab=Actions&action=claim&loadContract=true&payer=YOUR_ACCOUNT_HERE
+[Instant Registration Track](https://bloks.io/account/instanttrack?tab=Actions&action=claim&loadContract=true&payer=YOUR_ACCOUNT_HERE)
 
-Regular Registration Track: https://bloks.io/account/regulartrack?tab=Actions&action=claim&loadContract=true&payer=YOUR_ACCOUNT_HERE
+[Regular Registration Track](https://bloks.io/account/regulartrack?tab=Actions&action=claim&loadContract=true&payer=YOUR_ACCOUNT_HERE)
 
 Login with the wallet of your choice and enter your account in the "payer" field (**YOUR_ACCOUNT_HERE**) and hit "Push Transaction".

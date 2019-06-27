@@ -8,4 +8,4 @@ The Air-HODLed DAPP tokens will be distributed on a block by block basis, matchi
 
 HODLers are allowed to stake their vested Air-HODLed tokens immediately using our new staking mechanics. Withdrawing the tokens will transfer the vested tokens to their DAPP account, forfeiting the unvested portion to be redistributed amongst remaining eligible participants.
 
-You can get more information on the Air-HODL and view your balance at: https://liquidapps.io/air-hodl
+You can get more information on the Air-HODL and view your balance at: [https://liquidapps.io/air-hodl](https://liquidapps.io/air-hodl)
