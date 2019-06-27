@@ -2,14 +2,25 @@ Zeus Getting Started
 ====================
 
 ## Overview
-zeus-cmd is an Extensible command line tool. SDK extensions come packaged in "boxes".
+Zeus-cmd is an extensible command line tool. SDK extensions come packaged in "boxes" and are served through IPFS.  Zeus is currently in alpha.
 
-## Boxes
+* zeus-sdk: https://github.com/liquidapps-io/zeus-sdk
+* [overview of boxes](boxes/zeus-boxes.md)
 
-* EOSIO dApp development support
-* DAPP Services support
+## Features:
 
-[Boxes overview](boxes/zeus-boxes.md)
+* Smart contract templating with a single command
+* Install nodeos, keosd, cleos, and eosio.cdt with a single command
+* Simulate a blockchain node with a single command
+* Test, compile, and deploy smart contracts
+* Easily migrate a contract to a different EOSIO chain such as the Kylin and Jungle testnets or the mainnet
+* Design fluid dApp frontends
+* Cross-platform (Windows, OS X, Linux)
+* Easily install necessary libraries with a package manager
+* Truffle-like interface
+* Manage development lifecycle with version control
+* Open source (BSD License)
+* And more...
 
 ## Hardware Requirements
 * 16GB RAM
@@ -17,12 +28,16 @@ zeus-cmd is an Extensible command line tool. SDK extensions come packaged in "bo
 
 ## Prerequisites
 
-* nodejs == 10.x (nvm recommended)
+* nodejs == 10.x (nvm recommended, install at bottom of doc)
 * curl
+* cmake
+* make
 
-Recommended (otherwise falling back to docker)
+## Recommended eosio.cdt and eosio versions
+Automatically installed with `zeus unbox helloworld`
+
 * [eosio.cdt v1.6.1](https://github.com/EOSIO/eosio.cdt/releases/tag/v1.6.1)
-* [eosio v1.7.2](https://github.com/EOSIO/eos/releases/tag/v1.7.2)
+* [eosio v1.7.3](https://github.com/EOSIO/eos/releases/tag/v1.7.3)
 
 
 ## Install Zeus
@@ -31,10 +46,7 @@ Recommended (otherwise falling back to docker)
 npm install -g @liquidapps/zeus-cmd
 ```
 
-### Notes regarding docker on mac:
-Recommended version: 18.06.1-ce-mac73
-
-## Upgrade
+## Update
 
 ```bash
 npm update -g @liquidapps/zeus-cmd
@@ -48,40 +60,120 @@ zeus test
 ```
 
 ## Samples Boxes
-### vRAM
+
+```bash
+zeus unbox <INSERT_BOX>
+```
+
+### vRAM Boxes
 * [coldtoken](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/sample/coldtoken) - vRAM based eosio.token
 * [deepfreeze](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/sample/deepfreeze) - vRAM based cold storage contract
 * [vgrab](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/sample/vgrab) - vRAM based airgrab for eosio.token
 * [cardgame](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/sample/cardgame) - vRAM supported elemental battles
-* [registry](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/eos-framework/registry) - Generic Registry - the1registry
+* [registry](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/eos-framework/registry) - vRAM based item registration
 
-### Zeus Extensions
-* [contract-migrations-extensions](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/core/contract-migrations-extensions)
-* [build-extensions](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/core/build-extensions)
-* [test-extensions](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/core/test-extensions)
-* [eos-extensions](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/eos-sdk/eos-extensions)
-* [unbox-extensions](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/repos/unbox-extensions)
-* [demux](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/microservices/demux)
+### Zeus Extension Boxes
+* [contract-migrations-extensions](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/core/contract-migrations-extensions) - contract create/deployment command template, deploy contract and allocate DAPP tokens
+* [test-extensions](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/core/test-extensions) - provides logic to test smart contract with unit tests
+* [eos-extensions](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/eos-sdk/eos-extensions) - install eos/eosio.cdt, launch local nodeos, launch system contracts
+* [unbox-extensions](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/repos/unbox-extensions) - logic to unbox zeus boxes, list all boxes, and deploy a new box
+* [demux](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/microservices/demux) - install EOSIO's demux backend to capture events for contracts, zmq/state-history plugin options included
 
-### DAPP Services
-* [ipfs-dapp-service](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/services/ipfs-dapp-service)
-* [log-dapp-service](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/services/log-dapp-service)
-* [cron-dapp-service](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/services/cron-dapp-service)
-* [oracle-dapp-service](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/services/oracle-dapp-service)
+### DAPP Services Boxes
+* [ipfs-dapp-service](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/services/ipfs-dapp-service) - utilize the dapp::multi_index table to store data in IPFS (vRAM) instead of RAM
+* [cron-dapp-service](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/services/cron-dapp-service) - schedule CRON tasks on-chain
+* [oracle-dapp-service](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/services/oracle-dapp-service) - provide oracle services
+* [readfn-dapp-service](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/services/readfn-dapp-service) - read a contract function without the need to submit a trx to the chain
+* [vaccounts-dapp-service](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/services/vaccounts-dapp-service) - EOSIO accounts that live in vRAM instead of RAM
 
-### Misc.
+### Miscellaneous Boxes
 * [microauctions](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/economics/microauctions) - Micro Auctions
 * [eos-detective-reports](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/economics/eos-detective-reports) - EOS Detective Reports - by EOSNation
 * [helloworld](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/eos-sdk/sample-eos-cpp) - Hello World
 * [token](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/eos-framework/token) - Standard eosio.token
+* [airhodl](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/economics/airhodl) - First ever Air-HODL
 
-## Other Options
+## Zeus Options
+*please note: zeus commands are directory sensitive, all commands should be performed in root of box*
+
+### Zeus compile
+Compile a smart contract
 ```bash
-zeus compile #compile contracts
-zeus migrate #migrate contracts (deploy to local eos.node)
+zeus compile
+
+# optional flags:
+
+--all # compile all contracts
+# default: true
+--chain # chain to work on
+# default: eos
 ```
 
-## Usage inside a project
+### Zeus migrate
+Compile and migrate a smart contract to another network such as the [Kylin Testnet](https://www.cryptokylin.io/), [Jungle Testnet](https://monitor.jungletestnet.io/#home), or [Mainnet](https://eosnetworkmonitor.io/)
+```bash
+zeus import-key <CONTRACT_ACCOUNT_NAME> --owner-private-key <KEY> --active-private-key <KEY>
+zeus create contract-deployment CONTRACT_NAME CONTRACT_ACCOUNT_NAME
+zeus migrate
+
+# optional flags:
+
+--compile-all # compile all contracts
+# default: true
+--wallet # keosd wallet to use
+# default: zeus
+--creator-key # contract creator private key
+# default: (eosio test key) 5KQwrPbwdL6PhXujxW37FSSQZ1JiwsST4cqQzDeyXtP79zkvFD3
+--creator # account to set contract to
+# default: eosio
+--reset # reset testing environment
+# default: true
+--chain # chain to work on
+# default: eos
+--network # network to work on (other options, kylin, jungle, mainnet)
+# development (local)
+--verbose-rpc # verbose logs for blockchain communication
+# default: false
+--storage-path # path for persistent storage',
+# default: path.join(require('os').homedir(), '.zeus')
+--stake # account EOSIO staking amount
+# default: '30.0000'
+--no-compile-all # do not compile contracts
+--no-reset # do not reset local testing environment
+```
+
+### Zeus test
+Compile and unit test a smart contract
+```bash
+zeus test
+
+# optional flags:
+
+--compile-all # compile all contracts
+# default: true
+--wallet # keosd wallet to use
+# default: zeus
+--creator-key # contract creator key
+# default: (eosio test key) 5KQwrPbwdL6PhXujxW37FSSQZ1JiwsST4cqQzDeyXtP79zkvFD3
+--creator # account to set contract to
+# default: eosio
+--reset # reset testing environment
+# default: true
+--chain # chain to work on
+# default: eos
+--network # network to work on (other options, kylin, jungle, mainnet)
+# development (local)
+--verbose-rpc # verbose logs for blockchain communication
+# default: false
+--storage-path # path for persistent storage',
+# default: path.join(require('os').homedir(), '.zeus')
+--stake # account EOSIO staking amount
+# default: '30.0000'
+--no-compile-all # do not compile contracts
+--no-reset # do not reset local testing environment
+```
+
+### Help
 ```bash
 zeus --help 
 ```
@@ -106,6 +198,7 @@ zeus list-boxes
     zeus-config.js
 ```
 ### zeus-box.json
+Add commands, NPM intalls, ignores, and command hooks
 ```
     {
       "ignore": [
@@ -122,12 +215,14 @@ zeus list-boxes
           }
       },
       "hooks": {
-        "post-unpack": "echo hello"
+        "post-unpack": "echo hello",
+        "post-install": "git clone ..."
       }
     }
 ```
 
 ### zeus-config.js
+Configure zeus environments available to interact with
 ```
     module.exports = {
         defaultArgs:{
@@ -144,14 +239,20 @@ zeus list-boxes
                         secured: false
                     },
                     jungle: {
-                        host: "localhost",
-                        port: 7545,
+                        host: "jungle2.cryptolions.io",
+                        port: 80,
                         network_id: "*", // Match any network id
                         secured: false
                     },
+                    kylin: {
+                        host: "api.kylin.eosbeijing.one",
+                        port: 80,
+                        network_id: "*",
+                        secured: false
+                    },
                     mainnet:{
-                        host: "localhost",
-                        port: 7545,
+                        host: "bp.cryptolions.io",
+                        port: 8888,
                         network_id: "*", // Match any network id
                         secured: false
                     }
@@ -164,17 +265,8 @@ zeus list-boxes
 ## Notes regarding permissions errors:
 Recommend using Node Version Manager (nvm)
 ```bash
-sudo apt install curl
 curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.34.0/install.sh | bash
-exec bash
+# use install instructions provided to set PATH
 nvm install 10
 nvm use 10
-```
-Or you can try the following:
-```bash
-sudo groupadd docker
-sudo usermod -aG docker $USER
-
-#If still getting error:
-sudo chmod 666 /var/run/docker.sock
 ```

@@ -4,26 +4,28 @@ Kylin Testnet Account
 
 ```bash
 # Create a new available account name (replace 'yourtestaccount' with your account name):
-export KYLIN_TEST_ACCOUNT=yourtestaccount
-# Create wallet
-cleos wallet create --file wallet_password.pwd
-
-# Create Account
-curl http://faucet.cryptokylin.io/create_account?$KYLIN_TEST_ACCOUNT > keys.json
-export KYLIN_TEST_PRIVATE_KEY=`cat keys.json | jq -e '.keys.active_key.private'`
-export KYLIN_TEST_PUBLIC_KEY=`cat keys.json | jq -e '.keys.active_key.public'`
-cleos wallet import $KYLIN_TEST_PRIVATE_KEY
+export ACCOUNT=yourtestaccount
 
 # Configure endpoint
 export EOS_ENDPOINT=https://kylin-dsp-1.liquidapps.io
+
+# Create wallet
+cleos wallet create --file wallet_password.pwd
+
+# Create account and import key
+curl http://faucet.cryptokylin.io/create_account?$ACCOUNT > keys.json
+export ACTIVE_PRIVATE_KEY=`cat keys.json | jq -e '.keys.active_key.private'`
+export ACTIVE_PUBLIC_KEY=`cat keys.json | jq -e '.keys.active_key.public'`
+cleos wallet import --private-key $ACTIVE_PRIVATE_KEY
+# if this does not work, import key directly
+
+# Get some tokens, stake CPU/NET, buy RAM for contract
+curl http://faucet.cryptokylin.io/get_token?$ACCOUNT
+curl http://faucet.cryptokylin.io/get_token?$ACCOUNT
+cleos -u $EOS_ENDPOINT system buyram $ACCOUNT $ACCOUNT "100.0000 EOS" -p $ACCOUNT@active
+cleos -u $EOS_ENDPOINT system delegatebw $ACCOUNT $ACCOUNT "20.0000 EOS" "80.0000 EOS" -p $ACCOUNT@active
 ```
 *Save wallet_password.pwd and keys.json somewhere safe!*
-
-## Kylin EOS Tokens
-```bash
-# Get some Kylin EOS tokens
-curl http://faucet.cryptokylin.io/get_token?$KYLIN_TEST_ACCOUNT
-```
 
 ## Kylin DAPP Tokens
 

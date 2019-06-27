@@ -16,7 +16,7 @@ __   _| |__) |   /  \  | \  / |
 ## Prerequisites
 
 * [eosio.cdt v1.6.1](https://github.com/EOSIO/eosio.cdt/releases/tag/v1.6.1)
-* [eosio v1.7.1](https://github.com/EOSIO/eos/releases/tag/v1.7.1)
+* [eosio v1.7.4](https://github.com/EOSIO/eos/releases/tag/v1.7.4)
 * [Kylin Account](kylin-account.md)
 
 ## Install
@@ -59,19 +59,19 @@ DAPPSERVICES_ACTIONS()
 ### Replace eosio::multi_index
 ```cpp
 /*** REPLACE ***/
-    typedef eosio::multi_index<"accounts"_n, account> accounts_t;
+typedef eosio::multi_index<"accounts"_n, account> accounts_t;
 
 /*** WITH ***/
-      typedef dapp::multi_index<"accounts"_n, account> accounts_t;
+typedef dapp::multi_index<"accounts"_n, account> accounts_t;
       
 /*** ADD (for client side query support): ***/
-      typedef eosio::multi_index<".accounts"_n, account> accounts_t_v_abi;
-      TABLE shardbucket {
-          std::vector<char> shard_uri;
-          uint64_t shard;
-          uint64_t primary_key() const { return shard; }
-      };
-      typedef eosio::multi_index<"accounts"_n, shardbucket> accounts_t_abi;
+typedef eosio::multi_index<".accounts"_n, account> accounts_t_v_abi;
+TABLE shardbucket {
+    std::vector<char> shard_uri;
+    uint64_t shard;
+    uint64_t primary_key() const { return shard; }
+};
+typedef eosio::multi_index<"accounts"_n, shardbucket> accounts_t_abi;
 ```
 
 ### Add DSP actions dispatcher
@@ -118,4 +118,9 @@ The result should look like:
 executed transaction: 865a3779b3623eab94aa2e2672b36dfec9627c2983c379717f5225e43ac2b74a  104 bytes  67049 us
 #  yourcontract <= yourcontract::youraction1         {"param1":"param1","param2":"param2"}
 >> {"version":"1.0","etype":"service_request","payer":"yourcontract","service":"ipfsservice1","action":"commit","provider":"","data":"DH......"}
+```
+
+## Get table row
+```bash
+zeus get-table-row CONTRACT_ACCOUNT TABLE_NAME SCOPE TABLE_PRIMARY_KEY --endpoint $EOS_ENDPOINT
 ```

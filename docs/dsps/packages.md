@@ -69,22 +69,20 @@ Packages
     ]
 }
 ```
-### If not using Kubernetes
-```bash
-npm install -g @liquidapps/zeus-cmd
-cd $(readlink -f `which setup-dsp` | xargs dirname)
-```
+
 ### Register Package
 
 **Warning: packages are read only and can't be removed yet.**
 
 ```bash
+npm install -g @liquidapps/zeus-cmd
 export PACKAGE_ID=package1
 export EOS_CHAIN=mainnet
 #or
 export EOS_CHAIN=kylin
-
 export DSP_ENDPOINT=https://acme-dsp.com
+
+cd $(readlink -f `which setup-dsp` | xargs dirname)
 zeus register dapp-service-provider-package \
     ipfs $DSP_ACCOUNT $PACKAGE_ID \
     --key $DSP_PRIVATE_KEY \
