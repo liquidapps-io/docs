@@ -1,5 +1,0 @@
-Identity Service
-================
-
-## Overview
-## Contract

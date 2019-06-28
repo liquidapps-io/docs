@@ -1,5 +1,0 @@
-History Service
-===============
-
-## Overview
-## Contract

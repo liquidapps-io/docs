@@ -1,5 +1,6 @@
 DAPP Token Overview
 ===================
+The DAPP token is a multi-purpose utility token that grants access to the DAPP Network. It is designed to power an ecosystem of utilities, resources, and services specifically serving the needs of dApp developers building user-centric dApps.
 
 ## Videos
 

@@ -1,4 +1,0 @@
-Sister Chains
-=============
-
-## Overview

@@ -69,22 +69,20 @@ Packages
     ]
 }
 ```
-### If not using Kubernetes
-```bash
-npm install -g @liquidapps/zeus-cmd
-cd $(readlink -f `which setup-dsp` | xargs dirname)
-```
+
 ### Register Package
 
 **Warning: packages are read only and can't be removed yet.**
 
 ```bash
+npm install -g @liquidapps/zeus-cmd
 export PACKAGE_ID=package1
 export EOS_CHAIN=mainnet
 #or
 export EOS_CHAIN=kylin
-
 export DSP_ENDPOINT=https://acme-dsp.com
+
+cd $(readlink -f `which setup-dsp` | xargs dirname)
 zeus register dapp-service-provider-package \
     ipfs $DSP_ACCOUNT $PACKAGE_ID \
     --key $DSP_PRIVATE_KEY \
@@ -109,7 +107,7 @@ zeus register dapp-service-provider-package --help
 
 Don't forget to stake CPU/NET to your DSP account:
 ```bash
-cleos -u $EOS_ENDPOINT system delegatebw $DSP_ACCOUNT $DSP_ACCOUNT "5.000 EOS" "95.000 EOS" -p $DSP_ACCOUNT@active
+cleos -u $DSP_ENDPOINT system delegatebw $DSP_ACCOUNT $DSP_ACCOUNT "5.000 EOS" "95.000 EOS" -p $DSP_ACCOUNT@active
 ```
 
 #### Modify Package metadata:
@@ -119,5 +117,5 @@ To modify package metadata: use the "modifypkg" action of the dappservices contr
 
 Using cleos:
 ```bash
-cleos -u $EOS_ENDPOINT push action dappservices modifypkg "[\"$DSP_ACCOUNT\",\"$PACKAGE_ID\",\"ipfsservice1\",\"$DSP_ENDPOINT\",\"https://acme-dsp.com/modified-package1.dsp-package.json\"]" -p $DSP_ACCOUNT@active
+cleos -u $DSP_ENDPOINT push action dappservices modifypkg "[\"$DSP_ACCOUNT\",\"$PACKAGE_ID\",\"ipfsservice1\",\"$DSP_ENDPOINT\",\"https://acme-dsp.com/modified-package1.dsp-package.json\"]" -p $DSP_ACCOUNT@active
 ```
