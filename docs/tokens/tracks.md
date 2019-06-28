@@ -1,6 +1,6 @@
 DAPP Tokens Tracks
 ==================
-Link to auction: https://liquidapps.io/auction
+Link to auction: [https://liquidapps.io/auction](https://liquidapps.io/auction)
 
 ## Instant Track
 Users wishing to purchase DAPP with EOS tokens can do so through the instant track. Simply send EOS to the Instant Registration Track Vendor Smart Contract and you will receive your DAPP tokens at the end of the current cycle (see “Claiming DAPP Tokens” for further information about the claiming process).
