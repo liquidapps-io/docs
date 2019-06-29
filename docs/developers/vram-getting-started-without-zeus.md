@@ -26,7 +26,6 @@ Clone into your project directory:
 git clone  --single-branch --branch v1.4 --recursive https://github.com/liquidapps-io/dist
 ```
 
-
 ## Modify your contract
 
 vRAM provides a drop in replacement for the `eosio::multi_index` table that is also interacted with in the same way as the traditional `eosio::multi_index` table making it very easy and familiar to use. Please note that secondary indexes are not currently implemented for `dapp::multi_index` tables. 
