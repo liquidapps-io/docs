@@ -26,56 +26,19 @@ sudo yum install -y make cmake3 python
 ## Install
 ```bash
 sudo su -
-nvm use 10
 npm install -g pm2
 npm install -g @liquidapps/dsp --unsafe-perm=true
 exit
 ```
 
 ## Configure Settings
+**Any changes to the `config.toml` file will require `setup-dsp` to be run again.**
 ```bash
 sudo su -
 mkdir ~/.dsp
 cp $(readlink -f `which setup-dsp` | xargs dirname)/sample-config.toml ~/.dsp/config.toml
 nano ~/.dsp/config.toml
-# edit based on config below
 exit
-```
-
-### sample.config.toml:
-```bash
-[dsp]
-# enter account
-account = "<DSP ACCOUNT>"
-# enter account private key
-private_key = "<DSP PRIVATE KEY>"
-port = 3115
-# configure available services: 
-services_enabled = "ipfs,log,vaccounts,oracle,cron,readfn"
-
-[nodeos]
-host = "localhost"
-port = 8888
-secured = false
-
-# mainnet:
-chainid = "aca376f206b8fc25a6ed44dbdc66547c36c6c33e3a119ffbeaef943642f0e906"
-# kylin: "5fff1dae8dc8e2fc4d5b23b2c7665c97f9e9d8edf2b6485a86ba311c25639191"
-
-# if using zmq_plugin: 
-zmq_port = 5557
-# if using state_history_plugin: 
-websocket_port = 8887
-
-[demux]
-backend = "state_history_plugin"
-# zmq: "zmq_plugin" only if using nodeos with eosrio's version of the ZMQ plugin: https://github.com/eosrio/eos_zmq_plugin
-socket_mode = "sub"
-
-[ipfs]
-protocol = "http"
-host = "localhost"
-port = 5001
 ```
 
 ## Launch DSP Services

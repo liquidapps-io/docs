@@ -1,11 +1,17 @@
 Upgrade DSP Node
 ================
 
+Ensure no new updates to the `sample-config.toml` file are present, if so, update your config.toml accordingly.
+
+Link: [sample-config.toml](https://raw.githubusercontent.com/liquidapps-io/zeus-sdk/master/boxes/groups/dapp-network/dapp-services-deploy/sample-config.toml)
+
 ```bash
 sudo su -
 systemctl stop dsp
 systemctl stop ipfs
 systemctl stop nodeos
+# if changes to sample-config.toml syntax:
+nano ~/.dsp/config.toml
 pm2 del all
 pm2 kill
 npm uninstall -g @liquidapps/dsp

@@ -4,6 +4,7 @@ Overview
 ## Articles
 
 - [vRAM guide for experts](https://medium.com/@liquidapps/vram-guide-for-experts-f809c8f82a27)
+- [EOS dApps and Their RAM Expenses](https://medium.com/@liquidapps/eos-dapps-and-their-ram-expenses-39352417be5c)
 
 ## Videos
 

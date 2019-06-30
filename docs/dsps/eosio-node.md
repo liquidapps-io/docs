@@ -10,8 +10,10 @@ EOSIO Node
 ## Get EOSIO binary
 
 ```bash
-# install nodeos
+# install nodeos mainnet
 VERSION=1.7.4
+# if Kylin Testnet
+VERSION=1.8.0
 ```
 
 ### Ubuntu 18.04
@@ -41,9 +43,10 @@ INSTALL_TOOL=yum
 ## Install
 ```bash
 wget https://github.com/EOSIO/eos/releases/download/v$VERSION/$FILENAME
+# if Kylin Testnet:
+wget https://github.com/EOSIO/eos/releases/download/v1.8.0/eosio_1.8.0-1-ubuntu-18.04_amd64.deb
 sudo $INSTALL_TOOL install ./$FILENAME
 ```
-
 
 ## Prepare Directories
 ```bash
@@ -58,10 +61,10 @@ mkdir $HOME/.local/share/eosio/nodeos/config -p
 
 ### Kylin
 ```bash
-URL=https://s3-ap-northeast-1.amazonaws.com/eosbeijing/snapshot-0276f607955f3008bae69fc47a23ac2eb989af1adebeced2d7462ef30423b194.bin
+URL="http://storage.googleapis.com/eos-kylin-snapshot/snapshot-2019-06-10-09(utc)-0312d3b9843e2efa6831806962d6c219d37200e0b897a0d9243bcab40b2b546b.bin"
 P2P_FILE=https://raw.githubusercontent.com/cryptokylin/CryptoKylin-Testnet/master/fullnode/config/config.ini
 GENESIS=https://raw.githubusercontent.com/cryptokylin/CryptoKylin-Testnet/master/genesis.json
-CHAIN_STATE_SIZE=65535
+CHAIN_STATE_SIZE=256000
 wget $URL -O $HOME/.local/share/eosio/nodeos/data/snapshots/boot.bin
 ```        
 
