@@ -14,6 +14,7 @@ seed-eos
 * [`zeus-eos`](zeus-eos.md)
 * [`eos-common`](eos-common.md)
 * [`eosio-system-contracts`](eosio-system-contracts.md)
+* [`eos-keystore`](eos-keystore.md)
 ### npm packages
 * [`mkdirp`](http://npmjs.com/package/mkdirp)
 * [`which`](http://npmjs.com/package/which)
