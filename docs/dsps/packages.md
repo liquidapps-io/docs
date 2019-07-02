@@ -79,7 +79,8 @@ Packages
 
 ```bash
 npm install -g @liquidapps/zeus-cmd
-# find the desired package name in the /service/models/dapp-service/service.json folder of each service as the "name" parameter: https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/services (ipfs, cron, log, oracle, readfn, vaccounts)
+# the package must be chosen from the following list:
+# packages: (ipfs, cron, log, oracle, readfn, vaccounts)
 export PACKAGE=ipfs
 export DSP_ACCOUNT=
 # active key to sign package creation trx

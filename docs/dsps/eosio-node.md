@@ -113,6 +113,7 @@ access-control-allow-credentials = false
 verbose-http-errors = true
 http-threads=8
 net-threads=8
+read-mode = head
 plugin = eosio::producer_plugin
 plugin = eosio::chain_plugin
 plugin = eosio::chain_api_plugin
@@ -123,7 +124,7 @@ state-history-endpoint = 0.0.0.0:8887
 chain-state-db-size-mb = $CHAIN_STATE_SIZE
 EOF
 
-# if on Kylin, please add the following option to the config.ini for demux support in 1.8.0:
+# if on Kylin, please add the following option to the config.ini for supporting 1.8.0:
 # trace-history-debug-mode = true
 nano config.ini
 
