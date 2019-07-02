@@ -11,6 +11,10 @@ Zeus Boxes
 
 * [airhodl](airhodl.md)
 
+* [airdrop](airdrop.md)
+
+* [bancor-extensions](bancor-extensions.md)
+
 * [cardgame](cardgame.md)
 
 * [dapp-services-deploy](dapp-services-deploy.md)
