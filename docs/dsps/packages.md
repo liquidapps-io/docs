@@ -74,24 +74,41 @@ Packages
 
 **Warning: packages are read only and can't be removed yet.**
 
+* [Mainnet DSP packages](https://bloks.io/account/dappservices?loadContract=true&tab=Tables&account=dappservices&scope=dappservices&limit=100&table=package)
+* [Kylin DSP packages](https://kylin.bloks.io/account/dappservices?loadContract=true&tab=Tables&account=dappservices&scope=dappservices&limit=100&table=package)
+
 ```bash
 npm install -g @liquidapps/zeus-cmd
+# find the desired package name in the /service/models/dapp-service/service.json folder of each service as the "name" parameter: https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/services (ipfs, cron, log, oracle, readfn, vaccounts)
+export PACKAGE=ipfs
+export DSP_ACCOUNT=
+# active key to sign package creation trx
+export DSP_PRIVATE_KEY=
+# customizable and unique name for your package
 export PACKAGE_ID=package1
 export EOS_CHAIN=mainnet
-#or
+# or
 export EOS_CHAIN=kylin
+# the minimum stake quantity is the amount of DAPP and/or DAPPHDL that must be staked to meet the package's threshold for use
+export MIN_STAKE_QUANTITY="10.0000"
+# package period is in seconds, so 86400 = 1 day, 3600 = 1 hour
+export PACKAGE_PERIOD=86400
+# QUOTA is the measurement for total actions allowed within the package period to be processed by the DSP.  1.0000 QUOTA = 10,000 actions. 0.0001 QUOTA = 1 action
+export QUOTA="1.0000"
 export DSP_ENDPOINT=https://acme-dsp.com
+# package json uri is the link to your package's information, this is customizable without a required syntax
+export PACKAGE_JSON_URI=https://acme-dsp.com/package1.dsp-package.json
 
 cd $(readlink -f `which setup-dsp` | xargs dirname)
 zeus register dapp-service-provider-package \
-    ipfs $DSP_ACCOUNT $PACKAGE_ID \
+    $PACKAGE $DSP_ACCOUNT $PACKAGE_ID \
     --key $DSP_PRIVATE_KEY \
-    --min-stake-quantity "10.0000" \
-    --package-period 86400 \
-    --quota "1.0000" \
+    --min-stake-quantity $MIN_STAKE_QUANTITY \
+    --package-period $PACKAGE_PERIOD \
+    --quota $QUOTA \
     --network $EOS_CHAIN \
     --api-endpoint $DSP_ENDPOINT \
-    --package-json-uri https://acme-dsp.com/package1.dsp-package.json
+    --package-json-uri $PACKAGE_JSON_URI
 ```
 
 output should be:
@@ -111,7 +128,7 @@ cleos -u $DSP_ENDPOINT system delegatebw $DSP_ACCOUNT $DSP_ACCOUNT "5.000 EOS" "
 ```
 
 #### Modify Package metadata:
-Currently only `package_json_uri` and `api_endpoint` are modifyable.
+Currently only `package_json_uri` and `api_endpoint` are modifyable.  To signal to DSP Portals / Developers that your package is no longer in service, set your `api_endpoint` to `null`.
 
 To modify package metadata: use the "modifypkg" action of the dappservices contract.
 

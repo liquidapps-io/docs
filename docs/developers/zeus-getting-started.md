@@ -87,8 +87,8 @@ zeus unbox <INSERT_BOX>
 * [vaccounts-dapp-service](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/services/vaccounts-dapp-service) - EOSIO accounts that live in vRAM instead of RAM
 
 ### Miscellaneous Boxes
-* [microauctions](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/economics/microauctions) - Micro Auctions
-* [eos-detective-reports](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/economics/eos-detective-reports) - EOS Detective Reports - by EOSNation
+* [microauctions](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/economics/microauctions) - twin reverse dutch auctions used in DAPP's generation event
+* [eos-detective-reports](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/economics/eos-detective-reports) - EOS Detective Reports - by EOSNation - [https://eosdetective.io/](https://eosdetective.io/)
 * [helloworld](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/eos-sdk/sample-eos-cpp) - Hello World
 * [token](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/eos-framework/token) - Standard eosio.token
 * [airhodl](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/economics/airhodl) - First ever Air-HODL
@@ -112,7 +112,7 @@ zeus compile
 ### Zeus migrate
 Compile and migrate a smart contract to another network such as the [Kylin Testnet](https://www.cryptokylin.io/), [Jungle Testnet](https://monitor.jungletestnet.io/#home), or [Mainnet](https://eosnetworkmonitor.io/)
 ```bash
-zeus import-key <CONTRACT_ACCOUNT_NAME> --owner-private-key <KEY> --active-private-key <KEY>
+zeus import <CONTRACT_ACCOUNT_NAME> --owner-private-key <KEY> --active-private-key <KEY>
 zeus create contract-deployment CONTRACT_NAME CONTRACT_ACCOUNT_NAME
 zeus migrate
 
@@ -131,7 +131,7 @@ zeus migrate
 --chain # chain to work on
 # default: eos
 --network # network to work on (other options, kylin, jungle, mainnet)
-# development (local)
+# default: development (local)
 --verbose-rpc # verbose logs for blockchain communication
 # default: false
 --storage-path # path for persistent storage',
@@ -162,7 +162,7 @@ zeus test
 --chain # chain to work on
 # default: eos
 --network # network to work on (other options, kylin, jungle, mainnet)
-# development (local)
+# default: development (local)
 --verbose-rpc # verbose logs for blockchain communication
 # default: false
 --storage-path # path for persistent storage',
@@ -171,6 +171,35 @@ zeus test
 # default: '30.0000'
 --no-compile-all # do not compile contracts
 --no-reset # do not reset local testing environment
+```
+
+### Zeus Import/Export Keys
+Import and export keys to your Zeus wallet.  **Please note by default keys are imported without encryption.**
+
+```bash
+zeus key import <ACCOUNT_NAME> --owner-private-key <KEY> --active-private-key <KEY>
+
+# optional flags:
+
+--encrypted # encrypt the account keys with a password
+# default: false
+--storage # path to the wallet which will store the key
+# default: ${home}/.zeus/networks
+--network # network to work on (other options, kylin, jungle, mainnet)
+# development (local)
+--password # password to encrypt the keys with
+
+zeus key export <ACCOUNT_NAME>
+
+# optional flags:
+
+--encrypted # exports encrypted key
+# default: false
+--storage # path to where the key is stored
+# default: ${home}/.zeus/networks
+--network # network to work on (other options, kylin, jungle, mainnet)
+# default: development (local)
+--password # password to decrypt the keypair
 ```
 
 ### Help

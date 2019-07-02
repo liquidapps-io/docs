@@ -14,6 +14,7 @@ __   _| |__) |   /  \  | \  / |
 
 * [Zeus](zeus-getting-started.md)
 * [Kylin Account](kylin-account.md)
+* If testing on Kylin: [eosio v1.8.0](https://github.com/EOSIO/eos/releases/tag/v1.8.0)
 
 ## Unbox sample template
 This box supports all DAPP Services and unit tests and is built to integrate your own vRAM logic.
