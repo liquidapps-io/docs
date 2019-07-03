@@ -14,6 +14,7 @@ dns-dapp-service
 * [`dapp-services`](dapp-services.md)
 ### npm packages
 * [`dnsd`](http://npmjs.com/package/dnsd)
+* [`native-dns`](http://npmjs.com/package/native-dns)
 
 ## Contracts
 * [`dnsservice`](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/services/dns-dapp-service/contracts/eos/dappservices/_dns_impl.hpp)
