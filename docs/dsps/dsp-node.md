@@ -53,7 +53,9 @@ exit
 
 ## Check logs
 ```bash
-sudo pm2 logs
+sudo su -
+pm2 logs
+exit
 ```
 
 ### Output sample:
