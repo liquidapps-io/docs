@@ -59,6 +59,29 @@ cd helloworld
 zeus test
 ```
 
+## Try out a game!
+LiquidApps' take on Elemental Battles: [https://cardgame1112.dnsregistry1.com/](https://cardgame1112.dnsregistry1.com/) | [code](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/sample/cardgame)
+
+The game incorporates:
+
+* vRAM - light-weight caching solution for EOSIO based RAM
+* LiquidAccounts - EOSIO accounts that live in vRAM instead of RAM
+* LiquidDNS - DNS service on the blockchain | [contract table](https://kylin.bloks.io/account/dnsregistry1?loadContract=true&tab=Tables&table=dnsentry&account=dnsregistry1&scope=cardgame1112&limit=100)
+* Frontend stored on IPFS
+* user data is stored in the vRAM `dapp::multi_index` table (vRAM) | [code](https://github.com/liquidapps-io/zeus-sdk/blob/master/boxes/groups/sample/cardgame/contracts/eos/cardgame/cardgame.hpp#L94)
+* keys stored in `dapp::multi_index` table | [code](https://github.com/liquidapps-io/zeus-sdk/blob/master/boxes/groups/sample/cardgame/contracts/eos/cardgame/cardgame.hpp#L94)
+* keys created using the account name and password as seed phrases | [code](https://github.com/liquidapps-io/zeus-sdk/blob/master/boxes/groups/sample/cardgame/frontends/main/src/components/Login/Login.jsx#L35)
+* eosjs-ecc's `seedPrivate` method is used to create the keypair | [code](https://github.com/EOSIO/eosjs-ecc#seedprivate)
+* logic to create LiquidAccount transactions | [code](https://github.com/liquidapps-io/zeus-sdk/blob/master/boxes/groups/sample/cardgame/frontends/main/src/services/ApiService.js#L12)
+
+To launch locally:
+```bash
+zeus unbox cardgame
+cd cardgame
+zeus migrate
+zeus run frontend main
+```
+
 ## Samples Boxes
 
 ```bash
@@ -69,7 +92,6 @@ zeus unbox <INSERT_BOX>
 * [coldtoken](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/sample/coldtoken) - vRAM based eosio.token
 * [deepfreeze](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/sample/deepfreeze) - vRAM based cold storage contract
 * [vgrab](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/sample/vgrab) - vRAM based airgrab for eosio.token
-* [cardgame](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/sample/cardgame) - vRAM supported elemental battles
 * [registry](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/eos-framework/registry) - vRAM based item registration
 
 ### Zeus Extension Boxes
