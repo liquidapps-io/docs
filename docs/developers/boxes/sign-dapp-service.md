@@ -15,8 +15,10 @@ sign-dapp-service
 * [`seed-utils`](seed-utils.md)
 * [`mocha`](mocha.md)
 * [`hooks-cpp-contracts`](hooks-cpp-contracts.md)
-
-
+### npm packages
+* [`web3@1.0.0-beta.36`](http://npmjs.com/package/web3@1.0.0-beta.36)
+* [`ganache-cli`](http://npmjs.com/package/ganache-cli)
+* [`truffle-contract`](http://npmjs.com/package/truffle-contract)
 
 ## Contracts
 * [`signservice`](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/services/sign-dapp-service/contracts/eos/dappservices/_sign_impl.hpp)
@@ -28,9 +30,10 @@ zeus unbox sign-dapp-service
 
 
 
+## Zeus Command Extensions
 
-
-
+### Subcommands
+* ```zeus start-localenv 03-ganache-cli --help```
 
 
 
@@ -49,11 +52,13 @@ zeus unbox sign-dapp-service
     "signtrx": {
       "blocking": true,
       "request": {
-        "account": "name",
-        "permission": "name",
-        "client_code": "std::string",
-        "payload_hash": "checksum256",
-        "signature": "std::vector<char>"
+        "id": "std::string",
+        "trx": "std::string",
+        "chain": "std::string",
+        "chain_type": "std::string",
+        "sigs": "std::vector<std::string>",
+        "account": "std::string",
+        "sigsRequired": "uint16_t"
       },
       "callback": {
         "account": "name",
