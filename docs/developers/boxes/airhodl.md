@@ -35,5 +35,6 @@ zeus test
 
 
 
-
+## Tests 
+* [airhodl.spec.js](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/economics/airhodl/test/airhodl.spec.js)
 ## [Source](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/economics/airhodl)
