@@ -47,5 +47,5 @@ cleos wallet create --file wallet_password.pwd
 
 ## Import account
 ```bash
-cleos wallet import $DSP_PRIVATE_KEY
+cleos wallet import --private-key $DSP_PRIVATE_KEY
 ```

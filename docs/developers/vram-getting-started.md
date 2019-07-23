@@ -14,7 +14,7 @@ __   _| |__) |   /  \  | \  / |
 
 * [Zeus](zeus-getting-started.md)
 * [Kylin Account](kylin-account.md)
-* If testing on Kylin: [eosio v1.8.0](https://github.com/EOSIO/eos/releases/tag/v1.8.0)
+* If testing on Kylin: [eosio v1.8.1](https://github.com/EOSIO/eos/releases/tag/v1.8.1)
 
 ## Unbox sample template
 This box supports all DAPP Services and unit tests and is built to integrate your own vRAM logic.
@@ -277,9 +277,9 @@ executed transaction: 865a3779b3623eab94aa2e2672b36dfec9627c2983c379717f5225e43a
 # zeus:
 zeus get-table-row "CONTRACT_ACCOUNT" "TABLE_NAME" "SCOPE" "TABLE_PRIMARY_KEY" --endpoint $DSP_ENDPOINT | python -m json.tool
 # curl: 
-curl http://$DSP_ENDPOINT/dsp/ipfsservice1/get_table_row -d '{"contract":"CONTRACT_ACCOUNT","scope":"SCOPE","table":"TABLE_NAME","key":"TABLE_PRIMARY_KEY"}' | python -m json.tool
+curl http://$DSP_ENDPOINT/v1/dsp/ipfsservice1/get_table_row -d '{"contract":"CONTRACT_ACCOUNT","scope":"SCOPE","table":"TABLE_NAME","key":"TABLE_PRIMARY_KEY"}' | python -m json.tool
 
 # coldtoken:
 zeus get-table-row $KYLIN_TEST_ACCOUNT "accounts" $KYLIN_TEST_ACCOUNT "TEST" --endpoint $DSP_ENDPOINT | python -m json.tool
-curl http://$DSP_ENDPOINT/dsp/ipfsservice1/get_table_row -d '{"contract":"CONTRACT_ACCOUNT","scope":"CONTRACT_ACCOUNT","table":"accounts","key":"TEST"}' | python -m json.tool
+curl http://$DSP_ENDPOINT/v1/dsp/ipfsservice1/get_table_row -d '{"contract":"CONTRACT_ACCOUNT","scope":"CONTRACT_ACCOUNT","table":"accounts","key":"TEST"}' | python -m json.tool
 ```
