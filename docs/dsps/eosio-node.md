@@ -10,10 +10,8 @@ EOSIO Node
 ## Get EOSIO binary
 
 ```bash
-# install nodeos mainnet
-VERSION=1.7.4
-# if Kylin Testnet
-VERSION=1.8.0
+# install 1.8 even if chain is sub 1.7.*
+VERSION=1.8.1
 ```
 
 ### Ubuntu 18.04
@@ -43,8 +41,6 @@ INSTALL_TOOL=yum
 ## Install
 ```bash
 wget https://github.com/EOSIO/eos/releases/download/v$VERSION/$FILENAME
-# if Kylin Testnet:
-wget https://github.com/EOSIO/eos/releases/download/v1.8.0/eosio_1.8.0-1-ubuntu-18.04_amd64.deb
 sudo $INSTALL_TOOL install ./$FILENAME
 ```
 
@@ -114,19 +110,16 @@ verbose-http-errors = true
 http-threads=8
 net-threads=8
 read-mode = head
+trace-history-debug-mode = true
+trace-history = true
 plugin = eosio::producer_plugin
 plugin = eosio::chain_plugin
 plugin = eosio::chain_api_plugin
 plugin = eosio::net_plugin
 plugin = eosio::state_history_plugin
-trace-history = true
 state-history-endpoint = 0.0.0.0:8887
 chain-state-db-size-mb = $CHAIN_STATE_SIZE
 EOF
-
-# if on Kylin, please add the following option to the config.ini for supporting 1.8.0:
-# trace-history-debug-mode = true
-nano config.ini
 
 curl $P2P_FILE > p2p-config.ini
 cat p2p-config.ini | grep "p2p-peer-address" >> $HOME/.local/share/eosio/nodeos/config/config.ini
