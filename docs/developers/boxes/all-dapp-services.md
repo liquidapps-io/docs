@@ -18,7 +18,6 @@ all-dapp-services
 * [`storage-dapp-service`](storage-dapp-service.md)
 * [`auth-dapp-service`](auth-dapp-service.md)
 * [`history-dapp-service`](history-dapp-service.md)
-* [`sign-dapp-service`](sign-dapp-service.md)
 * [`readfn-dapp-service`](readfn-dapp-service.md)
 * [`dns-dapp-service`](dns-dapp-service.md)
 
