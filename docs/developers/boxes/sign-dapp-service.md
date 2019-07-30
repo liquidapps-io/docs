@@ -58,9 +58,7 @@ zeus unbox sign-dapp-service
         "trx_data": "std::string",
         "chain": "std::string",
         "chain_type": "std::string",
-        "sigs": "std::string",
-        "account": "std::string",
-        "sigs_required": "uint16_t"
+        "account": "std::string"
       },
       "callback": {
         "id": "std::string",
@@ -68,9 +66,7 @@ zeus unbox sign-dapp-service
         "trx_data": "std::string",
         "chain": "std::string",
         "chain_type": "std::string",
-        "sigs": "std::string",
         "account": "std::string",
-        "sigs_required": "uint16_t",
         "trx_id": "std::string"
       },
       "signal": {
@@ -79,8 +75,7 @@ zeus unbox sign-dapp-service
         "trx_data": "std::string",
         "chain": "std::string",
         "chain_type": "std::string",
-        "account": "std::string",
-        "sigs_required": "uint16_t"
+        "account": "std::string"
       }
     },
     "sgcleanup": {
