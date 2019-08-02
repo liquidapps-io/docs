@@ -5,7 +5,7 @@ LiquidLink Service
 IBC MultiSig Service
 
 ## Stage
-WIP
+Alpha
 
 ## Contract
 

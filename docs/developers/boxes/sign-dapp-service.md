@@ -15,8 +15,11 @@ sign-dapp-service
 * [`seed-utils`](seed-utils.md)
 * [`mocha`](mocha.md)
 * [`hooks-cpp-contracts`](hooks-cpp-contracts.md)
-
-
+### npm packages
+* [`web3@1.0.0-beta.36`](http://npmjs.com/package/web3@1.0.0-beta.36)
+* [`ganache-cli`](http://npmjs.com/package/ganache-cli)
+* [`truffle-contract`](http://npmjs.com/package/truffle-contract)
+* [`ethereumjs-tx`](http://npmjs.com/package/ethereumjs-tx)
 
 ## Contracts
 * [`signservice`](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/services/sign-dapp-service/contracts/eos/dappservices/_sign_impl.hpp)
@@ -28,9 +31,10 @@ zeus unbox sign-dapp-service
 
 
 
+## Zeus Command Extensions
 
-
-
+### Subcommands
+* ```zeus start-localenv 03-ganache-cli --help```
 
 
 
@@ -43,55 +47,52 @@ zeus unbox sign-dapp-service
   "port": 13128,
   "contract": "signfndspsvc",
   "prettyName": "LiquidLink",
-  "stage": "WIP",
+  "stage": "Alpha",
   "description": "IBC MultiSig Service",
   "commands": {
     "signtrx": {
-      "blocking": true,
+      "blocking": false,
       "request": {
-        "account": "name",
-        "permission": "name",
-        "client_code": "std::string",
-        "payload_hash": "checksum256",
-        "signature": "std::vector<char>"
+        "id": "std::string",
+        "destination": "std::string",
+        "trx_data": "std::string",
+        "chain": "std::string",
+        "chain_type": "std::string",
+        "sigs": "std::string",
+        "account": "std::string",
+        "sigs_required": "uint16_t"
       },
       "callback": {
-        "account": "name",
-        "permission": "name",
-        "client_code": "std::string",
-        "payload_hash": "checksum256",
-        "signature": "std::vector<char>"
+        "id": "std::string",
+        "destination": "std::string",
+        "trx_data": "std::string",
+        "chain": "std::string",
+        "chain_type": "std::string",
+        "sigs": "std::string",
+        "account": "std::string",
+        "sigs_required": "uint16_t",
+        "trx_id": "std::string"
       },
       "signal": {
-        "account": "name",
-        "permission": "name",
-        "client_code": "std::string",
-        "payload_hash": "checksum256",
-        "signature": "std::vector<char>"
+        "id": "std::string",
+        "destination": "std::string",
+        "trx_data": "std::string",
+        "chain": "std::string",
+        "chain_type": "std::string",
+        "account": "std::string",
+        "sigs_required": "uint16_t"
       }
     },
     "sgcleanup": {
       "blocking": false,
       "request": {
-        "account": "name",
-        "permission": "name",
-        "client_code": "std::string",
-        "payload_hash": "checksum256",
-        "signature": "std::vector<char>"
+        "id": "uint64_t"
       },
       "callback": {
-        "account": "name",
-        "permission": "name",
-        "client_code": "std::string",
-        "payload_hash": "checksum256",
-        "signature": "std::vector<char>"
+        "id": "uint64_t"
       },
       "signal": {
-        "account": "name",
-        "permission": "name",
-        "client_code": "std::string",
-        "payload_hash": "checksum256",
-        "signature": "std::vector<char>"
+        "id": "uint64_t"
       }
     }
   }

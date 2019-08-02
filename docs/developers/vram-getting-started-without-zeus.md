@@ -17,7 +17,7 @@ __   _| |__) |   /  \  | \  / |
 
 * [eosio.cdt v1.6.1](https://github.com/EOSIO/eosio.cdt/releases/tag/v1.6.1)
 * [eosio v1.7.4](https://github.com/EOSIO/eos/releases/tag/v1.7.4)
-* If testing on Kylin: [eosio v1.8.0](https://github.com/EOSIO/eos/releases/tag/v1.8.0)
+* If testing on Kylin: [eosio v1.8.1](https://github.com/EOSIO/eos/releases/tag/v1.8.1)
 * [Kylin Account](kylin-account.md)
 
 ## Install
@@ -90,6 +90,9 @@ eosio-cpp -abigen -o contract.wasm contract.cpp
 
 ## Deploy Contract
 ```bash
+export DSP_ENDPOINT=https://kylin-dsp-1.liquidapps.io
+export KYLIN_TEST_ACCOUNT=
+export KYLIN_TEST_PUBLIC_KEY=
 # Set contract code and abi
 cleos -u $DSP_ENDPOINT set contract $KYLIN_TEST_ACCOUNT ../contract -p $KYLIN_TEST_ACCOUNT@active
 # Set contract permissions
@@ -106,7 +109,6 @@ Finally you can now test your vRAM implementation by sending an action through y
 The endpoint can be found in the [package table](https://kylin.eosx.io/account/dappservices?mode=contract&sub=tables&table=package&lowerBound=&upperBound=&limit=100) of the dappservices account on all chains.
 
 ```bash
-export DSP_ENDPOINT=https://kylin-dsp-1.liquidapps.io
 cleos -u $DSP_ENDPOINT push action $KYLIN_TEST_ACCOUNT youraction1 "[\"param1\",\"param2\"]" -p $KYLIN_TEST_ACCOUNT@active
 ```
 
@@ -119,5 +121,5 @@ executed transaction: 865a3779b3623eab94aa2e2672b36dfec9627c2983c379717f5225e43a
 
 ## Get table row
 ```bash
-curl http://$DSP_ENDPOINT/dsp/ipfsservice1/get_table_row -d '{"contract":"CONTRACT_ACCOUNT","scope":"SCOPE","table":"TABLE_NAME","key":"TABLE_PRIMARY_KEY"}' | python -m json.tool
+curl http://$DSP_ENDPOINT/v1/dsp/ipfsservice1/get_table_row -d '{"contract":"CONTRACT_ACCOUNT","scope":"SCOPE","table":"TABLE_NAME","key":"TABLE_PRIMARY_KEY"}' | python -m json.tool
 ```
