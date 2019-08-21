@@ -145,7 +145,7 @@ After=network.target
 User=$NODEOS_USER
 ExecStart=$NODEOS_EXEC --disable-replay-opts
 [Install]
-WantedBy=multiuser.target
+WantedBy=multi-user.target
 EOF
 
 systemctl start nodeos
