@@ -2,9 +2,6 @@ DSP Node
 ========
 
 ## Prerequisites
-
-- git
-
 ### Linux
 ```bash
 sudo su -
@@ -30,7 +27,6 @@ sudo yum install -y make cmake3 python
 ```bash
 sudo su -
 npm install -g pm2
-npm install -g dnsd native-dns
 npm install -g @liquidapps/dsp --unsafe-perm=true
 exit
 ```

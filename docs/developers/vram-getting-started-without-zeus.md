@@ -45,9 +45,15 @@ To access the vRAM table, add the following lines to your smart contract:
     IPFS_SVC_COMMANDS()
   
 #define CONTRACT_NAME() mycontract
+```
+### After contract class header
+```cpp
+CONTRACT mycontract : public eosio::contract { 
+  using contract::contract; 
+public: 
 
-CONTRACT_START()
-   public:
+/*** ADD HERE ***/
+DAPPSERVICES_ACTIONS()
 ```
 
 ### Replace eosio::multi_index
@@ -68,9 +74,13 @@ TABLE shardbucket {
 typedef eosio::multi_index<"accounts"_n, shardbucket> accounts_t_abi;
 ```
 
-### Add actions dispatcher
+### Add DSP actions dispatcher
 ```cpp
-CONTRACT_END((youraction1)(youraction2)(youraction2))
+/*** REPLACE ***/
+EOSIO_DISPATCH(mycontract,(youraction1)(youraction2)(youraction2))
+
+/*** WITH ***/
+EOSIO_DISPATCH_SVC(mycontract,(youraction1)(youraction2)(youraction2))
 ```
 
 ## Compile
