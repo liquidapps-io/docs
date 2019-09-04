@@ -21,6 +21,7 @@ core-extensions
 * [`create-extensions`](create-extensions.md)
 * [`hooks-extensions`](hooks-extensions.md)
 * [`update-extensions`](update-extensions.md)
+* [`log-extensions`](log-extensions.md)
 
 
 

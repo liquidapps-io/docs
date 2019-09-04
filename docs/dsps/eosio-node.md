@@ -75,7 +75,10 @@ cd $HOME/.local/share/eosio/nodeos/data
 wget $URL -O - | tar xvz
 SNAPFILE=`ls snapshots/*.bin | head -n 1 | xargs -n 1 basename`
 mv snapshots/$SNAPFILE snapshots/boot.bin
-```        
+```
+
+### Snapshots
+If you would like an up to date snapshot, please visit: [snapshots.eosnation.io](https://snapshots.eosnation.io/) and find the latest snapshot for the chain you are using.  You will want to unpack the file and store it here with the following file name: `$HOME/.local/share/eosio/nodeos/data/snapshots/boot.bin`
 
 ## Configuration
 
@@ -87,7 +90,6 @@ wget $GENESIS
 # config
 cat <<EOF >> $HOME/.local/share/eosio/nodeos/config/config.ini
 agent-name = "DSP"
-p2p-server-address = addr:8888
 http-server-address = 0.0.0.0:8888
 p2p-listen-endpoint = 0.0.0.0:9876
 blocks-dir = "blocks"
@@ -130,7 +132,7 @@ First run (from snapshot)
 ```bash
 nodeos --disable-replay-opts --snapshot $HOME/.local/share/eosio/nodeos/data/snapshots/boot.bin --delete-all-blocks
 ```
-Wait until the node fully syncs, then press CTRL+C once, wait for the node to shutdown and proceed to the next step.
+You will know that the node is fully synced once you see blocks being produced every half second at the head block.  You can match the block number you are seeing in the nodeos logs to what [bloks.io](https://bloks.io/) is indicating as the head block on the chain you are syncing (mainnet, Kylin etc). Once you have confirmed that it is synced press `CTRL+C` once, wait for the node to shutdown and proceed to the next step.
 
 ## systemd
 ```bash
@@ -145,7 +147,7 @@ After=network.target
 User=$NODEOS_USER
 ExecStart=$NODEOS_EXEC --disable-replay-opts
 [Install]
-WantedBy=multiuser.target
+WantedBy=multi-user.target
 EOF
 
 systemctl start nodeos

@@ -48,7 +48,7 @@ After=network.target
 ExecStart=/usr/local/bin/ipfs daemon
 Restart=always
 [Install]
-WantedBy=multiuser.target
+WantedBy=multi-user.target
 EOF
 
 systemctl start ipfs
