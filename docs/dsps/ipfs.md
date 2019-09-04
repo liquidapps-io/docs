@@ -25,7 +25,7 @@ sudo yum install golang -y
 ### Install 
 ```bash
 sudo su -
-VERS=0.4.19
+VERS=0.4.22
 DIST="go-ipfs_v${VERS}_linux-amd64.tar.gz"
 wget https://dist.ipfs.io/go-ipfs/v$VERS/$DIST
 tar xvfz $DIST
