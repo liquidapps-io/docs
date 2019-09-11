@@ -16,7 +16,7 @@ coldtoken
 * [`seed-migrations`](seed-migrations.md)
 * [`hooks-cpp-contracts`](hooks-cpp-contracts.md)
 * [`eos-common`](eos-common.md)
-* [`ipfs-dapp-service`](ipfs-dapp-service.md)
+* [`all-dapp-services`](all-dapp-services.md)
 * [`seed-models`](seed-models.md)
 
 
@@ -42,5 +42,6 @@ zeus test
 
 
 
-
+## Tests 
+* [coldtoken.spec.js](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/sample/coldtoken/test/coldtoken.spec.js)
 ## [Source](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/sample/coldtoken)

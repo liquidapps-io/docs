@@ -43,5 +43,6 @@ zeus test
 
 
 
-
+## Tests 
+* [deepfreeze.spec.js](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/sample/deepfreeze/test/deepfreeze.spec.js)
 ## [Source](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/sample/deepfreeze)

@@ -42,5 +42,6 @@ zeus test
 
 
 
-
+## Tests 
+* [dgoods.spec.js](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/game/dgoods/test/dgoods.spec.js)
 ## [Source](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/game/dgoods)

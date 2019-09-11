@@ -42,5 +42,6 @@ zeus test
 
 
 
-
+## Tests 
+* [registry.spec.js](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/eos-framework/registry/test/registry.spec.js)
 ## [Source](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/eos-framework/registry)
