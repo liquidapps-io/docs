@@ -23,7 +23,7 @@ dapp-services
 * [`big-integer`](http://npmjs.com/package/big-integer)
 * [`bytebuffer`](http://npmjs.com/package/bytebuffer)
 * [`cors`](http://npmjs.com/package/cors)
-* [`eosjs@16.0.9`](http://npmjs.com/package/eosjs@16.0.9)
+* [`eosjs@20.0.0`](http://npmjs.com/package/eosjs@20.0.0)
 * [`express`](http://npmjs.com/package/express)
 * [`ipfs-api`](http://npmjs.com/package/ipfs-api)
 * [`http-proxy`](http://npmjs.com/package/http-proxy)
@@ -32,6 +32,8 @@ dapp-services
 * [`js-sha256`](http://npmjs.com/package/js-sha256)
 * [`body-parser`](http://npmjs.com/package/body-parser)
 * [`mkdirp`](http://npmjs.com/package/mkdirp)
+* [`sequelize`](http://npmjs.com/package/sequelize)
+* [`sqlite3`](http://npmjs.com/package/sqlite3)
 
 ## Contracts
 * [`dappservices`](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/dapp-network/dapp-services/contracts/eos/dappservices)
