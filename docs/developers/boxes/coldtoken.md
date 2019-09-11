@@ -16,7 +16,7 @@ coldtoken
 * [`seed-migrations`](seed-migrations.md)
 * [`hooks-cpp-contracts`](hooks-cpp-contracts.md)
 * [`eos-common`](eos-common.md)
-* [`all-dapp-services`](all-dapp-services.md)
+* [`ipfs-dapp-service`](ipfs-dapp-service.md)
 * [`seed-models`](seed-models.md)
 
 
