@@ -36,7 +36,8 @@ exit
 ```
 
 ## Configure Settings
-**Any changes to the `config.toml` file will require `setup-dsp` to be run again.**
+**Any changes to the `config.toml` file will require `setup-dsp` to be run again.**  Link to [`sample-config.toml`](https://github.com/liquidapps-io/zeus-sdk/blob/master/boxes/groups/dapp-network/dapp-services-deploy/sample-config.toml)
+
 ```bash
 sudo su -
 mkdir ~/.dsp

@@ -30,3 +30,8 @@ Getting started
 
 ## Upgrade Version
 [Upgrade](upgrade)
+
+## Replay Contract and Cleanup IPFS Entries
+[Replay Contract](replay-contract)
+
+[Cleanup IPFS Entries](cleanup-ipfs-entries)

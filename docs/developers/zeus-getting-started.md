@@ -37,7 +37,7 @@ Zeus-cmd is an extensible command line tool. SDK extensions come packaged in "bo
 Automatically installed with `zeus unbox helloworld`
 
 * [eosio.cdt v1.6.1](https://github.com/EOSIO/eosio.cdt/releases/tag/v1.6.1)
-* [eosio v1.7.4](https://github.com/EOSIO/eos/releases/tag/v1.7.4)
+* [eosio v1.8.3](https://github.com/EOSIO/eos/releases/tag/v1.8.3)
 
 
 ## Install Zeus
@@ -230,8 +230,17 @@ zeus --help
 ```
 
 ### List Boxes
+Lists all available zeus boxes that can be unboxed.
+
 ```bash
 zeus list-boxes
+```
+
+### Update Boxes
+Updates zeus boxes for currently unboxed project
+
+```bash
+zeus update --boxes
 ```
 
 ## Project structure
