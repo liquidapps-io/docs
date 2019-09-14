@@ -21,6 +21,8 @@ DSPs
    dsps/packages
    dsps/testing
    dsps/claim
+   dsps/replay-contract
+   dsps/cleanup-ipfs-entries
    dsps/recovery
    dsps/upgrade
    
