@@ -1,4 +1,4 @@
-Replay Contract
+Cleanup IPFS Entries
 ========
 
 Sometimes IPFS entries are not evicted from a developer's contract due to the DSP experiencing unpredictable behavior.  This causes the developer's smart contract RAM supply to increase as the ipfsentry table rows are not evicted.  If this happens, you may run the [cleanup.js](https://github.com/liquidapps-io/zeus-sdk/blob/master/boxes/groups/services/ipfs-dapp-service/utils/ipfs-service/cleanup.js) file with the following environment variables:
