@@ -1,19 +1,9 @@
 Replay Contract
 ========
 
-As a DSP, you will want the ability to replay a contract's vRAM (IPFS) related transactions to load that data into your IPFS cluster.  We provide a file that does just that [replay-contract.js](https://github.com/liquidapps-io/zeus-sdk/blob/master/boxes/groups/services/ipfs-dapp-service/utils/ipfs-service/replay-contract.js):
-
-```bash
-node -v
-# update node to match version, using node version manager
-nano /root/.nvm/versions/node/v10.16.0/lib/node_modules/@liquidapps/dsp/utils/ipfs-service/replay-contract.js
-# or
-sudo find / -name replay-contract.js
-```
+As a DSP, you will want the ability to replay a contract's vRAM (IPFS) related transactions to load that data into your IPFS cluster.  We provide a file that does just that [replay-contract.js](https://github.com/liquidapps-io/zeus-sdk/blob/master/boxes/groups/services/ipfs-dapp-service/utils/ipfs-service/replay-contract.js).
 
 To do this you will need to sign up for an API key from [dfuse.io](https://www.dfuse.io), you can select the *Server to Server* option from the dropdown when creating it. Dfuse offers free keys that last 24 hours, so there's no need to pay.
-
-## Environment Variables
 
 There are some mandatory and optional environment variables.
 
@@ -40,6 +30,7 @@ export NODEOS_PORT= # defaults to 13115
 Once you've set those, simply run with:
 
 ```bash
+sudo find / -name replay-contract.js
 node /root/.nvm/versions/node/v10.16.0/lib/node_modules/@liquidapps/dsp/utils/ipfs-service/replay-contract.js
 
 # sent 6513 saved 7725.26KB 6.42KB/s Block:77756949

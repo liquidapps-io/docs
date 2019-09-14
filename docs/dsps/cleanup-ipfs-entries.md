@@ -22,5 +22,6 @@ export NODEOS_PORT= # defaults to 13115
 Then run with:
 
 ```bash
+sudo find / -name cleanup.js
 node /root/.nvm/versions/node/v10.16.0/lib/node_modules/@liquidapps/dsp/utils/ipfs-service/cleanup.js
 ```
