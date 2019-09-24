@@ -50,6 +50,7 @@ zeus unbox oracle-dapp-service
   "commands": {
     "geturi": {
       "blocking": true,
+      "broadcast": true,
       "request": {
         "uri": "std::vector<char>"
       },
