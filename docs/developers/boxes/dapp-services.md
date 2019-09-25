@@ -19,6 +19,7 @@ dapp-services
 * [`seed-models`](seed-models.md)
 * [`hooks-cpp-contracts`](hooks-cpp-contracts.md)
 * [`mocha`](mocha.md)
+* [`client-lib-base`](client-lib-base.md)
 ### npm packages
 * [`big-integer`](http://npmjs.com/package/big-integer)
 * [`bytebuffer`](http://npmjs.com/package/bytebuffer)
