@@ -11,7 +11,7 @@ EOSIO Node
 
 ```bash
 # install 1.8 even if chain is sub 1.7.*
-VERSION=1.8.3
+VERSION=1.8.4
 ```
 
 ### Ubuntu 18.04
