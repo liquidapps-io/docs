@@ -134,9 +134,9 @@ zeus compile
 ### Zeus migrate
 Compile and migrate a smart contract to another network such as the [Kylin Testnet](https://www.cryptokylin.io/), [Jungle Testnet](https://monitor.jungletestnet.io/#home), or [Mainnet](https://eosnetworkmonitor.io/)
 ```bash
-zeus import <CONTRACT_ACCOUNT_NAME> --owner-private-key <KEY> --active-private-key <KEY>
-zeus create contract-deployment CONTRACT_NAME CONTRACT_ACCOUNT_NAME
-zeus migrate
+zeus key import <CONTRACT_ACCOUNT_NAME> --owner-private-key <KEY> --active-private-key <KEY>
+zeus create contract-deployment <CONTRACT_FILE_NAME> <CONTRACT_ACCOUNT_NAME>
+zeus migrate --network=kylin --creator=<CONTRACT_ACCOUNT_NAME> --creator-key=<ACTIVE_PRIVATE_KEY>
 
 # optional flags:
 
