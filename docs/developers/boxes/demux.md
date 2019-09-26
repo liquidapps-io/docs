@@ -13,6 +13,7 @@ demux
 * [`events`](events.md)
 * [`seed-microservices`](seed-microservices.md)
 * [`seed-models`](seed-models.md)
+* [`log-extensions`](log-extensions.md)
 ### npm packages
 * [`zeromq`](http://npmjs.com/package/zeromq)
 * [`@types/jest`](http://npmjs.com/package/@types/jest)

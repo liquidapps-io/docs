@@ -21,6 +21,7 @@ export DSP_PUBLIC_KEY=`cat keys.txt | tail -n 1 | cut -d ":" -f 2 | xargs echo`
 Fiat:
 - [EOS Account Creator](https://eos-account-creator.com/)
 - [EOS Lynx](https://eoslynx.com/)
+- [Scatter](https://get-scatter.com/)
 
 Bitcoin/ETH/Bitcoin Cash/ALFAcoins:
 - [ZEOS](https://www.zeos.co/)
@@ -30,8 +31,8 @@ Create an account
 ```bash
 # Create a new available account name (replace 'yourdspaccount' with your account name):
 export DSP_ACCOUNT=yourdspaccount
-curl http://faucet.cryptokylin.io/create_account?$DSP_ACCOUNT > keys.json
-curl http://faucet.cryptokylin.io/get_token?$DSP_ACCOUNT
+curl http://faucet.cryptokylin.io/create/$DSP_ACCOUNT > keys.json
+curl http://faucet.cryptokylin.io/get_token/$DSP_ACCOUNT
 export DSP_PRIVATE_KEY=`cat keys.json | jq -e '.keys.active_key.private'`
 export DSP_PUBLIC_KEY=`cat keys.json | jq -e '.keys.active_key.public'`
 ```

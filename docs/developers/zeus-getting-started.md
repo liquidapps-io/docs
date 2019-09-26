@@ -99,7 +99,7 @@ zeus unbox <INSERT_BOX>
 * [test-extensions](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/core/test-extensions) - provides logic to test smart contract with unit tests
 * [eos-extensions](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/eos-sdk/eos-extensions) - install eos/eosio.cdt, launch local nodeos, launch system contracts
 * [unbox-extensions](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/repos/unbox-extensions) - logic to unbox zeus boxes, list all boxes, and deploy a new box
-* [demux](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/microservices/demux) - install EOSIO's demux backend to capture events for contracts, zmq/state-history plugin options included
+* [demux](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/microservices/demux) - install EOSIO's demux backend to capture events for contracts using the state-history plugin
 
 ### DAPP Services Boxes
 * [ipfs-dapp-service](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/services/ipfs-dapp-service) - utilize the dapp::multi_index table to store data in IPFS (vRAM) instead of RAM

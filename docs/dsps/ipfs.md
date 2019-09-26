@@ -120,6 +120,5 @@ To do so, first create a secret from `node0`, the original node, then share that
 * `ipfs-cluster-ctl peers ls` check your peers to see you've added node0 correctly
 
 #### node0
-
 * if you want to remove a peer after the bootstrapping is complete, the following command will do that and shut down the IPFS cluster
 * `ipfs-cluster-ctl peers rm QmYFYwnFUkjFhJcSJJGN72wwedZnpQQ4aNpAtPZt8g5fCd`

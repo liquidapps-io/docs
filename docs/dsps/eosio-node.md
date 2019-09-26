@@ -1,5 +1,8 @@
 EOSIO Node
 ==========
+
+A non block / non full history node is required for the DSP API to interact with.  This node may be hosted with the rest of the DSP architecture or standalone.
+
 ## Hardware Requirements
 ## Prerequisites
 

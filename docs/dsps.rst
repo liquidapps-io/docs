@@ -12,11 +12,11 @@ DSPs
    dsps/getting-started
    dsps/overview
    dsps/architecture
-   dsps/storage-backend
    dsps/demux-backend
    dsps/dsp-account
    dsps/eosio-node
    dsps/ipfs
+   dsps/postgresql-database-backend
    dsps/dsp-node
    dsps/packages
    dsps/testing

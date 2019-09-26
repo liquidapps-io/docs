@@ -33,6 +33,10 @@ dapp-services
 * [`js-sha256`](http://npmjs.com/package/js-sha256)
 * [`body-parser`](http://npmjs.com/package/body-parser)
 * [`mkdirp`](http://npmjs.com/package/mkdirp)
+* [`sequelize`](http://npmjs.com/package/sequelize)
+* [`pg`](http://npmjs.com/package/pg)
+* [`minipass@2.7.0`](http://npmjs.com/package/minipass@2.7.0)
+* [`sqlite3`](http://npmjs.com/package/sqlite3)
 
 ## Contracts
 * [`dappservices`](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/dapp-network/dapp-services/contracts/eos/dappservices)

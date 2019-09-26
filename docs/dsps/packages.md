@@ -94,6 +94,8 @@ export EOS_CHAIN=kylin
 export MIN_STAKE_QUANTITY="10.0000"
 # package period is in seconds, so 86400 = 1 day, 3600 = 1 hour
 export PACKAGE_PERIOD=86400
+# the time to unstake is the greater of the package period remaining and the minimum unstake period, which is also in seconds
+export MIN_UNSTAKE_PERIOD=3600
 # QUOTA is the measurement for total actions allowed within the package period to be processed by the DSP.  1.0000 QUOTA = 10,000 actions. 0.0001 QUOTA = 1 action
 export QUOTA="1.0000"
 export DSP_ENDPOINT=https://acme-dsp.com
@@ -109,8 +111,27 @@ zeus register dapp-service-provider-package \
     --quota $QUOTA \
     --network $EOS_CHAIN \
     --api-endpoint $DSP_ENDPOINT \
-    --package-json-uri $PACKAGE_JSON_URI
+    --package-json-uri $PACKAGE_JSON_URI \
+    --min-unstake-period $MIN_UNSTAKE_PERIOD
 ```
+
+### Or in cleos:
+
+```bash
+# currently available services: (ipfsservice1, cronservices, logservices1, oracleservic, readfndspsvc, accountless1)
+# the services use EOS account names to fascilitate usage
+# service contract names may be found in the boxes/groups/services/SERVICE_NAME/models/dapp-services/*.json file as the ( contract ) parameter
+export SERVICE=ipfsservice1
+# zeus command automatically adds QUOTA / DAPP, so we must add it here
+export QUOTA="1.0000 QUOTA"
+export MIN_STAKE_QUANTITY="10.0000 DAPP"
+export EOS_ENDPOINT=https://kylin-dsp-2.liquidapps.io # or mainnet: https://api.eosnewyork.io
+cleos -u $EOS_ENDPOINT push action dappservices regpkg "{\"newpackage\":{\"api_endpoint\":\"$DSP_ENDPOINT\",\"enabled\":0,\"id\":0,\"min_stake_quantity\":\"$MIN_STAKE_QUANTITY\",\"min_unstake_period\":\"$MIN_UNSTAKE_PERIOD\",\"package_id\":\"$PACKAGE_ID\",\"package_json_uri\":\"$PACKAGE_JSON_URI\",\"package_period\":\"$PACKAGE_PERIOD\",\"provider\":\"$DSP_ACCOUNT\",\"quota\":\"$QUOTA\",\"service\":\"$SERVICE\"}}" -p $DSP_ACCOUNT
+```
+
+Example service contract name for LiquidAccounts: https://github.com/liquidapps-io/zeus-sdk/blob/master/boxes/groups/services/vaccounts-dapp-service/models/dapp-services/vaccounts.json#L7
+
+List of all services, please note some of which may not be testable yet: https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/services, see the [stage](https://docs.liquidapps.io/en/v1.4/services/history-service.html#stage) for each service to monitor its development maturity (WIP - work in progress, Alpha, Beta, Stable).
 
 output should be:
 ```
