@@ -61,9 +61,11 @@ exit
 
 ### Adding Peers
 
-#### Bootstrap Peers [Documentation](https://docs.ipfs.io/guides/examples/bootstrap/)
+To connect with your peers you may open port 4001 to the selected IPs that you wish to communicate with or open the port to all addresses.
 
-Bootstrap peers default to IPFS nodes provided by the core development team.  They are scattered across the world.  Bootstrap peers are what your IPFS node will monitor for new IPFS nodes on the network, for this reason, it is important this is a trusted source.  To facilitate the process of connecting to other IPFS nodes that are EOS related, you may add our mainnet and kylin testnet IPFS nodes with the following command:
+#### Bootstrap Peers | [Documentation](https://docs.ipfs.io/guides/examples/bootstrap/)
+
+Bootstrap peers default to IPFS nodes provided by the core development team.  They are scattered across the world.  These peers are what your IPFS node will initially monitor upon startup.  You may add our mainnet and kylin testnet IPFS nodes with the following commands:
 
 ```sh
 # kylin
@@ -76,9 +78,9 @@ ipfs bootstrap add /ip4/18.212.76.109/tcp/4001/ipfs/QmcCX4b3EF3eXaDe5dgxTL9mXbyc
 ipfs bootstrap add /ip4/35.170.64.183/tcp/4001/ipfs/QmZpyMnBJKwyPJNBUYVuCZEJuKQBEwM6qVHsSp179B3yao
 ```
 
-#### Swarm Peers [Documentation](https://docs.ipfs.io/reference/api/cli/#ipfs-swarm-connect)
+#### Swarm Peers | [Documentation](https://docs.ipfs.io/reference/api/cli/#ipfs-swarm-connect)
 
-Swarm peers are what your IPFS node will look to first when requesting a file that is not stored locally.  To reduce the latency of requesting files, you may add our DSPs to your swarm.  You may also add other DSP IPFS nodes.
+Swarm peers are addresses that the local daemon will listen on for connections from other IPFS peers. They are what your IPFS node will look to first when requesting a file that is not cached locally.  [Both your node as well as the node you are trying to connect to](https://github.com/ipfs/go-ipfs/issues/6271) must run the following commands:
 
 ```sh
 # kylin
@@ -91,15 +93,74 @@ ipfs swarm connect /ip4/18.212.76.109/tcp/4001/ipfs/QmcCX4b3EF3eXaDe5dgxTL9mXbyc
 ipfs swarm connect /ip4/35.170.64.183/tcp/4001/ipfs/QmZpyMnBJKwyPJNBUYVuCZEJuKQBEwM6qVHsSp179B3yao
 ```
 
+#### Reconnecting Periodically | [Medium Article](https://medium.com/pinata/how-to-keep-your-ipfs-nodes-connected-and-ensure-fast-content-discovery-7d92fb23da46)
+
+Peers have a tendency to disconnect from each other if not reconnected manually periodically, so to combat this, you may add the following two files to periodically reconnect to your swarm peeers.
+
+```bash
+sudo su -
+cat <<EOF > /lib/systemd/system/gateway-connector.service
+[Unit]
+Description=Job that periodically connects this IPFS node to the gateway node
+[Service]
+ExecStart=/usr/local/bin/ipfs swarm connect <ADD_MULTIPLE_CONNECTIONS_HERE> # /ip4/18.212.96.94/tcp/4001/ipfs/QmZ5gLTZwvfD5DkbbaFFX4YJCi7f4C5oQAgq8qpjL8S1ur /ip4/18.212.76.109/tcp/4001/ipfs/QmcCX4b3EF3eXaDe5dgxTL9mXbyci4FwcJAjWqpub5vCXM /ip4/35.170.64.183/tcp/4001/ipfs/QmZpyMnBJKwyPJNBUYVuCZEJuKQBEwM6qVHsSp179B3yao
+Environment="IPFS_PATH=/root/.ipfs"
+EOF
+exit
+```
+
+```bash
+sudo su -
+cat <<EOF > /lib/systemd/system/gateway-connector.timer
+[Unit]
+Description=Timer that periodically triggers gateway-connector.service
+[Timer]
+OnBootSec=3min
+OnUnitActiveSec=1min
+[Install]
+WantedBy=timers.target
+EOF
+exit
+```
+
+Now you can enable and start the service:
+
+```bash
+sudo systemctl enable gateway-connector.timer
+sudo systemctl start gateway-connector.timer
+```
+
+To double checked this worked, run:
+
+```bash
+systemctl list-timers
+```
+
+You should see an entry for your gateway connector service. You can also check the status of its last execution attempt by running:
+
+```bash
+systemctl status gateway-connector
+```
+
+Finally you can monitor the process with:
+
+```bash
+journalctl -f | grep ipfs
+```
+
+#### Running a private network | [Documentation](https://docs.ipfs.io/reference/api/cli/#ipfs-bootstrap-rm-all)
+
+Running a private IPFS network is possible by removing all default IPFS bootstrap peers and only adding those of your private network.
+
+```sh
+ipfs bootstrap rm all - Remove all peers from the bootstrap list
+```
+
 ## Cluster
 
-### IPFS-Cluster
+### IPFS-Cluster | [Documentation](https://cluster.ipfs.io/documentation/)
 
-[IPFS-Cluster Documentation](https://cluster.ipfs.io/documentation/)
-
-### Boostrapping from an existing IPFS Cluster
-
-[Documentation](https://cluster.ipfs.io/documentation/quickstart/#quickstart-starting-enlarging-and-shrinking-a-cluster)
+### Boostrapping from an existing IPFS Cluster | [Documentation](https://cluster.ipfs.io/documentation/quickstart/#quickstart-starting-enlarging-and-shrinking-a-cluster)
 
 IPFS is designed so that a node only stores files locally that are specifically requested.  The following is one way of populating a new IPFS node with all existing files from a pre-existing node.
 
