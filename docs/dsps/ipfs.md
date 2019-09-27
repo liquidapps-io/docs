@@ -95,7 +95,7 @@ ipfs swarm connect /ip4/35.170.64.183/tcp/4001/ipfs/QmZpyMnBJKwyPJNBUYVuCZEJuKQB
 
 #### Reconnecting Periodically | [Medium Article](https://medium.com/pinata/how-to-keep-your-ipfs-nodes-connected-and-ensure-fast-content-discovery-7d92fb23da46)
 
-Peers have a tendency to disconnect from each other if not reconnected manually periodically, so to combat this, you may add the following two files to periodically reconnect to your swarm peeers.
+Peers have a tendency to disconnect from each other if not reconnected manually periodically, so to combat this, you may add the following two files to periodically reconnect to your swarm peers.
 
 ```bash
 sudo su -
@@ -103,7 +103,7 @@ cat <<EOF > /lib/systemd/system/gateway-connector.service
 [Unit]
 Description=Job that periodically connects this IPFS node to the gateway node
 [Service]
-ExecStart=/usr/local/bin/ipfs swarm connect <ADD_MULTIPLE_CONNECTIONS_HERE> # /ip4/18.212.96.94/tcp/4001/ipfs/QmZ5gLTZwvfD5DkbbaFFX4YJCi7f4C5oQAgq8qpjL8S1ur /ip4/18.212.76.109/tcp/4001/ipfs/QmcCX4b3EF3eXaDe5dgxTL9mXbyci4FwcJAjWqpub5vCXM /ip4/35.170.64.183/tcp/4001/ipfs/QmZpyMnBJKwyPJNBUYVuCZEJuKQBEwM6qVHsSp179B3yao
+ExecStart=/usr/local/bin/ipfs swarm connect <ADD_MULTIPLE_CONNECTIONS_HERE_SPACE_SEPARATED> # /ip4/18.212.96.94/tcp/4001/ipfs/QmZ5gLTZwvfD5DkbbaFFX4YJCi7f4C5oQAgq8qpjL8S1ur /ip4/18.212.76.109/tcp/4001/ipfs/QmcCX4b3EF3eXaDe5dgxTL9mXbyci4FwcJAjWqpub5vCXM /ip4/35.170.64.183/tcp/4001/ipfs/QmZpyMnBJKwyPJNBUYVuCZEJuKQBEwM6qVHsSp179B3yao
 Environment="IPFS_PATH=/root/.ipfs"
 EOF
 exit
