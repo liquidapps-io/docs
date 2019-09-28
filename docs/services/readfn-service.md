@@ -7,6 +7,9 @@ Read Functions Service
 ## Stage
 Alpha
 
+## Version
+0.5
+
 ## Contract
 
 ```readfndspsvc```

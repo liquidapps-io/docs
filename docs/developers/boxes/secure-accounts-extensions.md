@@ -22,7 +22,7 @@ secure-accounts-extensions
 zeus unbox secure-accounts-extensions
 ```
 ## Examples
-### Add Secure to migrations 
+### Add Secure to migrations
 ```bash
 zeus secure-account accountabc owner active
 ```

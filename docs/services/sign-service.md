@@ -7,6 +7,9 @@ IBC MultiSig Service
 ## Stage
 Alpha
 
+## Version
+0.5
+
 ## Contract
 
 ```signfndspsvc```

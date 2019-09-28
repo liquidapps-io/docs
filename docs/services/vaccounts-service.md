@@ -5,7 +5,10 @@ LiquidAccounts Service
 Allows interaction with contract without a native EOS Account
 
 ## Stage
-Alpha
+Beta
+
+## Version
+0.9
 
 ## Contract
 

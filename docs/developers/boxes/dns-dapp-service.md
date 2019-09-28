@@ -42,6 +42,7 @@ zeus unbox dns-dapp-service
   "prettyName": "LiquidDNS",
   "description": "DSP Hosted DNS Service",
   "stage": "WIP",
+  "version": "0.0",
   "contract": "dnsservices1",
   "generateStubs": true,
   "commands": {

@@ -41,6 +41,7 @@ zeus unbox log-dapp-service
   "contract": "logservices1",
   "prettyName": "LiquidLog",
   "stage": "Beta",
+  "version": "0.9",
   "description": "Log Service",
   "commands": {
     "logevent": {

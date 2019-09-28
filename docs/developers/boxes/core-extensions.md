@@ -32,7 +32,7 @@ core-extensions
 zeus unbox core-extensions
 ```
 ## Examples
-### Watch 
+### Watch
 ```bash
 zeus watch
 ```

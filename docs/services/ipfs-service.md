@@ -7,6 +7,9 @@ Virtual Memory Service
 ## Stage
 Stable
 
+## Version
+1.1
+
 ## Contract
 
 ```ipfsservice1```

@@ -28,7 +28,7 @@ craft
 zeus unbox craft
 ```
 ## Examples
-### Test 
+### Test
 ```bash
 zeus test
 ```

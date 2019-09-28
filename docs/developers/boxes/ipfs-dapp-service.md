@@ -49,6 +49,7 @@ zeus unbox ipfs-dapp-service
   "prettyName": "LiquidVRAM",
   "stage": "Stable",
   "description": "Virtual Memory Service",
+  "version": "1.1",
   "commands": {
     "commit": {
       "blocking": false,

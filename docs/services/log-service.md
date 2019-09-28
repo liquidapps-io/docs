@@ -7,6 +7,9 @@ Log Service
 ## Stage
 Beta
 
+## Version
+0.9
+
 ## Contract
 
 ```logservices1```

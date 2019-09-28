@@ -20,7 +20,7 @@ seed-empty
 zeus unbox seed-empty
 ```
 ## Examples
-### Unbox sample 
+### Unbox sample
 ```bash
 zeus unbox sample-eos-cpp
 ```

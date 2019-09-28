@@ -28,7 +28,7 @@ registry
 zeus unbox registry
 ```
 ## Examples
-### Test 
+### Test
 ```bash
 zeus test
 ```

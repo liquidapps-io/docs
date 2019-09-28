@@ -21,7 +21,7 @@ unbox-extensions
 zeus unbox unbox-extensions
 ```
 ## Examples
-### Unbox 
+### Unbox
 ```bash
 zeus unbox helloworld
 ```

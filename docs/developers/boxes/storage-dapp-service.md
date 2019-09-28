@@ -48,6 +48,7 @@ zeus unbox storage-dapp-service
   "contract": "liquidstorag",
   "prettyName": "LiquidStorage",
   "stage": "WIP",
+  "version": "0.0",
   "description": "Distributed storage and hosting",
   "commands": {
     "strstore": {

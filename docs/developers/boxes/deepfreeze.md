@@ -29,7 +29,7 @@ deepfreeze
 zeus unbox deepfreeze
 ```
 ## Examples
-### Test 
+### Test
 ```bash
 zeus test
 ```

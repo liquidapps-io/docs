@@ -7,6 +7,9 @@ History API Provisioning
 ## Stage
 WIP
 
+## Version
+0.0
+
 ## Contract
 
 ```historyservc```

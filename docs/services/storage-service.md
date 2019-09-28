@@ -7,6 +7,9 @@ Distributed storage and hosting
 ## Stage
 WIP
 
+## Version
+0.0
+
 ## Contract
 
 ```liquidstorag```

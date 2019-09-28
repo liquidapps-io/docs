@@ -20,11 +20,11 @@ eoscraft-frontend
 zeus unbox eoscraft-frontend
 ```
 ## Examples
-### Deploy Frontend 
+### Deploy Frontend
 ```bash
 zeus deploy frontend main
 ```
-### Run Locally 
+### Run Locally
 ```bash
 zeus run frontend main
 ```

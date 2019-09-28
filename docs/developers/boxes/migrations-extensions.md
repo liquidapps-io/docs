@@ -22,11 +22,11 @@ migrations-extensions
 zeus unbox migrations-extensions
 ```
 ## Examples
-### Migrate 
+### Migrate
 ```bash
 zeus migrate
 ```
-### No reset 
+### No reset
 ```bash
 zeus migrate --no-reset
 ```

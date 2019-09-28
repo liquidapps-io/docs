@@ -29,23 +29,23 @@ cardgame
 zeus unbox cardgame
 ```
 ## Examples
-### Deploy contract 
+### Deploy contract
 ```bash
 zeus migrate
 ```
-### Run frontend locally 
+### Run frontend locally
 ```bash
 zeus run frontend main
 ```
-### Build frontend 
+### Build frontend
 ```bash
 zeus build frontend main
 ```
-### Deploy frontend 
+### Deploy frontend
 ```bash
 zeus deploy frontend main
 ```
-### Deploy and register frontend 
+### Deploy and register frontend
 ```bash
 zeus deploy frontend main --ipfs --register cardgame1111
 ```

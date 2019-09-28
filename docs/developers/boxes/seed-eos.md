@@ -25,7 +25,7 @@ seed-eos
 zeus unbox seed-eos
 ```
 ## Examples
-### Unbox sample 
+### Unbox sample
 ```bash
 zeus unbox sample-eos-cpp
 ```

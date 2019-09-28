@@ -21,7 +21,7 @@ events
 zeus unbox events
 ```
 ## Examples
-### Create event 
+### Create event
 ```bash
 zeus create event
 ```

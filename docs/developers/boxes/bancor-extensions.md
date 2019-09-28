@@ -26,11 +26,11 @@ bancor-extensions
 zeus unbox bancor-extensions
 ```
 ## Examples
-### Create Database 
+### Create Database
 ```bash
 zeus create converter eosio.token SYS tknarly TKNARLY cnvtkna 0
 ```
-### Run Locally 
+### Run Locally
 ```bash
 zeus migrate
 ```

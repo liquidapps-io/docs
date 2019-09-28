@@ -24,7 +24,7 @@ update-extensions
 zeus unbox update-extensions
 ```
 ## Examples
-### Update 
+### Update
 ```bash
 zeus update
 ```

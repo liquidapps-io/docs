@@ -28,7 +28,7 @@ templates-dsp-service
 zeus unbox templates-dsp-service
 ```
 ## Examples
-### Create contract from template 
+### Create contract from template
 ```bash
 zeus create dsp-service someservice
 ```

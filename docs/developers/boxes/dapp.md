@@ -21,11 +21,11 @@ dapp
 zeus unbox dapp
 ```
 ## Examples
-### Create contract from template 
+### Create contract from template
 ```bash
 zeus create contract somecontract
 ```
-### help for create-contract 
+### help for create-contract
 ```bash
 zeus create contract somecontract --help
 ```

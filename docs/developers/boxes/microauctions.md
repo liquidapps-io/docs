@@ -27,7 +27,7 @@ microauctions
 zeus unbox microauctions
 ```
 ## Examples
-### Test 
+### Test
 ```bash
 zeus test
 ```

@@ -20,7 +20,7 @@ test-extensions
 zeus unbox test-extensions
 ```
 ## Examples
-### Watch 
+### Watch
 ```bash
 zeus test
 ```

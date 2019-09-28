@@ -26,7 +26,7 @@ framework-tests
 zeus unbox framework-tests
 ```
 ## Examples
-### Run framework tests 
+### Run framework tests
 ```bash
 zeus test
 ```

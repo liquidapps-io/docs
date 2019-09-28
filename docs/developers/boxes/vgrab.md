@@ -28,7 +28,7 @@ vgrab
 zeus unbox vgrab
 ```
 ## Examples
-### Test 
+### Test
 ```bash
 zeus test
 ```

@@ -46,6 +46,7 @@ zeus unbox history-dapp-service
   "contract": "historyservc",
   "prettyName": "LiquidArchive",
   "stage": "WIP",
+  "version": "0.0",
   "description": "History API Provisioning",
   "commands": {
     "hststore": {

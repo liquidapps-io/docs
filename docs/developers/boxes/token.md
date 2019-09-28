@@ -24,11 +24,11 @@ token
 zeus unbox token
 ```
 ## Examples
-### Create Token 
+### Create Token
 ```bash
 zeus create token ...
 ```
-### Migrate 
+### Migrate
 ```bash
 zeus migrate
 ```

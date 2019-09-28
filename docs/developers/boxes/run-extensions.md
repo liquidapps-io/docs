@@ -21,7 +21,7 @@ run-extensions
 zeus unbox run-extensions
 ```
 ## Examples
-### Watch 
+### Watch
 ```bash
 zeus run <type> <name>
 ```

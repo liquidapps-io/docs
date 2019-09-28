@@ -20,7 +20,7 @@ eos-extensions
 zeus unbox eos-extensions
 ```
 ## Examples
-### Start EOS Localenv 
+### Start EOS Localenv
 ```bash
 zeus start-localenv
 ```

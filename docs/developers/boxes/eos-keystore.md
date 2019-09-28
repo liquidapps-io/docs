@@ -28,7 +28,7 @@ eos-keystore
 zeus unbox eos-keystore
 ```
 ## Examples
-### Unbox sample 
+### Unbox sample
 ```bash
 zeus unbox sample-eos-cpp
 ```

@@ -23,7 +23,7 @@ mocha
 zeus unbox mocha
 ```
 ## Examples
-### Test 
+### Test
 ```bash
 zeus test
 ```

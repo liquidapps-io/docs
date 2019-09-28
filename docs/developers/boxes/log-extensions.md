@@ -21,7 +21,7 @@ log-extensions
 zeus unbox log-extensions
 ```
 ## Examples
-### Watch 
+### Watch
 ```bash
 zeus log docker-log
 ```

@@ -7,6 +7,9 @@ DSP Hosted DNS Service
 ## Stage
 WIP
 
+## Version
+0.0
+
 ## Contract
 
 ```dnsservices1```

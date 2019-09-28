@@ -20,7 +20,7 @@ upgrade-extensions
 zeus unbox upgrade-extensions
 ```
 ## Examples
-### Watch 
+### Watch
 ```bash
 zeus upgrade
 ```

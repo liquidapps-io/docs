@@ -27,7 +27,7 @@ dapp-services-deploy
 zeus unbox dapp-services-deploy
 ```
 ## Examples
-### Register DSP 
+### Register DSP
 ```bash
 zeus register dapp-service-provider-package --help
 ```

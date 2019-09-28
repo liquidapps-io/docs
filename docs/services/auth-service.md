@@ -7,6 +7,9 @@ Authentication of offchain APIs and services using EOSIO permissions and contrac
 ## Stage
 WIP
 
+## Version
+0.0
+
 ## Contract
 
 ```authfndspsvc```

@@ -25,15 +25,15 @@ sample-eos-cpp
 zeus unbox sample-eos-cpp
 ```
 ## Examples
-### Compile contracts 
+### Compile contracts
 ```bash
 zeus compile
 ```
-### Migrate contracts 
+### Migrate contracts
 ```bash
 zeus migrate
 ```
-### Test all 
+### Test all
 ```bash
 zeus test
 ```

@@ -28,7 +28,7 @@ templates-emptycontract-eos-cpp
 zeus unbox templates-emptycontract-eos-cpp
 ```
 ## Examples
-### Create contract from template 
+### Create contract from template
 ```bash
 zeus create contract somecontract
 ```

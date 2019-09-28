@@ -46,6 +46,7 @@ zeus unbox oracle-dapp-service
   "contract": "oracleservic",
   "prettyName": "LiquidOracle",
   "stage": "Beta",
+  "version": "0.9",
   "description": "Web/IBC/XIBC Oracle Service",
   "commands": {
     "geturi": {

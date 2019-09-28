@@ -21,7 +21,7 @@ publish-extensions
 zeus unbox publish-extensions
 ```
 ## Examples
-### Watch 
+### Watch
 ```bash
 zeus run <type> <name>
 ```

@@ -20,7 +20,7 @@ unlock-extensions
 zeus unbox unlock-extensions
 ```
 ## Examples
-### Watch 
+### Watch
 ```bash
 zeus unlock
 ```

@@ -44,7 +44,8 @@ zeus unbox vaccounts-dapp-service
   "name": "vaccounts",
   "port": 13129,
   "prettyName": "LiquidAccounts",
-  "stage": "Alpha",
+  "stage": "Beta",
+  "version": "0.9",
   "description": "Allows interaction with contract without a native EOS Account",
   "contract": "accountless1",
   "commands": {

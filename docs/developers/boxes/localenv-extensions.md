@@ -20,7 +20,7 @@ localenv-extensions
 zeus unbox localenv-extensions
 ```
 ## Examples
-### Watch 
+### Watch
 ```bash
 zeus start-localenv
 ```

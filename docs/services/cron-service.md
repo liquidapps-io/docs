@@ -5,7 +5,10 @@ LiquidScheduler Service
 Scheduled Transactions
 
 ## Stage
-Alpha
+beta
+
+## Version
+0.9
 
 ## Contract
 

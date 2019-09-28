@@ -20,11 +20,11 @@ frontend-react
 zeus unbox frontend-react
 ```
 ## Examples
-### Deploy Frontend 
+### Deploy Frontend
 ```bash
 zeus deploy frontend main
 ```
-### Run Locally 
+### Run Locally
 ```bash
 zeus run frontend main
 ```

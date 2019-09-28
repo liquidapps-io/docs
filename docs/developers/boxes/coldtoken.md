@@ -28,7 +28,7 @@ coldtoken
 zeus unbox coldtoken
 ```
 ## Examples
-### Test 
+### Test
 ```bash
 zeus test
 ```

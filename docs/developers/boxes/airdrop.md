@@ -25,27 +25,27 @@ airdrop
 zeus unbox airdrop
 ```
 ## Examples
-### Create airdrop 
+### Create airdrop
 ```bash
 zeus airdrop create myairdrop
 ```
-### Download Snapshot 
+### Download Snapshot
 ```bash
 zeus airdrop download-snapshot myairdrop
 ```
-### Transform 
+### Transform
 ```bash
 zeus airdrop transform-entries myairdrop
 ```
-### Populate Entries 
+### Populate Entries
 ```bash
 zeus airdrop populate-entries myairdrop
 ```
-### Init 
+### Init
 ```bash
 zeus airdrop init myairdrop
 ```
-### Periodic Cleanup 
+### Periodic Cleanup
 ```bash
 zeus airdrop cleanup myairdrop
 ```

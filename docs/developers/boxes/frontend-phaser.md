@@ -20,11 +20,11 @@ frontend-phaser
 zeus unbox frontend-phaser
 ```
 ## Examples
-### Deploy Frontend 
+### Deploy Frontend
 ```bash
 zeus deploy frontend main
 ```
-### Run Locally 
+### Run Locally
 ```bash
 zeus run frontend main
 ```

@@ -42,7 +42,8 @@ zeus unbox cron-dapp-service
   "port": 13131,
   "contract": "cronservices",
   "prettyName": "LiquidScheduler",
-  "stage": "Alpha",
+  "stage": "beta",
+  "version": "0.9",
   "description": "Scheduled Transactions",
   "commands": {
     "schedule": {

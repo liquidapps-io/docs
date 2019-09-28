@@ -28,7 +28,7 @@ dgoods
 zeus unbox dgoods
 ```
 ## Examples
-### Test 
+### Test
 ```bash
 zeus test
 ```

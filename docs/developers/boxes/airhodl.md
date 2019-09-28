@@ -21,7 +21,7 @@ airhodl
 zeus unbox airhodl
 ```
 ## Examples
-### Test 
+### Test
 ```bash
 zeus test
 ```

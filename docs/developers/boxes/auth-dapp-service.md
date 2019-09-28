@@ -44,6 +44,7 @@ zeus unbox auth-dapp-service
   "contract": "authfndspsvc",
   "prettyName": "LiquidAuthenticator",
   "stage": "WIP",
+  "version": "0.0",
   "description": "Authentication of offchain APIs and services using EOSIO permissions and contract",
   "commands": {
     "authusage": {

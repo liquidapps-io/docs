@@ -23,15 +23,15 @@ testbox
 zeus unbox testbox
 ```
 ## Examples
-### Compile sample contracts 
+### Compile sample contracts
 ```bash
 zeus compile
 ```
-### Migrate sample contracts (deploy to local eos.node) 
+### Migrate sample contracts (deploy to local eos.node)
 ```bash
 zeus migrate
 ```
-### Test sample contract 
+### Test sample contract
 ```bash
 zeus test
 ```
