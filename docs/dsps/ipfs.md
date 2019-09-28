@@ -27,7 +27,7 @@ sudo yum install golang -y
 ### Install 
 ```bash
 sudo su -
-VERS=0.4.19
+VERS=0.4.22
 DIST="go-ipfs_v${VERS}_linux-amd64.tar.gz"
 wget https://dist.ipfs.io/go-ipfs/v$VERS/$DIST
 tar xvfz $DIST
@@ -160,7 +160,7 @@ ipfs bootstrap rm all - Remove all peers from the bootstrap list
 
 ### IPFS-Cluster | [Documentation](https://cluster.ipfs.io/documentation/)
 
-### Boostrapping from an existing IPFS Cluster | [Documentation](https://cluster.ipfs.io/documentation/quickstart/#quickstart-starting-enlarging-and-shrinking-a-cluster)
+### Bootsrapping from an existing IPFS Cluster | [Documentation](https://cluster.ipfs.io/documentation/quickstart/#quickstart-starting-enlarging-and-shrinking-a-cluster)
 
 IPFS is designed so that a node only stores files locally that are specifically requested.  The following is one way of populating a new IPFS node with all existing files from a pre-existing node.
 
