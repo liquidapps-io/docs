@@ -104,7 +104,6 @@ contracts-console = true
 p2p-max-nodes-per-host = 1
 allowed-connection = any
 max-clients = 100
-network-version-match = 1 
 sync-fetch-span = 500
 connection-cleanup-period = 30
 http-validate-host = false

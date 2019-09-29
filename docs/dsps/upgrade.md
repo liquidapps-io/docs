@@ -1,7 +1,7 @@
 Upgrade DSP Node
 ================
 
-Ensure no new updates to the `sample-config.toml` file are present, if so, update your config.toml accordingly.
+For all new releases, please test on the Kylin testnet for at least one week before deploying to a production environment. 
 
 Link: [sample-config.toml](https://raw.githubusercontent.com/liquidapps-io/zeus-sdk/master/boxes/groups/dapp-network/dapp-services-deploy/sample-config.toml)
 
@@ -23,6 +23,9 @@ npm uninstall -g @liquidapps/dsp
 
 sudo su -
 npm install -g @liquidapps/dsp --unsafe-perm=true
+# Ensure no new updates to the `sample-config.toml` file are present, if so, update your config.toml accordingly.
+sudo find / -name sample-config.toml
+# nano <PATH>
 setup-dsp
 systemctl start nodeos
 systemctl start ipfs
