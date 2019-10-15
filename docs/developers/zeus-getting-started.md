@@ -2,7 +2,7 @@ Zeus Getting Started
 ====================
 
 ## Overview
-Zeus-cmd is an extensible command line tool. SDK extensions come packaged in "boxes" and are served through IPFS.  Zeus is currently in alpha.  *As a note, all Zeus commands must be run within the root directory of the package that was unboxed.*
+Zeus-cmd is an extensible command line tool. SDK extensions come packaged in "boxes" and are served through IPFS.  Zeus is currently in alpha.
 
 * [zeus-sdk](https://github.com/liquidapps-io/zeus-sdk)
 * [overview of boxes](boxes/zeus-boxes.md)
@@ -222,18 +222,6 @@ zeus key export <ACCOUNT_NAME>
 --network # network to work on (other options, kylin, jungle, mainnet)
 # default: development (local)
 --password # password to decrypt the keypair
-```
-
-### Zeus Deploy
-Deploy a custom Zeus box to your local IPFS node.  Once deployed, if the `--update-mapping` flag is used, you may unbox this box like other packages.
-
-```bash
-zeus deploy box
-
-# optional flags:
-
---update-mapping # updates local mapping.js file with an IPFS URI where the package may be accessed at
-# default: false
 ```
 
 ### Help

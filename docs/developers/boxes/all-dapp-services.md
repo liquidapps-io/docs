@@ -20,7 +20,6 @@ all-dapp-services
 * [`history-dapp-service`](history-dapp-service.md)
 * [`readfn-dapp-service`](readfn-dapp-service.md)
 * [`dns-dapp-service`](dns-dapp-service.md)
-* [`vcpu-dapp-service`](vcpu-dapp-service.md)
 
 
 
