@@ -59,8 +59,8 @@ cd helloworld
 zeus test
 ```
 
-## Try out a game!
-LiquidApps' take on Elemental Battles: [https://cardgame1112.dnsregistry1.com/](https://cardgame1112.dnsregistry1.com/) | [code](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/sample/cardgame)
+## Try out LiquidApps's take on Elemental Battles:
+[https://cardgame1112.dnsregistry1.com/](https://cardgame1112.dnsregistry1.com/) | [code](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/sample/cardgame)
 
 The game incorporates:
 
@@ -78,6 +78,24 @@ To launch locally:
 ```bash
 zeus unbox cardgame
 cd cardgame
+zeus migrate
+zeus run frontend main
+```
+
+## Or try out vCPU with our LiquidChess game:
+[https://liquidchess1.dnsregistry1.com/](https://liquidchess1.dnsregistry1.com/) | [code](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/sample/chess)
+
+The game incorporates:
+
+* vRAM - light-weight caching solution for EOSIO based RAM
+* LiquidAccounts - EOSIO accounts that live in vRAM instead of RAM
+* LiquidDNS - DNS service on the blockchain
+* vCPU - a solution to scale blockchain processing power horizontally
+
+To launch locally:
+```bash
+zeus unbox chess
+cd chess
 zeus migrate
 zeus run frontend main
 ```
@@ -107,6 +125,7 @@ zeus unbox <INSERT_BOX>
 * [oracle-dapp-service](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/services/oracle-dapp-service) - provide oracle services
 * [readfn-dapp-service](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/services/readfn-dapp-service) - read a contract function without the need to submit a trx to the chain
 * [vaccounts-dapp-service](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/services/vaccounts-dapp-service) - EOSIO accounts that live in vRAM instead of RAM
+* [vcpu-dapp-service](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/services/vcpu-dapp-service) - scale blockchain processing power horizontally
 
 ### Miscellaneous Boxes
 * [microauctions](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/economics/microauctions) - twin reverse dutch auctions used in DAPP's generation event
