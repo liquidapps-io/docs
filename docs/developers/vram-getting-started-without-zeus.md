@@ -21,9 +21,9 @@ The DAPP Services Provider is responsible for removing this data after the trans
 
 ## Prerequisites
 
-* [eosio.cdt v1.6.1](https://github.com/EOSIO/eosio.cdt/releases/tag/v1.6.1)
+* [eosio.cdt v1.6.3](https://github.com/EOSIO/eosio.cdt/releases/tag/v1.6.3)
 * [eosio v1.7.4](https://github.com/EOSIO/eos/releases/tag/v1.7.4)
-* If testing on Kylin: [eosio v1.8.1](https://github.com/EOSIO/eos/releases/tag/v1.8.1)
+* If testing on Kylin: [eosio v1.8.5](https://github.com/EOSIO/eos/releases/tag/v1.8.5)
 * [Kylin Account](kylin-account.md)
 
 ## Install
