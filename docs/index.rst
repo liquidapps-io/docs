@@ -14,7 +14,7 @@ Welcome to LiquidApps's documentation!
    services
    tokens
    faqs
-   patch-nodes
+   patches
    
 
 * :ref:`search`

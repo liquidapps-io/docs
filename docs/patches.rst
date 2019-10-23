@@ -4,11 +4,11 @@
    contain the root `toctree` directive.
 
 Patch Notes
-====
+===========
 
 .. toctree::
    :glob:
    
-   patch-notes/2.0.2527
+   patches/2.0.2527
    
 * :ref:`search`
