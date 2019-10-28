@@ -18,6 +18,7 @@ latest
 - enable large LiquidAccount payload sizes
 - fixes
     - change instantiateBuffer to instantiateSync for vcpu vrun.js
+    - fix debian install for eosio.cdt due to syntax change in download link
 
 ### [@liquidapps/dapp-client](https://www.npmjs.com/package/@liquidapps/dapp-client)
 
