@@ -4,6 +4,7 @@ latest
 ### [@liquidapps/dsp](https://www.npmjs.com/package/@liquidapps/dsp)
 - separated pm2 log files
 - add dsp version endpoint /v1/dsp/version
+- add `keytype` parameter to `/v1/dsp/get_table_row` request (`"keytype":"symbol"` if passing a symbol or string as primary key, `"keytype":"number"` if passing number). The keytype field adds precision to ensure the correct primary key is returned and it is an optional parameter
 - fixes
     - demux database sync issue
     - speed up demux sync and fix log messages
