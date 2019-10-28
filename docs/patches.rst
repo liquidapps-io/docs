@@ -9,6 +9,7 @@ Patch Notes
 .. toctree::
    :glob:
    
-   patches/*
+   patches/latest
+   patches/2.0.2527
    
 * :ref:`search`
