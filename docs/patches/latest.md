@@ -20,6 +20,7 @@ latest
 - add chess game zeus unbox chess
 - enable large LiquidAccount payload sizes
 - add unit test for oracle POST request
+- add `--phase` command to specify dapp services file `dapp-services-eos.js`, install npm files `npm`, or compile eos files `eos`
 - fixes
     - change instantiateBuffer to instantiateSync for vcpu vrun.js
     - fix debian install for eosio.cdt due to syntax change in download link
