@@ -11,6 +11,7 @@ latest
     - allow demux to sync from head_block in config.toml
     - prevent demux block processing from hanging
     - enable DSP API to use non-local nodeos instance
+    - fix demux high CPU issue
 
 ### [@liquidapps/zeus-cmd](https://www.npmjs.com/package/@liquidapps/zeus-cmd)
 - add vcpu-dapp-service
