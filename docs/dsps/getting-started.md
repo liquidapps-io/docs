@@ -16,7 +16,7 @@ Getting started
 
 [IPFS Node](ipfs)
 
-[PostgreSQL Database](database-backend)
+[PostgreSQL Database](postgresql-database-backend)
 
 [DSP Service Node](dsp-node)
 

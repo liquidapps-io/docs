@@ -10,6 +10,13 @@ __   _| |__) |   /  \  | \  / |
   \_/ |_|  \_\/_/    \_\_|  |_|
             
 ```
+
+vRAM is a caching solution that enables DAPP Service providers (specialized EOS nodes) to load data to and from RAM <> vRAM on demand.  Data is evicted from RAM and stored in vRAM after the transaction has been run.  This works similar to the way data is passed to and from regular computer RAM and a hard drive.  As with EOS, RAM is used in a computer sometimes because it is a faster storage mechanism, but it is scarce in supply as well.  For more information on the technical details of the transaction lifecycle, please read the [vRAM Guide For Experts](https://medium.com/the-liquidapps-blog/vram-guide-for-experts-f809c8f82a27) article and/or the [whitepaper](https://liquidapps.io/DAPP%20Network%20and%20DAPP%20Token%20Whitepaper%20v2.0.pdf).
+
+vRAM requires a certain amount of data to be stored in RAM permanently in order for the vRAM system to be trustless.  This data is represented as rows in the `ipfsentry` table of any `dapp::multi_index` enabled smart contract.  It is used to create the merkle root that is used by the smart contract to verify the data's integrity before being used.  Each row in the `ipfsentry` table is structured with an IPFS universal resource identifier (`vector<char>`) and a shard id (`uint64_t`).  The default maximum amount of shards (thus relating to the maximum amount of RAM required) is 1024.  Said differently, the total amount of RAM that a `dapp::multi_index` will need to use is `1024 * (vector<char> data + uint64_t id)`.
+
+The DAPP Services Provider is responsible for removing this data after the transaction's lifecycle.  If the DSP does not perform this action, the `ipfsentry` table will continue to grow until the account's RAM supply has been exhausted or the DSP resumes its services.
+
 ## Prerequisites
 
 * [Zeus](zeus-getting-started.md)
@@ -84,143 +91,13 @@ CONTRACT_START()
 CONTRACT_END((your)(actions)(here))
 ```
 
-## Add your contract unit tests
-in tests/mycontract.spec.js
-```javascript
-import 'mocha';
-require('babel-core/register');
-require('babel-polyfill');
-const { assert } = require('chai');
-const { getCreateKeys } = require('../extensions/helpers/key-utils');
-const { getNetwork } = require('../extensions/tools/eos/utils');
-var Eos = require('eosjs');
-const getDefaultArgs = require('../extensions/helpers/getDefaultArgs');
-const artifacts = require('../extensions/tools/eos/artifacts');
-const deployer = require('../extensions/tools/eos/deployer');
-const { genAllocateDAPPTokens } = require('../extensions/tools/eos/dapp-services');
+## Compile
 
-/*** UPDATE CONTRACT CODE ***/
-var contractCode = 'mycontract';
+See the unit testing section for details on adding unit tests.
 
-var ctrt = artifacts.require(`./${contractCode}/`);
-const delay = ms => new Promise(res => setTimeout(res, ms));
-
-describe(`${contractCode} Contract`, () => {
-  var testcontract;
-
-  /*** SET CONTRACT NAME(S) ***/
-  const code = 'airairairai1';
-  const code2 = 'testuser5';
-  var account = code;
-
-  before(done => {
-    (async () => {
-      try {
-        
-        /*** DEPLOY CONTRACT ***/
-        var deployedContract = await deployer.deploy(ctrt, code);
-        
-        /*** DEPLOY ADDITIONAL CONTRACTS ***/
-        var deployedContract2 = await deployer.deploy(ctrt, code2);
-        
-        await genAllocateDAPPTokens(deployedContract, 'ipfs');
-        var selectedNetwork = getNetwork(getDefaultArgs());
-        var config = {
-          expireInSeconds: 120,
-          sign: true,
-          chainId: selectedNetwork.chainId
-        };
-        if (account) {
-          var keys = await getCreateKeys(account);
-          config.keyProvider = keys.active.privateKey;
-        }
-        var eosvram = deployedContract.eos;
-        config.httpEndpoint = 'http://localhost:13015';
-        eosvram = new Eos(config);
-        testcontract = await eosvram.contract(code);
-        done();
-      } catch (e) {
-        done(e);
-      }
-    })();
-  });
-        
-  /*** DISPLAY NAME FOR TEST, REPLACE 'coldissue' WITH ANYTHING ***/
-  it('coldissue', done => {
-    (async () => {
-      try {        
-       
-        /*** SETUP VARIABLES ***/
-        var symbol = 'AIR';
-                
-        /*** DEFAULT failed = false, SET failed = true IN TRY/CATCH BLOCK TO FAIL TEST ***/
-        var failed = false;
-                    
-        /*** SETUP CHAIN OF ACTIONS ***/
-        await testcontract.create({
-          issuer: code2,
-          maximum_supply: `1000000000.0000 ${symbol}`
-        }, {
-          authorization: `${code}@active`,
-          broadcast: true,
-          sign: true
-        });
-
-        /*** CREATE ADDITIONAL KEYS AS NEEDED ***/
-        var key = await getCreateKeys(code2);
-        
-        var testtoken = testcontract;
-        await testtoken.coldissue({
-          to: code2,
-          quantity: `1000.0000 ${symbol}`,
-          memo: ''
-        }, {
-          authorization: `${code2}@active`,
-          broadcast: true,
-          keyProvider: [key.active.privateKey],
-          sign: true
-        });
-        
-        /*** ADD DELAY BETWEEN ACTIONS ***/
-        await delay(3000);
-        
-        /*** EXAMPLE TRY/CATCH failed = true ***/
-        try {
-          await testtoken.transfer({
-            from: code2,
-            to: code,
-            quantity: `100.0000 ${symbol}`,
-            memo: ''
-          }, {
-            authorization: `${code2}@active`,
-            broadcast: true,
-            keyProvider: [key.active.privateKey],
-            sign: true
-          });
-        } catch (e) {
-          failed = true;
-        }
-        
-        /*** ADD CUSTOM FAILURE MESSAGE ***/
-        assert(failed, 'should have failed before withdraw');
-        
-        /*** ADDITIONAL ACTIONS ... ***/
-
-        done();
-      } catch (e) {
-        done(e);
-      }
-    })();
-  });
-        
-  /*** USE it.skip TO CONTINUE WITH UNIT TEST IF TEST FAILS ***/
-  it.skip('it.skip does not assert and continues test if fails' ...
-});
-
-```
-
-## Compile and test
 ```bash
+zeus compile
+# compile and test with
 zeus test
 ```
 

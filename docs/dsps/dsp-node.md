@@ -11,8 +11,9 @@ sudo su -
 curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.34.0/install.sh | bash
 export NVM_DIR="${XDG_CONFIG_HOME/:-$HOME/.}nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
-nvm install 10
-nvm use 10
+# latest is 10.17.0 which has issues
+nvm install 10.16.3
+nvm use 10.16.3
 exit
 ```
 
@@ -60,6 +61,12 @@ exit
 sudo su -
 pm2 logs
 exit
+```
+
+## Additional Logs
+```bash
+cd $(readlink -f `which setup-dsp` | xargs dirname)
+cd logs
 ```
 
 ### Output sample:

@@ -17,6 +17,7 @@ oracle-dapp-service
 ### npm packages
 * [`node-fetch`](http://npmjs.com/package/node-fetch)
 * [`tronweb`](http://npmjs.com/package/tronweb)
+* [`stockfish`](http://npmjs.com/package/stockfish)
 * [`ripple-lib`](http://npmjs.com/package/ripple-lib)
 * [`bitcoin-core`](http://npmjs.com/package/bitcoin-core)
 

@@ -2,7 +2,7 @@ Zeus Getting Started
 ====================
 
 ## Overview
-Zeus-cmd is an extensible command line tool. SDK extensions come packaged in "boxes" and are served through IPFS.  Zeus is currently in alpha.
+Zeus-cmd is an extensible command line tool. SDK extensions come packaged in "boxes" and are served through IPFS.  Zeus is currently in alpha.  *As a note, all Zeus commands must be run within the root directory of the package that was unboxed.*
 
 * [zeus-sdk](https://github.com/liquidapps-io/zeus-sdk)
 * [overview of boxes](boxes/zeus-boxes.md)
@@ -36,8 +36,8 @@ Zeus-cmd is an extensible command line tool. SDK extensions come packaged in "bo
 ## Recommended eosio.cdt and eosio versions
 Automatically installed with `zeus unbox helloworld`
 
-* [eosio.cdt v1.6.1](https://github.com/EOSIO/eosio.cdt/releases/tag/v1.6.1)
-* [eosio v1.8.4](https://github.com/EOSIO/eos/releases/tag/v1.8.4)
+* [eosio.cdt v1.6.3](https://github.com/EOSIO/eosio.cdt/releases/tag/v1.6.3)
+* [eosio v1.8.5](https://github.com/EOSIO/eos/releases/tag/v1.8.5)
 
 
 ## Install Zeus
@@ -59,8 +59,8 @@ cd helloworld
 zeus test
 ```
 
-## Try out a game!
-LiquidApps' take on Elemental Battles: [https://cardgame1112.dnsregistry1.com/](https://cardgame1112.dnsregistry1.com/) | [code](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/sample/cardgame)
+## Try out LiquidApps's take on Elemental Battles:
+[https://cardgame1112.dnsregistry1.com/](https://cardgame1112.dnsregistry1.com/) | [code](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/sample/cardgame)
 
 The game incorporates:
 
@@ -78,6 +78,24 @@ To launch locally:
 ```bash
 zeus unbox cardgame
 cd cardgame
+zeus migrate
+zeus run frontend main
+```
+
+## Or try out vCPU with our LiquidChess game:
+[https://liquidchess1.dnsregistry1.com/](https://liquidchess1.dnsregistry1.com/) | [code](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/sample/chess)
+
+The game incorporates:
+
+* vRAM - light-weight caching solution for EOSIO based RAM
+* LiquidAccounts - EOSIO accounts that live in vRAM instead of RAM
+* LiquidDNS - DNS service on the blockchain
+* vCPU - a solution to scale blockchain processing power horizontally
+
+To launch locally:
+```bash
+zeus unbox chess
+cd chess
 zeus migrate
 zeus run frontend main
 ```
@@ -107,6 +125,7 @@ zeus unbox <INSERT_BOX>
 * [oracle-dapp-service](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/services/oracle-dapp-service) - provide oracle services
 * [readfn-dapp-service](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/services/readfn-dapp-service) - read a contract function without the need to submit a trx to the chain
 * [vaccounts-dapp-service](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/services/vaccounts-dapp-service) - EOSIO accounts that live in vRAM instead of RAM
+* [vcpu-dapp-service](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/services/vcpu-dapp-service) - scale blockchain processing power horizontally
 
 ### Miscellaneous Boxes
 * [microauctions](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/economics/microauctions) - twin reverse dutch auctions used in DAPP's generation event
@@ -222,6 +241,18 @@ zeus key export <ACCOUNT_NAME>
 --network # network to work on (other options, kylin, jungle, mainnet)
 # default: development (local)
 --password # password to decrypt the keypair
+```
+
+### Zeus Deploy
+Deploy a custom Zeus box to your local IPFS node.  Once deployed, if the `--update-mapping` flag is used, you may unbox this box like other packages.
+
+```bash
+zeus deploy box
+
+# optional flags:
+
+--update-mapping # updates local mapping.js file with an IPFS URI where the package may be accessed at
+# default: false
 ```
 
 ### Help
