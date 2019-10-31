@@ -5,6 +5,7 @@ latest
 - separated pm2 log files
 - add dsp version endpoint /v1/dsp/version
 - add `keytype` parameter to `/v1/dsp/get_table_row` request (`"keytype":"symbol"` if passing a symbol or string as primary key, `"keytype":"number"` if passing number). The keytype field adds precision to ensure the correct primary key is returned and it is an optional parameter
+- add support pass body to oracle POST request
 - fixes
     - demux database sync issue
     - speed up demux sync and fix log messages
@@ -17,6 +18,7 @@ latest
 - add vcpu-dapp-service
 - add chess game zeus unbox chess
 - enable large LiquidAccount payload sizes
+- add unit test for oracle POST request
 - fixes
     - change instantiateBuffer to instantiateSync for vcpu vrun.js
     - fix debian install for eosio.cdt due to syntax change in download link
