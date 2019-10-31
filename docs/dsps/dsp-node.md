@@ -63,6 +63,12 @@ pm2 logs
 exit
 ```
 
+## Additional Logs
+```bash
+cd $(readlink -f `which setup-dsp` | xargs dirname)
+cd logs
+```
+
 ### Output sample:
 ```
 /root/.pm2/logs/readfn-dapp-service-node-error.log last 15 lines:

@@ -26,9 +26,9 @@ npm install -g @liquidapps/dsp --unsafe-perm=true
 # Ensure no new updates to the `sample-config.toml` file are present, if so, update your config.toml accordingly.
 sudo find / -name sample-config.toml
 # nano <PATH>
+setup-dsp
 systemctl start nodeos
 systemctl start ipfs
 systemctl start dsp
-setup-dsp
 exit
 ```

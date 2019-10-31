@@ -12,6 +12,7 @@ latest
     - allow demux to sync from head_block in config.toml
     - prevent demux block processing from hanging
     - enable DSP API to use non-local nodeos instance
+    - fix vram collision issue
     - auto generate dsp node index files
     - fix demux high CPU issue
 
