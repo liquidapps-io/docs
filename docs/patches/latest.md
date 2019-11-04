@@ -3,6 +3,7 @@ latest
 
 ### [@liquidapps/dsp](https://www.npmjs.com/package/@liquidapps/dsp)
 - add `'Content-Type': 'application/json'` to oracle `https+post+json` request
+- add timeout proxy for database calls
 
 ### [@liquidapps/zeus-cmd](https://www.npmjs.com/package/@liquidapps/zeus-cmd)
 
