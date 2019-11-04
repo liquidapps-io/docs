@@ -19,9 +19,8 @@ The DAPP Services Provider is responsible for removing this data after the trans
 
 ## Prerequisites
 
-* [Zeus](zeus-getting-started.md)
+* [Zeus](zeus-getting-started.md) - Zeus installs eos and the eosio.cdt if not already installed
 * [Kylin Account](kylin-account.md)
-* If testing on Kylin: [eosio v1.8.1](https://github.com/EOSIO/eos/releases/tag/v1.8.1)
 
 ## Unbox sample template
 This box supports all DAPP Services and unit tests and is built to integrate your own vRAM logic.
@@ -107,7 +106,7 @@ export DSP_ENDPOINT=https://kylin-dsp-1.liquidapps.io
 export KYLIN_TEST_ACCOUNT=<ACCOUNT_NAME>
 export KYLIN_TEST_PUBLIC_KEY=<ACTIVE_PUBLIC_KEY>
 # Buy RAM:
-cleos -u $DSP_ENDPOINT system buyram $KYLIN_TEST_ACCOUNT $KYLIN_TEST_ACCOUNT "50.0000 EOS" -p $KYLIN_TEST_ACCOUNT@active
+cleos -u $DSP_ENDPOINT system buyram $KYLIN_TEST_ACCOUNT $KYLIN_TEST_ACCOUNT "200.0000 EOS" -p $KYLIN_TEST_ACCOUNT@active
 # Set contract code and abi
 cleos -u $DSP_ENDPOINT set contract $KYLIN_TEST_ACCOUNT ../contract -p $KYLIN_TEST_ACCOUNT@active
 
@@ -127,7 +126,7 @@ export SERVICE=ipfsservice1
 cleos -u $DSP_ENDPOINT push action dappservices selectpkg "[\"$KYLIN_TEST_ACCOUNT\",\"$PROVIDER\",\"$SERVICE\",\"$PACKAGE_ID\"]" -p $KYLIN_TEST_ACCOUNT@active
 
 # Stake your DAPP to the DSP that you selected the service package for:
-cleos -u $DSP_ENDPOINT push action dappservices stake "[\"$KYLIN_TEST_ACCOUNT\",\"$PROVIDER\",\"$SERVICE\",\"50.0000 DAPP\"]" -p $KYLIN_TEST_ACCOUNT@active
+cleos -u $DSP_ENDPOINT push action dappservices stake "[\"$KYLIN_TEST_ACCOUNT\",\"$PROVIDER\",\"$SERVICE\",\"10.0000 DAPP\"]" -p $KYLIN_TEST_ACCOUNT@active
 ```
 
 ## Test
