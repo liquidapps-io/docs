@@ -6,13 +6,13 @@ DSPs who have registered their service packages may be found in the [package tab
 
 DSP Portals for viewing/interacting with packages:
 
+* [DSP HQ](https://dsphq.io/)
 * [Bloks.io](https://bloks.io/dsp)
 * [EOS Nation](https://dsp.eosnation.io/)
 * [Malta Block](https://dsp.maltablock.org/)
 * [Mission Control](https://dsp.mest.net)
 * [Aloha EOS](https://dsps.io/)
 * [MinerGate](https://minergate.com/eos-vram-providers)
-* [DSP HQ](https://dsphq.io/)
 
 ## DSP Package Explanation
 DSP packages have several fields which are important to understand:

@@ -22,6 +22,10 @@ Zeus-cmd is an extensible command line tool. SDK extensions come packaged in "bo
 * Open source (BSD License)
 * And more...
 
+## Gitpod Zeus-IDE
+
+If you want to be up and running with Zeus quickly, you can use our cloud based Zeus-IDE, all you need is a Github account! [Try it here!](zeus-ide.md)
+
 ## Hardware Requirements
 * 16GB RAM
 * 2 CPU Cores
