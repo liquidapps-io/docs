@@ -11,8 +11,8 @@ Developers
    
    developers/getting-started
    developers/overview
-   developers/kylin-account
    developers/zeus-getting-started
+   developers/kylin-account
    developers/zeus-ide
    developers/vram-getting-started
    developers/vram-getting-started-without-zeus

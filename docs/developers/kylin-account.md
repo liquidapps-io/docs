@@ -1,5 +1,8 @@
 Kylin Testnet Account
 =====================
+
+The CryptoKylin testnet is one of the EOS Testnets.  Feel free to join their [Telegram](https://t.me/cryptokylin1en), or checkout their [Github repo](https://github.com/cryptokylin/CryptoKylin-Testnet).
+
 ## Account
 
 ```bash
