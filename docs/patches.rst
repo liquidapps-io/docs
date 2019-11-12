@@ -10,6 +10,7 @@ Patch Notes
    :glob:
    
    patches/latest
+   patches/2.0.2812
    patches/2.0.2527
    
 * :ref:`search`

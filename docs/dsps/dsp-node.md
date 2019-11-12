@@ -19,7 +19,7 @@ exit
 
 #### Ubuntu/Debian
 ```bash
-sudo apt install -y make cmake build-essential python
+sudo apt install -y make cmake build-essential python npm
 ```
 
 #### Centos/Fedora/AWS Linux:

@@ -22,6 +22,14 @@ Zeus-cmd is an extensible command line tool. SDK extensions come packaged in "bo
 * Open source (BSD License)
 * And more...
 
+## [Gitpod Zeus-IDE](https://gitpod.io/#https://github.com/liquidapps-io/zeus-ide)
+
+If you want to be up and running with Zeus quickly, you can use our cloud based Zeus-IDE, all you need is a Github account! [Try it here!](zeus-ide)
+
+## [dapp-client library](https://www.npmjs.com/package/@liquidapps/dapp-client)
+
+The dapp-client library makes it easier to interact with the DAPP Network's core smart contracts and services, [read more here](dapp-client).
+
 ## Hardware Requirements
 * 16GB RAM
 * 2 CPU Cores
@@ -37,7 +45,7 @@ Zeus-cmd is an extensible command line tool. SDK extensions come packaged in "bo
 Automatically installed with `zeus unbox helloworld`
 
 * [eosio.cdt v1.6.3](https://github.com/EOSIO/eosio.cdt/releases/tag/v1.6.3)
-* [eosio v1.8.5](https://github.com/EOSIO/eos/releases/tag/v1.8.5)
+* [eosio v1.8.6](https://github.com/EOSIO/eos/releases/tag/v1.8.6)
 
 
 ## Install Zeus
