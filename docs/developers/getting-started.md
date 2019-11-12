@@ -5,28 +5,32 @@ Getting Started
 
 ### Zeus SDK
 
-- #### [Getting Started](zeus-getting-started)
-- #### [Unit Testing](unit-testing)
-- #### [Packages and Staking](dsp-packages-and-staking)
-- #### [Zeus boxes](boxes/zeus-boxes)
+- [Getting Started](zeus-getting-started)
+
+- [Unit Testing](unit-testing)
+
+- [Packages and Staking](dsp-packages-and-staking)
+
+- [Zeus boxes](boxes/zeus-boxes)
 
 ### Dapp Client Library
 
-- #### [Getting Started](dapp-client)
+- [Getting Started](dapp-client)
 
 ### vRAM
 
-- #### [With Zeus](vram-getting-started)
-- #### [Without Zeus](vram-getting-started-without-zeus)
+- [With Zeus](vram-getting-started)
+
+- [Without Zeus](vram-getting-started-without-zeus)
 
 ### LiquidAccounts
 
-- #### [LiquidAccounts Getting Started](vaccounts-getting-started)
+- [LiquidAccounts Getting Started](vaccounts-getting-started)
 
 ### LiquidOracles
 
-- #### [LiquidOracles Getting Started](oracles-getting-started)
+- [LiquidOracles Getting Started](oracles-getting-started)
 
 ### LiquidScheduler
 
-- #### [LiquidScheduler Getting Started](cron-getting-started)
+- [LiquidScheduler Getting Started](cron-getting-started)
