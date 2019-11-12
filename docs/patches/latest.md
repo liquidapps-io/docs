@@ -18,5 +18,6 @@ latest
 - add zeus-ide
 - replace unzip install with unzipper, allow node v11
 - update overview section with new links / videos
+- add dapp-client section
 
 ### [dappservices contract](http://bloks.io/account/dappservices)

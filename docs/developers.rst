@@ -12,6 +12,7 @@ Developers
    developers/getting-started
    developers/overview
    developers/zeus-getting-started
+   developers/dapp-client
    developers/kylin-account
    developers/zeus-ide
    developers/vram-getting-started
