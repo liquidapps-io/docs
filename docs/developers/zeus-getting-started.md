@@ -36,10 +36,19 @@ The dapp-client library makes it easier to interact with the DAPP Network's core
 
 ## Prerequisites
 
-* nodejs == 10.x (nvm recommended, install at bottom of doc)
+* *node version 10.16.3* is recommended (nvm recommended, install at bottom of doc)
 * curl
 * cmake
 * make
+
+### Use node version manager to install node
+
+```bash
+curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.34.0/install.sh | bash
+# use install instructions provided to set PATH
+nvm install 10.16.3
+nvm use 10.16.3
+```
 
 ## Recommended eosio.cdt and eosio versions
 Automatically installed with `zeus unbox helloworld`
@@ -65,6 +74,14 @@ npm update -g @liquidapps/zeus-cmd
 zeus unbox helloworld
 cd helloworld
 zeus test
+```
+
+## Create your own contract
+This box supports all DAPP Services and unit tests and is built to integrate your own DAPP Network logic.  When you run the command a sample unit test and smart contract will be created.
+```bash
+mkdir mydapp; cd mydapp
+zeus unbox dapp --no-create-dir
+zeus create contract mycontract
 ```
 
 ## Try out LiquidApps's take on Elemental Battles:
@@ -363,13 +380,4 @@ Configure zeus environments available to interact with.  The `zeus-config.js` fi
             }
         }
     };
-```
-
-## Notes regarding permissions errors:
-Recommend using Node Version Manager (nvm)
-```bash
-curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.34.0/install.sh | bash
-# use install instructions provided to set PATH
-nvm install 10
-nvm use 10
 ```
