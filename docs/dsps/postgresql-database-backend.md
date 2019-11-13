@@ -17,7 +17,7 @@ url = "postgres://user:pass@example.com:5432/dbname"
 node_env = "production"
 ```
 
-### How to install postgres on Ubuntu
+### [How to install postgres on Ubuntu](https://computingforgeeks.com/install-postgresql-12-on-ubuntu/)
 
 ```bash
 wget --quiet -O - https://www.postgresql.org/media/keys/ACCC4CF8.asc | sudo apt-key add -
@@ -30,6 +30,7 @@ sudo apt -y install postgresql-12 postgresql-client-12
 
 ```bash
 sudo su - postgres
+psql
 CREATE DATABASE dsp;
 CREATE USER dsp WITH ENCRYPTED PASSWORD 'Put-Some-Strong-Password-Here';
 GRANT ALL PRIVILEGES ON DATABASE dsp to dsp;
