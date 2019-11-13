@@ -159,9 +159,13 @@ zeus compile
 ```
 
 ### Zeus migrate
-Compile and migrate a smart contract to another network such as the [Kylin Testnet](https://www.cryptokylin.io/), [Jungle Testnet](https://monitor.jungletestnet.io/#home), or [Mainnet](https://eosnetworkmonitor.io/)
+Compile and migrate a smart contract to another network such as the [Kylin Testnet](https://www.cryptokylin.io/), [Jungle Testnet](https://monitor.jungletestnet.io/#home), or [Mainnet](https://eosnetworkmonitor.io/).
+
+Be sure to run the following commands from inside the directory you unboxed, e.g., if you unboxed coldtoken, be in `/coldtoken`.  Also be sure to set the network in the import and migrate commands so Zeus knows what chain the keys / contract is operating on (mainnet, kylin, or jungle).
 ```bash
-zeus key import <CONTRACT_ACCOUNT_NAME> --owner-private-key <KEY> --active-private-key <KEY>
+# keys are stored in ~/.zeus/networks/<NETWORK>/accounts/
+zeus key import <CONTRACT_ACCOUNT_NAME> --owner-private-key <KEY> --active-private-key <KEY> --network=kylin
+# contract deployment files are stored in ~/<BOX>/models/contract-deployments
 zeus create contract-deployment <CONTRACT_FILE_NAME> <CONTRACT_ACCOUNT_NAME>
 zeus migrate --network=kylin --creator=<CONTRACT_ACCOUNT_NAME> --creator-key=<ACTIVE_PRIVATE_KEY>
 
@@ -321,7 +325,7 @@ Add commands, NPM intalls, ignores, and command hooks
 ```
 
 ### zeus-config.js
-Configure zeus environments available to interact with
+Configure zeus environments available to interact with.  The `zeus-config.js` file is located in the root of an unboxed directory.
 ```
     module.exports = {
         defaultArgs:{
