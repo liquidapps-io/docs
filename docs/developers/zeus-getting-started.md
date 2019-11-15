@@ -108,7 +108,7 @@ zeus run frontend main
 ```
 
 ## Or try out vCPU with our LiquidChess game:
-[https://liquidchess1.dnsregistry1.com/](https://liquidchess1.dnsregistry1.com/) | [code](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/sample/chess)
+[https://chess.liquidapps.io/](https://chess.liquidapps.io/) | [code](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/sample/chess)
 
 The game incorporates:
 
@@ -145,6 +145,8 @@ zeus unbox <INSERT_BOX>
 * [demux](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/microservices/demux) - install EOSIO's demux backend to capture events for contracts using the state-history plugin
 
 ### DAPP Services Boxes
+The DAPP Service boxes allow you to isolate the service that you wish to work with.  If you instead would like to use all of the DAPP Services, you may unbox the `all-dapp-services` box.
+
 * [ipfs-dapp-service](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/services/ipfs-dapp-service) - utilize the dapp::multi_index table to store data in IPFS (vRAM) instead of RAM
 * [cron-dapp-service](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/services/cron-dapp-service) - schedule CRON tasks on-chain
 * [oracle-dapp-service](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/services/oracle-dapp-service) - provide oracle services

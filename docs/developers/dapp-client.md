@@ -13,7 +13,7 @@ From there include the library's client creator script:
 
 ```javascript
 import { createClient } from '@liquidapps/dapp-client';
-const createClient = require('@liquidapps/dapp-client');
+const { createClient } = require('@liquidapps/dapp-client');
 ```
 
 Then pass your desired arguments to the creator function
