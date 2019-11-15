@@ -108,7 +108,7 @@ zeus run frontend main
 ```
 
 ## Or try out vCPU with our LiquidChess game:
-[https://liquidchess1.dnsregistry1.com/](https://liquidchess1.dnsregistry1.com/) | [code](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/sample/chess)
+[https://chess.liquidapps.io/](https://chess.liquidapps.io/) | [code](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/sample/chess)
 
 The game incorporates:
 
