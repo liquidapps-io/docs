@@ -10,6 +10,7 @@ latest
 - update eos 1.8.6
 - fixes
     - replace unzip install with unzipper, allow node v11
+    - update create contract example unit test eosjs2
 
 ### [@liquidapps/dapp-client](https://www.npmjs.com/package/@liquidapps/dapp-client)
 
