@@ -8,6 +8,7 @@ latest
 
 ### [@liquidapps/zeus-cmd](https://www.npmjs.com/package/@liquidapps/zeus-cmd)
 - update eos 1.8.6
+- add example portfolio dapp
 - fixes
     - replace unzip install with unzipper, allow node v11
     - update create contract example unit test eosjs2
