@@ -11,7 +11,7 @@ LiquidOracles Getting Started
 
 ```
 
-The DAPP Network offers the ability to fetch information using DAPP Service Providers (DSPs). A developer may choose as many or as few oracles to use in fetching data points from the internet.  If a developer wishes to prevent a scenario where all oracles have an incentive to return false information, the developer may run a DSP themselves and set the threshold of acceptance for the information to all parties.  Another great place to understand the service is in the [unit tests](https://github.com/liquidapps-io/zeus-sdk/blob/master/boxes/groups/services/oracle-dapp-service/test/oracleconsumer.spec.js).
+The DAPP Network offers the ability to fetch information using DAPP Service Providers (DSPs). A developer may choose as many or as few oracles to use in fetching data points from the internet.  If a developer wishes to prevent a scenario where all oracles have an incentive to return false information, the developer may run a DSP themselves and set the threshold of acceptance for the information to all parties.  Another great place to understand the service is in the [unit tests](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/oracles) within each sub directory.
 
 ## Prerequisites
 
@@ -48,8 +48,8 @@ Each of the following oracle request types comes equipped with its own syntax th
 - HTTP(S)+JSON Post: `https+post+json://timestamp/${body}/nodes.get-scatter.com:443/v1/chain/get_block` - where body is `const body = Buffer.from('{"block_num_or_id":"36568000"}').toString('base64')`.  In this example you specify the type of request: `https+post+json` then the key mapping `timestamp` then the body of the POST request, encoded in base64, then the URL path `nodes.get-scatter.com:443/v1/chain/get_block`.
 - Nodeos History Get: `self_history://${code}/0/0/0/action_trace.act.data.account` - where code is `const code = 'test1';`
 - IBC Block Fetch: `sister_chain_block://bos/10000000/transaction_mroot` - the `sister_chain_block` specifies the type of oracle request, followed by the chain of choice `bos` then the requested data point.
-- Oracle XIBC: `foreign_chain://ethereum/history/0x100/result.transactionsRoot` - here the `foreign_chain` oracle type is used followed by the foreign chain of choice: `ethereum`, the type of data point (`block_number`, `history`, `balance`, `storage`).  To see other blockchain data point options, see [this file](https://github.com/liquidapps-io/zeus-sdk/blob/master/boxes/groups/services/oracle-dapp-service/services/oracle-dapp-service-node/index.js#L197). Then the required data parameter is passed `0x100` followed by the object key mapping `result.transactionsRoot`.
-  - You may also see more examples in the [unit test](https://github.com/liquidapps-io/zeus-sdk/blob/master/boxes/groups/services/oracle-dapp-service/test/oracleconsumer.spec.js#L238)
+- Oracle XIBC: `foreign_chain://ethereum/history/0x100/result.transactionsRoot` - here the `foreign_chain` oracle type is used followed by the foreign chain of choice: `ethereum`, the type of data point (`block_number`, `history`, `balance`, `storage`).  To see other blockchain data point options, see [this file](https://github.com/liquidapps-io/zeus-sdk/blob/master/boxes/groups/oracles/oracle-foreign-chain/services/oracle-dapp-service-node/protocols/foreign_chain.js). Then the required data parameter is passed `0x100` followed by the object key mapping `result.transactionsRoot`.
+  - You may also see more examples in the [unit test](https://github.com/liquidapps-io/zeus-sdk/blob/master/boxes/groups/oracles/oracle-foreign-chain/test/oracle-foreign-chain.spec.js)
 - Wolfram Alpha: `wolfram_alpha://What is the average air speed velocity of a laden swallow?` - here the `wolfram_alpha` oracle type is used followed by the question: `What is the average air speed velocity of a laden swallow?`.
 
 ## LiquidOracle Consumer Example Contract used in unit tests
