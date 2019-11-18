@@ -5,10 +5,10 @@ LiquidStorage Service
 Distributed storage and hosting
 
 ## Stage
-WIP
+Alpha
 
 ## Version
-0.0
+0.5
 
 ## Contract
 
@@ -18,9 +18,7 @@ WIP
 [storage-dapp-service](../../developers/boxes/storage-dapp-service)
 
 ## Service Commands
-### strstore
-### strhold
-### strserve
+### sdummy
 ## Tests 
 * [storage.spec.js](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/services/storage-dapp-service/test/storage.spec.js)
 ## [Implementation](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/services/storage-dapp-service/contracts/eos/dappservices/_storage_impl.hpp)

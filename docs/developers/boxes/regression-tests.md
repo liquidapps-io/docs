@@ -12,12 +12,12 @@ regression-tests
 ### Boxes
 * [`helloworld`](helloworld.md)
 * [`all-dapp-services`](all-dapp-services.md)
-* [`cardgame`](cardgame.md)
 * [`airhodl`](airhodl.md)
 * [`coldtoken`](coldtoken.md)
 * [`vgrab`](vgrab.md)
 * [`deepfreeze`](deepfreeze.md)
 * [`airdrop`](airdrop.md)
+* [`chess`](chess.md)
 
 
 

@@ -8,18 +8,18 @@ oracle-dapp-service
 
 
 ## Service Documentation
-[LiquidOracle](../../services/oracle-service.md)
+[LiquidHarmony](../../services/oracle-service.md)
 ## Dependencies
 ### Boxes
 * [`dapp-services`](dapp-services.md)
 * [`mocha`](mocha.md)
 * [`hooks-cpp-contracts`](hooks-cpp-contracts.md)
+* [`oracle-web`](oracle-web.md)
+* [`oracle-self-history`](oracle-self-history.md)
+* [`oracle-random`](oracle-random.md)
+* [`oracle-sister-chain`](oracle-sister-chain.md)
 ### npm packages
 * [`node-fetch`](http://npmjs.com/package/node-fetch)
-* [`tronweb`](http://npmjs.com/package/tronweb)
-* [`stockfish`](http://npmjs.com/package/stockfish)
-* [`ripple-lib`](http://npmjs.com/package/ripple-lib)
-* [`bitcoin-core`](http://npmjs.com/package/bitcoin-core)
 
 ## Contracts
 * [`oracleservice`](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/services/oracle-dapp-service/contracts/eos/dappservices/_oracle_impl.hpp)
@@ -45,10 +45,10 @@ zeus unbox oracle-dapp-service
   "name": "oracle",
   "port": 13112,
   "contract": "oracleservic",
-  "prettyName": "LiquidOracle",
+  "prettyName": "LiquidHarmony",
   "stage": "Beta",
   "version": "0.9",
-  "description": "Web/IBC/XIBC Oracle Service",
+  "description": "Web/IBC/XIBC/VCPU/SQL Services",
   "commands": {
     "geturi": {
       "blocking": true,

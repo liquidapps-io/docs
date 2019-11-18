@@ -21,6 +21,14 @@ all-dapp-services
 * [`readfn-dapp-service`](readfn-dapp-service.md)
 * [`dns-dapp-service`](dns-dapp-service.md)
 * [`vcpu-dapp-service`](vcpu-dapp-service.md)
+* [`oracle-web`](oracle-web.md)
+* [`oracle-self-history`](oracle-self-history.md)
+* [`oracle-foreign-chain`](oracle-foreign-chain.md)
+* [`oracle-sister-chain`](oracle-sister-chain.md)
+* [`oracle-wolframalpha`](oracle-wolframalpha.md)
+* [`oracle-random`](oracle-random.md)
+* [`oracle-sql`](oracle-sql.md)
+* [`oracle-vcpu`](oracle-vcpu.md)
 
 
 

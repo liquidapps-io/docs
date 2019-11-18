@@ -18,6 +18,7 @@ chess
 * [`eos-common`](eos-common.md)
 * [`all-dapp-services`](all-dapp-services.md)
 * [`seed-frontends`](seed-frontends.md)
+* [`oracle-stockfish`](oracle-stockfish.md)
 * [`seed-models`](seed-models.md)
 
 
