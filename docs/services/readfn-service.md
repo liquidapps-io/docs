@@ -8,7 +8,7 @@ Read Functions Service
 Alpha
 
 ## Version
-0.5
+0.9
 
 ## Contract
 

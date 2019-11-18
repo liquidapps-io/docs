@@ -44,7 +44,7 @@ zeus unbox readfn-dapp-service
   "contract": "readfndspsvc",
   "prettyName": "LiquidLens",
   "stage": "Alpha",
-  "version": "0.5",
+  "version": "0.9",
   "description": "Read Functions Service",
   "commands": {
     "rfnuse": {

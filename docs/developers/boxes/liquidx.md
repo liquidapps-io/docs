@@ -40,8 +40,8 @@ zeus unbox liquidx
 ```json
 {
   "dsp_port": 12346,
-  "nodeos_port": 12345,
-  "nodeos_endpoint": "http://localhost:12345",
+  "nodeos_port": 42345,
+  "nodeos_endpoint": "http://localhost:42345",
   "nodeos_host": "localhost",
   "nodeos_state_history_port": 12341,
   "nodeos_p2p_port": 12451,
