@@ -107,7 +107,7 @@ zeus migrate
 zeus run frontend main
 ```
 
-## Or try out vCPU with our LiquidChess game:
+## Try out vCPU with our LiquidChess game:
 [https://chess.liquidapps.io/](https://chess.liquidapps.io/) | [code](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/sample/chess)
 
 The game incorporates:
@@ -121,6 +121,24 @@ To launch locally:
 ```bash
 zeus unbox chess
 cd chess
+zeus migrate
+zeus run frontend main
+```
+
+## Try out LiquidPortfolio
+LiquidPortfolio is a portfolio tracking tool for BTC, ETH (and tokens), and EOS (and tokens).  The tool displays the total current value of the portfolio while also encrypting all user account info with the LiquidAccount's private key.
+
+The game incorporates:
+
+* vRAM - light-weight caching solution for EOSIO based RAM
+* LiquidAccounts - EOSIO accounts that live in vRAM instead of RAM
+* LiquidOracles - DNS service on the blockchain
+* Encryption/Decryption locally of account data using LiquidAccount private key
+
+To launch locally:
+```bash
+zeus unbox portfolio
+cd portfolio
 zeus migrate
 zeus run frontend main
 ```

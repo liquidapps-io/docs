@@ -1,8 +1,8 @@
-LiquidOracle Service
+LiquidHarmony Service
 =================
 
 ## Overview
-Web/IBC/XIBC Oracle Service
+Web/IBC/XIBC/VCPU/SQL Services
 
 ## Stage
 Beta

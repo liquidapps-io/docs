@@ -5,10 +5,10 @@ LiquidAuthenticator Service
 Authentication of offchain APIs and services using EOSIO permissions and contract
 
 ## Stage
-WIP
+Alpha
 
 ## Version
-0.0
+0.4
 
 ## Contract
 

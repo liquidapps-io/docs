@@ -5,14 +5,28 @@ latest
 - add `'Content-Type': 'application/json'` to oracle `https+post+json` request
 - add timeout proxy for database calls
 - add LiquidX
+- add LiquidHarmony, extension oracle service that allows plug and play oracle options (Web/IBC/XIBC/VCPU/SQL Services)
+- add LiquidSQL, state storage alternative for smart contracts
+- dappservicesx contract - add setlink (create link between side chain account and mainnet owner), adddsp (side chain account add DSP name), rmvdsp (side chain - account remove DSP name)
+- liquidx contract - add addaccount (add sidechain account to allow billing to another chain account) and rmvaccount (remove link) actions
+- add sidechain billing to dapp-services-node/common.js
+- add LiquidKMS boilerplate
+- add LiquidStorage node logic for unpin / upload_public
+- add LiquidBilling boilerplate
 
 ### [@liquidapps/zeus-cmd](https://www.npmjs.com/package/@liquidapps/zeus-cmd)
 - update eos 1.8.6
+- add example portolio dapp
+- update LiquidStorage unit test
+- add boxes: oracle-web oracle-self-history oracle-foreign-chain oracle-sister-chain oracle-wolframalpha oracle-random oracle-sql oracle-vcpu
+- split up oracle services
+- add functional LiquidStorage unit test
 - fixes
     - replace unzip install with unzipper, allow node v11
     - update create contract example unit test eosjs2
 
 ### [@liquidapps/dapp-client](https://www.npmjs.com/package/@liquidapps/dapp-client)
+- add LiquidStorage client extension to upload / unpin
 
 ### [docs](https://docs.liquidapps.io/en/stable/)
 - add local postgresql info
@@ -20,5 +34,13 @@ latest
 - replace unzip install with unzipper, allow node v11
 - update overview section with new links / videos
 - add dapp-client section
+- add example portolio dapp
+- update oracle getting started links
+- LiquidAuthenticator - WIP → Alpha
+- LiquidBilling - WIP - Transaction signing service for resource payment
+- LiquidKMS - WIP - Key Management Service
+- LiquidStorage - WIP → Alpha
+- LiquidSQL - Alpha
 
 ### [dappservices contract](http://bloks.io/account/dappservices)
+- add usagex for LiquidX billing

@@ -8,7 +8,7 @@ DSP Hosted DNS Service
 WIP
 
 ## Version
-0.0
+0.5
 
 ## Contract
 
