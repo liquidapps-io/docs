@@ -24,6 +24,7 @@ latest
 - fixes
     - replace unzip install with unzipper, allow node v11
     - update create contract example unit test eosjs2
+    - update example frontend to eosjs2 and latest scatter
 
 ### [@liquidapps/dapp-client](https://www.npmjs.com/package/@liquidapps/dapp-client)
 - add LiquidStorage client extension to upload / unpin
@@ -43,4 +44,4 @@ latest
 - LiquidSQL - Alpha
 
 ### [dappservices contract](http://bloks.io/account/dappservices)
-- add usagex for LiquidX billing
+- add usagex for LiquidX and other off chain service billing LiquidStorage, LiquidLens, LiquidAuth
