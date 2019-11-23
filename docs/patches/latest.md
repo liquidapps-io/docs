@@ -13,6 +13,8 @@ latest
 - add LiquidKMS boilerplate
 - add LiquidStorage node logic for unpin / upload_public
 - add LiquidBilling boilerplate
+- fixes
+    - add custom permissions for xcallback in generic-dapp-service-node file
 
 ### [@liquidapps/zeus-cmd](https://www.npmjs.com/package/@liquidapps/zeus-cmd)
 - update eos 1.8.6
