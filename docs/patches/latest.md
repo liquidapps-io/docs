@@ -27,6 +27,11 @@ latest
     - replace unzip install with unzipper, allow node v11
     - update create contract example unit test eosjs2
     - update example frontend to eosjs2 and latest scatter
+    - fix cardgame unit test
+        - use dapp-client for vaccounts
+        - move xvinit for vaccounts to happen in migration
+        - add xvinit to coldtoken contract
+        - update to eosj2
 
 ### [@liquidapps/dapp-client](https://www.npmjs.com/package/@liquidapps/dapp-client)
 - add LiquidStorage client extension to upload / unpin
