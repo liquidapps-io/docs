@@ -32,6 +32,7 @@ latest
         - move xvinit for vaccounts to happen in migration
         - add xvinit to coldtoken contract
         - update to eosj2
+    - fix chess.json to enable migration by updating contract / account
 
 ### [@liquidapps/dapp-client](https://www.npmjs.com/package/@liquidapps/dapp-client)
 - add LiquidStorage client extension to upload / unpin
