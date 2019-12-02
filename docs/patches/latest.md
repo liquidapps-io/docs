@@ -39,6 +39,8 @@ latest
 
 ### [@liquidapps/dapp-client](https://www.npmjs.com/package/@liquidapps/dapp-client)
 - add LiquidStorage client extension to upload / unpin
+- fixes
+    - add fix text encode/decode in vaccounts service
 
 ### [docs](https://docs.liquidapps.io/en/stable/)
 - add local postgresql info
