@@ -23,10 +23,12 @@ latest
 - add boxes: oracle-web oracle-self-history oracle-foreign-chain oracle-sister-chain oracle-wolframalpha oracle-random oracle-sql oracle-vcpu
 - split up oracle services
 - add functional LiquidStorage unit test
+- modified and fixed ipfs cleanup script to support oracle cleanups
 - fixes
     - replace unzip install with unzipper, allow node v11
     - update create contract example unit test eosjs2
     - update example frontend to eosjs2 and latest scatter
+    - update cleanup script to work with new dsp logic
     - add CONTRACT_END syntax to example contract
     - fix cardgame unit test
         - use dapp-client for vaccounts

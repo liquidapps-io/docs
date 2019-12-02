@@ -13,6 +13,7 @@ oracle-dapp-service
 ### Boxes
 * [`dapp-services`](dapp-services.md)
 * [`mocha`](mocha.md)
+* [`seed-utils-cleanup`](seed-utils-cleanup.md)
 * [`hooks-cpp-contracts`](hooks-cpp-contracts.md)
 * [`oracle-web`](oracle-web.md)
 * [`oracle-self-history`](oracle-self-history.md)
