@@ -36,4 +36,4 @@ Getting started
 ## Replay Contract and Cleanup IPFS Entries
 [Replay Contract](replay-contract)
 
-[Cleanup IPFS Entries](cleanup-ipfs-entries)
+[Cleanup IPFS Entries](cleanup-ipfs-oracle-entries)
