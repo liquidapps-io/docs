@@ -183,9 +183,9 @@ The DAPP Service boxes allow you to isolate the service that you wish to work wi
 *please note: zeus commands are directory sensitive, all commands should be performed in root of box*
 
 ### Zeus compile
-Compile a smart contract
+Compile a smart contract.  You can either compile all of the contracts within the contracts directory with `zeus compile` or a specific contract by name, such as `zeus compile dappservices`
 ```bash
-zeus compile
+zeus compile <CONTRACT_NAME>
 
 # optional flags:
 
