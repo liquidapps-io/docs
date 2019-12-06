@@ -37,6 +37,7 @@ latest
         - add xvinit to coldtoken contract
         - update to eosj2
     - fix chess.json to enable migration by updating contract / account
+    - fix OSX `zeus deploy box` breaking issue
 
 ### [@liquidapps/dapp-client](https://www.npmjs.com/package/@liquidapps/dapp-client)
 - add LiquidStorage client extension to upload / unpin
