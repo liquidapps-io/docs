@@ -20,6 +20,7 @@ dapp-services
 * [`hooks-cpp-contracts`](hooks-cpp-contracts.md)
 * [`mocha`](mocha.md)
 * [`client-lib-base`](client-lib-base.md)
+* [`ipfs-daemon`](ipfs-daemon.md)
 ### npm packages
 * [`big-integer`](http://npmjs.com/package/big-integer)
 * [`bytebuffer`](http://npmjs.com/package/bytebuffer)

@@ -26,6 +26,7 @@ latest
 - modified and fixed ipfs cleanup script to support oracle cleanups
 - allow `zeus compile <CONTRACT_NAME>`, zeus now allows you to only compile a contract by its name if you like, or you can run `zeus compile` to run all
 - add `kill-port` npm dependency to `eos-extensions` box
+- move `ipfs-daemon` dependency from `boxes/groups/core/build-extensions/zeus-box.json` to `boxes/groups/dapp-network/dapp-services/zeus-box.json` as `IPFS` is only needed with the `dapp-services` box
 - fixes
     - replace unzip install with unzipper, allow node v11
     - update create contract example unit test eosjs2
