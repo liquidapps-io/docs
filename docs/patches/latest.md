@@ -25,6 +25,7 @@ latest
 - add functional LiquidStorage unit test
 - modified and fixed ipfs cleanup script to support oracle cleanups
 - allow `zeus compile <CONTRACT_NAME>`, zeus now allows you to only compile a contract by its name if you like, or you can run `zeus compile` to run all
+- add `kill-port` npm dependency to `eos-extensions` box
 - fixes
     - replace unzip install with unzipper, allow node v11
     - update create contract example unit test eosjs2
