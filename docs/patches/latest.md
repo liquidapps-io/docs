@@ -23,6 +23,8 @@ latest
 - add boxes: oracle-web oracle-self-history oracle-foreign-chain oracle-sister-chain oracle-wolframalpha oracle-random oracle-sql oracle-vcpu
 - split up oracle services
 - add functional LiquidStorage unit test
+- add `--type=local` flag to `zeus deploy box` command: deploys boxes locally to `~/.zeus/boxes/` instead of `IPFS` or `s3`. *Must use with the `--update-mapping` flag*. Together both flags (`zeus deploy box --type=local --update-mapping`) updates the `mapping.js` file with `file://`.. as the pointer | [thank you prcolaco](https://github.com/liquidapps-io/zeus-sdk/pull/11)
+- only use invalidation of ipfs with `zeus deploy box` command when the `--type` is `ipfs` | [thank you prcolaco](https://github.com/liquidapps-io/zeus-sdk/pull/11)
 - modified and fixed ipfs cleanup script to support oracle cleanups
 - allow `zeus compile <CONTRACT_NAME>`, zeus now allows you to only compile a contract by its name if you like, or you can run `zeus compile` to run all
 - add `kill-port` npm dependency to `eos-extensions` box
