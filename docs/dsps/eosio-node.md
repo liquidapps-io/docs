@@ -113,7 +113,6 @@ access-control-allow-credentials = false
 verbose-http-errors = true
 http-threads=8
 net-threads=8
-read-mode = head
 trace-history-debug-mode = true
 trace-history = true
 plugin = eosio::producer_plugin
@@ -128,6 +127,11 @@ EOF
 curl $P2P_FILE > p2p-config.ini
 cat p2p-config.ini | grep "p2p-peer-address" >> $HOME/.local/share/eosio/nodeos/config/config.ini
 ```
+
+*Please note the following about some `config.ini` settings:*
+
+- `wasm-runtime = wabt` must be used as the `wavm` engine still has bugs
+- `read-mode = head` (default is: `read-more = speculative` and does not need to be specified in the `config.ini`) must not be used to prevent duplicate `xwarmup` actions | [read more about read modes here](https://developers.eos.io/eosio-nodeos/docs/read-modes)
 
 ## Run 
 First run (from snapshot)

@@ -61,6 +61,11 @@ latest
 - LiquidKMS - WIP - Key Management Service
 - LiquidStorage - WIP → Alpha
 - LiquidSQL - Alpha
+- removed `read-mode = head` from default `config.ini` setup for eosio node
+- clarified `wasm-runtime = wabt` must be used over `wasm-runtime = wavm` due to bugs in `wavm`
+- add `zeus compile <CONTRACT_NAME>` syntax to [zeus-getting-started](../developers/zeus-getting-started)
+- update path for `cleanup.js` script for DSPs
+- add cleanup oracle info to [Cleanup IPFS and Oracle Entries](../dsps/cleanup-ipfs-oracle-entries)
 
 ### [dappservices contract](http://bloks.io/account/dappservices)
 - add usagex for LiquidX and other off chain service billing LiquidStorage, LiquidLens, LiquidAuth
