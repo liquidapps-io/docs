@@ -58,6 +58,9 @@ mkdir $HOME/.local/share/eosio/nodeos/data/snapshots -p
 mkdir $HOME/.local/share/eosio/nodeos/config -p
 ```
 
+### Snapshots
+If you would like an up to date snapshot, please visit: [snapshots.eosnation.io](https://snapshots.eosnation.io/) and find the latest snapshot for the chain you are using.  You will want to unpack the file and store it here with the following file name: `$HOME/.local/share/eosio/nodeos/data/snapshots/boot.bin`.  EOS Node tools many also be used for mainnet: [https://eosnode.tools/snapshots](https://eosnode.tools/snapshots)
+
 ### Kylin
 ```bash
 URL="http://storage.googleapis.com/eos-kylin-snapshot/snapshot-2019-06-10-09(utc)-0312d3b9843e2efa6831806962d6c219d37200e0b897a0d9243bcab40b2b546b.bin"
@@ -68,21 +71,16 @@ wget $URL -O $HOME/.local/share/eosio/nodeos/data/snapshots/boot.bin
 ```        
 
 ### Mainnet
-
 ```bash
-URL=$(wget --quiet "https://eosnode.tools/api/bundle" -O- | jq -r '.data.snapshot.s3')
+URL="https://s3.eu-central-1.wasabisys.com/eosnodetools/snapshots/snap_2019-12-15-13-00.tar.gz"
 P2P_FILE=https://eosnodes.privex.io/?config=1
 GENESIS=https://raw.githubusercontent.com/CryptoLions/EOS-MainNet/master/genesis.json
-CHAIN_STATE_SIZE=131072
+CHAIN_STATE_SIZE=16384
 cd $HOME/.local/share/eosio/nodeos/data
 wget $URL -O - | tar xvz
 SNAPFILE=`ls snapshots/*.bin | head -n 1 | xargs -n 1 basename`
 mv snapshots/$SNAPFILE snapshots/boot.bin
 ```
-
-### Snapshots
-If you would like an up to date snapshot, please visit: [snapshots.eosnation.io](https://snapshots.eosnation.io/) and find the latest snapshot for the chain you are using.  You will want to unpack the file and store it here with the following file name: `$HOME/.local/share/eosio/nodeos/data/snapshots/boot.bin`
-
 ## Configuration
 
 ```bash

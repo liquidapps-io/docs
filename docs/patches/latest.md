@@ -67,6 +67,7 @@ latest
 - add `zeus compile <CONTRACT_NAME>` syntax to [zeus-getting-started](../developers/zeus-getting-started)
 - update path for `cleanup.js` script for DSPs
 - add cleanup oracle info to [Cleanup IPFS and Oracle Entries](../dsps/cleanup-ipfs-oracle-entries)
+- update `chain-state-db-size-mb` from `131072` to `16384` see [here](https://github.com/EOSIO/eos/issues/7664#issuecomment-560266833)
 
 ### [dappservices contract](http://bloks.io/account/dappservices)
 - add usagex for LiquidX and other off chain service billing LiquidStorage, LiquidLens, LiquidAuth
