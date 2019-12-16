@@ -13,6 +13,7 @@ latest
 - add LiquidKMS boilerplate
 - add LiquidStorage node logic for unpin / upload_public
 - add LiquidBilling boilerplate
+- add reconnect mechanism to demux nodeos websocket
 - fixes
     - add custom permissions for xcallback in generic-dapp-service-node file
 
