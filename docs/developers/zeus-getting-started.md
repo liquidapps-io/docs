@@ -233,9 +233,9 @@ zeus migrate --network=kylin --creator=<CONTRACT_ACCOUNT_NAME> --creator-key=<AC
 ```
 
 ### Zeus test
-Compile and unit test a smart contract
+Compile and unit test a smart contract.  You can either compile and test all of the contracts within the contracts & test directories with `zeus test` or a specific contract by name, with `zeus test dappservices`
 ```bash
-zeus test
+zeus test <CONTRACT_NAME>
 
 # optional flags:
 
