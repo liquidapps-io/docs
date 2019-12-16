@@ -58,6 +58,9 @@ mkdir $HOME/.local/share/eosio/nodeos/data/snapshots -p
 mkdir $HOME/.local/share/eosio/nodeos/config -p
 ```
 
+### Snapshots
+If you would like an up to date snapshot, please visit: [snapshots.eosnation.io](https://snapshots.eosnation.io/) and find the latest snapshot for the chain you are using.  You will want to unpack the file and store it here with the following file name: `$HOME/.local/share/eosio/nodeos/data/snapshots/boot.bin`.  EOS Node tools many also be used for mainnet: [https://eosnode.tools/snapshots](https://eosnode.tools/snapshots)
+
 ### Kylin
 ```bash
 URL="http://storage.googleapis.com/eos-kylin-snapshot/snapshot-2019-06-10-09(utc)-0312d3b9843e2efa6831806962d6c219d37200e0b897a0d9243bcab40b2b546b.bin"
@@ -68,21 +71,16 @@ wget $URL -O $HOME/.local/share/eosio/nodeos/data/snapshots/boot.bin
 ```        
 
 ### Mainnet
-
 ```bash
-URL=$(wget --quiet "https://eosnode.tools/api/bundle" -O- | jq -r '.data.snapshot.s3')
+URL="https://s3.eu-central-1.wasabisys.com/eosnodetools/snapshots/snap_2019-12-15-13-00.tar.gz"
 P2P_FILE=https://eosnodes.privex.io/?config=1
 GENESIS=https://raw.githubusercontent.com/CryptoLions/EOS-MainNet/master/genesis.json
-CHAIN_STATE_SIZE=131072
+CHAIN_STATE_SIZE=16384
 cd $HOME/.local/share/eosio/nodeos/data
 wget $URL -O - | tar xvz
 SNAPFILE=`ls snapshots/*.bin | head -n 1 | xargs -n 1 basename`
 mv snapshots/$SNAPFILE snapshots/boot.bin
 ```
-
-### Snapshots
-If you would like an up to date snapshot, please visit: [snapshots.eosnation.io](https://snapshots.eosnation.io/) and find the latest snapshot for the chain you are using.  You will want to unpack the file and store it here with the following file name: `$HOME/.local/share/eosio/nodeos/data/snapshots/boot.bin`
-
 ## Configuration
 
 ```bash
@@ -113,7 +111,6 @@ access-control-allow-credentials = false
 verbose-http-errors = true
 http-threads=8
 net-threads=8
-read-mode = head
 trace-history-debug-mode = true
 trace-history = true
 plugin = eosio::producer_plugin
@@ -128,6 +125,11 @@ EOF
 curl $P2P_FILE > p2p-config.ini
 cat p2p-config.ini | grep "p2p-peer-address" >> $HOME/.local/share/eosio/nodeos/config/config.ini
 ```
+
+*Please note the following about some `config.ini` settings:*
+
+- `wasm-runtime = wabt` must be used as the `wavm` engine still has bugs
+- `read-mode = head` (default is: `read-more = speculative` and does not need to be specified in the `config.ini`) must not be used to prevent duplicate `xwarmup` actions | [read more about read modes here](https://developers.eos.io/eosio-nodeos/docs/read-modes)
 
 ## Run 
 First run (from snapshot)

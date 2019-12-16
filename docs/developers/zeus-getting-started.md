@@ -183,9 +183,9 @@ The DAPP Service boxes allow you to isolate the service that you wish to work wi
 *please note: zeus commands are directory sensitive, all commands should be performed in root of box*
 
 ### Zeus compile
-Compile a smart contract
+Compile a smart contract.  You can either compile all of the contracts within the contracts directory with `zeus compile` or a specific contract by name, such as `zeus compile dappservices`
 ```bash
-zeus compile
+zeus compile <CONTRACT_NAME>
 
 # optional flags:
 
@@ -293,7 +293,7 @@ zeus key export <ACCOUNT_NAME>
 ```
 
 ### Zeus Deploy
-Deploy a custom Zeus box to your local IPFS node.  Once deployed, if the `--update-mapping` flag is used, you may unbox this box like other packages.
+Deploy a custom Zeus box to your local working directory.  Once deployed, if the `--update-mapping` flag is used, you may unbox this box like other packages.  The `--type` method can be used to determine what medium to deploy the box to.  The default `local` deploys with the syntax `file://${packagePath}/box.zip`.  The option `ipfs` deploys to the IPFS network with the syntax `ipfs://${hash}`.
 
 ```bash
 zeus deploy box
@@ -301,7 +301,9 @@ zeus deploy box
 # optional flags:
 
 --update-mapping # updates local mapping.js file with an IPFS URI where the package may be accessed at
-# default: false
+# default: true
+--type # deploy destination (local, ipfs)
+# default: local
 ```
 
 ### Help

@@ -62,8 +62,8 @@ zeus deploy frontend main --ipfs --register chess
 #### [sample/chess.json](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/sample/chess/models/contract-deployments/chess.json)
 ```json
 {
-  "contract": "cardgame",
-  "account": "cardgame1111"
+  "contract": "chess",
+  "account": "chess1111111"
 }
 ```
 ## Tests 

@@ -13,7 +13,7 @@ ipfs-dapp-service
 ### Boxes
 * [`dapp-services`](dapp-services.md)
 * [`log-dapp-service`](log-dapp-service.md)
-* [`seed-utils`](seed-utils.md)
+* [`seed-utils-cleanup`](seed-utils-cleanup.md)
 * [`mocha`](mocha.md)
 * [`hooks-cpp-contracts`](hooks-cpp-contracts.md)
 ### npm packages

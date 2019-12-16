@@ -13,9 +13,9 @@ __   _| |__) |   /  \  | \  / |
 
 vRAM is a caching solution that enables DAPP Service providers (specialized EOS nodes) to load data to and from RAM <> vRAM on demand.  Data is evicted from RAM and stored in vRAM after the transaction has been run.  This works similar to the way data is passed to and from regular computer RAM and a hard drive.  As with EOS, RAM is used in a computer sometimes because it is a faster storage mechanism, but it is scarce in supply as well.  For more information on the technical details of the transaction lifecycle, please read the [vRAM Guide For Experts](https://medium.com/the-liquidapps-blog/vram-guide-for-experts-f809c8f82a27) article and/or the [whitepaper](https://liquidapps.io/DAPP%20Network%20and%20DAPP%20Token%20Whitepaper%20v2.0.pdf).
 
-vRAM requires a certain amount of data to be stored in RAM permanently in order for the vRAM system to be trustless.  This data is represented as rows in the `ipfsentry` table of any `dapp::multi_index` enabled smart contract.  It is used to create the merkle root that is used by the smart contract to verify the data's integrity before being used.  Each row in the `ipfsentry` table is structured with an IPFS universal resource identifier (`vector<char>`) and a shard id (`uint64_t`).  The default maximum amount of shards (thus relating to the maximum amount of RAM required) is 1024.  Said differently, the total amount of RAM that a `dapp::multi_index` will need to use is `1024 * (vector<char> data + uint64_t id)`.
+vRAM requires a certain amount of data to be stored in RAM permanently in order for the vRAM system to be trustless.  This data is stored in a regular `eosio::multi_index` table with the same name as the `dapp::multi_index` vRam table defined by the smart contract. Each row in the regular `eosio::multi_index` table represents the merkle root of a partition of the sharded data with the root hash being `vector<char> shard_uri` and the partition id being `uint64_t shard`. Note that this is equivalent to having a single merkle root with the second layer of the tree being written to RAM for faster access.  The default amount of shards (which is proportional to the maximum amount of permanent RAM required) is 1024 meaning that, the total amount of RAM that a `dapp::multi_index` table will need to permanently use is `1024 * (sizeof(vector<char> shard_uri) + sizeof(uint64_t id))`.
 
-The DAPP Services Provider is responsible for removing this data after the transaction's lifecycle.  If the DSP does not perform this action, the `ipfsentry` table will continue to grow until the account's RAM supply has been exhausted or the DSP resumes its services.
+In order to access/modify vRam entries certain data may need to be loaded into RAM in order to prove (via the merkle root) that an entry exists in the table. This temporary data (the "cache") is stored in the `ipfsentry` table. The DAPP Services Provider is responsible for removing this data after the transaction's lifecycle.  If the DSP does not perform this action, the `ipfsentry` table will continue to grow until the account's RAM supply has been exhausted or the DSP resumes its services.
 
 ## Prerequisites
 
@@ -158,4 +158,149 @@ curl http://$DSP_ENDPOINT/v1/dsp/ipfsservice1/get_table_row -d '{"contract":"CON
 # coldtoken:
 zeus get-table-row $KYLIN_TEST_ACCOUNT "accounts" $KYLIN_TEST_ACCOUNT "TEST" --endpoint $DSP_ENDPOINT | python -m json.tool
 curl http://$DSP_ENDPOINT/v1/dsp/ipfsservice1/get_table_row -d '{"contract":"CONTRACT_ACCOUNT","scope":"CONTRACT_ACCOUNT","table":"accounts","key":"TEST"}' | python -m json.tool
+```
+
+## Get table - `get-table.js`
+Reads all vRAM tables of a smart contract and stores them with the naming syntax: `${contract_name}-${table_name}-table.json`.  The script is located in the `utils/ipfs-service/get-table.js` of an unboxed zeus box.
+
+Mandatory env variables:
+```bash
+# account name vRAM table exists on
+export CONTRACT_NAME= 
+# run script
+node utils/ipfs-service/get-table
+```
+
+Optional env variables (if using non-local nodeos / IPFS instance):
+```bash
+# defaults to all vRam tables in the abi, can be used to target a specific table
+export TABLE_NAME=
+# defaults to localhost:8888, can be used to specify external nodeos instance
+export NODEOS_ENDPOINT=
+# defaults to localhost, can be used to specify external IPFS instance
+export IPFS_HOST=
+# defaults to 5001
+export IPFS_PORT=
+# defaults to http
+export IPFS_PROTOCOL=
+# defaults to 1024
+export SHARD_LIMIT=
+# defaults to false
+# produces a ${contractName}-${tableName}-roots.json file which is the table's current entries
+# also produces an ipfs-data.json which can be used to recreate the current state of the IPFS table
+export VERBOSE=
+```
+
+Steps to produce `/ipfs-dapp-service/test1-test-table.json` file below:
+
+```bash
+npm i -g @liquidapps/zeus-cmd
+zeus unbox ipfs-dapp-service
+cd ipfs-dapp-service
+zeus test
+export CONTRACT_NAME=test1
+node utils/ipfs-service/get-table
+```
+
+Expected output `/ipfs-dapp-service/test1-test-table.json`:
+
+```json
+[
+  {
+    "scope": "test1",
+    "key": "2b02000000000000",
+    "data": {
+      "id": "555",
+      "sometestnumber": "0"
+    }
+  },
+  {
+    "scope": "test1",
+    "key": "0200000000000000",
+    "data": {
+      "id": "2",
+      "sometestnumber": "0"
+    }
+  }
+  ...
+]
+```
+
+If `VERBOSE=true`, you will also get `test1-test-roots.json` and `ipfs-data.json`:
+
+`test1-test-roots.json` - equivalent of `cleos get table test1 test1 test`
+```json
+[
+  {
+    "shard_uri": "01551220d0c889cbd658f2683c78a09a8161ad406dd828dadab383fdcc0659aa6dfed8dc",
+    "shard": 3
+  },
+  {
+    "shard_uri": "01551220435f234b3af595737af50ac0b4e44053f0b31d31d94e1ffe917fd3dfbc6a9d88",
+    "shard": 156
+  },
+  ...
+]
+```
+
+`ipfs-data.json` - produces all data necessary to recreate current state of the table, can be used for populating a DSP's IPFS cluster
+```json
+{
+  "015512204cbbd8ca5215b8d161aec181a74b694f4e24b001d5b081dc0030ed797a8973e0": "01000000000000000000000000000000",
+  "01551220b422e3b9180b32ba0ec0d538c7af1cf7ccf764bfb89f4cd5bc282175391e02bb": "77cc0000000000007f00000000000000",
+  ...
+}
+```
+
+## Get ordered keys - `get-ordered-keys.js`
+Prints ordered vRAM table keys in ascending order account/table/scope.  This can be used to iterate over the entire table client side.  The script is located in the `utils/ipfs-service/get-ordered-keys.js` of an unboxed zeus box.
+
+Mandatory env variables:
+```bash
+export CONTRACT_NAME=
+export SCOPE=
+export TABLE_NAME=
+node utils/ipfs-service/get-ordered-keys
+```
+
+Optional env variables (if using non-local nodeos / IPFS instance):
+```bash
+# defaults to localhost:8888, can be used to specify external nodeos instance
+export NODEOS_ENDPOINT=
+# defaults to localhost, can be used to specify external IPFS instance
+export IPFS_HOST=
+# defaults to 5001
+export IPFS_PORT=
+# defaults to http
+export IPFS_PROTOCOL=
+# defaults to 1024
+export SHARD_LIMIT=
+```
+
+Steps to produce console logged output below:
+
+```bash
+npm i -g @liquidapps/zeus-cmd
+zeus unbox ipfs-dapp-service
+cd ipfs-dapp-service
+zeus test
+export CONTRACT_NAME=test1
+export SCOPE=test1
+export TABLE_NAME=test
+node utils/ipfs-service/get-ordered-keys
+```
+
+Expected output:
+
+```bash
+[ '0', '1', '2', '20', '555', '12345', '52343' ]
+```
+
+Querying table rows with Zeus or the [`dapp-client`](../developers/dapp-client#get-vram-row-get-vram-row-from-dsp-s-endpoint)'s `get_vram_row` call:
+
+```bash
+# zeus get-table-row <contract> <table> <scope> <key> <keytype>
+zeus get-table-row test1 test test1 52343 number
+# output:
+{"row":{"id":"0","sometestnumber":"0"}}
 ```

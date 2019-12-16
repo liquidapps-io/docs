@@ -11,7 +11,6 @@ build-extensions
 ## Dependencies
 ### Boxes
 * [`seed-extensions`](seed-extensions.md)
-* [`ipfs-daemon`](ipfs-daemon.md)
 
 
 
