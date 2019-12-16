@@ -30,6 +30,8 @@ latest
 - allow `zeus compile <CONTRACT_NAME>`, zeus now allows you to only compile a contract by its name if you like, or you can run `zeus compile` to run all
 - add `kill-port` npm dependency to `eos-extensions` box
 - move `ipfs-daemon` dependency from `boxes/groups/core/build-extensions/zeus-box.json` to `boxes/groups/dapp-network/dapp-services/zeus-box.json` as `IPFS` is only needed with the `dapp-services` box
+- add `utils/ipfs-service/get-table.js` - Reads all vRAM tables of a smart contract and stores them with the naming syntax: `${contract_name}-${table_name}-table.json`
+- add `utils/ipfs-service/get-ordered-keys.js` - Prints ordered vRAM table keys in ascending order account/table/scope.  This can be used to iterate over the entire table client side
 - fixes
     - replace unzip install with unzipper, allow node v11
     - update create contract example unit test eosjs2
@@ -67,6 +69,8 @@ latest
 - add `zeus compile <CONTRACT_NAME>` syntax to [zeus-getting-started](../developers/zeus-getting-started)
 - update path for `cleanup.js` script for DSPs
 - add cleanup oracle info to [Cleanup IPFS and Oracle Entries](../dsps/cleanup-ipfs-oracle-entries)
+- fixed little mistakes in [vram-getting-started](../developers/vram-getting-started)
+- added usage docs for `get-table` and `get-ordered-keys`
 - update `chain-state-db-size-mb` from `131072` to `16384` see [here](https://github.com/EOSIO/eos/issues/7664#issuecomment-560266833)
 
 ### [dappservices contract](http://bloks.io/account/dappservices)
