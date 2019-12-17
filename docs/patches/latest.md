@@ -44,3 +44,6 @@ latest
 - update `chain-state-db-size-mb` from `131072` to `16384` see [here](https://github.com/EOSIO/eos/issues/7664#issuecomment-560266833)
 
 ### [dappservices contract](http://bloks.io/account/dappservices)
+- add usagex for LiquidX and other off chain service billing LiquidStorage, LiquidLens, LiquidAuth
+- fixes
+    - add DAPP token assertion to `regpkg` command to ensure DAPP symbol and 4 decimals of precision used
