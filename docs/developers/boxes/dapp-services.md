@@ -38,6 +38,7 @@ dapp-services
 * [`pg`](http://npmjs.com/package/pg)
 * [`minipass@2.7.0`](http://npmjs.com/package/minipass@2.7.0)
 * [`sqlite3`](http://npmjs.com/package/sqlite3)
+* [`@liquidapps/dapp-client`](http://npmjs.com/package/@liquidapps/dapp-client)
 
 ## Contracts
 * [`dappservices`](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/dapp-network/dapp-services/contracts/eos/dappservices)
