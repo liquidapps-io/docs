@@ -85,7 +85,7 @@ zeus create contract mycontract
 ```
 
 ## Try out LiquidApps's take on Elemental Battles:
-[https://cardgame1112.dnsregistry1.com/](https://cardgame1112.dnsregistry1.com/) | [code](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/sample/cardgame)
+[http://elemental.liquidapps.io/](http://elemental.liquidapps.io/) | [code](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/sample/cardgame)
 
 The game incorporates:
 

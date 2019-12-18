@@ -42,6 +42,7 @@ latest
 - fixed little mistakes in [vram-getting-started](../developers/vram-getting-started)
 - added usage docs for `get-table` and `get-ordered-keys`
 - update `chain-state-db-size-mb` from `131072` to `16384` see [here](https://github.com/EOSIO/eos/issues/7664#issuecomment-560266833)
+- update cardgame link to: [http://elemental.liquidapps.io/](http://elemental.liquidapps.io/)
 
 ### [dappservices contract](http://bloks.io/account/dappservices)
 - add usagex for LiquidX and other off chain service billing LiquidStorage, LiquidLens, LiquidAuth
