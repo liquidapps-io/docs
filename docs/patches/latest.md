@@ -18,6 +18,7 @@ latest
 - add `utils/ipfs-service/get-table.js` - Reads all vRAM tables of a smart contract and stores them with the naming syntax: `${contract_name}-${table_name}-table.json`
 - add `utils/ipfs-service/get-ordered-keys.js` - Prints ordered vRAM table keys in ascending order account/table/scope.  This can be used to iterate over the entire table client side
 - allow `zeus test <CONTRACT_NAME>`, zeus now allows you to only compile/test a contract by its name if you like, or you can run `zeus test` to compile/test all
+- implement storage `dapp-client` into storage service test `storage-dapp-service/test/storage.spec.js`
 - fixes
     - update example frontend to eosjs2 and latest scatter
     - update cleanup script to work with new dsp logic
