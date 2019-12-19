@@ -5,6 +5,7 @@ latest
 - add reconnect mechanism to demux nodeos websocket
 - fixes
     - add custom permissions for xcallback in generic-dapp-service-node file
+    - fix cron reschedule on error, use `nextTrySeconds` time.
 
 ### [@liquidapps/zeus-cmd](https://www.npmjs.com/package/@liquidapps/zeus-cmd)
 - add `--type=local` flag to `zeus deploy box` command: deploys boxes locally to `~/.zeus/boxes/` instead of `IPFS` or `s3`. *Must use with the `--update-mapping` flag*. Together both flags (`zeus deploy box --type=local --update-mapping`) updates the `mapping.js` file with `file://`.. as the pointer | [thank you prcolaco](https://github.com/liquidapps-io/zeus-sdk/pull/11)
