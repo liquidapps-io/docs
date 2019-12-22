@@ -132,7 +132,8 @@ The game incorporates:
 
 * vRAM - light-weight caching solution for EOSIO based RAM
 * LiquidAccounts - EOSIO accounts that live in vRAM instead of RAM
-* LiquidOracles - DNS service on the blockchain
+* LiquidHarmony - oracle service for fetching prices
+* LiquidDNS - DNS service on the blockchain
 * Encryption/Decryption locally of account data using LiquidAccount private key
 
 To launch locally:

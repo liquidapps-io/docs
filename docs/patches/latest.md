@@ -30,6 +30,7 @@ latest
         - update to eosj2
     - fix chess.json to enable migration by updating contract / account
     - fix OSX `zeus deploy box` breaking issue
+    - remove prints from vaccount code to prevent `required service` error
 
 ### [@liquidapps/dapp-client](https://www.npmjs.com/package/@liquidapps/dapp-client)
 - fixes

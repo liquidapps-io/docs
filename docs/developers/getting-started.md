@@ -27,9 +27,9 @@ Getting Started
 
 - [LiquidAccounts Getting Started](vaccounts-getting-started)
 
-### LiquidOracles
+### LiquidHarmony
 
-- [LiquidOracles Getting Started](oracles-getting-started)
+- [LiquidHarmony Getting Started](oracles-getting-started)
 
 ### LiquidScheduler
 

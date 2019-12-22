@@ -18,7 +18,7 @@ Developers
    developers/vram-getting-started
    developers/vram-getting-started-without-zeus
    developers/vaccounts-getting-started
-   developers/oracles-getting-started
+   developers/harmony-getting-started
    developers/cron-getting-started
    developers/unit-testing
    developers/dsp-packages-and-staking
