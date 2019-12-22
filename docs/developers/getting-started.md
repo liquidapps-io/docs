@@ -29,7 +29,7 @@ Getting Started
 
 ### LiquidHarmony
 
-- [LiquidHarmony Getting Started](oracles-getting-started)
+- [LiquidHarmony Getting Started](harmony-getting-started)
 
 ### LiquidScheduler
 
