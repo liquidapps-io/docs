@@ -2,6 +2,7 @@ latest
 ========
 
 ### [@liquidapps/dsp](https://www.npmjs.com/package/@liquidapps/dsp)
+- add DSP console log in `common.js` if minimum stake threshold not met for account's DAPP stake to DSP's service package
 - add reconnect mechanism to demux nodeos websocket
 - update eos 1.8.7 nodeos
 - fixes
