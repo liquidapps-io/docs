@@ -3,6 +3,7 @@ latest
 
 ### [@liquidapps/dsp](https://www.npmjs.com/package/@liquidapps/dsp)
 - add reconnect mechanism to demux nodeos websocket
+- update eos 1.8.7 nodeos
 - fixes
     - add custom permissions for xcallback in generic-dapp-service-node file
     - fix cron reschedule on error, use `nextTrySeconds` time.
@@ -18,6 +19,7 @@ latest
 - add `utils/ipfs-service/get-table.js` - Reads all vRAM tables of a smart contract and stores them with the naming syntax: `${contract_name}-${table_name}-table.json`
 - add `utils/ipfs-service/get-ordered-keys.js` - Prints ordered vRAM table keys in ascending order account/table/scope.  This can be used to iterate over the entire table client side
 - allow `zeus test <CONTRACT_NAME>`, zeus now allows you to only compile/test a contract by its name if you like, or you can run `zeus test` to compile/test all
+- update eos 1.8.7 nodeos
 - implement storage `dapp-client` into storage service test `storage-dapp-service/test/storage.spec.js`
 - fixes
     - update example frontend to eosjs2 and latest scatter
@@ -45,6 +47,7 @@ latest
 - fixed little mistakes in [vram-getting-started](../developers/vram-getting-started)
 - added usage docs for `get-table` and `get-ordered-keys`
 - update `chain-state-db-size-mb` from `131072` to `16384` see [here](https://github.com/EOSIO/eos/issues/7664#issuecomment-560266833)
+- update eos 1.8.7 nodeos
 - update cardgame link to: [http://elemental.liquidapps.io/](http://elemental.liquidapps.io/)
 
 ### [dappservices contract](http://bloks.io/account/dappservices)
