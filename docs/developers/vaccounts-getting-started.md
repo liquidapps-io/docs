@@ -142,7 +142,11 @@ export CHAIN_ID=5fff1dae8dc8e2fc4d5b23b2c7665c97f9e9d8edf2b6485a86ba311c25639191
 cleos -u $DSP_ENDPOINT push action $KYLIN_TEST_ACCOUNT xvinit "[\"$CHAIN_ID\"]" -p $KYLIN_TEST_ACCOUNT
 ```
 
-Then you can begin registering accounts.  You will need to do this in a nodejs environment using the [`dapp-client-lib`](https://www.npmjs.com/package/@liquidapps/dapp-client).  [Here is an example of using the lib to register an account.](https://github.com/liquidapps-io/zeus-sdk/blob/master/boxes/groups/services/vaccounts-dapp-service/client/examples/push_register_liquid_account.ts).
+Then you can begin registering accounts.  You will need to do this either in a nodejs environment using the [`dapp-client-lib`](https://www.npmjs.com/package/@liquidapps/dapp-client), or you can use the `zeus vaccounts push-action`.  [Here is an example of using the lib to register an account.](https://github.com/liquidapps-io/zeus-sdk/blob/master/boxes/groups/services/vaccounts-dapp-service/client/examples/push_register_liquid_account.ts).
+
+*All payloads must include a key value pair with `"vaccount":"vaccountname"` or the transaction will fail*.  This is so the `dapp-client` can fetch the nonce associated with the LiquidAccount.
+
+#### dapp-client
 
 ```bash
 npm install -g @liquidapps/dapp-client
@@ -157,3 +161,31 @@ This example takes:
 
 After registering an account, you may also use the library to [push LiquidAccount transactions](https://github.com/liquidapps-io/zeus-sdk/blob/master/boxes/groups/services/vaccounts-dapp-service/client/examples/push_liquid_account_transaction.ts).  In the linked example, you can see that the action name has changed to `hello` and the payload has changed to include the required parameters.
 
+#### Zeus vaccounts push-action
+
+Push LiquidAccount actions easily with zeus's wrapper of the `dapp-client` library.  You can pass a `--dsp-url` for your DAPP Service Provider's API endpoint.  Then pass the name of the contract that the LiquidAccount code is deployed to, the action name (`regaccount` for example), and the payload.
+
+You also have the ability to store your private keys with or without encryption.  If you choose to encrypt, you can pass the `--encrypted` flag when creating a new account to store the keys.  You can provide a password by command line, or with the flag `--password`.  If you use the account again, zeus will look for the key based on what network you are operating on.  If it finds it, it will use that key to sign and prompt for a password if needed.
+
+```bash
+zeus vaccounts push-action <CONTRACT> <ACTION> <PAYLOAD> --dsp-url https://kylin-dsp-2.liquidapps.io
+
+# optional flags:
+
+--dsp-url # url to DAPP Service Provider's API endpoint
+# default: https://kylin-dsp-2.liquidapps.io
+--private-key # LiquidAccount private key, can be provided or auto generated
+# will be auto generated and stored in the storage path if not provided
+--encrypted # Encrypt the LiquidAccount keys with a password
+# default: false
+--password # password to encrypt the keys with
+--network # network LiquidAccount contract deployed on (other options: kylin, jungle, mainnet)
+# development (local)
+--storage-path # path to the wallet which will store the LiquidAccount key
+# default: path.join(require('os').homedir(), '.zeus')
+
+# Example:
+zeus vaccounts push-action test1v regaccount '{"vaccount":"vaccount1"}'
+zeus vaccounts push-action vacctstst123 regaccount '{"vaccount":"vaccount2"}' --private-key 5KJL... -u https://kylin-dsp-2.liquidapps.io
+zeus vaccounts push-action vacctstst123 regaccount '{"vaccount":"vaccount3"}' -u http://kylin-dsp-2.liquidapps.io/ --encrypted --network=kylin --password=password
+```

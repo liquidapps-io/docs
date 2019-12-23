@@ -20,6 +20,8 @@ latest
 - add `utils/ipfs-service/get-table.js` - Reads all vRAM tables of a smart contract and stores them with the naming syntax: `${contract_name}-${table_name}-table.json`
 - add `utils/ipfs-service/get-ordered-keys.js` - Prints ordered vRAM table keys in ascending order account/table/scope.  This can be used to iterate over the entire table client side
 - allow `zeus test <CONTRACT_NAME>`, zeus now allows you to only compile/test a contract by its name if you like, or you can run `zeus test` to compile/test all
+- add `zeus vaccounts push-action test1v regaccount '{"vaccount":"vaccount1"}'`
+- add ability to import/export LiquidAccount keys
 - update eos 1.8.7 nodeos
 - implement storage `dapp-client` into storage service test `storage-dapp-service/test/storage.spec.js`
 - fixes

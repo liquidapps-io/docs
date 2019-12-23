@@ -279,6 +279,8 @@ zeus key import <ACCOUNT_NAME> --owner-private-key <KEY> --active-private-key <K
 --network # network to work on (other options, kylin, jungle, mainnet)
 # development (local)
 --password # password to encrypt the keys with
+--vaccount # bool whether account is a LiquidAccount
+# default: false
 
 zeus key export <ACCOUNT_NAME>
 
@@ -291,6 +293,8 @@ zeus key export <ACCOUNT_NAME>
 --network # network to work on (other options, kylin, jungle, mainnet)
 # default: development (local)
 --password # password to decrypt the keypair
+--vaccount # bool whether account is a LiquidAccount
+# default: false
 ```
 
 ### Zeus Deploy
