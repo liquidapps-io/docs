@@ -68,27 +68,27 @@ zeus unbox storage-dapp-service
     "upload_public": {
       "authentication": {
         "type": "payer",
-        "contract": "authenticato",
+        "contract": "authentikeos",
         "permission": "active"
       }
     },
     "upload_private": {
       "authentication": {
         "type": "payer",
-        "contract": "authenticato",
+        "contract": "authentikeos",
         "permission": "active"
       }
     },
     "decrypt": {
       "authentication": {
         "type": "custom",
-        "contract": "authenticato"
+        "contract": "authentikeos"
       }
     },
     "unpin": {
       "authentication": {
         "type": "payer",
-        "contract": "authenticato",
+        "contract": "authentikeos",
         "permission": "active"
       }
     },
