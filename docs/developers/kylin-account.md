@@ -20,8 +20,8 @@ cleos wallet import --private-key $ACTIVE_PRIVATE_KEY
 # if this does not work, import key directly
 
 # Get some tokens, stake CPU/NET, buy RAM for contract
-curl http://faucet.cryptokylin.io/get_token?$ACCOUNT
-curl http://faucet.cryptokylin.io/get_token?$ACCOUNT
+curl http://faucet.cryptokylin.io/get_token/$ACCOUNT
+curl http://faucet.cryptokylin.io/get_token/$ACCOUNT
 cleos -u $DSP_ENDPOINT system buyram $ACCOUNT $ACCOUNT "100.0000 EOS" -p $ACCOUNT@active
 cleos -u $DSP_ENDPOINT system delegatebw $ACCOUNT $ACCOUNT "20.0000 EOS" "80.0000 EOS" -p $ACCOUNT@active
 ```
