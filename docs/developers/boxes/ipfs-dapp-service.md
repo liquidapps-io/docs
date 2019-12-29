@@ -33,6 +33,7 @@ zeus unbox ipfs-dapp-service
 
 
 ## Zeus Command Extensions
+* ```zeus backup-table  --help```
 * ```zeus get-table.row  --help```
 
 
