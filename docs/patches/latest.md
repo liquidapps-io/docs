@@ -36,6 +36,7 @@ latest
     - fix chess.json to enable migration by updating contract / account
     - fix OSX `zeus deploy box` breaking issue
     - remove prints from vaccount code to prevent `required service` error
+    - remove `all-dapp-services` box from `templates-emptycontract-eos-cpp` (zeus create contract)
 
 ### [@liquidapps/dapp-client](https://www.npmjs.com/package/@liquidapps/dapp-client)
 - fixes
