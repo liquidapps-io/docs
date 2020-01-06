@@ -25,6 +25,7 @@ latest
 - update eos 1.8.7 nodeos
 - implement storage `dapp-client` into storage service test `storage-dapp-service/test/storage.spec.js`
 - use base58 instead of default base32 for LiquidStorage's `ipfs.files.add` to match ipfs service
+- update eos 1.8.8 nodeos
 - fixes
     - update example frontend to eosjs2 and latest scatter
     - update cleanup script to work with new dsp logic
@@ -54,6 +55,7 @@ latest
 - update `chain-state-db-size-mb` from `131072` to `16384` see [here](https://github.com/EOSIO/eos/issues/7664#issuecomment-560266833)
 - update eos 1.8.7 nodeos
 - update cardgame link to: [http://elemental.liquidapps.io/](http://elemental.liquidapps.io/)
+- update eos 1.8.8 nodeos
 
 ### [dappservices contract](http://bloks.io/account/dappservices)
 - add usagex for LiquidX and other off chain service billing LiquidStorage, LiquidLens, LiquidAuth
