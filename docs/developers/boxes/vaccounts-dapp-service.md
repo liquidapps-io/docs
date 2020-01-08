@@ -19,7 +19,6 @@ vaccounts-dapp-service
 * [`log-dapp-service`](log-dapp-service.md)
 ### npm packages
 * [`node-fetch`](http://npmjs.com/package/node-fetch)
-* [`@liquidapps/dapp-client`](http://npmjs.com/package/@liquidapps/dapp-client)
 * [`eosjs-ecc`](http://npmjs.com/package/eosjs-ecc)
 
 ## Contracts

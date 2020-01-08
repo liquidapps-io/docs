@@ -24,6 +24,7 @@ latest
 - add ability to import/export LiquidAccount keys
 - update eos 1.8.7 nodeos
 - implement storage `dapp-client` into storage service test `storage-dapp-service/test/storage.spec.js`
+- build `dapp-client` from source instead of installing by adding step to `start-localenv`
 - use base58 instead of default base32 for LiquidStorage's `ipfs.files.add` to match ipfs service
 - update eos 1.8.8 nodeos
 - fixes
