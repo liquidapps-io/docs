@@ -25,6 +25,7 @@ ipfs-dapp-service
 ## Contracts
 * [`ipfsservice`](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/services/ipfs-dapp-service/contracts/eos/dappservices/_ipfs_impl.hpp)
 
+* [`oldipfscons`](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/services/ipfs-dapp-service/contracts/eos/oldipfscons)
 ## Install
 ```bash
 zeus unbox ipfs-dapp-service
@@ -101,4 +102,5 @@ zeus unbox ipfs-dapp-service
 ## Tests 
 * [dappservices.spec.js](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/services/ipfs-dapp-service/test/dappservices.spec.js)
 * [ipfsconsumer.spec.js](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/services/ipfs-dapp-service/test/ipfsconsumer.spec.js)
+* [oldipfscons.spec.js](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/services/ipfs-dapp-service/test/oldipfscons.spec.js)
 ## [Source](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/services/ipfs-dapp-service)

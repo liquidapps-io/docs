@@ -1,6 +1,16 @@
 latest
 ========
 
+### [LiquidVRAM Service](https://docs.liquidapps.io/en/v2.0/services/ipfs-service.html)
+- **Backwards Compatability Warning** 
+    - To Support new features some schema changes have taken place
+    - If you already have a vram contract in production, it is recomended that you do not use the changes
+    - Migration details and tools will be provided at a later time
+    - To use the new features place `#define USE_ADVANCED_IPFS` at the start of your contract
+- New Advanced Multi Index features
+    - Primary key may be uint32, uint64, uint128, and checksum256
+    - Ability to backup, restore, and clear vram datasets with versioning
+
 ### [@liquidapps/dsp](https://www.npmjs.com/package/@liquidapps/dsp)
 - add DSP console log in `common.js` if minimum stake threshold not met for account's DAPP stake to DSP's service package
 - add reconnect mechanism to demux nodeos websocket

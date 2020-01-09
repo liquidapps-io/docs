@@ -39,6 +39,9 @@ cd coldtoken
 zeus test
 ```
 
+## Advanced features
+To use advanced multi index features include `#define USE_ADVANCED_IPFS` at the top of the contract file while following the steps below. If you have already deployed a contract that does not use advanced features, do not add this line, as it is not backwards compatible.
+
 ## Add your contract logic
 in contract/eos/mycontract/mycontract.cpp
 ```cpp

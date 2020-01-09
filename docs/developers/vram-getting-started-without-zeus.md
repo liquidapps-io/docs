@@ -39,6 +39,9 @@ vRAM provides a drop in replacement for the `eosio::multi_index` table that is a
 
 To access the vRAM table, add the following lines to your smart contract:
 
+## Advanced features
+To use advanced multi index features include `#define USE_ADVANCED_IPFS` at the top of the contract file while following the steps below. If you have already deployed a contract that does not use advanced features, do not add this line, as it is not backwards compatible.
+
 ### At header:
 ```cpp
 #include "../dist/contracts/eos/dappservices/multi_index.hpp"
