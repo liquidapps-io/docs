@@ -23,6 +23,7 @@ DSPs
    dsps/claim
    dsps/replay-contract
    dsps/cleanup-ipfs-oracle-entries
+   dsps/consumer-permissions
    dsps/recovery
    dsps/upgrade
    

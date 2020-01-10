@@ -70,5 +70,6 @@ latest
 
 ### [dappservices contract](http://bloks.io/account/dappservices)
 - add usagex for LiquidX and other off chain service billing LiquidStorage, LiquidLens, LiquidAuth
+- contract pays for CPU/NET/RAM associated with xactions `xwarmup`, `xsignal`, `xcommit`, `xdcommit`, `xvexec`, etc
 - fixes
     - add DAPP token assertion to `regpkg` command to ensure DAPP symbol and 4 decimals of precision used
