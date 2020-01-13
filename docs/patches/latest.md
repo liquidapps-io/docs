@@ -36,6 +36,7 @@ latest
 - implement storage `dapp-client` into storage service test `storage-dapp-service/test/storage.spec.js`
 - build `dapp-client` from source instead of installing by adding step to `start-localenv`
 - use base58 instead of default base32 for LiquidStorage's `ipfs.files.add` to match ipfs service
+- add `zeus test -c` alias to compile all contracts, `zeus test` now does not compile by default
 - update eos 1.8.8 nodeos
 - add `zeus box create` and `zeus box add` commands
 - fixes

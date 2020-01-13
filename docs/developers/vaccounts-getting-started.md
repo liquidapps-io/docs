@@ -98,10 +98,10 @@ See the unit testing section for details on adding unit tests.
 
 ```bash
 zeus compile
-# compile and test with
-zeus test
 # test without compiling
-zeus test --no-compile-all
+zeus test
+# compile and test with
+zeus test -c
 ```
 
 ## Deploy Contract

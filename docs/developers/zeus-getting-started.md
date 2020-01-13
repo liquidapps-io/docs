@@ -229,7 +229,7 @@ zeus migrate --network=kylin --creator=<CONTRACT_ACCOUNT_NAME> --creator-key=<AC
 # default: path.join(require('os').homedir(), '.zeus')
 --stake # account EOSIO staking amount
 # default: '30.0000'
---no-compile-all # do not compile contracts
+--no-compile # do not compile contracts
 --no-reset # do not reset local testing environment
 ```
 
@@ -240,14 +240,17 @@ zeus test <CONTRACT_NAME>
 
 # optional flags:
 
---compile-all # compile all contracts
-# default: true
+--compile # compile contracts
+# default: false
+# alias: c
 --wallet # keosd wallet to use
 # default: zeus
+# alias: w
 --creator-key # contract creator key
 # default: (eosio test key) 5KQwrPbwdL6PhXujxW37FSSQZ1JiwsST4cqQzDeyXtP79zkvFD3
 --creator # account to set contract to
 # default: eosio
+# alias: a
 --reset # reset testing environment
 # default: true
 --chain # chain to work on
@@ -260,7 +263,6 @@ zeus test <CONTRACT_NAME>
 # default: path.join(require('os').homedir(), '.zeus')
 --stake # account EOSIO staking amount
 # default: '30.0000'
---no-compile-all # do not compile contracts
 --no-reset # do not reset local testing environment
 ```
 
