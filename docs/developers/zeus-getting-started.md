@@ -330,6 +330,22 @@ Updates zeus boxes for currently unboxed project
 zeus update --boxes
 ```
 
+### Create a new box
+Creates a new directory with an empty `zeus-config.json` file.
+
+```bash
+zeus box create <BOX_NAME>
+```
+
+
+### Add a box to the mapping.js file
+In order to add a new box to zeus, you either need to edit the `mapping.js` where Zeus was installed, or you can use the following command:
+
+```bash
+zeus box add <BOX_NAME> <URI>
+# for example: zeus box add liquidx-jungle https://s3.us-east-2.amazonaws.com/liquidapps.artifacts/boxes/0a98835c75debf2f1d875be8be39591501b15352f7c017799d0ebf3342668d2c.zip
+```
+
 ## Project structure
 ### Directory structure
 ```

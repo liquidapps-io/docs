@@ -37,6 +37,7 @@ latest
 - build `dapp-client` from source instead of installing by adding step to `start-localenv`
 - use base58 instead of default base32 for LiquidStorage's `ipfs.files.add` to match ipfs service
 - update eos 1.8.8 nodeos
+- add `zeus box create` and `zeus box add` commands
 - fixes
     - update example frontend to eosjs2 and latest scatter
     - update cleanup script to work with new dsp logic
