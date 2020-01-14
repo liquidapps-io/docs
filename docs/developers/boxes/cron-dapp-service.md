@@ -67,5 +67,5 @@ zeus unbox cron-dapp-service
 }
 ```
 ## Tests 
-* [cron.spec.js](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/services/cron-dapp-service/test/cron.spec.js)
+* [cronconsumer.spec.js](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/services/cron-dapp-service/test/cronconsumer.spec.js)
 ## [Source](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/services/cron-dapp-service)
