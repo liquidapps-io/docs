@@ -32,3 +32,5 @@ systemctl start ipfs
 systemctl start dsp
 exit
 ```
+
+If a DSP is not updating properly, you may try `pm2 restart all` to restart all processes.
