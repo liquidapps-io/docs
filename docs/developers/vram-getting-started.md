@@ -47,19 +47,16 @@ in contract/eos/mycontract/mycontract.cpp
 ```cpp
 #pragma once
 
-#include "../dappservices/log.hpp"
-#include "../dappservices/plist.hpp"
-#include "../dappservices/plisttree.hpp"
+#include "../dappservices/ipfs.hpp"
 #include "../dappservices/multi_index.hpp"
 
 #define DAPPSERVICES_ACTIONS() \
   XSIGNAL_DAPPSERVICE_ACTION \
-  LOG_DAPPSERVICE_ACTIONS \
   IPFS_DAPPSERVICE_ACTIONS
 
-/*** IPFS: (xcommit)(xcleanup)(xwarmup) | LOG: (xlogevent)(xlogclear) ***/
+/*** IPFS: (xcommit)(xcleanup)(xwarmup) ***/
 #define DAPPSERVICE_ACTIONS_COMMANDS() \
-  IPFS_SVC_COMMANDS()LOG_SVC_COMMANDS() 
+  IPFS_SVC_COMMANDS() 
 
 /*** UPDATE CONTRACT NAME ***/
 #define CONTRACT_NAME() mycontract

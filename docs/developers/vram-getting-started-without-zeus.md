@@ -44,15 +44,21 @@ To use advanced multi index features include `#define USE_ADVANCED_IPFS` at the 
 
 ### At header:
 ```cpp
-#include "../dist/contracts/eos/dappservices/multi_index.hpp"
+
+#pragma once
+
+#include "../dappservices/ipfs.hpp"
+#include "../dappservices/multi_index.hpp"
 
 #define DAPPSERVICES_ACTIONS() \
-    XSIGNAL_DAPPSERVICE_ACTION \
-    IPFS_DAPPSERVICE_ACTIONS
+  XSIGNAL_DAPPSERVICE_ACTION \
+  IPFS_DAPPSERVICE_ACTIONS
 
+/*** IPFS: (xcommit)(xcleanup)(xwarmup) ***/
 #define DAPPSERVICE_ACTIONS_COMMANDS() \
-    IPFS_SVC_COMMANDS()
-  
+  IPFS_SVC_COMMANDS() 
+
+/*** UPDATE CONTRACT NAME ***/
 #define CONTRACT_NAME() mycontract
 
 CONTRACT_START()

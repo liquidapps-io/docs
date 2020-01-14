@@ -20,6 +20,7 @@ Developers
    developers/vaccounts-getting-started
    developers/harmony-getting-started
    developers/cron-getting-started
+   developers/macros
    developers/unit-testing
    developers/dsp-packages-and-staking
    developers/boxes/zeus-boxes
