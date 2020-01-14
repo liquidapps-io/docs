@@ -68,7 +68,20 @@ P2P_FILE=https://raw.githubusercontent.com/cryptokylin/CryptoKylin-Testnet/maste
 GENESIS=https://raw.githubusercontent.com/cryptokylin/CryptoKylin-Testnet/master/genesis.json
 CHAIN_STATE_SIZE=256000
 wget $URL -O $HOME/.local/share/eosio/nodeos/data/snapshots/boot.bin
-```        
+```  
+
+### Jungle
+You can find more Jungle peers here: [https://monitor.jungletestnet.io/#p2p](https://monitor.jungletestnet.io/#p2p)
+```bash
+export MONTH=01
+export DAY=09
+wget https://eosn.sfo2.digitaloceanspaces.com/snapshots/snapshot-2020-$MONTH-$DAY-15-jungle.bin.bz2
+bzip2 -d ./snapshot-2020-01-09-15-jungle.bin.bz2
+mv snapshot-2020-01-09-15-jungle.bin $HOME/.local/share/eosio/nodeos/data/snapshots/boot.bin
+P2P_FILE=https://validate.eosnation.io/jungle/reports/config.txt
+GENESIS=https://raw.githubusercontent.com/EOS-Jungle-Testnet/Node-Manual-Installation/master/genesis.json
+CHAIN_STATE_SIZE=256000
+```
 
 ### Mainnet
 ```bash
@@ -81,6 +94,7 @@ wget $URL -O - | tar xvz
 SNAPFILE=`ls snapshots/*.bin | head -n 1 | xargs -n 1 basename`
 mv snapshots/$SNAPFILE snapshots/boot.bin
 ```
+
 ## Configuration
 
 ```bash
