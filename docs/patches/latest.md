@@ -38,6 +38,10 @@ latest
 - use base58 instead of default base32 for LiquidStorage's `ipfs.files.add` to match ipfs service
 - add `zeus test -c` alias to compile all contracts, `zeus test` now does not compile by default
 - update eos 1.8.8 nodeos
+- flag ipfsentries as pending commit to prevent duplicate requests
+    - If a contract uses a shardbucket multiple times, it will only have unique commits
+    - If multiple actions in the same block (or prior to the xcommit) need to lookup the same shardbucket, there will be a single unique commit, and no additional warmups required
+    - If a contract uses a delayed commit, this delayed commit won’t be overwritten by an immediate commit
 - update eos 1.8.9 and eosio.cdt 1.7.0
 - add `zeus box create` and `zeus box add` commands
 - fixes
