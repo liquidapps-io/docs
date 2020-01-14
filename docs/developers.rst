@@ -16,7 +16,6 @@ Developers
    developers/kylin-account
    developers/zeus-ide
    developers/vram-getting-started
-   developers/vram-getting-started-without-zeus
    developers/vaccounts-getting-started
    developers/harmony-getting-started
    developers/cron-getting-started

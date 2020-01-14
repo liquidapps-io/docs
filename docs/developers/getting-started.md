@@ -21,8 +21,6 @@ Getting Started
 
 - [With Zeus](vram-getting-started)
 
-- [Without Zeus](vram-getting-started-without-zeus)
-
 ### LiquidAccounts
 
 - [LiquidAccounts Getting Started](vaccounts-getting-started)
