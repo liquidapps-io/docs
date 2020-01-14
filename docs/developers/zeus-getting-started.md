@@ -53,8 +53,8 @@ nvm use 10.16.3
 ## Recommended eosio.cdt and eosio versions
 Automatically installed with `zeus unbox helloworld`
 
-* [eosio.cdt v1.6.3](https://github.com/EOSIO/eosio.cdt/releases/tag/v1.6.3)
-* [eosio v1.8.8](https://github.com/EOSIO/eos/releases/tag/v1.8.8)
+* [eosio.cdt v1.7.0](https://github.com/EOSIO/eosio.cdt/releases/tag/v1.7.0)
+* [eosio v1.8.9](https://github.com/EOSIO/eos/releases/tag/v1.8.9)
 
 
 ## Install Zeus

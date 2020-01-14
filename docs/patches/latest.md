@@ -38,6 +38,7 @@ latest
 - use base58 instead of default base32 for LiquidStorage's `ipfs.files.add` to match ipfs service
 - add `zeus test -c` alias to compile all contracts, `zeus test` now does not compile by default
 - update eos 1.8.8 nodeos
+- update eos 1.8.9 and eosio.cdt 1.7.0
 - add `zeus box create` and `zeus box add` commands
 - fixes
     - update example frontend to eosjs2 and latest scatter
