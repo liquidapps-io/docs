@@ -57,6 +57,7 @@ latest
     - fix OSX `zeus deploy box` breaking issue
     - remove prints from vaccount code to prevent `required service` error
     - remove `all-dapp-services` box from `templates-emptycontract-eos-cpp` (zeus create contract)
+    - Remove Babel as a dependency from zeus-cmd and all zeus boxes
 
 ### [@liquidapps/dapp-client](https://www.npmjs.com/package/@liquidapps/dapp-client)
 - fixes
