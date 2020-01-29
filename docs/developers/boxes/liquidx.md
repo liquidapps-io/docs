@@ -109,19 +109,22 @@ zeus unbox liquidx
 #### [dapp-network/test1.json](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/dapp-network/liquidx/models/local-sidechains/test1.json)
 ```json
 {
-  "dsp_port": 12346,
-  "nodeos_port": 2424,
-  "nodeos_endpoint": "http://localhost:2424",
+  "dsp_port": 13016,
+  "webhook_dapp_port": 8813,
   "nodeos_host": "localhost",
+  "nodeos_port": 2424,
+  "secured": false,
   "nodeos_state_history_port": 12341,
   "nodeos_p2p_port": 12451,
+  "nodeos_endpoint": "http://localhost:2424",
   "demux_port": 1232,
-  "name": "test1"
+  "name": "test1",
+  "local": true
 }
 ```
 ## Tests 
+* [0-sidechain-ipfsconsumer.spec.js](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/dapp-network/liquidx/test/0-sidechain-ipfsconsumer.spec.js)
 * [sidechain-cron.spec.js](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/dapp-network/liquidx/test/sidechain-cron.spec.js)
-* [sidechain-ipfsconsumer.spec.js](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/dapp-network/liquidx/test/sidechain-ipfsconsumer.spec.js)
 * [sidechain-oracle.spec.js](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/dapp-network/liquidx/test/sidechain-oracle.spec.js)
 * [sidechain-readfn.spec.js](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/dapp-network/liquidx/test/sidechain-readfn.spec.js)
 * [sidechain-vaccount.spec.js](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/dapp-network/liquidx/test/sidechain-vaccount.spec.js)

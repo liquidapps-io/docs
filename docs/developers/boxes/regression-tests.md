@@ -18,6 +18,7 @@ regression-tests
 * [`deepfreeze`](deepfreeze.md)
 * [`airdrop`](airdrop.md)
 * [`chess`](chess.md)
+* [`liquidx`](liquidx.md)
 
 
 

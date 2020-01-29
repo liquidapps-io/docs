@@ -15,9 +15,15 @@ latest
 - add DSP console log in `common.js` if minimum stake threshold not met for account's DAPP stake to DSP's service package
 - add reconnect mechanism to demux nodeos websocket
 - update eos 1.8.7 nodeos
+- add `DSP_CONSUMER_PAYS` logic to `config.toml`, if true throws error if DSP permission not setup
+- add `DEMUX_BYPASS_DATABASE_HEAD_BLOCK` to `config.toml`, if true bypasses database last processed block as head block and uses `config.toml` head block
+- add `DAPPSERVICES_LIQUIDX_CONTRACT` to `config.toml`, points to EOS mainnet account that hosts the `liquidx` contract
+- add `[sidechains]` section to `config.toml`
+- add `liquidx` ability to offer service to other eosio based chains while using the EOS mainnet for staking, billing, and claim rewards
 - fixes
     - add custom permissions for xcallback in generic-dapp-service-node file
     - fix cron reschedule on error, use `nextTrySeconds` time.
+    - `NODEOS_SECURED`, `DSP_CONSUMER_PAYS`, `DEMUX_BYPASS_DATABASE_HEAD_BLOCK`, transition to using bool or string, when passed from toml, string, when set as env var manually, bool, accepts both
 
 ### [@liquidapps/zeus-cmd](https://www.npmjs.com/package/@liquidapps/zeus-cmd)
 - add `--type=local` flag to `zeus deploy box` command: deploys boxes locally to `~/.zeus/boxes/` instead of `IPFS` or `s3`. *Must use with the `--update-mapping` flag*. Together both flags (`zeus deploy box --type=local --update-mapping`) updates the `mapping.js` file with `file://`.. as the pointer | [thank you prcolaco](https://github.com/liquidapps-io/zeus-sdk/pull/11)
@@ -44,6 +50,10 @@ latest
     - If a contract uses a delayed commit, this delayed commit won’t be overwritten by an immediate commit
 - update eos 1.8.9 and eosio.cdt 1.7.0
 - add `zeus box create` and `zeus box add` commands
+- add `zeus compile --sidechain=mychainnamee` flag to compile a side chain name when using liquidx
+- use gateway port (3115) instead of service port (e.g. `13112` oracles) when running local zeus tests
+- add `liquidjungle` box with `/models/liquid-mappings` for DSP files, service files, and the `dappservices`:`dappservicex` mapping as well as `/models/eosio-chains` `liquidjungle.json` chain config file
+- add `dappservicex` (DAPP service contract for new chain) and `liquidx` (DAPP service contract for EOS mainnet)
 - fixes
     - update example frontend to eosjs2 and latest scatter
     - update cleanup script to work with new dsp logic
@@ -75,6 +85,10 @@ latest
 - update eos 1.8.7 nodeos
 - update cardgame link to: [http://elemental.liquidapps.io/](http://elemental.liquidapps.io/)
 - update eos 1.8.8 nodeos
+- add `docs/liquidx/add-a-chain` section
+- add `docs/liquidx/become-a-dsp` section
+- add `docs/liquidx/getting-started` section
+- add `docs/liquidx/use-services` section
 
 ### [dappservices contract](http://bloks.io/account/dappservices)
 - add usagex for LiquidX and other off chain service billing LiquidStorage, LiquidLens, LiquidAuth
