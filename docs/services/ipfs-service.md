@@ -8,7 +8,7 @@ Virtual Memory Service
 Stable
 
 ## Version
-1.1
+1.3
 
 ## Contract
 
