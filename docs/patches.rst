@@ -10,6 +10,7 @@ Patch Notes
    :glob:
    
    patches/latest
+   patches/2.0.4002
    patches/2.0.3107
    patches/2.0.2812
    patches/2.0.2527
