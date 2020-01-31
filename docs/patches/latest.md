@@ -73,6 +73,7 @@ latest
     - If a contract uses a delayed commit, this delayed commit won’t be overwritten by an immediate commit
 - update eos 1.8.9 and eosio.cdt 1.7.0
 - add `zeus box create` and `zeus box add` commands
+- add `--sidechains ['{sidechain_provider:"dspnameeeeee",service_contract:"ipfservice2",nodeos_endpoint:"https://api.jungle.alohaeos.com:443",active_key:""}','{ ... another sidechain object }']` option to `zeus register dapp-service-provider-package"` to regprovider with sidechains
 - add `zeus compile --sidechain=mychainnamee` flag to compile a side chain name when using liquidx
 - use gateway port (3115) instead of service port (e.g. `13112` oracles) when running local zeus tests
 - add `liquidjungle` box with `/models/liquid-mappings` for DSP files, service files, and the `dappservices`:`dappservicex` mapping as well as `/models/eosio-chains` `liquidjungle.json` chain config file
