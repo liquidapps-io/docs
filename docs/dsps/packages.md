@@ -72,7 +72,7 @@ Packages
 
 ### Register Package
 
-**Warning: packages are read only and can't be removed yet.**
+**Warning: packages are read only and can't be disabled yet.**
 
 * [Mainnet DSP packages](https://bloks.io/account/dappservices?loadContract=true&tab=Tables&account=dappservices&scope=dappservices&limit=100&table=package)
 * [Kylin DSP packages](https://kylin.bloks.io/account/dappservices?loadContract=true&tab=Tables&account=dappservices&scope=dappservices&limit=100&table=package)

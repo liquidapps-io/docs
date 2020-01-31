@@ -21,15 +21,13 @@ Getting Started
 
 - [With Zeus](vram-getting-started)
 
-- [Without Zeus](vram-getting-started-without-zeus)
-
 ### LiquidAccounts
 
 - [LiquidAccounts Getting Started](vaccounts-getting-started)
 
-### LiquidOracles
+### LiquidHarmony
 
-- [LiquidOracles Getting Started](oracles-getting-started)
+- [LiquidHarmony Getting Started](harmony-getting-started)
 
 ### LiquidScheduler
 

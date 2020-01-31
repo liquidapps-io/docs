@@ -37,3 +37,6 @@ Getting started
 [Replay Contract](replay-contract)
 
 [Cleanup IPFS Entries](cleanup-ipfs-oracle-entries)
+
+## Consumer Resource Usage
+[Consumer Permissions](consumer-permissions)

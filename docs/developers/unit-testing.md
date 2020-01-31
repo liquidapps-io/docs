@@ -6,9 +6,7 @@ Unit testing with Zeus is highly customizable and easy to configure.  The follow
 ## Customize your own unit tests
 in tests/mycontract.spec.js
 ```javascript
-import 'mocha';
-require('babel-core/register');
-require('babel-polyfill');
+require('mocha');
 const { assert } = require('chai'); // Using Assert style
 const { getCreateKeys } = require('../extensions/helpers/key-utils');
 const getDefaultArgs = require('../extensions/helpers/getDefaultArgs');

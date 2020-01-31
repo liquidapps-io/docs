@@ -25,6 +25,7 @@ ipfs-dapp-service
 ## Contracts
 * [`ipfsservice`](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/services/ipfs-dapp-service/contracts/eos/dappservices/_ipfs_impl.hpp)
 
+* [`oldipfscons`](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/services/ipfs-dapp-service/contracts/eos/oldipfscons)
 ## Install
 ```bash
 zeus unbox ipfs-dapp-service
@@ -33,6 +34,7 @@ zeus unbox ipfs-dapp-service
 
 
 ## Zeus Command Extensions
+* ```zeus backup-table  --help```
 * ```zeus get-table.row  --help```
 
 
@@ -49,7 +51,7 @@ zeus unbox ipfs-dapp-service
   "prettyName": "LiquidVRAM",
   "stage": "Stable",
   "description": "Virtual Memory Service",
-  "version": "1.1",
+  "version": "1.3",
   "commands": {
     "commit": {
       "blocking": false,
@@ -82,7 +84,8 @@ zeus unbox ipfs-dapp-service
     "warmup": {
       "blocking": true,
       "request": {
-        "uri": "std::string"
+        "uri": "std::string",
+        "code": "eosio::name"
       },
       "callback": {
         "size": "uint32_t",
@@ -94,10 +97,48 @@ zeus unbox ipfs-dapp-service
         "uri": "std::string"
       }
     }
+  },
+  "_staging": {
+    "warmuprow": {
+      "blocking": true,
+      "request": {
+        "uri": "std::string",
+        "code": "name",
+        "table": "name",
+        "scope": "uint64_t",
+        "index_position": "uint8_t",
+        "key": "checksum256",
+        "keysize": "uint8_t"
+      },
+      "callback": {
+        "size": "uint32_t",
+        "uris": "vector<std::string>",
+        "data": "vector<vector<char>>"
+      },
+      "signal": {
+        "size": "uint32_t",
+        "uris": "vector<std::string>"
+      }
+    },
+    "cleanuprow": {
+      "blocking": false,
+      "request": {
+        "uris": "vector<string>"
+      },
+      "callback": {
+        "size": "uint32_t",
+        "uris": "vector<string>"
+      },
+      "signal": {
+        "size": "uint32_t",
+        "uris": "vector<string>"
+      }
+    }
   }
 }
 ```
 ## Tests 
 * [dappservices.spec.js](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/services/ipfs-dapp-service/test/dappservices.spec.js)
 * [ipfsconsumer.spec.js](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/services/ipfs-dapp-service/test/ipfsconsumer.spec.js)
+* [oldipfscons.spec.js](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/services/ipfs-dapp-service/test/oldipfscons.spec.js)
 ## [Source](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/services/ipfs-dapp-service)

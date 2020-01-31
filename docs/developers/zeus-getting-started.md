@@ -53,8 +53,8 @@ nvm use 10.16.3
 ## Recommended eosio.cdt and eosio versions
 Automatically installed with `zeus unbox helloworld`
 
-* [eosio.cdt v1.6.3](https://github.com/EOSIO/eosio.cdt/releases/tag/v1.6.3)
-* [eosio v1.8.6](https://github.com/EOSIO/eos/releases/tag/v1.8.6)
+* [eosio.cdt v1.7.0](https://github.com/EOSIO/eosio.cdt/releases/tag/v1.7.0)
+* [eosio v1.8.9](https://github.com/EOSIO/eos/releases/tag/v1.8.9)
 
 
 ## Install Zeus
@@ -85,7 +85,7 @@ zeus create contract mycontract
 ```
 
 ## Try out LiquidApps's take on Elemental Battles:
-[https://cardgame1112.dnsregistry1.com/](https://cardgame1112.dnsregistry1.com/) | [code](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/sample/cardgame)
+[http://elemental.liquidapps.io/](http://elemental.liquidapps.io/) | [code](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/sample/cardgame)
 
 The game incorporates:
 
@@ -132,7 +132,8 @@ The game incorporates:
 
 * vRAM - light-weight caching solution for EOSIO based RAM
 * LiquidAccounts - EOSIO accounts that live in vRAM instead of RAM
-* LiquidOracles - DNS service on the blockchain
+* LiquidHarmony - oracle service for fetching prices
+* LiquidDNS - DNS service on the blockchain
 * Encryption/Decryption locally of account data using LiquidAccount private key
 
 To launch locally:
@@ -228,7 +229,7 @@ zeus migrate --network=kylin --creator=<CONTRACT_ACCOUNT_NAME> --creator-key=<AC
 # default: path.join(require('os').homedir(), '.zeus')
 --stake # account EOSIO staking amount
 # default: '30.0000'
---no-compile-all # do not compile contracts
+--no-compile # do not compile contracts
 --no-reset # do not reset local testing environment
 ```
 
@@ -239,14 +240,17 @@ zeus test <CONTRACT_NAME>
 
 # optional flags:
 
---compile-all # compile all contracts
-# default: true
+--compile # compile contracts
+# default: false
+# alias: c
 --wallet # keosd wallet to use
 # default: zeus
+# alias: w
 --creator-key # contract creator key
 # default: (eosio test key) 5KQwrPbwdL6PhXujxW37FSSQZ1JiwsST4cqQzDeyXtP79zkvFD3
 --creator # account to set contract to
 # default: eosio
+# alias: a
 --reset # reset testing environment
 # default: true
 --chain # chain to work on
@@ -259,7 +263,6 @@ zeus test <CONTRACT_NAME>
 # default: path.join(require('os').homedir(), '.zeus')
 --stake # account EOSIO staking amount
 # default: '30.0000'
---no-compile-all # do not compile contracts
 --no-reset # do not reset local testing environment
 ```
 
@@ -278,6 +281,8 @@ zeus key import <ACCOUNT_NAME> --owner-private-key <KEY> --active-private-key <K
 --network # network to work on (other options, kylin, jungle, mainnet)
 # development (local)
 --password # password to encrypt the keys with
+--vaccount # bool whether account is a LiquidAccount
+# default: false
 
 zeus key export <ACCOUNT_NAME>
 
@@ -290,6 +295,8 @@ zeus key export <ACCOUNT_NAME>
 --network # network to work on (other options, kylin, jungle, mainnet)
 # default: development (local)
 --password # password to decrypt the keypair
+--vaccount # bool whether account is a LiquidAccount
+# default: false
 ```
 
 ### Zeus Deploy
@@ -323,6 +330,22 @@ Updates zeus boxes for currently unboxed project
 
 ```bash
 zeus update --boxes
+```
+
+### Create a new box
+Creates a new directory with an empty `zeus-config.json` file.
+
+```bash
+zeus box create <BOX_NAME>
+```
+
+
+### Add a box to the mapping.js file
+In order to add a new box to zeus, you either need to edit the `mapping.js` where Zeus was installed, or you can use the following command:
+
+```bash
+zeus box add <BOX_NAME> <URI>
+# for example: zeus box add liquidx-jungle https://s3.us-east-2.amazonaws.com/liquidapps.artifacts/boxes/0a98835c75debf2f1d875be8be39591501b15352f7c017799d0ebf3342668d2c.zip
 ```
 
 ## Project structure

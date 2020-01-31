@@ -63,7 +63,7 @@ zeus unbox kms-dapp-service
     "create_key": {
       "authentication": {
         "type": "payer",
-        "contract": "authenticato"
+        "contract": "authentikeos"
       }
     }
   }

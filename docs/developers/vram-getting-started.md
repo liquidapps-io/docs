@@ -39,24 +39,24 @@ cd coldtoken
 zeus test
 ```
 
+## Advanced features
+To use advanced multi index features include `#define USE_ADVANCED_IPFS` at the top of the contract file while following the steps below. If you have already deployed a contract that does not use advanced features, do not add this line, as it is not backwards compatible.
+
 ## Add your contract logic
 in contract/eos/mycontract/mycontract.cpp
 ```cpp
 #pragma once
 
-#include "../dappservices/log.hpp"
-#include "../dappservices/plist.hpp"
-#include "../dappservices/plisttree.hpp"
+#include "../dappservices/ipfs.hpp"
 #include "../dappservices/multi_index.hpp"
 
 #define DAPPSERVICES_ACTIONS() \
   XSIGNAL_DAPPSERVICE_ACTION \
-  LOG_DAPPSERVICE_ACTIONS \
   IPFS_DAPPSERVICE_ACTIONS
 
-/*** IPFS: (xcommit)(xcleanup)(xwarmup) | LOG: (xlogevent)(xlogclear) ***/
+/*** IPFS: (xcommit)(xcleanup)(xwarmup) ***/
 #define DAPPSERVICE_ACTIONS_COMMANDS() \
-  IPFS_SVC_COMMANDS()LOG_SVC_COMMANDS() 
+  IPFS_SVC_COMMANDS() 
 
 /*** UPDATE CONTRACT NAME ***/
 #define CONTRACT_NAME() mycontract
@@ -151,7 +151,15 @@ executed transaction: 865a3779b3623eab94aa2e2672b36dfec9627c2983c379717f5225e43a
 ## Get table row
 ```bash
 # zeus:
-zeus get-table-row "CONTRACT_ACCOUNT" "TABLE_NAME" "SCOPE" "TABLE_PRIMARY_KEY" --endpoint $DSP_ENDPOINT | python -m json.tool
+zeus get-table-row "CONTRACT_ACCOUNT" "TABLE_NAME" "SCOPE" "TABLE_PRIMARY_KEY" "KEYTYPE" "KEYSIZE" --endpoint $DSP_ENDPOINT | python -m json.tool
+
+# contract - account name
+# table_name - name of dapp::multi_index table
+# scope - table scope to search under
+# table_primary_key - primary key of row requesting | options: "string", "number"
+# key type (optional) - the type of key being passed in the request ("name", "number", "hex"). If table_primary_key is a js number, key type defaults to "number", otherwise "name". In case of large keys, table_primary_key should be encoded as a hex string, and key type should be "hex".
+# key size (optional) - size of key in bits: 64 (uint64_t), 128 (uint128_t), 256 (uint256_t, eosio::checksum256)
+
 # curl: 
 curl http://$DSP_ENDPOINT/v1/dsp/ipfsservice1/get_table_row -d '{"contract":"CONTRACT_ACCOUNT","scope":"SCOPE","table":"TABLE_NAME","key":"TABLE_PRIMARY_KEY"}' | python -m json.tool
 
@@ -275,6 +283,8 @@ export IPFS_PORT=
 export IPFS_PROTOCOL=
 # defaults to 1024
 export SHARD_LIMIT=
+# defaults to 10000
+export IPFS_TIMEOUT=
 ```
 
 Steps to produce console logged output below:
@@ -299,8 +309,114 @@ Expected output:
 Querying table rows with Zeus or the [`dapp-client`](../developers/dapp-client#get-vram-row-get-vram-row-from-dsp-s-endpoint)'s `get_vram_row` call:
 
 ```bash
-# zeus get-table-row <contract> <table> <scope> <key> <keytype>
-zeus get-table-row test1 test test1 52343 number
+# zeus get-table-row <contract> <table> <scope> <key> <keytype> <keysize>
+zeus get-table-row test1 test test1 52343 number 64
 # output:
 {"row":{"id":"0","sometestnumber":"0"}}
+```
+
+## Save load and reset dapp::multi_index data
+
+To enable these features, you must include the advanced multi index with: `#define USE_ADVANCED_IPFS` at the top of the contract file. If you have already deployed a contract that does not use advanced features, do not add this line, as it is not backwards compatible.
+
+With that, you now have the ability to save the list of shards currently being used to represent the table's current state.  With the saved snapshot, a developer can upload it to another contract, or version the snapshot and save it to be loaded to the contract later.  This adds much needed flexibility to maintaining database state in a vRAM table.
+
+### Save dapp::multi_index data
+
+Using zeus, a backup file can be created with the following command:
+
+```bash
+zeus backup-table <CONTRACT> <TABLE>
+
+# optional flags:
+
+--endpoint # endpoint of node
+# default: localhost:13115
+--output # output file name
+# default: vram-backup-${CONTRACT}-${TABLE}-0-1578405972.json
+
+# example
+zeus backup-table lqdportfolio users --endpoint=http://kylin-dsp-2.liquidapps.io/
+```
+
+Example: vram-backup-lqdportfolio-users-0-1578405972.json
+
+```json
+{
+  "contract": "lqdportfolio",
+  "table": "users",
+  "timestamp": "2020-01-07T14:06:12.339Z",
+  "revision": 0,
+  "manifest": {
+    "next_available_key": 0,
+    "shards": 1024,
+    "buckets_per_shard": 64,
+    "shardbuckets": [
+      {
+        "key": 2,
+        "value": "015512202a1de9ce245a8d14b23512badc076aee71aad3aba30900e9c938243ce25b467d"
+      },
+      {
+        "key": 44,
+        "value": "015512205b43f739a9786fbe2c384c504af15d06fe1b5a61b72710f51932c6b62592d800"
+      },
+      ...
+    ]
+  }
+}
+```
+
+### Load manifest
+
+Once a manifest is saved, it can be loaded with the following smart contract action.
+
+```cpp
+[[eosio::action]] void testman(dapp::manifest man) {
+  testindex_t testset(_self,_self.value);
+  // void load_manifest(manifest manifest, string description)
+  // description is description item in the backup table
+  testset.load_manifest(man,"Test");
+}
+```
+
+With a unit test:
+
+```javascript
+let manifest = {
+  next_available_key: 556,
+  shards: 1024,
+  buckets_per_shard: 64,
+  shardbuckets
+}
+await testcontract.testman({
+  man: manifest
+}, {
+  authorization: `${code}@active`,
+  broadcast: true,
+  sign: true
+});
+```
+
+## Clear table
+
+By calling the clear command, a table's version is incremented via the `revision` param and the `next_available_key` is reset
+
+```cpp
+TABLE vconfig {
+    checksum256 next_available_key = empty256;
+    uint32_t shards = 0;
+    uint32_t buckets_per_shard = 0;
+    uint32_t revision = 0;
+};
+void clear() {
+  vconfig_sgt vconfigsgt(_code,name(TableName).value);
+  auto config = vconfigsgt.get_or_default();
+  config.revision++;    
+  config.next_available_key = empty256; //reset the next available key
+  vconfigsgt.set(config,_code);
+}
+[[eosio::action]] void testclear() {
+  testindex_t testset(_self,_self.value);
+  testset.clear();
+}
 ```

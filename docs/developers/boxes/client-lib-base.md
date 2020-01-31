@@ -11,6 +11,7 @@ client-lib-base
 ## Dependencies
 ### Boxes
 * [`seed-eos`](seed-eos.md)
+* [`seed-zeus-support`](seed-zeus-support.md)
 
 
 
@@ -22,9 +23,10 @@ zeus unbox client-lib-base
 
 
 
+## Zeus Command Extensions
 
-
-
+### Subcommands
+* ```zeus start-localenv 01-dapp-client --help```
 
 
 

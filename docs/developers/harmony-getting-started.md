@@ -1,15 +1,19 @@
-LiquidOracles Getting Started
+LiquidHarmony Getting Started
 ====================
 
-```  
-  _       _                   _       _    ___                          _              
- | |     (_)   __ _   _   _  (_)   __| |  / _ \   _ __    __ _    ___  | |   ___   ___ 
- | |     | |  / _` | | | | | | |  / _` | | | | | | '__|  / _` |  / __| | |  / _ \ / __|
- | |___  | | | (_| | | |_| | | | | (_| | | |_| | | |    | (_| | | (__  | | |  __/ \__ \
- |_____| |_|  \__, |  \__,_| |_|  \__,_|  \___/  |_|     \__,_|  \___| |_|  \___| |___/
-                 |_|                                                                   
+```
+ _      _             _     _ _    _                                        
+| |    (_)           (_)   | | |  | |                                       
+| |     _  __ _ _   _ _  __| | |__| | __ _ _ __ _ __ ___   ___  _ __  _   _ 
+| |    | |/ _` | | | | |/ _` |  __  |/ _` | '__| '_ ` _ \ / _ \| '_ \| | | |
+| |____| | (_| | |_| | | (_| | |  | | (_| | |  | | | | | | (_) | | | | |_| |
+|______|_|\__, |\__,_|_|\__,_|_|  |_|\__,_|_|  |_| |_| |_|\___/|_| |_|\__, |
+             | |                                                       __/ |
+             |_|                                                      |___/ 
 
 ```
+
+LiquidHarmony includes all oracle related logic from the DAPP Network.  This includes things like http fetches, IBC and XIBC fetches, vCPU and more.  The full list of options can be explored in the oracles directory of the repo: [https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/oracles](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/oracles)
 
 The DAPP Network offers the ability to fetch information using DAPP Service Providers (DSPs). A developer may choose as many or as few oracles to use in fetching data points from the internet.  If a developer wishes to prevent a scenario where all oracles have an incentive to return false information, the developer may run a DSP themselves and set the threshold of acceptance for the information to all parties.  Another great place to understand the service is in the [unit tests](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/oracles) within each sub directory.
 
@@ -30,6 +34,7 @@ The DAPP Network currently supports the following oracle requests:
 - Wolfram Alpha
 - Random Number
 - Stockfish - chess engine AI
+- SQL
 
 ## Unbox Oracle DAPP Service box
 This box contains the oracle smart contract libraries, DSP node logic, unit tests, and everything else needed to get started integrating / testing the DAPP Network oracles in your smart contract.
@@ -52,9 +57,9 @@ Each of the following oracle request types comes equipped with its own syntax th
   - You may also see more examples in the [unit test](https://github.com/liquidapps-io/zeus-sdk/blob/master/boxes/groups/oracles/oracle-foreign-chain/test/oracle-foreign-chain.spec.js)
 - Wolfram Alpha: `wolfram_alpha://What is the average air speed velocity of a laden swallow?` - here the `wolfram_alpha` oracle type is used followed by the question: `What is the average air speed velocity of a laden swallow?`.
 
-## LiquidOracle Consumer Example Contract used in unit tests
+## LiquidHarmony Consumer Example Contract used in unit tests
 in `contract/eos/oracleconsumer/oracleconsumer.cpp`
-The consumer contract is a great starting point for playing around with the LiquidOracle syntax.
+The consumer contract is a great starting point for playing around with the LiquidHarmony syntax.
 ```cpp
 /* INCLUDE ORACLE LOGIC */
 #include "../dappservices/oracle.hpp"
@@ -110,10 +115,10 @@ See the unit testing section for details on adding unit tests.
 
 ```bash
 zeus compile
-# compile and test with
-zeus test
 # test without compiling
-zeus test --no-compile-all
+zeus test
+# compile and test with
+zeus test -c
 ```
 
 ## Deploy Contract
@@ -146,7 +151,7 @@ cleos -u $DSP_ENDPOINT push action dappservices stake "[\"$KYLIN_TEST_ACCOUNT\",
 ```
 
 ## Test
-Finally you can now test your LiquidOracle implementation by sending an action through your DSP's API endpoint
+Finally you can now test your LiquidHarmony implementation by sending an action through your DSP's API endpoint
 
 ```bash
 # oracleconsumer contract (testrnd / testget):

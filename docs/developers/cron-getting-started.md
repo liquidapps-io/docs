@@ -11,7 +11,7 @@ LiquidScheduler Getting Started
 
 ```
 
-LiquidScheduler is an on chain cron solution for EOS based actions.  One use case would be setting up LiquidOracle fetches on a continual basis.  Another great place to understand the service is in the [unit tests](https://github.com/liquidapps-io/zeus-sdk/blob/master/boxes/groups/services/cron-dapp-service/test/cron.spec.js).
+LiquidScheduler is an on chain cron solution for EOS based actions.  One use case would be setting up LiquidHarmony (oracle) fetches on a continual basis.  Another great place to understand the service is in the [unit tests](https://github.com/liquidapps-io/zeus-sdk/blob/master/boxes/groups/services/cron-dapp-service/test/cron.spec.js).
 
 ## Prerequisites
 
@@ -84,10 +84,10 @@ See the unit testing section for details on adding unit tests.
 
 ```bash
 zeus compile
-# compile and test with
-zeus test
 # test without compiling
-zeus test --no-compile-all
+zeus test
+# compile and test with
+zeus test -c
 ```
 
 ## Deploy Contract

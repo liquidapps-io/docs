@@ -19,6 +19,7 @@ vaccounts-dapp-service
 * [`log-dapp-service`](log-dapp-service.md)
 ### npm packages
 * [`node-fetch`](http://npmjs.com/package/node-fetch)
+* [`eosjs-ecc`](http://npmjs.com/package/eosjs-ecc)
 
 ## Contracts
 * [`vaccountsservice`](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/services/vaccounts-dapp-service/contracts/eos/dappservices/_vaccounts_impl.hpp)
@@ -30,9 +31,10 @@ zeus unbox vaccounts-dapp-service
 
 
 
-
-
-
+## Zeus Command Extensions
+* ```zeus vaccounts  --help```
+### Subcommands
+* ```zeus vaccounts push-action --help```
 
 
 
