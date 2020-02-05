@@ -84,8 +84,7 @@ zeus unbox ipfs-dapp-service
     "warmup": {
       "blocking": true,
       "request": {
-        "uri": "std::string",
-        "code": "eosio::name"
+        "uri": "std::string"
       },
       "callback": {
         "size": "uint32_t",
