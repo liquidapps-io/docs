@@ -2,124 +2,13 @@ latest
 ========
 
 ### [LiquidVRAM Service](https://docs.liquidapps.io/en/v2.0/services/ipfs-service.html)
-- **Backwards Compatability Warning** 
-    - To Support new features some schema changes have taken place
-    - If you already have a vram contract in production, it is recomended that you do not use the changes
-    - Migration details and tools will be provided at a later time
-    - To use the new features place `#define USE_ADVANCED_IPFS` at the start of your contract
-- New Advanced Multi Index features
-    - Primary key may be uint32, uint64, uint128, and checksum256
-    - Ability to backup, restore, and clear vram datasets with versioning
 
 ### [@liquidapps/dsp](https://www.npmjs.com/package/@liquidapps/dsp)
-- add DSP console log in `common.js` if minimum stake threshold not met for account's DAPP stake to DSP's service package
-- add reconnect mechanism to demux nodeos websocket
-- update eos 1.8.7 nodeos
-- add `keysize` support to ipfs index.js file
-- add `DSP_CONSUMER_PAYS` logic to `config.toml`, if true throws error if DSP permission not setup
-- add `DEMUX_BYPASS_DATABASE_HEAD_BLOCK` to `config.toml`, if true bypasses database last processed block as head block and uses `config.toml` head block
-- add `DAPPSERVICES_LIQUIDX_CONTRACT` to `config.toml`, points to EOS mainnet account that hosts the `liquidx` contract
-- add `[sidechains]` section to `config.toml`
-- add `liquidx` ability to offer service to other eosio based chains while using the EOS mainnet for staking, billing, and claim rewards
-- fixes
-    - add custom permissions for xcallback in generic-dapp-service-node file
-    - fix cron reschedule on error, use `nextTrySeconds` time.
-    - `NODEOS_SECURED`, `DSP_CONSUMER_PAYS`, `DEMUX_BYPASS_DATABASE_HEAD_BLOCK`, transition to using bool or string, when passed from toml, string, when set as env var manually, bool, accepts both
 
 ### [@liquidapps/zeus-cmd](https://www.npmjs.com/package/@liquidapps/zeus-cmd)
-- add `--type=local` flag to `zeus deploy box` command: deploys boxes locally to `~/.zeus/boxes/` instead of `IPFS` or `s3`. *Must use with the `--update-mapping` flag*. Together both flags (`zeus deploy box --type=local --update-mapping`) updates the `mapping.js` file with `file://`.. as the pointer | [thank you prcolaco](https://github.com/liquidapps-io/zeus-sdk/pull/11)
-- made `--type=local` and `--update-mapping` flags default for `zeus deploy box` command
-- only use invalidation of ipfs with `zeus deploy box` command when the `--type` is `ipfs` | [thank you prcolaco](https://github.com/liquidapps-io/zeus-sdk/pull/11)
-- modified and fixed ipfs cleanup script to support oracle cleanups
-- allow `zeus compile <CONTRACT_NAME>`, zeus now allows you to only compile a contract by its name if you like, or you can run `zeus compile` to run all
-- add `kill-port` npm dependency to `eos-extensions` box
-- move `ipfs-daemon` dependency from `boxes/groups/core/build-extensions/zeus-box.json` to `boxes/groups/dapp-network/dapp-services/zeus-box.json` as `IPFS` is only needed with the `dapp-services` box
-- add `utils/ipfs-service/get-table.js` - Reads all vRAM tables of a smart contract and stores them with the naming syntax: `${contract_name}-${table_name}-table.json`
-- add `utils/ipfs-service/get-ordered-keys.js` - Prints ordered vRAM table keys in ascending order account/table/scope.  This can be used to iterate over the entire table client side
-- allow `zeus test <CONTRACT_NAME>`, zeus now allows you to only compile/test a contract by its name if you like, or you can run `zeus test` to compile/test all
-- add `zeus vaccounts push-action test1v regaccount '{"vaccount":"vaccount1"}'`
-- add ability to import/export LiquidAccount keys
-- update eos 1.8.7 nodeos
-- implement storage `dapp-client` into storage service test `storage-dapp-service/test/storage.spec.js`
-- build `dapp-client` from source instead of installing by adding step to `start-localenv`
-- use base58 instead of default base32 for LiquidStorage's `ipfs.files.add` to match ipfs service
-- add `zeus test -c` alias to compile all contracts, `zeus test` now does not compile by default
-- update eos 1.8.8 nodeos
-- Implementing reset, load, and save functionality for multi-index tables
-    - save: add `zeus backup-table` command which calls `zeus/boxes/groups/services/ipfs-dapp-service/utils/ipfs-service/backup.js` to backup a `dapp::multi_index` table
-    - add manifest table to `advanced_multi_index.hpp` which provides the sharding details for a table, includes params: `checksum256 next_available_key`, `uint32_t shards`, `uint32_t buckets_per_shard`, and `std::map<uint64_t,std::vector<char>> shardbuckets`
-    - add backup table to `advanced_multi_index.hpp` which provides the manifest details, includes params: `uint64_t id`, `ipfsmultihash_t manifest_uri`, `time_point timestamp`, and `string description`
-    - add the following actions to the ipfsconsumer example contract: 
-        - `testman` - load a manifest
-        - `testclear` - incrementing table version and clear the `shards` and `buckets_per_shard` params
-        - `testbig` - tests storing an entry with a `checksum256` primary key and stores a `uint64_t` test number
-        - `checkbig` - checks entry `checksum256` primary key returns correct value of test number
-        - `testmed` - tests storing an entry with a `uint128_t` primary key and stores a `uint64_t` test number
-        - `checkmed` - checks entry `uint128_t` primary key returns correct value value of test number
-        - `testindex` - tests storing an entry with a `uint64_t` primary key and stores a `uint64_t` test number
-        - `testfind` - checks entry `uint64_t` primary key returns correct value value of test number
-    - add following tables to ipfsconsumer example contract: `bigentry` - uses a `checksum256` primary key, `medentry` - uses a `uint128_t` primary key
-    - add `keysize` as parameter for `zeus get-table-row` command, options: `64 (uint64_t), 128 (uint128_t), 256 (uint256_t) and hex (eosio::checksum256)`
-    - added the following unit tests: `dapp::multi_index checksum256 Get Available Key`, `IPFS Save Manifest`, `IPFS Clear`, `IPFS Load Manifest`, and `IPFS cache cleaned after write`
-- add `vmanifest` table, `getRawTreeData` and `getTreeData` functions, and `warmuprow` and `cleanuprow` service responses to `_ipfs_impl.hpp` file
-- added new service request types `warmuprow`,`cleanuprow` to the ipfs service
-- utilize over-eager loading in `dapp::multi_index` via `warmuprow` to reduce vRam latency by attempting to load all required data in a single action
-- update coldtoken unit tests to reflect new decrease in latency
-- moved nodeos.log to /logs folder
-- tail last 1mb of nodeos.log folder to keep upon restarting zeus test
-- flag ipfsentries as pending commit to prevent duplicate requests
-    - If a contract uses a shardbucket multiple times, it will only have unique commits
-    - If multiple actions in the same block (or prior to the xcommit) need to lookup the same shardbucket, there will be a single unique commit, and no additional warmups required
-    - If a contract uses a delayed commit, this delayed commit won’t be overwritten by an immediate commit
-- update eos 1.8.9 and eosio.cdt 1.7.0
-- add `zeus box create` and `zeus box add` commands
-- add `zeus compile --sidechain=mychainnamee` flag to compile a side chain name when using liquidx
-- use gateway port (3115) instead of service port (e.g. `13112` oracles) when running local zeus tests
-- add `liquidjungle` box with `/models/liquid-mappings` for DSP files, service files, and the `dappservices`:`dappservicex` mapping as well as `/models/eosio-chains` `liquidjungle.json` chain config file
-- add `dappservicex` (DAPP service contract for new chain) and `liquidx` (DAPP service contract for EOS mainnet)
-- fixes
-    - update example frontend to eosjs2 and latest scatter
-    - update cleanup script to work with new dsp logic
-    - add CONTRACT_END syntax to example contract
-    - fix cardgame unit test
-        - use dapp-client for vaccounts
-        - move xvinit for vaccounts to happen in migration
-        - add xvinit to coldtoken contract
-        - update to eosj2
-    - fix chess.json to enable migration by updating contract / account
-    - fix OSX `zeus deploy box` breaking issue
-    - remove prints from vaccount code to prevent `required service` error
-    - remove `all-dapp-services` box from `templates-emptycontract-eos-cpp` (zeus create contract)
-    - Remove Babel as a dependency from zeus-cmd and all zeus boxes
 
 ### [@liquidapps/dapp-client](https://www.npmjs.com/package/@liquidapps/dapp-client)
-- add `keysize` as argument for get vram row command, options: `64 (uint64_t), 128 (uint128_t), 256 (uint256_t) and hex (eosio::checksum256)`
-- add support for `vconfig` file, `warmuprow` and `cleanuprow` actions in node logic to support faster data warmups
-- fixes
-    - add fix text encode/decode in vaccounts service
 
 ### [docs](https://docs.liquidapps.io/en/stable/)
-- removed `read-mode = head` from default `config.ini` setup for eosio node
-- clarified `wasm-runtime = wabt` must be used over `wasm-runtime = wavm` due to bugs in `wavm`
-- add `zeus compile <CONTRACT_NAME>` syntax to [zeus-getting-started](../developers/zeus-getting-started)
-- update path for `cleanup.js` script for DSPs
-- add cleanup oracle info to [Cleanup IPFS and Oracle Entries](../dsps/cleanup-ipfs-oracle-entries)
-- fixed little mistakes in [vram-getting-started](../developers/vram-getting-started)
-- added usage docs for `get-table` and `get-ordered-keys`
-- update `chain-state-db-size-mb` from `131072` to `16384` see [here](https://github.com/EOSIO/eos/issues/7664#issuecomment-560266833)
-- update eos 1.8.7 nodeos
-- update cardgame link to: [http://elemental.liquidapps.io/](http://elemental.liquidapps.io/)
-- update eos 1.8.8 nodeos
-- update vram getting started section with new `get-table-row` syntax
-- add info on how to save load and clear a `dapp::multi_index` table
-- add `macros` section to developer docs
-- add `docs/liquidx/add-a-chain` section
-- add `docs/liquidx/become-a-dsp` section
-- add `docs/liquidx/getting-started` section
-- add `docs/liquidx/use-services` section
 
 ### [dappservices contract](http://bloks.io/account/dappservices)
-- add usagex for LiquidX and other off chain service billing LiquidStorage, LiquidLens, LiquidAuth
-- contract pays for CPU/NET/RAM associated with xactions `xwarmup`, `xsignal`, `xcommit`, `xdcommit`, `xvexec`, etc
-- fixes
-    - add DAPP token assertion to `regpkg` command to ensure DAPP symbol and 4 decimals of precision used

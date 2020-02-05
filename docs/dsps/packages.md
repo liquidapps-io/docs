@@ -101,6 +101,13 @@ export QUOTA="1.0000"
 export DSP_ENDPOINT=https://acme-dsp.com
 # package json uri is the link to your package's information, this is customizable without a required syntax
 export PACKAGE_JSON_URI=https://acme-dsp.com/package1.dsp-package.json
+# for a package to be used on a sidechain using LiquidX, the DSP provider's account 
+# on the sidechain must perform a regprovider action. To do so, include an object(s) containing:
+# sidechain_provider - DSP name on sidechain
+# service_contract - service contract name on sidechain
+# service_contract - a nodeos or DSP endpoint on the sidechain
+# active_key - of sidechain_provider
+export SIDECHAINS=['{"sidechain_provider":"","service_contract":"ipfsservice2","nodeos_endpoint":"https://api.jungle.alohaeos.com:443","active_key":""}']
 
 cd $(readlink -f `which setup-dsp` | xargs dirname)
 zeus register dapp-service-provider-package \
@@ -112,7 +119,8 @@ zeus register dapp-service-provider-package \
     --network $EOS_CHAIN \
     --api-endpoint $DSP_ENDPOINT \
     --package-json-uri $PACKAGE_JSON_URI \
-    --min-unstake-period $MIN_UNSTAKE_PERIOD
+    --min-unstake-period $MIN_UNSTAKE_PERIOD \
+    --sidechains $SIDECHAINS
 ```
 
 ### Or in cleos:
