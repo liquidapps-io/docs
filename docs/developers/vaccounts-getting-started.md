@@ -24,7 +24,7 @@ This box contains the LiquidAccounts smart contract libraries, DSP node logic, u
 # npm install -g @liquidapps/zeus-cmd
 zeus unbox vaccounts-dapp-service
 cd vaccounts-dapp-service
-zeus test
+zeus test -c
 ```
 
 ## LiquidAccount Consumer Example Contract used in unit tests

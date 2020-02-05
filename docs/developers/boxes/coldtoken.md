@@ -30,7 +30,7 @@ zeus unbox coldtoken
 ## Examples
 ### Test
 ```bash
-zeus test
+zeus test -c
 ```
 
 

@@ -30,7 +30,7 @@ zeus unbox craft
 ## Examples
 ### Test
 ```bash
-zeus test
+zeus test -c
 ```
 
 

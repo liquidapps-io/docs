@@ -30,7 +30,7 @@ zeus migrate
 ```
 ### Test sample contract
 ```bash
-zeus test
+zeus test -c
 ```
 
 

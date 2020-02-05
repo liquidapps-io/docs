@@ -73,7 +73,7 @@ npm update -g @liquidapps/zeus-cmd
 ```bash
 zeus unbox helloworld
 cd helloworld
-zeus test
+zeus test -c
 ```
 
 ## Create your own contract
@@ -234,9 +234,11 @@ zeus migrate --network=kylin --creator=<CONTRACT_ACCOUNT_NAME> --creator-key=<AC
 ```
 
 ### Zeus test
-Compile and unit test a smart contract.  You can either compile and test all of the contracts within the contracts & test directories with `zeus test` or a specific contract by name, with `zeus test dappservices`
+Unit test a smart contract.  To run the unit tests for all smart contracts within the unboxed directory, use `zeus test`.  The compile all smart contracts before testing, use `zeus test -c`, `-c` being the alias to compile.  To test and or compile for a specific contract name, add the `<CONTRACT_NAME>` to the command.
 ```bash
-zeus test <CONTRACT_NAME>
+zeus test # run all unit tests
+zeus test <CONTRACT_NAME> # run unit tests for contract name
+zeus test -c <CONTRACT_NAME> # compile and run unit tests for contract name
 
 # optional flags:
 

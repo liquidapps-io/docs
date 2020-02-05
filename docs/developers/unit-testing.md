@@ -249,5 +249,5 @@ await testcontract.create({
 
 ## Compile and test
 ```bash
-zeus test
+zeus test -c
 ```

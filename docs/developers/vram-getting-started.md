@@ -36,7 +36,7 @@ zeus create contract mycontract
 zeus unbox coldtoken
 cd coldtoken
 # unit test coldtoken contract locally
-zeus test
+zeus test -c
 ```
 
 ## Advanced features
@@ -97,7 +97,7 @@ See the unit testing section for details on adding unit tests.
 ```bash
 zeus compile
 # compile and test with
-zeus test
+zeus test -c
 ```
 
 ## Deploy Contract
@@ -205,7 +205,7 @@ Steps to produce `/ipfs-dapp-service/test1-test-table.json` file below:
 npm i -g @liquidapps/zeus-cmd
 zeus unbox ipfs-dapp-service
 cd ipfs-dapp-service
-zeus test
+zeus test -c
 export CONTRACT_NAME=test1
 node utils/ipfs-service/get-table
 ```
@@ -293,7 +293,7 @@ Steps to produce console logged output below:
 npm i -g @liquidapps/zeus-cmd
 zeus unbox ipfs-dapp-service
 cd ipfs-dapp-service
-zeus test
+zeus test -c
 export CONTRACT_NAME=test1
 export SCOPE=test1
 export TABLE_NAME=test

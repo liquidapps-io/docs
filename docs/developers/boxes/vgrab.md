@@ -30,7 +30,7 @@ zeus unbox vgrab
 ## Examples
 ### Test
 ```bash
-zeus test
+zeus test -c
 ```
 
 
