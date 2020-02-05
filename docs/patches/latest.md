@@ -6,6 +6,18 @@ latest
 ### [@liquidapps/dsp](https://www.npmjs.com/package/@liquidapps/dsp)
 
 ### [@liquidapps/zeus-cmd](https://www.npmjs.com/package/@liquidapps/zeus-cmd)
+- add RC file to load regular zeus-cmd options from, on ~/.zeus/zeusrc.json by default, changeable with --rc-file option | [thank you prcolaco](https://github.com/liquidapps-io/zeus-sdk/pull/9)
+- add RC file ignore flag --rc-ignore to bypass it | [thank you prcolaco](https://github.com/liquidapps-io/zeus-sdk/pull/9)
+
+Example `zeusrc.json`:
+```json
+{
+    "verbose": true,
+    "type": "local",
+    "update-mapping": true,
+    "test": true
+}
+```
 
 ### [@liquidapps/dapp-client](https://www.npmjs.com/package/@liquidapps/dapp-client)
 

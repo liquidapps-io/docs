@@ -315,6 +315,29 @@ zeus deploy box
 # default: local
 ```
 
+### Zeus RC File
+An RC file allows command flags specified in a json file to be used automatically without needing to add them to a command each time it is used. To use an RC file, on can be created in the directory: `~/.zeus/zeusrc.json` to persist between deleting boxes and updating Zeus, or in another directory using the `--rc-file` flag to specify the relative path.
+
+Example RC file: 
+
+```json
+{
+    "verbose": true,
+    "type": "local",
+    "update-mapping": true,
+    "test": true,
+    "compile": true
+}
+```
+
+Example usage:
+```bash
+# use rc file in local directory
+zeus test --rc-file ./zeusrc.json
+# ignore rc file
+zeus test -c --rc-ignore
+```
+
 ### Help
 ```bash
 zeus --help 
