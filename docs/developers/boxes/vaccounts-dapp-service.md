@@ -20,6 +20,7 @@ vaccounts-dapp-service
 ### npm packages
 * [`node-fetch`](http://npmjs.com/package/node-fetch)
 * [`eosjs-ecc`](http://npmjs.com/package/eosjs-ecc)
+* [`isomorphic-fetch`](http://npmjs.com/package/isomorphic-fetch)
 
 ## Contracts
 * [`vaccountsservice`](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/services/vaccounts-dapp-service/contracts/eos/dappservices/_vaccounts_impl.hpp)
