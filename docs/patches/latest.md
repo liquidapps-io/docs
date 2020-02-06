@@ -21,6 +21,7 @@ Example `zeusrc.json`:
 - fixes
     - fix portfolio app requesting new oracle entries twice on load
     - fix portfolio app double adding eos token balances
+    - `Read past end of buffer` - The issue was that an additional parameter was added to IPFS warmup to enable new functionality. This caused a conflict for pre-existing contracts attempting to warmup IPFS data. The parameter was removed.
 
 ### [@liquidapps/dapp-client](https://www.npmjs.com/package/@liquidapps/dapp-client)
 
