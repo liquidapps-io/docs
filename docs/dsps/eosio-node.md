@@ -13,8 +13,7 @@ A non block / non full history node is required for the DSP API to interact with
 ## Get EOSIO binary
 
 ```bash
-# install 1.8 even if chain is sub 1.7.*
-VERSION=1.8.8
+VERSION=1.8.7
 ```
 
 ### Ubuntu 18.04
