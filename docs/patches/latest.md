@@ -6,7 +6,11 @@ latest
 ### [@liquidapps/dsp](https://www.npmjs.com/package/@liquidapps/dsp)
 
 ### [@liquidapps/zeus-cmd](https://www.npmjs.com/package/@liquidapps/zeus-cmd)
-- add RC file ignore flag --rc-ignore to bypass it | [thank you prcolaco](https://github.com/liquidapps-io/zeus-sdk/pull/9)
+- split mapping into builtin and local file stored in ~/.zeus/ storage directory
+- boxes added to the mapping using zeus deploy box and zeus box add go to the local mapping file to persist between zeus updates
+- when unboxing a box found in both files, the local mapping is given priority, but a warning is displayed
+- added zeus box remove command to remove boxes from the local mapping
+- added RC file ignore flag --rc-ignore to bypass it | [thank you prcolaco](https://github.com/liquidapps-io/zeus-sdk/pull/9)
 
 Example `zeusrc.json`:
 ```json

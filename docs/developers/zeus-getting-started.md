@@ -301,6 +301,26 @@ zeus key export <ACCOUNT_NAME>
 # default: false
 ```
 
+### Create a new box
+Creates a new directory with an empty `zeus-config.json` file.
+
+```bash
+zeus box create <BOX_NAME>
+```
+
+
+### Add or remove a box from the local mapping.json file
+Zeus uses 2 mapping files to unbox boxes.  The `builtin-mapping.json` file is for boxes that are a part of the official zeus-sdk repo (located: `.../node_modules/@liquidapps/zeus-cmd/lib/resources/builtin-mapping.json`). This file only changes when Zeus is updated. There is also a local zeus box for modifying existing boxes from the `builtin-mapping.json` and adding new boxes.  If a box exists in both the builtin and the local mapping files, the local mapping file will be used.  To use the builtin box instead, you must remove the local version first.
+
+```bash
+zeus box add <BOX_NAME> <URI>
+# zeus box add liquidx-jungle https://s3.us-east-2.amazonaws.com/liquidapps.artifacts/boxes/0a98835c75debf2f1d875be8be39591501b15352f7c017799d0ebf3342668d2c.zip
+# zeus list-boxes, will see new box under 'Local Boxes:'
+zeus box remove <BOX_NAME>
+# zeus box remove liquidx-jungle
+# zeus list-boxes, will be gone
+```
+
 ### Zeus Deploy
 Deploy a custom Zeus box to your local working directory.  Once deployed, if the `--update-mapping` flag is used, you may unbox this box like other packages.  The `--type` method can be used to determine what medium to deploy the box to.  The default `local` deploys with the syntax `file://${packagePath}/box.zip`.  The option `ipfs` deploys to the IPFS network with the syntax `ipfs://${hash}`.
 
@@ -309,7 +329,7 @@ zeus deploy box
 
 # optional flags:
 
---update-mapping # updates local mapping.js file with an IPFS URI where the package may be accessed at
+--update-mapping # updates local mapping.json file with an IPFS URI where the package may be accessed at
 # default: true
 --type # deploy destination (local, ipfs)
 # default: local
@@ -357,21 +377,6 @@ Updates zeus boxes for currently unboxed project
 zeus update --boxes
 ```
 
-### Create a new box
-Creates a new directory with an empty `zeus-config.json` file.
-
-```bash
-zeus box create <BOX_NAME>
-```
-
-
-### Add a box to the mapping.js file
-In order to add a new box to zeus, you either need to edit the `mapping.js` where Zeus was installed, or you can use the following command:
-
-```bash
-zeus box add <BOX_NAME> <URI>
-# for example: zeus box add liquidx-jungle https://s3.us-east-2.amazonaws.com/liquidapps.artifacts/boxes/0a98835c75debf2f1d875be8be39591501b15352f7c017799d0ebf3342668d2c.zip
-```
 
 ## Project structure
 ### Directory structure
