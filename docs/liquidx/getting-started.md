@@ -11,4 +11,4 @@ This is accomplished by creating a set of mappings between accounts.  DSPs and U
 
 [Become a DSP on another chain](become-a-dsp)
 
-[Add a Chain to LiquidX](eosio-node)
+[Add a Chain to LiquidX](add-a-chain)

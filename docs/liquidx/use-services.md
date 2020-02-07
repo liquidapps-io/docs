@@ -64,7 +64,7 @@ Example cleos command:
 cleos -u https://nodes.get-scatter.com:443 push transaction '{"delay_sec":0,"max_cpu_usage_ms":0,"actions":[{"account":"liquidxxxxxx","name":"addaccount","data":{"owner":"natdeveloper","chain_account":"liquidxcnsmr","chain_name":"mynewchainnn"},"authorization":[{"actor":"natdeveloper","permission":"active"}]}]}'
 ```
 
-## Map Mainnet to New Chain
+## Map New Chain to Mainnet
 
 To map a new chain's account to the EOS mainnet, navigate to the contract that has deployed the `dappservicex` contract and perform the `setlink` action.
 
