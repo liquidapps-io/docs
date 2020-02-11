@@ -59,9 +59,9 @@ zeus unbox dapp-services
 
 * ```zeus run dapp-services-node --help```
 
-* ```zeus start-localenv 20-eos-local-dapp-services --help```
+* ```zeus start-localenv 20-a-eos-local-dapp-services --help```
 
-* ```zeus start-localenv 21-eos-local-services-all-dapp-services --help```
+* ```zeus start-localenv 21-a-eos-local-services-all-dapp-services --help```
 
 ## Models
 ### New Model Types

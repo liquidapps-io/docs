@@ -39,7 +39,7 @@ zeus unbox demux
 
 * ```zeus run demux --help```
 
-* ```zeus start-localenv 15-eos-demux --help```
+* ```zeus start-localenv 15-a-eos-demux --help```
 
 ## Models
 ### New Model Types

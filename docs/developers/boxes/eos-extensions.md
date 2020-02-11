@@ -36,9 +36,9 @@ zeus start-localenv
 
 * ```zeus preprocess eos --help```
 
-* ```zeus start-localenv 02-eos-local-nodeos --help```
+* ```zeus start-localenv 02-a-eos-local-nodeos --help```
 
-* ```zeus start-localenv 05-eos-local-bios --help```
+* ```zeus start-localenv 05-a-eos-local-bios --help```
 
 
 
