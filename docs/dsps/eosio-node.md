@@ -14,7 +14,8 @@ A non block / non full history node is required for the DSP API to interact with
 
 ```bash
 # install 1.8 even if chain is sub 1.7.*
-VERSION=1.8.8
+VERSION=1.8.7
+# we do not yet support nodeos version 2+, the secondary index query changed, so updates to the DSP logic must be made
 ```
 
 ### Ubuntu 18.04
@@ -142,7 +143,7 @@ cat p2p-config.ini | grep "p2p-peer-address" >> $HOME/.local/share/eosio/nodeos/
 
 *Please note the following about some `config.ini` settings:*
 
-- `wasm-runtime = wabt` must be used as the `wavm` engine still has bugs
+- `wasm-runtime = wabt` must be used as the `wavm` engine has bugs
 - `read-mode = head` (default is: `read-more = speculative` and does not need to be specified in the `config.ini`) must not be used to prevent duplicate `xwarmup` actions | [read more about read modes here](https://developers.eos.io/eosio-nodeos/docs/read-modes)
 
 ## Run 
