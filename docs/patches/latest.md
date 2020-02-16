@@ -4,6 +4,8 @@ latest
 ### [LiquidVRAM Service](https://docs.liquidapps.io/en/v2.0/services/ipfs-service.html)
 
 ### [@liquidapps/dsp](https://www.npmjs.com/package/@liquidapps/dsp)
+- fixes
+    - fix demux head block handler using brackets
 
 ### [@liquidapps/zeus-cmd](https://www.npmjs.com/package/@liquidapps/zeus-cmd)
 - split mapping into builtin and local file stored in ~/.zeus/ storage directory
