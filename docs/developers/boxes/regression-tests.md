@@ -19,6 +19,7 @@ regression-tests
 * [`airdrop`](airdrop.md)
 * [`chess`](chess.md)
 * [`liquidx`](liquidx.md)
+* [`combined`](combined.md)
 
 
 
