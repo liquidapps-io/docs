@@ -13,7 +13,8 @@ A non block / non full history node is required for the DSP API to interact with
 ## Get EOSIO binary
 
 ```bash
-VERSION=1.8.7
+# nodeos versions below 2.0 are not longer supported
+VERSION=2.0.2
 ```
 
 ### Ubuntu 18.04
@@ -109,7 +110,8 @@ p2p-listen-endpoint = 0.0.0.0:9876
 blocks-dir = "blocks"
 abi-serializer-max-time-ms = 3000
 max-transaction-time = 150000
-wasm-runtime = wabt
+wasm-runtime = eos-vm
+eos-vm-oc-enable = true
 reversible-blocks-db-size-mb = 1024
 contracts-console = true
 p2p-max-nodes-per-host = 1
@@ -141,7 +143,6 @@ cat p2p-config.ini | grep "p2p-peer-address" >> $HOME/.local/share/eosio/nodeos/
 
 *Please note the following about some `config.ini` settings:*
 
-- `wasm-runtime = wabt` must be used as the `wavm` engine still has bugs
 - `read-mode = head` (default is: `read-more = speculative` and does not need to be specified in the `config.ini`) must not be used to prevent duplicate `xwarmup` actions | [read more about read modes here](https://developers.eos.io/eosio-nodeos/docs/read-modes)
 
 ## Run 

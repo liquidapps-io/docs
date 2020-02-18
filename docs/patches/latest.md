@@ -4,6 +4,8 @@ latest
 ### [LiquidVRAM Service](https://docs.liquidapps.io/en/v2.0/services/ipfs-service.html)
 
 ### [@liquidapps/dsp](https://www.npmjs.com/package/@liquidapps/dsp)
+- update get table row secodary index changes in 2.0
+- cease support for pre nodeos 2.0 nodes
 - fixes
     - fix demux head block handler using brackets
 
@@ -24,6 +26,7 @@ Example `zeusrc.json`:
 }
 ```
 - add RC file to load regular zeus-cmd options from, on ~/.zeus/zeusrc.json by default, changeable with --rc-file option | [thank you prcolaco](https://github.com/liquidapps-io/zeus-sdk/pull/9)
+- use v2.0.2 nodeos
 - fixes
     - fix portfolio app requesting new oracle entries twice on load
     - fix portfolio app double adding eos token balances
@@ -32,5 +35,6 @@ Example `zeusrc.json`:
 ### [@liquidapps/dapp-client](https://www.npmjs.com/package/@liquidapps/dapp-client)
 
 ### [docs](https://docs.liquidapps.io/en/stable/)
+- update to using nodeos v2+, pre 2.0 no longer supported
 
 ### [dappservices contract](http://bloks.io/account/dappservices)
