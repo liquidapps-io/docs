@@ -21,4 +21,4 @@ Alpha
 ### sdummy
 ## Tests 
 * [storage.spec.js](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/services/storage-dapp-service/test/storage.spec.js)
-## [Implementation](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/services/storage-dapp-service/contracts/eos/dappservices/_storage_impl.hpp)
+

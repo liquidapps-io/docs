@@ -38,3 +38,9 @@ Example `zeusrc.json`:
 - update to using nodeos v2+, pre 2.0 no longer supported
 
 ### [dappservices contract](http://bloks.io/account/dappservices)
+- Moved quota calculation logic into dappservices
+- Deprecated individual service contracts for quota management, i.e. `ipfsservice1`,`cronservices`, etc
+    - Providers that have already registered packages will have their RAM freed using a new `freeprovider(provider)` action
+- billing will default to 0.0001 QUOTA for all actions
+    - This allows for new actions to be added to services
+- use `pricepkg` action to price action in quota

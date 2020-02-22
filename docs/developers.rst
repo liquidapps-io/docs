@@ -23,5 +23,6 @@ Developers
    developers/unit-testing
    developers/dsp-packages-and-staking
    developers/boxes/zeus-boxes
+   developers/zeus-create-service
    
 * :ref:`search`

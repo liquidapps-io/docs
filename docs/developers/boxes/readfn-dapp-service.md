@@ -19,7 +19,6 @@ readfn-dapp-service
 
 
 ## Contracts
-* [`readfnservice`](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/services/readfn-dapp-service/contracts/eos/dappservices/_readfn_impl.hpp)
 
 ## Install
 ```bash

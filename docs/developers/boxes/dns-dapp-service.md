@@ -17,7 +17,6 @@ dns-dapp-service
 * [`native-dns`](http://npmjs.com/package/native-dns)
 
 ## Contracts
-* [`dnsservice`](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/services/dns-dapp-service/contracts/eos/dappservices/_dns_impl.hpp)
 
 ## Install
 ```bash

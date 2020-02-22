@@ -23,4 +23,4 @@ PoC
 ## Tests 
 * [vcpuconsumer.spec.js](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/services/vcpu-dapp-service/test/vcpuconsumer.spec.js)
 * [Consumer Contract Example](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/services/vcpu-dapp-service/contracts/eos/vcpuconsumer/vcpuconsumer.cpp)
-## [Implementation](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/services/vcpu-dapp-service/contracts/eos/dappservices/_vcpu_impl.hpp)
+

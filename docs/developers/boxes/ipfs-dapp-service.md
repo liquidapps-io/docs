@@ -23,7 +23,6 @@ ipfs-dapp-service
 * [`node-fetch`](http://npmjs.com/package/node-fetch)
 
 ## Contracts
-* [`ipfsservice`](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/services/ipfs-dapp-service/contracts/eos/dappservices/_ipfs_impl.hpp)
 
 * [`oldipfscons`](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/services/ipfs-dapp-service/contracts/eos/oldipfscons)
 ## Install

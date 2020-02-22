@@ -23,7 +23,6 @@ vaccounts-dapp-service
 * [`isomorphic-fetch`](http://npmjs.com/package/isomorphic-fetch)
 
 ## Contracts
-* [`vaccountsservice`](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/services/vaccounts-dapp-service/contracts/eos/dappservices/_vaccounts_impl.hpp)
 
 ## Install
 ```bash

@@ -18,8 +18,7 @@ bill-dapp-service
 
 
 
-## Contracts
-* [`billservice`](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/services/bill-dapp-service/contracts/eos/dappservices/_bill_impl.hpp)
+
 ## Install
 ```bash
 zeus unbox bill-dapp-service

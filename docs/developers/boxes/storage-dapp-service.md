@@ -20,8 +20,7 @@ storage-dapp-service
 * [`tar-stream`](http://npmjs.com/package/tar-stream)
 * [`stream-buffers`](http://npmjs.com/package/stream-buffers)
 
-## Contracts
-* [`storageservice`](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/services/storage-dapp-service/contracts/eos/dappservices/_storage_impl.hpp)
+
 ## Install
 ```bash
 zeus unbox storage-dapp-service

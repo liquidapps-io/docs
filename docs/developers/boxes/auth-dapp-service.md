@@ -19,7 +19,6 @@ auth-dapp-service
 
 
 ## Contracts
-* [`authservice`](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/services/auth-dapp-service/contracts/eos/dappservices/_auth_impl.hpp)
 * [`authenticator`](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/services/auth-dapp-service/contracts/eos/authenticator)
 ## Install
 ```bash

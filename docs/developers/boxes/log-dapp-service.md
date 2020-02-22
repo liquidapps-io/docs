@@ -16,7 +16,6 @@ log-dapp-service
 
 
 ## Contracts
-* [`logservice`](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/services/log-dapp-service/contracts/eos/dappservices/_log_impl.hpp)
 
 ## Install
 ```bash

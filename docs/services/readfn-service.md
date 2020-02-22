@@ -22,4 +22,4 @@ Alpha
 ## Tests 
 * [readfnconsumer.spec.js](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/services/readfn-dapp-service/test/readfnconsumer.spec.js)
 * [Consumer Contract Example](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/services/readfn-dapp-service/contracts/eos/readfnconsumer/readfnconsumer.cpp)
-## [Implementation](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/services/readfn-dapp-service/contracts/eos/dappservices/_readfn_impl.hpp)
+

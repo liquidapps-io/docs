@@ -41,6 +41,7 @@ dapp-services
 
 ## Contracts
 * [`dappservices`](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/dapp-network/dapp-services/contracts/eos/dappservices)
+* [`allservices`](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/dapp-network/dapp-services/contracts/eos/allservices)
 ## Install
 ```bash
 zeus unbox dapp-services

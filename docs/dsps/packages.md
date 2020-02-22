@@ -101,13 +101,6 @@ export QUOTA="1.0000"
 export DSP_ENDPOINT=https://acme-dsp.com
 # package json uri is the link to your package's information, this is customizable without a required syntax
 export PACKAGE_JSON_URI=https://acme-dsp.com/package1.dsp-package.json
-# for a package to be used on a sidechain using LiquidX, the DSP provider's account 
-# on the sidechain must perform a regprovider action. To do so, include an object(s) containing:
-# sidechain_provider - DSP name on sidechain
-# service_contract - service contract name on sidechain
-# service_contract - a nodeos or DSP endpoint on the sidechain
-# active_key - of sidechain_provider
-export SIDECHAINS=['{"sidechain_provider":"","service_contract":"ipfsservice2","nodeos_endpoint":"https://api.jungle.alohaeos.com:443","active_key":""}']
 
 cd $(readlink -f `which setup-dsp` | xargs dirname)
 zeus register dapp-service-provider-package \
@@ -119,8 +112,7 @@ zeus register dapp-service-provider-package \
     --network $EOS_CHAIN \
     --api-endpoint $DSP_ENDPOINT \
     --package-json-uri $PACKAGE_JSON_URI \
-    --min-unstake-period $MIN_UNSTAKE_PERIOD \
-    --sidechains $SIDECHAINS
+    --min-unstake-period $MIN_UNSTAKE_PERIOD
 ```
 
 ### Or in cleos:
@@ -166,3 +158,12 @@ Using cleos:
 ```bash
 cleos -u $DSP_ENDPOINT push action dappservices modifypkg "[\"$DSP_ACCOUNT\",\"$PACKAGE_ID\",\"ipfsservice1\",\"$DSP_ENDPOINT\",\"https://acme-dsp.com/modified-package1.dsp-package.json\"]" -p $DSP_ACCOUNT@active
 ```
+
+### Update cost per action in QUOTA
+The `pricepkg` action on the `dappservices` contract allows a DSP to set how much QUOTA to bill for per action.  For example, a DSP could decide to charge 0.0002 QUOTA per vRAM warmup.  The default for each action is 0.0001 QUOTA.  The billable actions for all services may be found in the `zeus-sdk/boxes/groups/services/SERVICE_NAME-dapp-service/models/dapp-services/SERVICE_NAME.json`, for example: [vRAM](https://github.com/liquidapps-io/zeus-sdk/blob/master/boxes/groups/services/ipfs-dapp-service/models/dapp-services/ipfs.json).
+
+- name provider - DSP name
+- name package_id - package name
+- name service - service name, e.g., ipfsservice1
+- name action - action name, e.g., warmup, commit, geturi, etc
+- uint64_t cost - QUOTA cost per action, e.g., 1 = 0.0001 QUOTA, 5, = 0.0005 QUOTA, etc

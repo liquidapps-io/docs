@@ -21,4 +21,4 @@ WIP
 ### sdummy2
 ## Tests 
 * [bill.spec.js](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/services/bill-dapp-service/test/bill.spec.js)
-## [Implementation](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/services/bill-dapp-service/contracts/eos/dappservices/_bill_impl.hpp)
+
