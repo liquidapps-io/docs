@@ -2,6 +2,10 @@ latest
 ========
 
 ### [LiquidVRAM Service](https://docs.liquidapps.io/en/v2.0/services/ipfs-service.html)
+- add new service responses and requests when `#define USE_ADVANCED_IPFS` is used
+- add warmuprow and cleanuprow, these allow for more efficient loading and cleaning of vram shard information
+- add warmupcode, which allows for vram to be accessed from external contracts and third party DSPs
+- warmupcode is used automatically when required when the `code` specified in a multi-index table is something other than `self`
 
 ### [@liquidapps/dsp](https://www.npmjs.com/package/@liquidapps/dsp)
 - update get table row secodary index changes in 2.0

@@ -8,7 +8,7 @@ Virtual Memory Service
 Stable
 
 ## Version
-1.3
+1.4
 
 ## Contract
 
@@ -21,6 +21,9 @@ Stable
 ### commit
 ### cleanup
 ### warmup
+### warmupcode
+### warmuprow
+### cleanuprow
 ## Tests 
 * [dappservices.spec.js](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/services/ipfs-dapp-service/test/dappservices.spec.js)
 * [ipfsconsumer.spec.js](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/services/ipfs-dapp-service/test/ipfsconsumer.spec.js)
