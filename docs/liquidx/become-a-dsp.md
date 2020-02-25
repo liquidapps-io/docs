@@ -68,7 +68,7 @@ On the EOS mainnet, the EOS mainnet's DSP account must be connected to the new c
 Cleos example:
 
 ```bash
-cleos -u https://nodes.get-scatter.com:443 push transaction '{"delay_sec":0,"max_cpu_usage_ms":0,"actions":[{"account":"liquidxxxxxx","name":"addaccount","data":{"owner":"uuddlrlrbass","chain_account":"uuddlrlrbass","chain_name":"mynewchainnn"},"authorization":[{"actor":"uuddlrlrbass","permission":"active"}]}]}'
+cleos -u https://nodes.get-scatter.com:443 push transaction '{"delay_sec":0,"max_cpu_usage_ms":0,"actions":[{"account":"liquidx.dsp","name":"addaccount","data":{"owner":"uuddlrlrbass","chain_account":"uuddlrlrbass","chain_name":"mynewchainnn"},"authorization":[{"actor":"uuddlrlrbass","permission":"active"}]}]}'
 ```
 
 On the new chain you must find the account that has deployed the `dappservicex.cpp` code.  This can be found by asking a BP, a member of the community, or by checking the [`chainentry`](https://bloks.io/account/liquidx.dsp?loadContract=true&tab=Tables&table=chainentry&account=liquidx.dsp&scope=CHAIN_NAME_HERE&limit=100) table on the [`liquidx.dsp`](https://bloks.io/account/liquidx.dsp) contract and providing the scope of the `chain_name` used to register in the previous step.

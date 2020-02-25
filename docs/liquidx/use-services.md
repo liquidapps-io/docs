@@ -68,7 +68,7 @@ To map an EOS mainnet account to a new chain's account, perform the [`addaccount
 
 Example cleos command:
 ```bash
-cleos -u https://nodes.get-scatter.com:443 push transaction '{"delay_sec":0,"max_cpu_usage_ms":0,"actions":[{"account":"liquidxxxxxx","name":"addaccount","data":{"owner":"natdeveloper","chain_account":"liquidxcnsmr","chain_name":"mynewchainnn"},"authorization":[{"actor":"natdeveloper","permission":"active"}]}]}'
+cleos -u https://nodes.get-scatter.com:443 push transaction '{"delay_sec":0,"max_cpu_usage_ms":0,"actions":[{"account":"liquidx.dsp","name":"addaccount","data":{"owner":"natdeveloper","chain_account":"liquidxcnsmr","chain_name":"mynewchainnn"},"authorization":[{"actor":"natdeveloper","permission":"active"}]}]}'
 ```
 
 ## Map New Chain to Mainnet
