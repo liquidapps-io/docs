@@ -21,4 +21,5 @@ Alpha
 ### sdummy
 ## Tests 
 * [storage.spec.js](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/services/storage-dapp-service/test/storage.spec.js)
+* [Consumer Contract Example](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/services/storage-dapp-service/contracts/eos/storageconsumer/storageconsumer.cpp)
 

@@ -16,10 +16,13 @@ storage-dapp-service
 * [`mocha`](mocha.md)
 * [`hooks-cpp-contracts`](hooks-cpp-contracts.md)
 * [`auth-dapp-service`](auth-dapp-service.md)
+* [`ipfs-dapp-service`](ipfs-dapp-service.md)
+* [`vaccounts-dapp-service`](vaccounts-dapp-service.md)
 ### npm packages
 * [`tar-stream`](http://npmjs.com/package/tar-stream)
 * [`stream-buffers`](http://npmjs.com/package/stream-buffers)
 
+## Contracts
 
 ## Install
 ```bash
@@ -71,6 +74,7 @@ zeus unbox storage-dapp-service
         "permission": "active"
       }
     },
+    "upload_public_vaccount": {},
     "upload_private": {
       "authentication": {
         "type": "payer",
