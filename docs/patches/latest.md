@@ -12,6 +12,7 @@ latest
 - cease support for pre nodeos 2.0 nodes
 - fixes
     - fix demux head block handler using brackets
+    - support new `/v1/chain/send_transaction` endpoint in addition to `/v1/chain/push_transaction`
 
 ### [@liquidapps/zeus-cmd](https://www.npmjs.com/package/@liquidapps/zeus-cmd)
 - split mapping into builtin and local file stored in ~/.zeus/ storage directory
