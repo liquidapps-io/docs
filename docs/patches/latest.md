@@ -50,3 +50,4 @@ Example `zeusrc.json`:
 - billing will default to 0.0001 QUOTA for all actions
     - This allows for new actions to be added to services
 - use `pricepkg` action to price action in quota
+- add `developers/contract-logs` section and add details on DSP logs

@@ -56,17 +56,27 @@ systemctl enable dsp
 exit
 ```
 
-## Check logs
+## Logs
+There are several log files when it comes to the DAPP Service Providers.  The `logs` folder can be found in the directory the `dsp` software was installed in.  Each service has its own log file, for example: `DSP_NAME_HERE-ipfs-dapp-service-node-2020-03-03.log`.  The service file will log the service related information.  
+
+There is also a demux and dapp service node log `DSP_NAME_HERE-demux-2020-03-03.log`, `DSP_NAME_HERE-dapp-services-node-2020-03-03.log`.  The demux log tracks the interaction with the state history node, listening for relevant information for the DSP to act upon.  The dapp service node log is the first point of contact when sending a transaction to the DSP, this is the gateway that fields requests to the correct service files, to the nodeos RPC API in the case of say pushing a transaction or fetching a table row, or using the `/v1/dsp/version` endpoint for returning the current version of the DSP software on the node.
+
+Finally for each chain a DSP supports with LiquidX there is an additional dapp service node and demux log `DSP_NAME_HERE-CHAIN_NAME_HERE-dapp-services-node-2020-03-03.log` `DSP_NAME_HERE-CHAIN_NAME_HERE-demux-2020-03-03.log`.
+
 ```bash
 sudo su -
-pm2 logs
+cd $(readlink -f `which setup-dsp` | xargs dirname)
+cd logs
 exit
 ```
 
 ## Additional Logs
+`pm2 logs` can be used to ensure that there are no issues outside of the logging statements used.  For example, if a javascript file was improperly formatted, that error may show up in `pm2 logs`.
+
 ```bash
-cd $(readlink -f `which setup-dsp` | xargs dirname)
-cd logs
+sudo su -
+pm2 logs
+exit
 ```
 
 ### Output sample:
