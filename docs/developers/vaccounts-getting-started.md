@@ -189,3 +189,38 @@ zeus vaccounts push-action test1v regaccount '{"vaccount":"vaccount1"}'
 zeus vaccounts push-action vacctstst123 regaccount '{"vaccount":"vaccount2"}' --private-key 5KJL... -u https://kylin-dsp-2.liquidapps.io
 zeus vaccounts push-action vacctstst123 regaccount '{"vaccount":"vaccount3"}' -u http://kylin-dsp-2.liquidapps.io/ --encrypted --network=kylin --password=password
 ```
+
+## Deserialize Payload | [`des-payload.js`](https://github.com/liquidapps-io/zeus-sdk/blob/master/boxes/groups/services/vaccounts-dapp-service/utils/vaccounts-service/des-payload.js)
+This file is under the utility/tool and it is for deserializing `xvexec` data (vaccount action data).
+
+Example:
+
+`deserializeVactionPayload('dappaccoun.t', '6136465e000000002a00000000000000aca376f206b8fc25a6ed44dbdc66547c36c6c33e3a119ffbeaef943642f0e90600000000000000008090d9572d3ccdcd002370ae375c19feaa49e0d336557df8aa49010000000000000004454f5300000000026869', 'https://mainnet.eos.dfuse.io')`
+
+returns
+
+```json
+{
+   "payload":{
+      "expiry":"1581659745",
+      "nonce":"42",
+      "chainid":"ACA376F206B8FC25A6ED44DBDC66547C36C6C33E3A119FFBEAEF943642F0E906",
+      "action":{
+         "account":"",
+         "action_name":"transfervacc",
+         "authorization":[
+
+         ],
+         "action_data":"70AE375C19FEAA49E0D336557DF8AA49010000000000000004454F5300000000026869"
+      }
+   },
+   "deserializedAction":{
+      "payload":{
+         "vaccount":"dapjwaewayrb",
+         "to":"dapjkzepavdy",
+         "quantity":"0.0001 EOS",
+         "memo":"hi"
+      }
+   }
+}
+```

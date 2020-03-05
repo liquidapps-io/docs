@@ -30,6 +30,35 @@ Example `zeusrc.json`:
     "test": true
 }
 ```
+- added utility/tool for deserializing `xvexec` data (vaccount action data)
+Example:
+`deserializeVactionPayload('dappaccoun.t', '6136465e000000002a00000000000000aca376f206b8fc25a6ed44dbdc66547c36c6c33e3a119ffbeaef943642f0e90600000000000000008090d9572d3ccdcd002370ae375c19feaa49e0d336557df8aa49010000000000000004454f5300000000026869', 'https://mainnet.eos.dfuse.io')`
+returns
+```json
+{
+   "payload":{
+      "expiry":"1581659745",
+      "nonce":"42",
+      "chainid":"ACA376F206B8FC25A6ED44DBDC66547C36C6C33E3A119FFBEAEF943642F0E906",
+      "action":{
+         "account":"",
+         "action_name":"transfervacc",
+         "authorization":[
+
+         ],
+         "action_data":"70AE375C19FEAA49E0D336557DF8AA49010000000000000004454F5300000000026869"
+      }
+   },
+   "deserializedAction":{
+      "payload":{
+         "vaccount":"dapjwaewayrb",
+         "to":"dapjkzepavdy",
+         "quantity":"0.0001 EOS",
+         "memo":"hi"
+      }
+   }
+}
+```
 - add RC file to load regular zeus-cmd options from, on ~/.zeus/zeusrc.json by default, changeable with --rc-file option | [thank you prcolaco](https://github.com/liquidapps-io/zeus-sdk/pull/9)
 - `zeus create contract <MY_CONTRACT>` now creates `MY_CONTRACT.cpp` instead of `main.cpp`, update cmake to use `MY_CONTRACT.cpp`
 - use v2.0.2 nodeos
