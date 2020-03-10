@@ -16,6 +16,8 @@ Guide:
 
 At the smart contract level, the `liquidx` box must be unboxed and `#define LIQUIDX` must be added at the top of the smart contract which uses the DAPP Network services.  In order for the compiler to know which network the contract intends to be deployed on the `--sidechain` flag must be passed to `zeus compile --sidechain $SIDE_CHAIN_NAME`.
 
+Ensure that you add `@eosio.code` to the active permission level of the account.  This can be done with the `--add-code` flag on the `cleos set account permission` command.
+
 The side chain name is the account on the EOS mainnet that has registered the chain.  You may find what this contract is by asking a DSP, a BP, or the chain team itself.
 
 1 file must also be added to the `/liquidx/models/liquidx-mappings/` directory.

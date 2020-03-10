@@ -30,6 +30,8 @@ zeus compile
 cd contracts/eos
 ```
 
+Ensure that you add `dappservicex@eosio.code` to the active permission level of the account.
+
 ## Register chain
 
 You must execute the [`setchain`](https://bloks.io/account/liquidx.dsp?loadContract=true&tab=Tables&account=liquidx.dsp&scope=liquidx.dsp&limit=100&action=setchain) action on the [`liquidx.dsp`](https://bloks.io/account/liquidx.dsp) account on the EOS mainnet with the mainnet account created to represent the chain name.  The syntax is as follows:
