@@ -10,6 +10,8 @@ latest
 ### [@liquidapps/dsp](https://www.npmjs.com/package/@liquidapps/dsp)
 - update get table row secodary index changes in 2.0
 - cease support for pre nodeos 2.0 nodes
+- added max pending messages for demux to prevent memory crashes
+- fixed demux get starting block logic, added possibility for head block
 - fixes
     - fix demux head block handler using brackets
     - support new `/v1/chain/send_transaction` endpoint in addition to `/v1/chain/push_transaction`

@@ -123,8 +123,8 @@ zeus unbox liquidx
 }
 ```
 ## Tests 
-* [0-sidechain-ipfsconsumer.spec.js](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/dapp-network/liquidx/test/0-sidechain-ipfsconsumer.spec.js)
 * [sidechain-cron.spec.js](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/dapp-network/liquidx/test/sidechain-cron.spec.js)
+* [sidechain-ipfsconsumer.spec.js](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/dapp-network/liquidx/test/sidechain-ipfsconsumer.spec.js)
 * [sidechain-oracle.spec.js](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/dapp-network/liquidx/test/sidechain-oracle.spec.js)
 * [sidechain-readfn.spec.js](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/dapp-network/liquidx/test/sidechain-readfn.spec.js)
 * [sidechain-vaccount.spec.js](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/dapp-network/liquidx/test/sidechain-vaccount.spec.js)
