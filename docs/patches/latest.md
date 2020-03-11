@@ -74,6 +74,7 @@ returns
 
 ### [docs](https://docs.liquidapps.io/en/stable/)
 - update to using nodeos v2+, pre 2.0 no longer supported
+- add `developers/contract-logs` section and add details on DSP logs
 
 ### [dappservices contract](http://bloks.io/account/dappservices)
 - Moved quota calculation logic into dappservices
@@ -82,5 +83,16 @@ returns
 - billing will default to 0.0001 QUOTA for all actions
     - This allows for new actions to be added to services
 - use `pricepkg` action to price action in quota
-- add `developers/contract-logs` section and add details on DSP logs
 - add @eosio.code note for dappservicex and consumer contracts in liquidx section
+
+### [LiquidStorage for LiquidAccounts PR](https://github.com/liquidapps-io/zeus-sdk/pull/18) - thank you https://github.com/MrToph
+- Added `public_upload_vaccount` endpoint. This endpoint can be used directly from the frontend by vaccounts. The vaccount signs the file to upload, sends it to the DSP, which verifies and stores the file. Optionally, it does some additional quota checks defined by the consumer contract: It can define max file sizes, daily global upload limits, and daily limits on a per vaccount level.
+- Added a `storageconsumer` contract testing the vaccount uploads + limits checking.
+- Refactored the `upload_public` endpoint to a `common.js` file as most functionality is now also required by the new `upload_public_vaccount` endpoint.
+- Added two quick-fix options `external` and `box` to the `sync-builtin-boxes` command, because it did not work with the public zeus-sdk repo. External should be set to true when using the public repo. The default args are chosen in a way that they shouldn’t change anything if invoked as usual.
+- changed the uploads to use base64 encoding instead of hex (in both dapp-client and server) to save some bandwidth. Fixed the bytelength quota calculation
+- Disable vaccount archive upload
+- Use base64 as encoding for archive as well to match other encodings.
+- Support public archive upload in dapp-client lib
+- fixes
+    - Fix archive upload test
