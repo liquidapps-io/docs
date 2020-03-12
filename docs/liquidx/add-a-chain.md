@@ -36,7 +36,7 @@ Ensure that you add `dappservicex@eosio.code` to the active permission level of 
 
 You must execute the [`setchain`](https://bloks.io/account/liquidx.dsp?loadContract=true&tab=Tables&account=liquidx.dsp&scope=liquidx.dsp&limit=100&action=setchain) action on the [`liquidx.dsp`](https://bloks.io/account/liquidx.dsp) account on the EOS mainnet with the mainnet account created to represent the chain name.  The syntax is as follows:
 
-- chain_name {name} - name of account deploying chain, e.g., mynewchainnn
+- chain_name {name} - name of EOS mainnet account deploying chain, e.g., mynewchainnn
 - chain_meta {chain_metadata_t} - chain data
     - is_public {bool} - whether the chain is public
     - is_single_node {bool} - whether chain is a single node
@@ -50,6 +50,16 @@ Example cleos command:
 
 ```bash
 cleos -u https://nodes.get-scatter.com:443 push transaction '{"delay_sec":0,"max_cpu_usage_ms":0,"actions":[{"account":"mynewchainnn","name":"setchain","data":{"chain_name":"mynewchainnn","chain_meta":{"is_public":true,"is_single_node":false,"dappservices_contract":"dappservicex","chain_id":"e70aaab8997e1dfce58fbfac80cbbb8fecec7b99cf982a9444273cbc64c41473","type":"EOSIO","endpoints":[],"p2p_seeds":[],"chain_json_uri":""}},"authorization":[{"actor":"mynewchainnn","permission":"active"}]}]}'
+```
+
+After that, you must run the `init` action on the `dappservicex` contract.
+
+- `chain_name` {name} - name of EOS mainnet account deploying chain, e.g., mynewchainnn
+
+Example cleos command:
+
+```bash
+cleos -u https://api.jungle.alohaeos.com push transaction '{"delay_sec":0,"max_cpu_usage_ms":0,"actions":[{"account":"dappservicex","name":"init","data":{"chain_name":"liquidjungle"},"authorization":[{"actor":"dappservicex","permission":"active"}]}]}'
 ```
 
 And now you're setup to begin configuring DSPs and then enabling users to use DAPP Network services.  DSPs and developers will need to know the `chain_name` used on the mainnet and the account the `dappservicex.cpp` contract was set to on the new chain.
