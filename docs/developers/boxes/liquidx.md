@@ -58,40 +58,12 @@ zeus unbox liquidx
   "local": true
 }
 ```
-#### [dapp-network/test1.cron.service.json](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/dapp-network/liquidx/models/liquidx-mappings/test1.cron.service.json)
-```json
-{
-  "sidechain_name": "test1",
-  "mainnet_account": "cronservices",
-  "chain_account": "cronservicex"
-}
-```,#### [dapp-network/test1.dappservices.json](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/dapp-network/liquidx/models/liquidx-mappings/test1.dappservices.json)
+#### [dapp-network/test1.dappservices.json](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/dapp-network/liquidx/models/liquidx-mappings/test1.dappservices.json)
 ```json
 {
   "sidechain_name": "test1",
   "mainnet_account": "dappservices",
   "chain_account": "dappservicex"
-}
-```,#### [dapp-network/test1.ipfs.service.json](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/dapp-network/liquidx/models/liquidx-mappings/test1.ipfs.service.json)
-```json
-{
-  "sidechain_name": "test1",
-  "mainnet_account": "ipfsservice1",
-  "chain_account": "ipfsservice2"
-}
-```,#### [dapp-network/test1.log.service.json](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/dapp-network/liquidx/models/liquidx-mappings/test1.log.service.json)
-```json
-{
-  "sidechain_name": "test1",
-  "mainnet_account": "logservices1",
-  "chain_account": "logservices2"
-}
-```,#### [dapp-network/test1.oracle.service.json](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/dapp-network/liquidx/models/liquidx-mappings/test1.oracle.service.json)
-```json
-{
-  "sidechain_name": "test1",
-  "mainnet_account": "oracleservic",
-  "chain_account": "oracleservx1"
 }
 ```,#### [dapp-network/test1.provider1.json](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/dapp-network/liquidx/models/liquidx-mappings/test1.provider1.json)
 ```json
@@ -106,20 +78,6 @@ zeus unbox liquidx
   "sidechain_name": "test1",
   "mainnet_account": "pprovider2",
   "chain_account": "xprovider2"
-}
-```,#### [dapp-network/test1.readfn.service.json](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/dapp-network/liquidx/models/liquidx-mappings/test1.readfn.service.json)
-```json
-{
-  "sidechain_name": "test1",
-  "mainnet_account": "readfndspsvc",
-  "chain_account": "readfndspsvx"
-}
-```,#### [dapp-network/test1.vaccounts.service.json](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/dapp-network/liquidx/models/liquidx-mappings/test1.vaccounts.service.json)
-```json
-{
-  "sidechain_name": "test1",
-  "mainnet_account": "accountless1",
-  "chain_account": "accountless2"
 }
 ```
 ## Tests 

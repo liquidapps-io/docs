@@ -76,6 +76,10 @@ returns
 - update to using nodeos v2+, pre 2.0 no longer supported
 - add `developers/contract-logs` section and add details on DSP logs
 
+### [LiquidX](https://docs.liquidapps.io/en/stable/liquidx.html)
+- Service contracts and service contract mapping no longer mandatory
+    - If a service contract is not mapped, it will default to the same name as the mainnet
+
 ### [dappservices contract](http://bloks.io/account/dappservices)
 - Moved quota calculation logic into dappservices
 - Deprecated individual service contracts for quota management, i.e. `ipfsservice1`,`cronservices`, etc
