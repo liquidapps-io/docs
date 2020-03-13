@@ -49,7 +49,7 @@ You must execute the [`setchain`](https://bloks.io/account/liquidx.dsp?loadContr
 Example cleos command:
 
 ```bash
-cleos -u https://nodes.get-scatter.com:443 push transaction '{"delay_sec":0,"max_cpu_usage_ms":0,"actions":[{"account":"mynewchainnn","name":"setchain","data":{"chain_name":"mynewchainnn","chain_meta":{"is_public":true,"is_single_node":false,"dappservices_contract":"dappservicex","chain_id":"e70aaab8997e1dfce58fbfac80cbbb8fecec7b99cf982a9444273cbc64c41473","type":"EOSIO","endpoints":[],"p2p_seeds":[],"chain_json_uri":""}},"authorization":[{"actor":"mynewchainnn","permission":"active"}]}]}'
+cleos -u https://nodes.get-scatter.com:443 push transaction '{"delay_sec":0,"max_cpu_usage_ms":0,"actions":[{"account":"liquidx.dsp","name":"setchain","data":{"chain_name":"mynewchainnn","chain_meta":{"is_public":true,"is_single_node":false,"dappservices_contract":"dappservicex","chain_id":"e70aaab8997e1dfce58fbfac80cbbb8fecec7b99cf982a9444273cbc64c41473","type":"EOSIO","endpoints":[],"p2p_seeds":[],"chain_json_uri":""}},"authorization":[{"actor":"mynewchainnn","permission":"active"}]}]}'
 ```
 
 After that, you must run the `init` action on the `dappservicex` contract.
