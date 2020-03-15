@@ -75,6 +75,7 @@ returns
 ### [docs](https://docs.liquidapps.io/en/stable/)
 - update to using nodeos v2+, pre 2.0 no longer supported
 - add `developers/contract-logs` section and add details on DSP logs
+- add `/liquidx/models/eosio-chains/${CHAIN_ACCOUNT}.json` section to consumer liquidx docs
 
 ### [LiquidX](https://docs.liquidapps.io/en/stable/liquidx.html)
 - Service contracts and service contract mapping no longer mandatory

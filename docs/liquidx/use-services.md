@@ -20,9 +20,9 @@ Ensure that you add `@eosio.code` to the active permission level of the account.
 
 The side chain name is the account on the EOS mainnet that has registered the chain.  You may find what this contract is by asking a DSP, a BP, or the chain team itself.
 
-1 file must also be added to the `/liquidx/models/liquidx-mappings/` directory.
+2 files must be added.  One to the `/liquidx/models/eosio-chains/` directory and one to the `/liquidx/models/liquidx-mappings/` directory.
 
-`sidechain_name.dappservices.json` - this maps the dappservices account on the mainnet to the dappservicex account name on the new chain
+`/liquidx/models/liquidx-mappings/sidechain_name.dappservices.json` - this maps the dappservices account on the mainnet to the dappservicex account name on the new chain
 
 - sidechain_name - EOS mainnet account that has registered the chain
 - mainnet_account - dappservices account on EOS mainnet
@@ -33,6 +33,36 @@ The side chain name is the account on the EOS mainnet that has registered the ch
     "sidechain_name":"",
     "mainnet_account":"dappservices",
     "chain_account":""
+}
+```
+
+`/liquidx/models/eosio-chains/${CHAIN_ACCOUNT}.json` - this maps the chain's configuration details
+
+ - dsp_port - port DSP gateway runs on
+ - webhook_dapp_port - webhook port
+ - nodeos_host - nodeos host address
+ - nodeos_port - nodeos port
+ - secured - bool true/false for http/https for the nodeos address
+ - nodeos_state_history_port - port for nodeos state history websocket
+ - nodeos_p2p_port - nodeos peer 2 peer port
+ - nodeos_endpoint - full nodeos endpoint
+ - demux_port - demux port
+ - name - name of the chain account
+ - local - bool whether chain is local or not
+
+```json
+{
+    "dsp_port":13016,
+    "webhook_dapp_port": 8813,
+    "nodeos_host":"localhost",
+    "nodeos_port":2424,
+    "secured":false,
+    "nodeos_state_history_port":12341,
+    "nodeos_p2p_port":12451,
+    "nodeos_endpoint":"http://localhost:2424",
+    "demux_port":1232,
+    "name":"CHAIN_ACCOUNT_HERE",
+    "local":true
 }
 ```
 
