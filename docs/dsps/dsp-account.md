@@ -31,8 +31,8 @@ Create an account
 ```bash
 # Create a new available account name (replace 'yourdspaccount' with your account name):
 export DSP_ACCOUNT=yourdspaccount
-curl http://faucet-kylin.blockzone.net//create/$DSP_ACCOUNT > keys.json
-curl http://faucet-kylin.blockzone.net//get_token/$DSP_ACCOUNT
+curl http://faucet-kylin.blockzone.net/create/$DSP_ACCOUNT > keys.json
+curl http://faucet-kylin.blockzone.net/get_token/$DSP_ACCOUNT
 export DSP_PRIVATE_KEY=`cat keys.json | jq -e '.keys.active_key.private'`
 export DSP_PUBLIC_KEY=`cat keys.json | jq -e '.keys.active_key.public'`
 ```
