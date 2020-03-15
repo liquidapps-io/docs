@@ -13,7 +13,7 @@ A non block / non full history node is required for the DSP API to interact with
 ## Get EOSIO binary
 
 ```bash
-# nodeos versions below 2.0 are not longer supported
+# nodeos versions below 2.0 are no longer supported
 VERSION=2.0.2
 ```
 
