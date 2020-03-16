@@ -101,3 +101,5 @@ returns
 - Support public archive upload in dapp-client lib
 - fixes
     - Fix archive upload test
+
+_Special thank you to Michael of the EOSUSA team for helping us test and deploy LiquidX_
