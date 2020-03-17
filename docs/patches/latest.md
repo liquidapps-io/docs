@@ -63,7 +63,7 @@ returns
 ```
 - add RC file to load regular zeus-cmd options from, on ~/.zeus/zeusrc.json by default, changeable with --rc-file option | [thank you prcolaco](https://github.com/liquidapps-io/zeus-sdk/pull/9)
 - `zeus create contract <MY_CONTRACT>` now creates `MY_CONTRACT.cpp` instead of `main.cpp`, update cmake to use `MY_CONTRACT.cpp`
-- use v2.0.2 nodeos
+- use v2.0.4 nodeos
 - fixes
     - fix portfolio app requesting new oracle entries twice on load
     - fix portfolio app double adding eos token balances
