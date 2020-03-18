@@ -12,6 +12,7 @@ latest
 - cease support for pre nodeos 2.0 nodes
 - added max pending messages for demux to prevent memory crashes
 - fixed demux get starting block logic, added possibility for head block
+- expose `DEMUX_MAX_PENDING_MESSAGES` in toml file to set pending messages from demux web socket to process before disconnecting to allow pending messages to process.  Behavior is once max pending messages amount hit to disconnect websocket until 50% of messages are processed, then reconnect to continue processing.
 - fixes
     - fix demux head block handler using brackets
     - support new `/v1/chain/send_transaction` endpoint in addition to `/v1/chain/push_transaction`
