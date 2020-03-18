@@ -30,7 +30,7 @@ zeus unbox dgoods
 ## Examples
 ### Test
 ```bash
-zeus test
+zeus test -c
 ```
 
 

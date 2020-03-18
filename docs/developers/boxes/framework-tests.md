@@ -28,7 +28,7 @@ zeus unbox framework-tests
 ## Examples
 ### Run framework tests
 ```bash
-zeus test
+zeus test -c
 ```
 
 

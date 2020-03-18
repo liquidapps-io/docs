@@ -35,7 +35,7 @@ zeus migrate
 ```
 ### Test all
 ```bash
-zeus test
+zeus test -c
 ```
 
 

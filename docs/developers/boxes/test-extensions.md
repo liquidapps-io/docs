@@ -22,7 +22,7 @@ zeus unbox test-extensions
 ## Examples
 ### Watch
 ```bash
-zeus test
+zeus test -c
 ```
 
 ## Zeus Command Extensions

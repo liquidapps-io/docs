@@ -24,7 +24,7 @@ This box contains the LiquidScheduler smart contract libraries, DSP node logic, 
 # npm install -g @liquidapps/zeus-cmd
 zeus unbox cron-dapp-service
 cd cron-dapp-service
-zeus test
+zeus test -c
 ```
 
 ## LiquidScheduler Consumer Example Contract used in unit tests

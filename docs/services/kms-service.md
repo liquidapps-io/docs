@@ -21,4 +21,4 @@ WIP
 ### sdummy3
 ## Tests 
 * [kmsconsumer.spec.js](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/services/kms-dapp-service/test/kmsconsumer.spec.js)
-## [Implementation](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/services/kms-dapp-service/contracts/eos/dappservices/_kms_impl.hpp)
+

@@ -1,146 +1,65 @@
 Become a DSP on another chain
 ==========
 
-LiquidX enables DSPs (DAPP Service Providers) to offer services on new chains.  To do so, a DSP can acquire the necessary mapping files, verify the DSP's account name on the existing and new networks, and launch a DSP based on that new network.
+LiquidX enables DSPs (DAPP Service Providers) to offer services on new chains.  All existing and newly created packages may be staked to and used by developers without any additional modifications.
 
-Becoming a DSP on a new chain requires having an existing DSP account on the EOS mainnet.  The mainnet account will remain the account that claims DSP rewards.  To add a chain from an architecture perspective requires adding a new nodeos instance for that chain, enabling a new demux instance for the new nodeos instance, and opening a new port to receive services.
+To add a chain, a DSP must configure their DSP API's `config.toml` file with the sidechain's details then two way map their EOS mainnet DSP account, the account that will be staked to and will receive rewards, to their sidechain DSP account.  This is done with the [`addaccount`](https://bloks.io/account/liquidx.dsp?loadContract=true&tab=Tables&account=liquidx.dsp&scope=liquidx.dsp&limit=100&action=addaccount) action on the mainnet [`liquidx.dsp`](https://bloks.io/account/liquidx.dsp) account and `adddsp` on the `dappservicex.cpp` contract on the new chain.  As a note, the `dappservicex.cpp` contract's account can be called anything (hopefully `dappservicex` for simplicity), so the name must be found from the community.
+
+To add a chain from an architecture perspective requires adding a new nodeos instance for that chain and having another demux instance running on the DSP's API endpoint.  The nodeos instance can be run external to the DSP API.  There are two additional log files produced for the new chain.  A new dapp-service-node log file for the new gateway port and another demux log file.
 
 Guide:
 
-- [Create Mapping Files](#create-mapping-files)
+- [Editing config.toml file](#editing-config.toml-file)
 - [Push DSP account mapping action](#push-dsp-account-mapping-action)
-- [Register Provider Package with Service Contracts](#register-provider-package-with-service-contracts)
 
-## Create mapping files
+## Editing config.toml file
 
-There are two kinds of mappings when it comes to LiquidX, there are JSON files that must be acquired and translated into the `mapping` env variable in the `config.toml` file and there are actions that must be run on the new chain and the EOS mainnet. The mapping files should be publicly available on the new chain's Github, by API, or with IPFS.
-
-If the file is provided with IPFS, Zeus can be used to unbox the file with:
+In order to enable a new chain, a DSP must add the following to the `config.toml` environment variable file.  This is the file that holds the environment variables for your DSP's API instance.  Each sidechain will need a new `[sidechains.CHAIN_NAME]` section. `CHAIN_NAME` - this is the account on the EOS mainnet that has registered with the [`liquidx.dsp`](https://bloks.io/account/liquidx.dsp) contract as the chain's name.  This name can be found from the block producers of the chain, other DSPs, or the community.
 
 ```bash
-npm i -g @liquidapps/zeus-cmd
-zeus box add liquidx-mynewchainnn <URI> # URI being the IPFS URI
-zeus unbox liquidx-mynewchainnn
-```
-
-The architecture of the mapping files is as follows:
-
-```js
-liquidx-mynewchainnn // root box name
-└── models // models folder
-    ├── liquidx-mappings // generated after npm install
-    │   └── mynewchainnn.json // chain config file
-    └── eosio-chains // where chain config file should be
-        ├── mynewchainnn.dappservices.json // file mapping mainnet dappservices contract to account name dappservicex contract is deployed to
-        ├── mynewchainnn.dsp1.json // file mapping mainnet DSP account name to mynewchainnn DSP account name
-        ├── mynewchainnn.dsp2.json // another one
-        ├── mynewchainnn.ipfs.json // file mapping mainnet vRAM service contract account name to mynewchainnn vRAM service contract  account name
-        ├── mynewchainnn.cron.json // file mapping mainnet cron service contract account name to mynewchainnn cron service contract  account name
-        ├── mynewchainnn.readfn.json // file mapping mainnet read function service contract account name to mynewchainnn read function service contract  account name
-        ├── mynewchainnn.log.json // file mapping mainnet log service contract account name to mynewchainnn log service contract  account name
-        ├── mynewchainnn.oracle.json // file mapping mainnet LiquidHarmony (oracle) service contract account name to mynewchainnn LiquidHarmony (oracle) service contract  account name
-        ├── mynewchainnn.vaccounts.json // file mapping mainnet LiquidAccounts service contract account name to mynewchainnn LiquidAccounts service contract  account name
-        ├── mynewchainnn.storage.json // file mapping mainnet LiquidStorage service contract account name to mynewchainnn LiquidStorage service contract  account name
-        ├── mynewchainnn.auth.json // file mapping mainnet LiquidAuth service contract account name to mynewchainnn LiquidAuth service contract  account name
-        ├── mynewchainnn.vcpu.json // file mapping mainnet vCPU service contract account name to mynewchainnn vCPU service contract  account name
-        ├── mynewchainnn.storage.json // file mapping mainnet LiquidStorage service contract account name to mynewchainnn LiquidStorage service contract  account name
-```
-
-The DSP must be aware of each of the mappings in the `eosio-chains` section.  Below is an example `config.toml` with the necessary account mappings. 
-
-In order to enable a new chain, a DSP must add the following to the `config.toml` file.  This is the file that holds the environment variables for your DSP's API instance.  Each sidechain will need a new `[sidechains.LIQUIDX_CONTRACT_NAME]` section.
-
-The `mapping` var can be created from the mapping files and the `name` is the `chain_account` in the mapping files
-
-```bash
-# LIQUIDX_CONTRACT_NAME - this is the name of the account that has the LiquidX code deployed to it. 
-
+# sidechain section, if no sidechains, leave as [sidechains], can add additional sidechains with [sidechains.newchain] ...
 [sidechains]
-  [sidechains.LIQUIDX_CONTRACT_NAME]
+  [sidechains.test1]
     # dsp
     dsp_port = 3116 # dsp port to run new chain's services on, this is the port developers will push to, must be unique per new chain
-    dsp_account = "" # DSP Account on new chain
+    dsp_account = "test1" # DSP Account on new chain
     dsp_private_key = "" # DSP active private key on new chain
     # nodeos
-    nodeos_host = "" # nodeos host running new chain
+    nodeos_host = "localhost" # nodeos host running new chain
     nodeos_port = 8888 # nodeos host port
     nodeos_secured = false # nodeos secured bool (true: https, false: http)
     nodeos_chainid = "" # chainid of new chain
     nodeos_websocket_port = 8887 # nodeos websocket port, can be same per nodeos instance
     webhook_dapp_port = 8113 # nodeos webhook port, must be unique per chain
     # demux
-    demux_webhook_port = 3196 # webhook port for demux, must be unique per instance
-    demux_backend = "state_history_plugin" # demux backend plugin
-    demux_socket_mode = "sub" # demux socket mode
-    demux_head_block = 1 # head block to start new chain's demux instance at
+    demux_webhook_port = 3196 # port demux runs on, must be unique per new chain
+    demux_socket_mode = "sub"
+    demux_head_block = 1 # head block to sync demux from
+    # demux defaults to first pulling head block from toml file if postgres database is not set
+    # after database is set, defaults to database, to overwrite and default to toml file, pass true
+    demux_bypass_database_head_block = false
     # sidechain 
-    liquidx_contract = "liquidxxxxxx" # liquidx contract on the EOS mainnet
-    name = "" # contract on the EOS mainnet that registered the new chain
-    mapping = "dappservices:dappservicex,cronservices:cronservices,ipfsservice1:ipfsservice1,readfndspsvc:readfndspsvc,logservices1:logservices1,oracleservic:oracleservic,accountless1:accountless1,liquidstorag:liquidstorag,authfndspsvc:authfndspsvc,vcpuservices:vcpuservices"
-    # mapping of all service files (main_chain:new_chain), and the (dappservices:new_chain_dappservicex_account)
+    liquidx_contract = "liquidx.dsp" # liquidx contract on the EOS mainnet
+    name = "test1" # CHAIN_NAME - contract on the EOS mainnet that registered the new chain
+    # the mapping below contains the dappservices:dappservicex and mainnet DSP account to the new chain's DSP account mapping
+    mapping = "dappservices:dappservicex,heliosselene:heliosselene"
+  # [sidechains.ANOTHER_CHAIN_NAME]
+    # ...
 ```
 
-A further explanation of each file's key/value pairs:
+Once this has been configured, the environment variables for the DSP can be updated with:
 
-Example service file mapping `./models/liquidx-mappings/mynewchainnn.ipfs.json`
-
-- sidechain_name - account name of contract on the EOS mainnet that registered the chain
-- mainnet_account - service contract on main chain
-- chain_account - service contract on new chain
-
-```json
-{
-  "sidechain_name": "mynewchainnn",
-  "mainnet_account": "ipfsservice1",
-  "chain_account": "ipfsservice1"
-}
+```bash
+systemctl stop dsp
+setup-dsp
+systemctl start dsp
 ```
 
-Example DSP file mapping `./models/liquidx-mappings/mynewchainnn.uuddlrlrbass.json`
-
-- sidechain_name - account name of contract on the EOS mainnet that registered the chain
-- mainnet_account - DSP account on main chain
-- chain_account - DSP account on new chain
-
-```json
-{
-    "sidechain_name":"mynewchainnn",
-    "mainnet_account":"uuddlrlrbass",
-    "chain_account":"uuddlrlrbass"
-}
-```
-
-Example sidechain file mapping `./models/eosio-chains/mynewchainnn.json`
-
-- dsp_port - port of a DSP API's on the new chain, default 3115 (must be unique per chain)
-- nodeos_host - host address of nodeos endpoint
-- nodeos_port - port of nodeos endpoint
-- secured - true or false (true = https, false = http)
-- nodeos_state_history_port - state history port endpoint for nodeos instance
-- nodeos_p2p_port - port nodeos is listening on for peers
-- nodeos_endpoint - full nodeos endpoint (secured + host + port), "http://localhost:8888"
-- demux_port - port demux is running on, default 3195 (must be unique per chain)
-- name - mainnet account name used to register chain
-- local - bool whether new chain is local or not
-
-```json
-{
-    "dsp_port":3116,
-    "nodeos_host":"localhost",
-    "nodeos_port":8888,
-    "secured":false,
-    "nodeos_state_history_port":8887,
-    "nodeos_p2p_port":9876,
-    "nodeos_endpoint":"http://localhost:8888",
-    "demux_port":3196,
-    "name":"mynewchainnn",
-    "local":false
-}
-```
+You can also upgrade to the latest version of the DSP software by following the steps: [here](../dsps/upgrade).
 
 ## Push DSP account mapping action
 
-On the EOS mainnet, the EOS mainnet's DSP account must be connected to the new chain's DSP account.  This is done using the `addaccount` command on the account on the EOS mainnet that has deployed the LiquidX contract, i.e., `liquidxxxxxx`.
+On the EOS mainnet, the EOS mainnet's DSP account must be connected to the new chain's DSP account.  This is done using the [`addaccount`](https://bloks.io/account/liquidx.dsp?loadContract=true&tab=Actions&account=liquidx.dsp&scope=liquidx.dsp&limit=100&action=addaccount) command on the [`liquidx.dsp`](https://bloks.io/account/liquidx.dsp) account.
 
 - owner {name} - DSP account name on the EOS mainnet
 - chain_account {name} - DSP account name on the new chain
@@ -149,13 +68,23 @@ On the EOS mainnet, the EOS mainnet's DSP account must be connected to the new c
 Cleos example:
 
 ```bash
-cleos -u https://nodes.get-scatter.com:443 push transaction '{"delay_sec":0,"max_cpu_usage_ms":0,"actions":[{"account":"liquidxxxxxx","name":"addaccount","data":{"owner":"uuddlrlrbass","chain_account":"uuddlrlrbass","chain_name":"mynewchainnn"},"authorization":[{"actor":"uuddlrlrbass","permission":"active"}]}]}'
+cleos -u https://nodes.get-scatter.com:443 push transaction '{"delay_sec":0,"max_cpu_usage_ms":0,"actions":[{"account":"liquidx.dsp","name":"addaccount","data":{"owner":"uuddlrlrbass","chain_account":"uuddlrlrbass","chain_name":"mynewchainnn"},"authorization":[{"actor":"uuddlrlrbass","permission":"active"}]}]}'
 ```
 
-Then on the new chain, submit an `adddsp` action on the account that is marked as the `chain_account` in the `mynewchainnn.dappservices.json` file.
+On the new chain you must find the account that has deployed the `dappservicex.cpp` code.  This can be found by asking a BP, a member of the community, or by checking the [`chainentry`](https://bloks.io/account/liquidx.dsp?loadContract=true&tab=Tables&table=chainentry&account=liquidx.dsp&scope=CHAIN_NAME_HERE&limit=100) table on the [`liquidx.dsp`](https://bloks.io/account/liquidx.dsp) contract and providing the scope of the `chain_name` used to register in the previous step.
+
+This will return the `chain_meta` field:
+
+```json
+{ "is_public": 1, "is_single_node": 0, "dappservices_contract": "dappservicex", "chain_id": "e70aaab8997e1dfce58fbfac80cbbb8fecec7b99cf982a9444273cbc64c41473", "type": "EOSIO", "endpoints": [], "p2p_seeds": [], "chain_json_uri": "" }
+```
+
+The `dappservices_contract` value is the name of the contract that has deployed the `dappservicex.cpp` code, `dappservicex` in this case.
+
+Once you have that then on the new chain, submit an `adddsp` action on that account.
 
 - owner {name} - DSP name on new chain
-- dsp {name} - DSP name on mainnet or Jungle
+- dsp {name} - DSP name on mainnet
 
 Cleos example:
 
@@ -164,16 +93,6 @@ cleos -u $NEW_CHAIN_NODEOS_ENDPOINT push transaction '{"delay_sec":0,"max_cpu_us
 ```
 
 With that you have 2 way mapped your DSP account name.  On the EOS Mainnet, the DSP's account has been linked to the new chain's network.  And on the new network, the EOS Mainnet's DSP account has been verified.
-
-## Register Provider Package with Service Contracts
-
-In order to provide the same package that is provided on the EOS Mainnet, a DSP must register as a provider with each package they intend to offer with the service contract of the sidechain.  This is done with the `regprovider` action on each service contract.  The Zeus command to register a package did this in the background previously.
-
-Here is an example of registering a provider package with the `ipfsservice1` contract:
-
-```bash
-cleos -u $NEW_CHAIN_NODEOS_ENDPOINT push transaction '{"delay_sec":0,"max_cpu_usage_ms":0,"actions":[{"account":"ipfsservice1","name":"regprovider","data":{"provider":"heliosselene","model":{"model":{"cleanup_model_field":{"cost_per_action":1},"commit_model_field":{"cost_per_action":1},"warmup_model_field":{"cost_per_action":1}},"package_id":"package1"}},"authorization":[{"actor":"heliosselene","permission":"active"}]}]}'
-```
 
 With that, the DSP is ready to offer services.
 

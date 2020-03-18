@@ -23,7 +23,7 @@ zeus unbox airhodl
 ## Examples
 ### Test
 ```bash
-zeus test
+zeus test -c
 ```
 
 

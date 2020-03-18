@@ -15,8 +15,7 @@ kms-dapp-service
 
 
 
-## Contracts
-* [`kmsservice`](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/services/kms-dapp-service/contracts/eos/dappservices/_kms_impl.hpp)
+
 ## Install
 ```bash
 zeus unbox kms-dapp-service

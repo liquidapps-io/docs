@@ -22,7 +22,6 @@ sign-dapp-service
 * [`ethereumjs-tx`](http://npmjs.com/package/ethereumjs-tx)
 
 ## Contracts
-* [`signservice`](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/services/sign-dapp-service/contracts/eos/dappservices/_sign_impl.hpp)
 * [`signer`](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/services/sign-dapp-service/contracts/eos/signer)
 ## Install
 ```bash

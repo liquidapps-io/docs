@@ -19,9 +19,11 @@ Developers
    developers/vaccounts-getting-started
    developers/harmony-getting-started
    developers/cron-getting-started
+   developers/contract-logs
    developers/macros
    developers/unit-testing
    developers/dsp-packages-and-staking
    developers/boxes/zeus-boxes
+   developers/zeus-create-service
    
 * :ref:`search`

@@ -17,7 +17,6 @@ vcpu-dapp-service
 * [`node-fetch`](http://npmjs.com/package/node-fetch)
 
 ## Contracts
-* [`vcpuservice`](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/services/vcpu-dapp-service/contracts/eos/dappservices/_vcpu_impl.hpp)
 
 ## Install
 ```bash

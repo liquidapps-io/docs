@@ -24,7 +24,7 @@ This box contains the LiquidAccounts smart contract libraries, DSP node logic, u
 # npm install -g @liquidapps/zeus-cmd
 zeus unbox vaccounts-dapp-service
 cd vaccounts-dapp-service
-zeus test
+zeus test -c
 ```
 
 ## LiquidAccount Consumer Example Contract used in unit tests
@@ -92,6 +92,9 @@ CONTRACT_START()
 CONTRACT_END((init)(hello)(hello2)(regaccount)(xdcommit)(xvinit))
 ```
 
+## Use LiquidAccounts between contracts
+To enable the usage of LiquidAccounts between contracts, the subscriber contract (contract that wishes to use LiquidAccounts of another host contract) must add the `#define VACCOUNTS_SUBSCRIBER` definition to the smart contract.  The subscriber contract must also be staked to a DSP offering the LiquidAccounts service, but this DSP does not need to be the same DSP as the DSP providing services to the host contract.  In place of setting the `CHAIN_ID` with the `xvinit` action (detailed below), the account name of the host account providing the LiquidAccounts (not the DSP account) must be used in its place.
+
 ## Compile
 
 See the unit testing section for details on adding unit tests.
@@ -134,12 +137,14 @@ cleos -u $DSP_ENDPOINT push action dappservices stake "[\"$KYLIN_TEST_ACCOUNT\",
 ```
 
 ## Test
-First you'll need to initialize the LiquidAccounts implementation with the `chain_id` of the platform you're operating on.
+First you'll need to initialize the LiquidAccounts implementation with the `chain_id` of the platform you're operating on.  If you are using the `#define VACCOUNTS_SUBSCRIBER` definition to use LiquidAccounts from another host account, that host account must be used in place of the `chain_id`.
 
 ```bash
 # kylin
 export CHAIN_ID=5fff1dae8dc8e2fc4d5b23b2c7665c97f9e9d8edf2b6485a86ba311c25639191
 cleos -u $DSP_ENDPOINT push action $KYLIN_TEST_ACCOUNT xvinit "[\"$CHAIN_ID\"]" -p $KYLIN_TEST_ACCOUNT
+# if using VACCOUNTS_SUBSCRIBER
+cleos -u $DSP_ENDPOINT push action $KYLIN_TEST_ACCOUNT xvinit "[\"$HOST_ACCOUNT_NAME\"]" -p $KYLIN_TEST_ACCOUNT
 ```
 
 Then you can begin registering accounts.  You will need to do this either in a nodejs environment using the [`dapp-client-lib`](https://www.npmjs.com/package/@liquidapps/dapp-client), or you can use the `zeus vaccounts push-action`.  [Here is an example of using the lib to register an account.](https://github.com/liquidapps-io/zeus-sdk/blob/master/boxes/groups/services/vaccounts-dapp-service/client/examples/push_register_liquid_account.ts).
@@ -188,4 +193,39 @@ zeus vaccounts push-action <CONTRACT> <ACTION> <PAYLOAD> --dsp-url https://kylin
 zeus vaccounts push-action test1v regaccount '{"vaccount":"vaccount1"}'
 zeus vaccounts push-action vacctstst123 regaccount '{"vaccount":"vaccount2"}' --private-key 5KJL... -u https://kylin-dsp-2.liquidapps.io
 zeus vaccounts push-action vacctstst123 regaccount '{"vaccount":"vaccount3"}' -u http://kylin-dsp-2.liquidapps.io/ --encrypted --network=kylin --password=password
+```
+
+## Deserialize Payload | [`des-payload.js`](https://github.com/liquidapps-io/zeus-sdk/blob/master/boxes/groups/services/vaccounts-dapp-service/utils/vaccounts-service/des-payload.js)
+This file is under the utility/tool and it is for deserializing `xvexec` data (vaccount action data).
+
+Example:
+
+`deserializeVactionPayload('dappaccoun.t', '6136465e000000002a00000000000000aca376f206b8fc25a6ed44dbdc66547c36c6c33e3a119ffbeaef943642f0e90600000000000000008090d9572d3ccdcd002370ae375c19feaa49e0d336557df8aa49010000000000000004454f5300000000026869', 'https://mainnet.eos.dfuse.io')`
+
+returns
+
+```json
+{
+   "payload":{
+      "expiry":"1581659745",
+      "nonce":"42",
+      "chainid":"ACA376F206B8FC25A6ED44DBDC66547C36C6C33E3A119FFBEAEF943642F0E906",
+      "action":{
+         "account":"",
+         "action_name":"transfervacc",
+         "authorization":[
+
+         ],
+         "action_data":"70AE375C19FEAA49E0D336557DF8AA49010000000000000004454F5300000000026869"
+      }
+   },
+   "deserializedAction":{
+      "payload":{
+         "vaccount":"dapjwaewayrb",
+         "to":"dapjkzepavdy",
+         "quantity":"0.0001 EOS",
+         "memo":"hi"
+      }
+   }
+}
 ```

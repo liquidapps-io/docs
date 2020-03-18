@@ -25,7 +25,7 @@ zeus unbox mocha
 ## Examples
 ### Test
 ```bash
-zeus test
+zeus test -c
 ```
 
 

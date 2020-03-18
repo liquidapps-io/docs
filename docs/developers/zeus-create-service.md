@@ -5,7 +5,6 @@ Zeus Create Service
 
 The `templates-dsp-service` box contains a basic version of:
 
-- service contract - contract that gets uploaded to the services account that enables billing and registering of providers
 - consumer contract - contract showcasing simple examples of how to use the service
 - unit test - file that shows examples of the consumer contract being used
 - dsp-service.json - this goes in the `/models/dapp-service` directory of the service

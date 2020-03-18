@@ -23,7 +23,6 @@ oracle-dapp-service
 * [`node-fetch`](http://npmjs.com/package/node-fetch)
 
 ## Contracts
-* [`oracleservice`](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/services/oracle-dapp-service/contracts/eos/dappservices/_oracle_impl.hpp)
 
 ## Install
 ```bash

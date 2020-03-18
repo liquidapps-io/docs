@@ -13,9 +13,8 @@ A non block / non full history node is required for the DSP API to interact with
 ## Get EOSIO binary
 
 ```bash
-# install 1.8 even if chain is sub 1.7.*
-VERSION=1.8.12
-# we do not yet support nodeos version 2+, the secondary index query changed, so updates to the DSP logic must be made
+# nodeos versions 1.8+ and 2.0+ are supported
+VERSION=2.0.4
 ```
 
 ### Ubuntu 18.04
@@ -111,7 +110,8 @@ p2p-listen-endpoint = 0.0.0.0:9876
 blocks-dir = "blocks"
 abi-serializer-max-time-ms = 3000
 max-transaction-time = 150000
-wasm-runtime = wabt
+wasm-runtime = eos-vm
+eos-vm-oc-enable = true
 reversible-blocks-db-size-mb = 1024
 contracts-console = true
 p2p-max-nodes-per-host = 1

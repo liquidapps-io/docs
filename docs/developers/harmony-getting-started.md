@@ -42,7 +42,7 @@ This box contains the oracle smart contract libraries, DSP node logic, unit test
 # npm install -g @liquidapps/zeus-cmd
 zeus unbox oracle-dapp-service
 cd oracle-dapp-service
-zeus test
+zeus test -c
 ```
 
 ## Creating an Oracle Request URI

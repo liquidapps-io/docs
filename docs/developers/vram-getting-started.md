@@ -36,11 +36,23 @@ zeus create contract mycontract
 zeus unbox coldtoken
 cd coldtoken
 # unit test coldtoken contract locally
-zeus test
+zeus test -c
 ```
 
 ## Advanced features
 To use advanced multi index features include `#define USE_ADVANCED_IPFS` at the top of the contract file while following the steps below. If you have already deployed a contract that does not use advanced features, do not add this line, as it is not backwards compatible.
+
+Another feature of the advanced multi index is `warmuprow` and `cleanuprow` actions. The `warmuprow` action allows for faster warmups for IPFS actions.  The warmup process is where data is fetched and loaded into RAM to be used.  Previously each RAM entry touched would require 3 separate warmup actions, now this can be done within 1 action. The `cleanuprow` action removes all the data entries created by the `warmuprow` in the case that a rollback is required.
+
+Additionally, vram tables from other contracts can now be read with the addition of the `warmupcode` action. This is done the same way as a regular multi_index table by specifying a `code` other than `_self`. For example, by replacing:
+```
+my_table_struct mytable(_self,_self.value);
+```
+with
+```
+my_table_struct mytable(othercntr,othercntr.value);
+```
+This does require that the table struct and table name of the remote contract to be known, just as in regular multi_index. Remote tables can only be read, they cannot be modified. Remote table owners do not have to be staked to the same DSP as your contract.
 
 ## Add your contract logic
 in contract/eos/mycontract/mycontract.cpp
@@ -97,7 +109,7 @@ See the unit testing section for details on adding unit tests.
 ```bash
 zeus compile
 # compile and test with
-zeus test
+zeus test -c
 ```
 
 ## Deploy Contract
@@ -205,7 +217,7 @@ Steps to produce `/ipfs-dapp-service/test1-test-table.json` file below:
 npm i -g @liquidapps/zeus-cmd
 zeus unbox ipfs-dapp-service
 cd ipfs-dapp-service
-zeus test
+zeus test -c
 export CONTRACT_NAME=test1
 node utils/ipfs-service/get-table
 ```
@@ -293,7 +305,7 @@ Steps to produce console logged output below:
 npm i -g @liquidapps/zeus-cmd
 zeus unbox ipfs-dapp-service
 cd ipfs-dapp-service
-zeus test
+zeus test -c
 export CONTRACT_NAME=test1
 export SCOPE=test1
 export TABLE_NAME=test

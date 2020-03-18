@@ -23,7 +23,6 @@ ipfs-dapp-service
 * [`node-fetch`](http://npmjs.com/package/node-fetch)
 
 ## Contracts
-* [`ipfsservice`](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/services/ipfs-dapp-service/contracts/eos/dappservices/_ipfs_impl.hpp)
 
 * [`oldipfscons`](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/services/ipfs-dapp-service/contracts/eos/oldipfscons)
 ## Install
@@ -51,7 +50,7 @@ zeus unbox ipfs-dapp-service
   "prettyName": "LiquidVRAM",
   "stage": "Stable",
   "description": "Virtual Memory Service",
-  "version": "1.3",
+  "version": "1.4",
   "commands": {
     "commit": {
       "blocking": false,
@@ -95,9 +94,23 @@ zeus unbox ipfs-dapp-service
         "size": "uint32_t",
         "uri": "std::string"
       }
-    }
-  },
-  "_staging": {
+    },
+    "warmupcode": {
+      "blocking": true,
+      "request": {
+        "uri": "std::string",
+        "code": "name"
+      },
+      "callback": {
+        "size": "uint32_t",
+        "uri": "std::string",
+        "data": "std::vector<char>"
+      },
+      "signal": {
+        "size": "uint32_t",
+        "uri": "std::string"
+      }
+    },
     "warmuprow": {
       "blocking": true,
       "request": {
