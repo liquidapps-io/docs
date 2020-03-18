@@ -13,7 +13,7 @@ A non block / non full history node is required for the DSP API to interact with
 ## Get EOSIO binary
 
 ```bash
-# nodeos versions below 2.0 are no longer supported
+# nodeos versions 1.8+ and 2.0+ are supported
 VERSION=2.0.4
 ```
 
@@ -143,13 +143,7 @@ cat p2p-config.ini | grep "p2p-peer-address" >> $HOME/.local/share/eosio/nodeos/
 
 *Please note the following about some `config.ini` settings:*
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 - `wasm-runtime = wabt` must be used as the `wavm` engine has bugs
->>>>>>> production
-=======
->>>>>>> 19bc0b37a47698f95f3c6609e022205283c0ff9f
 - `read-mode = head` (default is: `read-more = speculative` and does not need to be specified in the `config.ini`) must not be used to prevent duplicate `xwarmup` actions | [read more about read modes here](https://developers.eos.io/eosio-nodeos/docs/read-modes)
 
 ## Run 
