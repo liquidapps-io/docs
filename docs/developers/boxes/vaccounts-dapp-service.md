@@ -24,6 +24,7 @@ vaccounts-dapp-service
 
 ## Contracts
 
+* [`vaccountsremote`](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/services/vaccounts-dapp-service/contracts/eos/vaccountsremote)
 ## Install
 ```bash
 zeus unbox vaccounts-dapp-service

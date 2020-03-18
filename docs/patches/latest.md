@@ -1,11 +1,19 @@
 latest
 ========
 
-### [LiquidVRAM Service](https://docs.liquidapps.io/en/v2.0/services/ipfs-service.html)
+### [LiquidVRAM Service](https://docs.liquidapps.io/en/stable/services/ipfs-service.html)
 - add new service responses and requests when `#define USE_ADVANCED_IPFS` is used
 - add warmuprow and cleanuprow, these allow for more efficient loading and cleaning of vram shard information
 - add warmupcode, which allows for vram to be accessed from external contracts and third party DSPs
 - warmupcode is used automatically when required when the `code` specified in a multi-index table is something other than `self`
+
+### [LiquidAccounts Service](https://docs.liquidapps.io/en/stable/services/vaccounts-service.html)
+- add ability for a contract to use vaccounts from another contract when `#define VACCOUNTS_SUBSCRIBER` is used
+    - xvinit argument is replaced in this case with a name (instead of a chainid)
+    - xvinit must be used to set the name of the contract providing vaccounts functionality
+    - contract using vaccounts_subscriber must be staked to a DSP, but does not have to be same DSP that the vaccounts host contract is staked to
+-fixes
+    - fixed issue where vaccount push requests are not forwarded to a staked provider
 
 ### [@liquidapps/dsp](https://www.npmjs.com/package/@liquidapps/dsp)
 - update get table row secodary index changes in 2.0

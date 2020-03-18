@@ -92,6 +92,9 @@ CONTRACT_START()
 CONTRACT_END((init)(hello)(hello2)(regaccount)(xdcommit)(xvinit))
 ```
 
+## Use LiquidAccounts between contracts
+To enable the usage of LiquidAccounts between contracts, the subscriber contract (contract that wishes to use LiquidAccounts of another host contract) must add the `#define VACCOUNTS_SUBSCRIBER` definition to the smart contract.  The subscriber contract must also be staked to a DSP offering the LiquidAccounts service, but this DSP does not need to be the same DSP as the DSP providing services to the host contract.  In place of setting the `CHAIN_ID` with the `xvinit` action (detailed below), the account name of the host account providing the LiquidAccounts (not the DSP account) must be used in its place.
+
 ## Compile
 
 See the unit testing section for details on adding unit tests.
@@ -134,12 +137,14 @@ cleos -u $DSP_ENDPOINT push action dappservices stake "[\"$KYLIN_TEST_ACCOUNT\",
 ```
 
 ## Test
-First you'll need to initialize the LiquidAccounts implementation with the `chain_id` of the platform you're operating on.
+First you'll need to initialize the LiquidAccounts implementation with the `chain_id` of the platform you're operating on.  If you are using the `#define VACCOUNTS_SUBSCRIBER` definition to use LiquidAccounts from another host account, that host account must be used in place of the `chain_id`.
 
 ```bash
 # kylin
 export CHAIN_ID=5fff1dae8dc8e2fc4d5b23b2c7665c97f9e9d8edf2b6485a86ba311c25639191
 cleos -u $DSP_ENDPOINT push action $KYLIN_TEST_ACCOUNT xvinit "[\"$CHAIN_ID\"]" -p $KYLIN_TEST_ACCOUNT
+# if using VACCOUNTS_SUBSCRIBER
+cleos -u $DSP_ENDPOINT push action $KYLIN_TEST_ACCOUNT xvinit "[\"$HOST_ACCOUNT_NAME\"]" -p $KYLIN_TEST_ACCOUNT
 ```
 
 Then you can begin registering accounts.  You will need to do this either in a nodejs environment using the [`dapp-client-lib`](https://www.npmjs.com/package/@liquidapps/dapp-client), or you can use the `zeus vaccounts push-action`.  [Here is an example of using the lib to register an account.](https://github.com/liquidapps-io/zeus-sdk/blob/master/boxes/groups/services/vaccounts-dapp-service/client/examples/push_register_liquid_account.ts).
