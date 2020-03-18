@@ -95,7 +95,7 @@ zeus unbox storage-dapp-service
         "permission": "active"
       }
     },
-    "ipfshttpgw": {}
+    "get_uri": {}
   }
 }
 ```

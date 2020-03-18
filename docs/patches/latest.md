@@ -99,6 +99,9 @@ returns
 - use `pricepkg` action to price action in quota
 - add @eosio.code note for dappservicex and consumer contracts in liquidx section
 
+### [LiquidStorage Service](https://docs.liquidapps.io/en/v2.0/services/storage-service.html)
+- Added unauthenticated `get_uri` api endpoint.
+
 ### [LiquidStorage for LiquidAccounts PR](https://github.com/liquidapps-io/zeus-sdk/pull/18) - thank you https://github.com/MrToph
 - Added `public_upload_vaccount` endpoint. This endpoint can be used directly from the frontend by vaccounts. The vaccount signs the file to upload, sends it to the DSP, which verifies and stores the file. Optionally, it does some additional quota checks defined by the consumer contract: It can define max file sizes, daily global upload limits, and daily limits on a per vaccount level.
 - Added a `storageconsumer` contract testing the vaccount uploads + limits checking.
