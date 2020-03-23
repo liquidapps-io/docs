@@ -70,12 +70,8 @@ Bootstrap peers default to IPFS nodes provided by the core development team.  Th
 ```sh
 # kylin
 
-ipfs bootstrap add /ip4/18.212.96.94/tcp/4001/ipfs/QmZ5gLTZwvfD5DkbbaFFX4YJCi7f4C5oQAgq8qpjL8S1ur
-ipfs bootstrap add /ip4/18.212.76.109/tcp/4001/ipfs/QmcCX4b3EF3eXaDe5dgxTL9mXbyci4FwcJAjWqpub5vCXM
-
-# mainnet
-
-ipfs bootstrap add /ip4/35.170.64.183/tcp/4001/ipfs/QmZpyMnBJKwyPJNBUYVuCZEJuKQBEwM6qVHsSp179B3yao
+ipfs bootstrap add /ip4/52.70.167.190/tcp/4001/ipfs/QmZ5gLTZwvfD5DkbbaFFX4YJCi7f4C5oQAgq8qpjL8S1ur
+ipfs bootstrap add /ip4/34.224.152.33/tcp/4001/ipfs/QmcCX4b3EF3eXaDe5dgxTL9mXbyci4FwcJAjWqpub5vCXM
 ```
 
 #### Swarm Peers | [Documentation](https://docs.ipfs.io/reference/api/cli/#ipfs-swarm-connect)
@@ -85,12 +81,8 @@ Swarm peers are addresses that the local daemon will listen on for connections f
 ```sh
 # kylin
 
-ipfs swarm connect /ip4/18.212.96.94/tcp/4001/ipfs/QmZ5gLTZwvfD5DkbbaFFX4YJCi7f4C5oQAgq8qpjL8S1ur
-ipfs swarm connect /ip4/18.212.76.109/tcp/4001/ipfs/QmcCX4b3EF3eXaDe5dgxTL9mXbyci4FwcJAjWqpub5vCXM
-
-# mainnet
-
-ipfs swarm connect /ip4/35.170.64.183/tcp/4001/ipfs/QmZpyMnBJKwyPJNBUYVuCZEJuKQBEwM6qVHsSp179B3yao
+ipfs swarm connect /ip4/52.70.167.190/tcp/4001/ipfs/QmZ5gLTZwvfD5DkbbaFFX4YJCi7f4C5oQAgq8qpjL8S1ur
+ipfs swarm connect /ip4/34.224.152.33/tcp/4001/ipfs/QmcCX4b3EF3eXaDe5dgxTL9mXbyci4FwcJAjWqpub5vCXM
 ```
 
 #### Reconnecting Periodically | [Medium Article](https://medium.com/pinata/how-to-keep-your-ipfs-nodes-connected-and-ensure-fast-content-discovery-7d92fb23da46)
@@ -103,7 +95,7 @@ cat <<EOF > /lib/systemd/system/gateway-connector.service
 [Unit]
 Description=Job that periodically connects this IPFS node to the gateway node
 [Service]
-ExecStart=/usr/local/bin/ipfs swarm connect <ADD_MULTIPLE_CONNECTIONS_HERE_SPACE_SEPARATED> # /ip4/18.212.96.94/tcp/4001/ipfs/QmZ5gLTZwvfD5DkbbaFFX4YJCi7f4C5oQAgq8qpjL8S1ur /ip4/18.212.76.109/tcp/4001/ipfs/QmcCX4b3EF3eXaDe5dgxTL9mXbyci4FwcJAjWqpub5vCXM /ip4/35.170.64.183/tcp/4001/ipfs/QmZpyMnBJKwyPJNBUYVuCZEJuKQBEwM6qVHsSp179B3yao
+ExecStart=/usr/local/bin/ipfs swarm connect <ADD_MULTIPLE_CONNECTIONS_HERE_SPACE_SEPARATED> # /ip4/52.70.167.190/tcp/4001/ipfs/QmZ5gLTZwvfD5DkbbaFFX4YJCi7f4C5oQAgq8qpjL8S1ur /ip4/34.224.152.33/tcp/4001/ipfs/QmcCX4b3EF3eXaDe5dgxTL9mXbyci4FwcJAjWqpub5vCXM
 Environment="IPFS_PATH=/root/.ipfs"
 EOF
 exit
