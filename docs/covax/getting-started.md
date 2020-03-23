@@ -7,6 +7,6 @@ Telegram link: [https://t.me/CoVaxApp](https://t.me/CoVaxApp)
 
 ## Docs:
 
-[Become a Block Producer](become-a-dsp)
+[Become a Block Producer](become-a-bp)
 
 [Become a DAPP Service Provider](become-a-dsp)

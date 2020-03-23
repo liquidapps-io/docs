@@ -28,7 +28,7 @@ To obtain a Block Producer account on CoVax, reach out in the CoVax Telegram cha
     "max_inline_action_depth": 4,
     "max_authority_depth": 6
   },
-  "initial_chain_id": "0000000000000000000000000000000000000000000000000000000000000000"
+  "initial_chain_id": "63788f6e75cdb4ec9d8bb64ce128fa08005326a8b91702d0d03e81ba80e14d27"
 }
 ```
 
