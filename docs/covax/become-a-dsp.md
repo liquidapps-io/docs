@@ -3,11 +3,11 @@ Become a DAPP Service Provider
 
 The CoVax chain utilizes the LiquidX technology to enable DAPP Network services to be provided on EOSIO based chains.  To read more on LiquidX, please [see the LiquidX section](../liquidx/getting-started).  To learn more about setting up a DAPP Service Provider, see the [getting started section](../dsps/getting-started).
 
-To obtain a DAPP Service Provider account on CoVax, reach out in the CoVax Telegram channel: https://t.me/CoVaxApp.
+To obtain a DAPP Service Provider account on CoVax, reach out in the CoVax Telegram channel: [https://t.me/CoVaxApp](https://t.me/CoVaxApp).
 
 Guide:
 
-- [Update config.toml file](#update-config.toml-file) update config.toml environment variable file with the CoVax chain sidechain section
+- [Update config.toml file](#update-config-toml-file) update config.toml environment variable file with the CoVax chain sidechain section
 - [Push DSP account mapping action on EOS mainnet](#push-dsp-account-mapping-action-on-eos-mainnet) run `adddsp` action on the `dappservicex` contract on the CoVax chain to link the CoVax chain DSP account to your EOS mainnet DSP account
 - [Push DSP account mapping action on CoVax Chain](#push-dsp-account-mapping-action-on-covax-chain) run the `addaccount` action on the `liquidx.dsp` contract on the EOS mainnet to link the EOS mainnet DSP account to the CoVax chain DSP account
 

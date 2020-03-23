@@ -1,7 +1,7 @@
 Become a Block Producer
 ==========
 
-To obtain a Block Producer account on CoVax, reach out in the CoVax Telegram channel: https://t.me/CoVaxApp.
+To obtain a Block Producer account on CoVax, reach out in the CoVax Telegram channel: [https://t.me/CoVaxApp](https://t.me/CoVaxApp).
 
 ## Genesis JSON:
 

@@ -9,7 +9,7 @@ Covax
 .. toctree::
    :glob:
    
-   covax/overview
+   covax/getting-started
    covax/become-a-dsp
    covax/become-a-bp
    
