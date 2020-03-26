@@ -64,5 +64,5 @@ Once you have that then on the CoVax chain, submit an `adddsp` action on that ac
 Cleos example:
 
 ```bash
-cleos -u http://peer-covax.liquidapps.io:80 push transaction '{"delay_sec":0,"max_cpu_usage_ms":0,"actions":[{"account":"dappservicex","name":"adddsp","data":{"owner":"uuddlrlrbass","dsp":"uuddlrlrbass"},"authorization":[{"actor":"uuddlrlrbass","permission":"active"}]}]}'
+cleos -u http://eosnode-covax.liquidapps.io push transaction '{"delay_sec":0,"max_cpu_usage_ms":0,"actions":[{"account":"dappservicex","name":"adddsp","data":{"owner":"uuddlrlrbass","dsp":"uuddlrlrbass"},"authorization":[{"actor":"uuddlrlrbass","permission":"active"}]}]}'
 ```

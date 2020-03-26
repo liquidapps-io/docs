@@ -5,6 +5,8 @@ CoVax, powered by the DAPP Network, is a community-driven project to fight again
 
 Telegram link: [https://t.me/CoVaxApp](https://t.me/CoVaxApp)
 
+Read more in our blog article release: [https://medium.com/@liquidapps/take-up-arms-against-covid-19-with-covax-964af0ec2951](https://medium.com/@liquidapps/take-up-arms-against-covid-19-with-covax-964af0ec2951)
+
 ## Docs:
 
 [Become a Block Producer](become-a-bp)
