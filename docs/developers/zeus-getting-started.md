@@ -126,6 +126,8 @@ zeus run frontend main
 ```
 
 ## Try out LiquidPortfolio
+[http://portfolio.liquidapps.io/](http://portfolio.liquidapps.io/) | [code](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/sample/portfolio)
+
 LiquidPortfolio is a portfolio tracking tool for BTC, ETH (and tokens), and EOS (and tokens).  The tool displays the total current value of the portfolio while also encrypting all user account info with the LiquidAccount's private key.
 
 The game incorporates:
@@ -143,6 +145,8 @@ cd portfolio
 zeus migrate
 zeus run frontend main
 ```
+
+*note if you compile and run this contract yourself, you will need to update all instances of `uint8[][]` within the abi to `bytes[]`*
 
 ## Samples Boxes
 
