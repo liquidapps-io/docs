@@ -10,3 +10,6 @@ latest
 
 ### [@liquidapps/dsp](https://www.npmjs.com/package/@liquidapps/dsp)
 - added warning to ensure `trace-history = true` set in nodeos `config.ini`
+
+### [docs](https://docs.liquidapps.io/en/stable/)
+- add [LiquidStorage section](../developers/storage-getting-started)

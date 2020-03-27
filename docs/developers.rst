@@ -19,6 +19,7 @@ Developers
    developers/vaccounts-getting-started
    developers/harmony-getting-started
    developers/cron-getting-started
+   developers/storage-getting-started
    developers/contract-logs
    developers/macros
    developers/unit-testing
