@@ -7,6 +7,8 @@ To add a chain, a DSP must configure their DSP API's `config.toml` file with the
 
 To add a chain from an architecture perspective requires adding a new nodeos instance for that chain and having another demux instance running on the DSP's API endpoint.  The nodeos instance can be run external to the DSP API.  There are two additional log files produced for the new chain.  A new dapp-service-node log file for the new gateway port and another demux log file.
 
+See list of example chains to add [here](example-chains).
+
 Guide:
 
 - [Editing config.toml file](#editing-config.toml-file)
@@ -30,6 +32,7 @@ In order to enable a new chain, a DSP must add the following to the `config.toml
     nodeos_secured = false # nodeos secured bool (true: https, false: http)
     nodeos_chainid = "" # chainid of new chain
     nodeos_websocket_port = 8887 # nodeos websocket port, can be same per nodeos instance
+    nodoes_latest = true # if using 2.0+ version of nodeos, true, if less than 2.0, false
     webhook_dapp_port = 8113 # nodeos webhook port, must be unique per chain
     # demux
     demux_webhook_port = 3196 # port demux runs on, must be unique per new chain
@@ -38,6 +41,7 @@ In order to enable a new chain, a DSP must add the following to the `config.toml
     # demux defaults to first pulling head block from toml file if postgres database is not set
     # after database is set, defaults to database, to overwrite and default to toml file, pass true
     demux_bypass_database_head_block = false
+    demux_max_pending_messages = 500 # amount of pending messages to add to the stack before disconnecting the demux websocket to allow pending messages to process
     # sidechain 
     liquidx_contract = "liquidx.dsp" # liquidx contract on the EOS mainnet
     name = "test1" # CHAIN_NAME - contract on the EOS mainnet that registered the new chain
