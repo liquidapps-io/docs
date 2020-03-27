@@ -144,6 +144,7 @@ cat p2p-config.ini | grep "p2p-peer-address" >> $HOME/.local/share/eosio/nodeos/
 *Please note the following about some `config.ini` settings:*
 
 - `read-mode = head` (default is: `read-more = speculative` and does not need to be specified in the `config.ini`) must not be used to prevent duplicate `xwarmup` actions | [read more about read modes here](https://developers.eos.io/eosio-nodeos/docs/read-modes)
+- if supporting the Hyperion API [https://github.com/eosrio/Hyperion-History-API](https://github.com/eosrio/Hyperion-History-API), must add the `chain-state-history = true`, note this will significantly increase storage requirements
 
 ## Run 
 First run (from snapshot)
