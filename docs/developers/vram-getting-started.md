@@ -55,7 +55,7 @@ my_table_struct mytable(othercntr,othercntr.value);
 This does require that the table struct and table name of the remote contract to be known, just as in regular multi_index. Remote tables can only be read, they cannot be modified. Remote table owners do not have to be staked to the same DSP as your contract.
 
 ## Add your contract logic
-in contract/eos/mycontract/mycontract.cpp
+in contracts/eos/mycontract/mycontract.cpp
 ```cpp
 #pragma once
 

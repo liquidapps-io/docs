@@ -28,7 +28,7 @@ zeus test -c
 ```
 
 ## LiquidScheduler Consumer Example Contract used in unit tests
-in `contract/eos/cronconsumer/cronconsumer.cpp`
+in `contracts/eos/cronconsumer/cronconsumer.cpp`
 The consumer contract is a great starting point for playing around with the LiquidScheduler syntax.
 ```cpp
 /* IMPORT DAPP NETWORK SERVICE */

@@ -58,7 +58,7 @@ Each of the following oracle request types comes equipped with its own syntax th
 - Wolfram Alpha: `wolfram_alpha://What is the average air speed velocity of a laden swallow?` - here the `wolfram_alpha` oracle type is used followed by the question: `What is the average air speed velocity of a laden swallow?`.
 
 ## LiquidHarmony Consumer Example Contract used in unit tests
-in `contract/eos/oracleconsumer/oracleconsumer.cpp`
+in `contracts/eos/oracleconsumer/oracleconsumer.cpp`
 The consumer contract is a great starting point for playing around with the LiquidHarmony syntax.
 ```cpp
 /* INCLUDE ORACLE LOGIC */
@@ -78,8 +78,8 @@ CONTRACT_START()
 
   /* 
   
-    tesget - provide a URI using the DAPP Network Oracle syntax and an expected result, 
-    it the result does not match the expected field, the transaction fails 
+    testget - provide a URI using the DAPP Network Oracle syntax and an expected result, 
+    if the result does not match the expected field, the transaction fails 
     
     testrnd - fetch oracle request based on URI without expected field assertion
   

@@ -12,6 +12,7 @@ Liquidx
    liquidx/getting-started
    liquidx/use-services
    liquidx/become-a-dsp
+   liquidx/example-chains
    liquidx/add-a-chain
    
 * :ref:`search`

@@ -28,7 +28,7 @@ zeus test -c
 ```
 
 ## LiquidAccount Consumer Example Contract used in unit tests
-in `contract/eos/vaccountsconsumer/vaccountsconsumer.cpp`
+in `contracts/eos/vaccountsconsumer/vaccountsconsumer.cpp`
 The consumer contract is a great starting point for playing around with the LiquidAccount syntax.
 ```cpp
 /* DELAY REMOVAL OF USER DATA INTO VRAM */

@@ -11,4 +11,6 @@ This is accomplished by creating a set of mappings between accounts.  DSPs and U
 
 [Become a DSP on another chain](become-a-dsp)
 
+[Example chains to add as a DSP](example-chains)
+
 [Add a Chain to LiquidX](add-a-chain)
