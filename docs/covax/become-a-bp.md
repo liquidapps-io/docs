@@ -5,6 +5,10 @@ To obtain a Block Producer account on CoVax, reach out in the CoVax Telegram cha
 
 API endpoint: [`http://eosnode-covax.liquidapps.io`](http://eosnode-covax.liquidapps.io/v1/chain/get_info)
 
+Hyperion: [https://covax.eosrio.io/v2/docs/index.html](https://covax.eosrio.io/v2/docs/index.html) | courtesy of [`eosriobrazil`](https://eosrio.io/)
+
+[Block Explorer](https://local.bloks.io/?nodeUrl=covax.eosdsp.com&coreSymbol=COVAX&systemDomain=eosio&hyperionUrl=https%3A%2F%2Fcovax.eosdsp.com) | courtesy of [EOSUSA](https://bp.eosusa.news/)
+
 ## Genesis JSON:
 
 ```json
@@ -41,6 +45,7 @@ eosnode-covax.liquidapps.io:9876
 node1.eosdsp.com:9888
 dsp1.dappsolutions.app:9875
 covax.maltablock.org:9876
+covax.eosrio.io:8132
 ```
 
 ## Scripts:
@@ -105,6 +110,7 @@ nodeos \
 --p2p-peer-address node1.eosdsp.com:9888 \
 --p2p-peer-address dsp1.dappsolutions.app:9875 \
 --p2p-peer-address covax.maltablock.org:9876 \
+--p2p-peer-address covax.eosrio.io:8132 \
 >> $DATADIR"/nodeos.log" 2>&1 & \
 echo $! > $DATADIR"/eosd.pid"
 ```
@@ -146,6 +152,7 @@ nodeos \
 --p2p-peer-address node1.eosdsp.com:9888 \
 --p2p-peer-address dsp1.dappsolutions.app:9875 \
 --p2p-peer-address covax.maltablock.org:9876 \
+--p2p-peer-address covax.eosrio.io:8132 \
 >> $DATADIR"/nodeos.log" 2>&1 & \
 echo $! > $DATADIR"/eosd.pid"
 ```
@@ -210,6 +217,7 @@ nodeos \
 --p2p-peer-address node1.eosdsp.com:9888 \
 --p2p-peer-address dsp1.dappsolutions.app:9875 \
 --p2p-peer-address covax.maltablock.org:9876 \
+--p2p-peer-address covax.eosrio.io:8132 \
 >> $DATADIR"/nodeos.log" 2>&1 & \
 echo $! > $DATADIR"/eosd.pid"
 ```
