@@ -67,10 +67,10 @@ covax.eosn.io:9876
 
 ## Scripts:
 
-- [`genesis_start.sh`](#genesis_start-sh)
+- [`genesis_start.sh`](#genesis-start-sh)
 - [`start.sh`](#start-sh)
 - [`stop.sh`](#stop-sh)
-- [`hard_replay.sh`](#hard_replay-sh)
+- [`hard_replay.sh`](#hard-replay-sh)
 - [`clean.sh`](#clean-sh)
 
 The following are a list of scripts from the bios boot sequence tutorial located [here](https://developers.eos.io/welcome/latest/tutorials/bios-boot-sequence/).  The `PURBLIC_KEY_HERE` and `PRIVATE_KEY_HERE` fields must be updated in the `genesis_start.sh`, `start.sh`, and `hard_replay.sh` scripts.
