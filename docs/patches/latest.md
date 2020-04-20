@@ -13,6 +13,11 @@ latest
 - added warning to ensure `trace-history = true` set in nodeos `config.ini`
 - add how many blocks behind the head block in demux heartbeat
 
+### [LiquidStorage Service](https://docs.liquidapps.io/en/stable/services/storage-service.html)
+- add dapp-client examples for `get_uri.ts`, `unpin_public_file.ts`, `upload_archive_to_liquidstorage.ts`, `upload_file_to_liquidstorage.ts`, `upload_public_file_from_vaccount.ts`
+- add sidechain storage unit test
+- add `zeus storage upload <ACCOUNT_NAME> package.json <ACCOUNT_PRIVATE_KEY>` and `zeus storage unpin <ACCOUNT_NAME> <IPFS_URI_RETURNED_ABOVE> <ACCOUNT_PRIVATE_KEY>` zeus commands
+
 ### [docs](https://docs.liquidapps.io/en/stable/)
 - add [LiquidStorage section](../developers/storage-getting-started)
 

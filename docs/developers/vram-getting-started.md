@@ -104,7 +104,7 @@ CONTRACT_END((your)(actions)(here))
 
 ## Compile
 
-See the unit testing section for details on adding unit tests.
+See the [unit testing](unit-testing) section for details on adding unit tests.
 
 ```bash
 zeus compile
@@ -122,7 +122,7 @@ cleos -u $DSP_ENDPOINT system buyram $KYLIN_TEST_ACCOUNT $KYLIN_TEST_ACCOUNT "20
 # Set contract code and abi
 cleos -u $DSP_ENDPOINT set contract $KYLIN_TEST_ACCOUNT ../contract -p $KYLIN_TEST_ACCOUNT@active
 
-# Set contract permissions
+# Set contract permissions, add eosio.code
 cleos -u $DSP_ENDPOINT set account permission $KYLIN_TEST_ACCOUNT active "{\"threshold\":1,\"keys\":[{\"weight\":1,\"key\":\"$KYLIN_TEST_PUBLIC_KEY\"}],\"accounts\":[{\"permission\":{\"actor\":\"$KYLIN_TEST_ACCOUNT\",\"permission\":\"eosio.code\"},\"weight\":1}]}" owner -p $KYLIN_TEST_ACCOUNT@active
 ```
 

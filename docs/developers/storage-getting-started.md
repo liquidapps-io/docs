@@ -29,10 +29,10 @@ zeus test -c
 ```
 
 ## LiquidStorage Consumer Example Contract used in unit tests
-
 `./contracts/eos/storageconsumer/storageconsumer.cpp`
 
 The consumer contract is a great starting point for playing around with the LiquidStorage service.  This sample contract uses LiquidAccounts as an option, but the service may also be used with regular EOS accounts.
+
 ```cpp
 /* DELAY REMOVAL OF USER DATA INTO VRAM */
 /* ALLOWS FOR QUICKER ACCESS TO USER DATA WITHOUT THE NEED TO WARM DATA UP */
@@ -213,3 +213,32 @@ response uri: ipfs://IPFS_URI_HERE
 This will return the IPFS URI where the content can be fetched.
 
 Add the URI to the end of the IPFS gateway: `https://ipfs.io/ipfs/IPFS_URI_HERE`, and you will see "a great success".
+
+To fetch data, the following example can be used:
+
+```js
+const fetch = require("node-fetch");
+
+(async () => {
+    let res = await fetch('https://kylin-dsp-2.liquidapps.io/v1/dsp/liquidstorag/get_uri', {
+      method: 'POST',
+      mode: 'cors',
+      body: JSON.stringify({ uri: "ipfs://zb2rhX28fttoDTUhpmHBgQa2PzjL1N3XUDaL9rZvx8dLZseji" })
+    });
+    res = await res.json();
+    res = Buffer.from(res.data, 'base64').toString(),
+    console.log(`result: ${res}`);
+})().catch((e) => { console.log(e); });
+// result: a great success
+```
+
+To see additional examples of the other `dapp-client` services, see the examples folder [here](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/services/storage-dapp-service/client/examples).
+
+## Zeus commands
+
+There are 2 Zeus commands available, upload, and unpin.  These can be used in the root of the storage box.  Upload will upload an archive (.tar), a directory, or a file.  The unpin command unpins data from the IPFS node.
+
+```bash
+zeus storage upload <ACCOUNT_NAME> package.json <ACCOUNT_PRIVATE_KEY>
+zeus storage unpin <ACCOUNT_NAME> <IPFS_URI_RETURNED_ABOVE> <ACCOUNT_PRIVATE_KEY>
+```

@@ -80,7 +80,7 @@ Packages
 ```bash
 npm install -g @liquidapps/zeus-cmd
 # the package must be chosen from the following list:
-# packages: (ipfs, cron, log, oracle, readfn, vaccounts)
+# packages: (ipfs, cron, log, oracle, readfn, vaccounts, storage, auth)
 export PACKAGE=ipfs
 export DSP_ACCOUNT=
 # active key to sign package creation trx

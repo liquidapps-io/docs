@@ -23,6 +23,7 @@ liquidx
 * [`readfnxtest`](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/dapp-network/liquidx/contracts/eos/readfnxtest)
 * [`vaccountsx`](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/dapp-network/liquidx/contracts/eos/vaccountsx)
 * [`cronxtest`](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/dapp-network/liquidx/contracts/eos/cronxtest)
+* [`storagextest`](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/dapp-network/liquidx/contracts/eos/storagextest)
 ## Install
 ```bash
 zeus unbox liquidx
@@ -85,5 +86,6 @@ zeus unbox liquidx
 * [sidechain-ipfsconsumer.spec.js](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/dapp-network/liquidx/test/sidechain-ipfsconsumer.spec.js)
 * [sidechain-oracle.spec.js](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/dapp-network/liquidx/test/sidechain-oracle.spec.js)
 * [sidechain-readfn.spec.js](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/dapp-network/liquidx/test/sidechain-readfn.spec.js)
+* [sidechain-storage.spec.js](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/dapp-network/liquidx/test/sidechain-storage.spec.js)
 * [sidechain-vaccount.spec.js](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/dapp-network/liquidx/test/sidechain-vaccount.spec.js)
 ## [Source](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/dapp-network/liquidx)
