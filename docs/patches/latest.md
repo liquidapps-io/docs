@@ -11,6 +11,7 @@ latest
 
 ### [@liquidapps/dsp](https://www.npmjs.com/package/@liquidapps/dsp)
 - added warning to ensure `trace-history = true` set in nodeos `config.ini`
+- add how many blocks behind the head block in demux heartbeat
 
 ### [docs](https://docs.liquidapps.io/en/stable/)
 - add [LiquidStorage section](../developers/storage-getting-started)
