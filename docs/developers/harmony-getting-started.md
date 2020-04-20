@@ -17,6 +17,8 @@ LiquidHarmony includes all oracle related logic from the DAPP Network.  This inc
 
 The DAPP Network offers the ability to fetch information using DAPP Service Providers (DSPs). A developer may choose as many or as few oracles to use in fetching data points from the internet.  If a developer wishes to prevent a scenario where all oracles have an incentive to return false information, the developer may run a DSP themselves and set the threshold of acceptance for the information to all parties.  Another great place to understand the service is in the [unit tests](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/oracles) within each sub directory.
 
+The price feed example uses LiquidHarmony web oracles and the LiquidScheduler to periodically update a price on chain only when the new price is more or less than 1% of the last updated price, conserving CPU by only running actions when necessary. See [here](price-feed)
+
 ## Prerequisites
 
 * [Zeus](zeus-getting-started.md) - Zeus installs eos and the eosio.cdt if not already installed
@@ -160,4 +162,24 @@ export URI=68747470733a2f2f697066732e696f2f697066732f516d6169737a364e4d684442353
 export EXPECTED_FIELD=48656c6c6f2066726f6d2049504653204761746577617920436865636b65720a
 cleos -u $DSP_ENDPOINT push action $KYLIN_TEST_ACCOUNT testrnd "[\"$URI\"]" -p $KYLIN_TEST_ACCOUNT
 cleos -u $DSP_ENDPOINT push action $KYLIN_TEST_ACCOUNT testget "[\"$URI\",\"$EXPECTED_FIELD\"]" -p $KYLIN_TEST_ACCOUNT
+```
+
+### Custom eosio assertion message
+
+If `shouldAbort` is included in an `eosio::check` assertion, the DSP will cease to process the request instead of retrying.  Retrying is done automatically in the event a transaction fails for any reason.
+
+### Pre geturi hook
+
+Traditionally, an oracle request will be run on each DSP a consumer is staked to with each DSP returning the result of that request before the final array of oracle responses is returned to the smart contract.  In order to access the response each DSP is returning before it is returned, a hook has been added which can be accessed with the following syntax.  This hook can be used to throw an assertion preventing the DSP from using CPU to process a transaction under certain circumstances:
+
+```cpp
+// define custom filter
+#undef ORACLE_HOOK_FILTER
+#define ORACLE_HOOK_FILTER(uri, data) filter_result(uri, data);
+
+void filter_result(std::vector<char> uri, std::vector<char> data){
+  // if assertion thrown here, DSP will not respond nor use CPU to process the geturi action
+  // shouldAbort is included here to prevent the DSP from retrying the oracle request
+  eosio::check(data.size() > 3, "shouldAbort, result too small");
+}
 ```

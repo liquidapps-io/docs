@@ -13,6 +13,8 @@ LiquidScheduler Getting Started
 
 LiquidScheduler is an on chain cron solution for EOS based actions.  One use case would be setting up LiquidHarmony (oracle) fetches on a continual basis.  Another great place to understand the service is in the [unit tests](https://github.com/liquidapps-io/zeus-sdk/blob/master/boxes/groups/services/cron-dapp-service/test/cron.spec.js).
 
+The price feed example uses LiquidHarmony web oracles and the LiquidScheduler to periodically update a price on chain only when the new price is more or less than 1% of the last updated price, conserving CPU by only running actions when necessary. See [here](price-feed)
+
 ## Prerequisites
 
 * [Zeus](zeus-getting-started.md) - Zeus installs eos and the eosio.cdt if not already installed
@@ -136,3 +138,7 @@ curl --request POST \
 ```bash
 cleos -u $DSP_ENDPOINT push action $KYLIN_TEST_ACCOUNT testschedule "[\"\"]" -p $KYLIN_TEST_ACCOUNT
 ```
+
+### Custom eosio assertion message
+
+If `shouldAbort` is included in an `eosio::check` assertion, the DSP will cease to process the request and will reschedule it.  This prevents the DSP from using CPU to schedule the next cron.
