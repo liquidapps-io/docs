@@ -7,6 +7,8 @@ Hyperion: [https://covax.eosrio.io/v2/docs/index.html](https://covax.eosrio.io/v
 
 [Block Explorer](https://local.bloks.io/?nodeUrl=covax.eosdsp.com&coreSymbol=COVAX&systemDomain=eosio&hyperionUrl=https%3A%2F%2Fcovax.eosdsp.com) | courtesy of [EOSUSA](https://bp.eosusa.news/)
 
+[Block Producer Scorecard](https://validate.eosnation.io/covax/producers/) | courtesy of [EOS Nation](https://eosnation.io/)
+
 Guide:
 
 - [Genesis JSON](#genesis-json)
@@ -53,6 +55,7 @@ dsp1.dappsolutions.app:9875
 covax.maltablock.org:9876
 covax.eosrio.io:8132
 covax.eosn.io:9876
+node3.blockstartdsp.com:8132
 ```
 
 ## API Endpoints:
@@ -60,6 +63,7 @@ covax.eosn.io:9876
 - [`http://eosnode-covax.liquidapps.io`](http://eosnode-covax.liquidapps.io/v1/chain/get_info)
 - [`https://covax.eosn.io`](https://covax.eosn.io/v1/chain/get_info)
 - [`https://covax.eosdsp.com`](https://covax.eosdsp.com/v1/chain/get_info)
+- [`http://node3.blockstartdsp.com:8200`](http://node3.blockstartdsp.com:8200/v1/chain/get_info)
 
 ## Snapshots:
 
@@ -135,6 +139,7 @@ nodeos \
 --p2p-peer-address covax.maltablock.org:9876 \
 --p2p-peer-address covax.eosrio.io:8132 \
 --p2p-peer-address covax.eosn.io:9876 \
+--p2p-peer-address node3.blockstartdsp.com:8132 \
 >> $DATADIR"/nodeos.log" 2>&1 & \
 echo $! > $DATADIR"/eosd.pid"
 ```
@@ -178,6 +183,7 @@ nodeos \
 --p2p-peer-address covax.maltablock.org:9876 \
 --p2p-peer-address covax.eosrio.io:8132 \
 --p2p-peer-address covax.eosn.io:9876 \
+--p2p-peer-address node3.blockstartdsp.com:8132 \
 >> $DATADIR"/nodeos.log" 2>&1 & \
 echo $! > $DATADIR"/eosd.pid"
 ```
@@ -244,6 +250,7 @@ nodeos \
 --p2p-peer-address covax.maltablock.org:9876 \
 --p2p-peer-address covax.eosrio.io:8132 \
 --p2p-peer-address covax.eosn.io:9876 \
+--p2p-peer-address node3.blockstartdsp.com:8132 \
 >> $DATADIR"/nodeos.log" 2>&1 & \
 echo $! > $DATADIR"/eosd.pid"
 ```
