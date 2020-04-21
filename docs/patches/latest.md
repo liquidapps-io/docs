@@ -7,6 +7,7 @@ latest
 
 ### [@liquidapps/zeus-cmd](https://www.npmjs.com/package/@liquidapps/zeus-cmd)
 - use 8887 instead of 8889 for state history port to match DSP docs
+- skip `01-dapp-client.js` if built
 - add price feed example, price feed uses LiquidHarmony's oracles and LiquidScheduler's cron to fetch a price periodically and only use CPU when the price has changed from the last recorded price by more or less than 1%
 
 ### [@liquidapps/dsp](https://www.npmjs.com/package/@liquidapps/dsp)
