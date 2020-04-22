@@ -13,6 +13,9 @@ latest
 ### [@liquidapps/dsp](https://www.npmjs.com/package/@liquidapps/dsp)
 - added warning to ensure `trace-history = true` set in nodeos `config.ini`
 - add how many blocks behind the head block in demux heartbeat
+- add `DATABASE_TIMEOUT` to sample toml, adjust time before database connection times out
+- add `DEMUX_PROCESS_BLOCK_CHECKPOINT` to sample toml, amount of blocks to pass before updating database with last processed block
+- add `disabledServices` to ecosystem file to prevent pre-alpha services from being setup
 
 ### [LiquidStorage Service](https://docs.liquidapps.io/en/stable/services/storage-service.html)
 - add dapp-client examples for `get_uri.ts`, `unpin_public_file.ts`, `upload_archive_to_liquidstorage.ts`, `upload_file_to_liquidstorage.ts`, `upload_public_file_from_vaccount.ts`
