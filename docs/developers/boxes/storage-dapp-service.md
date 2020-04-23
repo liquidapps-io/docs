@@ -31,9 +31,12 @@ zeus unbox storage-dapp-service
 
 
 
+## Zeus Command Extensions
+* ```zeus storage  --help```
+### Subcommands
+* ```zeus storage unpin --help```
 
-
-
+* ```zeus storage upload --help```
 
 
 
@@ -46,8 +49,8 @@ zeus unbox storage-dapp-service
   "port": 13142,
   "contract": "liquidstorag",
   "prettyName": "LiquidStorage",
-  "stage": "Alpha",
-  "version": "0.5",
+  "stage": "Beta",
+  "version": "0.9",
   "description": "Distributed storage and hosting",
   "generateStubs": true,
   "commands": {

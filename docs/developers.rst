@@ -20,6 +20,7 @@ Developers
    developers/harmony-getting-started
    developers/cron-getting-started
    developers/storage-getting-started
+   developers/price-feed
    developers/contract-logs
    developers/macros
    developers/unit-testing
