@@ -9,6 +9,8 @@ Hyperion: [https://covax.eosrio.io/v2/docs/index.html](https://covax.eosrio.io/v
 
 [Block Producer Scorecard](https://validate.eosnation.io/covax/producers/) | courtesy of [EOS Nation](https://eosnation.io/)
 
+[EOS Block Producer Benchmarks](https://www.alohaeos.com/tools/benchmarks#networkId=21&timeframeId=2) | courtesy of [Aloha EOS](https://www.alohaeos.com/)
+
 Guide:
 
 - [Genesis JSON](#genesis-json)

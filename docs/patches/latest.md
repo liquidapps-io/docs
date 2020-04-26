@@ -4,6 +4,7 @@ latest
 ### [docs](https://docs.liquidapps.io/en/stable/)
 - add CoVax chain section for becoming BP or DSP
 - add example chains section of LiquidX chains
+- add [EOS Block Producer Benchmarks](https://www.alohaeos.com/tools/benchmarks#networkId=21&timeframeId=2) | courtesy of [Aloha EOS](https://www.alohaeos.com/)
 
 ### [@liquidapps/zeus-cmd](https://www.npmjs.com/package/@liquidapps/zeus-cmd)
 - use 8887 instead of 8889 for state history port to match DSP docs

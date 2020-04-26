@@ -8,7 +8,7 @@ Authentication of offchain APIs and services using EOSIO permissions and contrac
 Alpha
 
 ## Version
-0.4
+0.5
 
 ## Contract
 
