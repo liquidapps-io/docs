@@ -41,9 +41,10 @@ The DAPP Network currently supports the following oracle requests:
 ## Unbox Oracle DAPP Service box
 This box contains the oracle smart contract libraries, DSP node logic, unit tests, and everything else needed to get started integrating / testing the DAPP Network oracles in your smart contract.
 ```bash
+mkdir oracle-dapp-service; cd oracle-dapp-service
 # npm install -g @liquidapps/zeus-cmd
+zeus box create
 zeus unbox oracle-dapp-service
-cd oracle-dapp-service
 zeus test -c
 ```
 
@@ -60,7 +61,7 @@ Each of the following oracle request types comes equipped with its own syntax th
 - Wolfram Alpha: `wolfram_alpha://What is the average air speed velocity of a laden swallow?` - here the `wolfram_alpha` oracle type is used followed by the question: `What is the average air speed velocity of a laden swallow?`.
 
 ## LiquidHarmony Consumer Example Contract used in unit tests
-in `contracts/eos/oracleconsumer/oracleconsumer.cpp`
+in `zeus_boxes/contracts/eos/oracleconsumer/oracleconsumer.cpp`
 The consumer contract is a great starting point for playing around with the LiquidHarmony syntax.
 ```cpp
 /* INCLUDE ORACLE LOGIC */

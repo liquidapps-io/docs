@@ -23,14 +23,15 @@ The price feed example uses LiquidHarmony web oracles and the LiquidScheduler to
 ## Unbox LiquidScheduler DAPP Service box
 This box contains the LiquidScheduler smart contract libraries, DSP node logic, unit tests, and everything else needed to get started integrating / testing the DAPP Network LiquidScheduler in your smart contract.
 ```bash
+mkdir cron-dapp-service; cd cron-dapp-service
 # npm install -g @liquidapps/zeus-cmd
+zeus box create
 zeus unbox cron-dapp-service
-cd cron-dapp-service
 zeus test -c
 ```
 
 ## LiquidScheduler Consumer Example Contract used in unit tests
-in `contracts/eos/cronconsumer/cronconsumer.cpp`
+in `zeus_boxes/contracts/eos/cronconsumer/cronconsumer.cpp`
 The consumer contract is a great starting point for playing around with the LiquidScheduler syntax.
 ```cpp
 /* IMPORT DAPP NETWORK SERVICE */

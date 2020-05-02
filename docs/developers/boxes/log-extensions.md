@@ -26,8 +26,8 @@ zeus unbox log-extensions
 zeus log docker-log
 ```
 
-## Zeus Command Extensions
-* ```zeus log  --help```
+
+
 
 
 

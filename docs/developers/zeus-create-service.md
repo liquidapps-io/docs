@@ -11,6 +11,8 @@ The `templates-dsp-service` box contains a basic version of:
 - myservice-dapp-service-node.js file for running the DSPs node logic
 
 ```bash
+mkdir templates-dsp-service; cd templates-dsp-service
+zeus box create
 zeus unbox templates-dsp-service
 zeus create dsp-service myservice
 # compile

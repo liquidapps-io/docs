@@ -30,10 +30,9 @@ zeus unbox vram-reconstructor
 
 
 
-## Zeus Command Extensions
 
-### Subcommands
-* ```zeus start-localenv 99-custom-deployment --help```
+
+
 
 
 

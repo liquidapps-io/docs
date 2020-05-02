@@ -10,8 +10,7 @@ zeus-eos
 
 ## Dependencies
 ### Boxes
-* [`seed`](seed.md)
-* [`hooks-npm`](hooks-npm.md)
+* [`seed-zeus-support`](seed-zeus-support.md)
 ### npm packages
 * [`eosjs@20.0.0`](http://npmjs.com/package/eosjs@20.0.0)
 * [`eosjs-ecc`](http://npmjs.com/package/eosjs-ecc)

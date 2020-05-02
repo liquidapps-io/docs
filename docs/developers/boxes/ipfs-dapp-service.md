@@ -15,7 +15,6 @@ ipfs-dapp-service
 * [`log-dapp-service`](log-dapp-service.md)
 * [`seed-utils-cleanup`](seed-utils-cleanup.md)
 * [`mocha`](mocha.md)
-* [`hooks-cpp-contracts`](hooks-cpp-contracts.md)
 ### npm packages
 * [`ipfs-api`](http://npmjs.com/package/ipfs-api)
 * [`lru-cache`](http://npmjs.com/package/lru-cache)
@@ -32,9 +31,8 @@ zeus unbox ipfs-dapp-service
 
 
 
-## Zeus Command Extensions
-* ```zeus backup-table  --help```
-* ```zeus get-table.row  --help```
+
+
 
 
 

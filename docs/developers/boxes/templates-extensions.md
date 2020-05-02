@@ -27,8 +27,8 @@ zeus unbox templates-extensions
 
 
 
-## Zeus Command Extensions
-* ```zeus scaffold  --help```
+
+
 
 
 ## Models

@@ -10,7 +10,6 @@ portfolio
 
 ## Dependencies
 ### Boxes
-* [`hooks-npm`](hooks-npm.md)
 * [`mocha`](mocha.md)
 * [`seed-eos`](seed-eos.md)
 * [`seed-migrations`](seed-migrations.md)
@@ -18,7 +17,6 @@ portfolio
 * [`vaccounts-dapp-service`](vaccounts-dapp-service.md)
 * [`oracle-dapp-service`](oracle-dapp-service.md)
 * [`cron-dapp-service`](cron-dapp-service.md)
-* [`hooks-cpp-contracts`](hooks-cpp-contracts.md)
 * [`eos-common`](eos-common.md)
 * [`seed-frontends`](seed-frontends.md)
 * [`seed-models`](seed-models.md)

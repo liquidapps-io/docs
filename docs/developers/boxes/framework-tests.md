@@ -15,7 +15,6 @@ framework-tests
 * [`coldtoken`](coldtoken.md)
 * [`vgrab`](vgrab.md)
 * [`microauctions`](microauctions.md)
-* [`hooks-cpp-contracts`](hooks-cpp-contracts.md)
 
 
 

@@ -14,7 +14,6 @@ sign-dapp-service
 * [`dapp-services`](dapp-services.md)
 * [`seed-utils`](seed-utils.md)
 * [`mocha`](mocha.md)
-* [`hooks-cpp-contracts`](hooks-cpp-contracts.md)
 ### npm packages
 * [`web3@1.0.0-beta.36`](http://npmjs.com/package/web3@1.0.0-beta.36)
 * [`ganache-cli`](http://npmjs.com/package/ganache-cli)
@@ -30,10 +29,9 @@ zeus unbox sign-dapp-service
 
 
 
-## Zeus Command Extensions
 
-### Subcommands
-* ```zeus start-localenv 03-ganache-cli --help```
+
+
 
 
 

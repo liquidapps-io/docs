@@ -22,14 +22,15 @@ LiquidStorage allows the read/write of data to a DAPP Service Provider's IPFS no
 ## Unbox LiquidStorage DAPP Service box
 This box contains the LiquidStorage example smart contract, DAPP Service Provider node logic, unit tests, [dapp-client](dapp-client.md) source code and examples.
 ```bash
-# npm i -g @liquidapps/zeus-cmd
+mkdir storage-dapp-service; cd storage-dapp-service
+# npm install -g @liquidapps/zeus-cmd
+zeus box create
 zeus unbox storage-dapp-service
-cd storage-dapp-service
 zeus test -c
 ```
 
 ## LiquidStorage Consumer Example Contract used in unit tests
-`./contracts/eos/storageconsumer/storageconsumer.cpp`
+`./zeus_boxes/contracts/eos/storageconsumer/storageconsumer.cpp`
 
 The consumer contract is a great starting point for playing around with the LiquidStorage service.  This sample contract uses LiquidAccounts as an option, but the service may also be used with regular EOS accounts.
 

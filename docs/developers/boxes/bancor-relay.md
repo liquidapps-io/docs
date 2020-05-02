@@ -16,7 +16,6 @@ bancor-relay
 * [`mocha`](mocha.md)
 * [`bancor-network`](bancor-network.md)
 * [`eos-common`](eos-common.md)
-* [`hooks-cpp-contracts`](hooks-cpp-contracts.md)
 
 
 

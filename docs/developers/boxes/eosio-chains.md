@@ -25,14 +25,9 @@ zeus unbox eosio-chains
 zeus start-localenv
 ```
 
-## Zeus Command Extensions
 
-### Subcommands
-* ```zeus start-localenv 02-b-eos-eosio-chains-nodeos --help```
 
-* ```zeus start-localenv 05-b-eos-eosio-chains-bios --help```
 
-* ```zeus start-localenv 15-b-eos-eosio-chains-demux --help```
 
 ## Models
 ### New Model Types

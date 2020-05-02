@@ -15,7 +15,6 @@ eos-detective-reports
 * [`token`](token.md)
 * [`mocha`](mocha.md)
 * [`eos-common`](eos-common.md)
-* [`hooks-cpp-contracts`](hooks-cpp-contracts.md)
 
 
 

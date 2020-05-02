@@ -26,12 +26,9 @@ zeus unbox ipfs-daemon
 
 
 
-## Zeus Command Extensions
 
-### Subcommands
-* ```zeus run ipfs-daemon --help```
 
-* ```zeus start-localenv 15-ipfs-dameon --help```
+
 
 
 

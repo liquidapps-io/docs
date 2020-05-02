@@ -32,14 +32,9 @@ zeus unbox demux
 
 
 
-## Zeus Command Extensions
-* ```zeus demux  --help```
-### Subcommands
-* ```zeus create captured-event --help```
 
-* ```zeus run demux --help```
 
-* ```zeus start-localenv 15-a-eos-demux --help```
+
 
 ## Models
 ### New Model Types

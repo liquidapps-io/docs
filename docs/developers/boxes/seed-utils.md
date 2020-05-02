@@ -10,7 +10,7 @@ seed-utils
 
 ## Dependencies
 ### Boxes
-* [`seed`](seed.md)
+* [`seed-zeus-support`](seed-zeus-support.md)
 * [`core-extensions`](core-extensions.md)
 
 

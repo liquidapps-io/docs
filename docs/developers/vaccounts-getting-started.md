@@ -21,14 +21,15 @@ LiquidAccounts are EOS accounts that are stored in vRAM instead of RAM.  This dr
 ## Unbox LiquidAccounts DAPP Service box
 This box contains the LiquidAccounts smart contract libraries, DSP node logic, unit tests, and everything else needed to get started integrating / testing the DAPP Network LiquidAccounts in your smart contract.
 ```bash
+mkdir vaccounts-dapp-service; cd vaccounts-dapp-service
 # npm install -g @liquidapps/zeus-cmd
+zeus box create
 zeus unbox vaccounts-dapp-service
-cd vaccounts-dapp-service
 zeus test -c
 ```
 
 ## LiquidAccount Consumer Example Contract used in unit tests
-in `contracts/eos/vaccountsconsumer/vaccountsconsumer.cpp`
+in `zeus_boxes/contracts/eos/vaccountsconsumer/vaccountsconsumer.cpp`
 The consumer contract is a great starting point for playing around with the LiquidAccount syntax.
 ```cpp
 /* DELAY REMOVAL OF USER DATA INTO VRAM */

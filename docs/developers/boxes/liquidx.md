@@ -31,13 +31,9 @@ zeus unbox liquidx
 
 
 
-## Zeus Command Extensions
-* ```zeus create-liquidx-mapping  --help```
-* ```zeus link-sidechain-dsp  --help```
-### Subcommands
-* ```zeus start-localenv 20-b-eos-eosio-chains-dapp-services --help```
 
-* ```zeus start-localenv 21-b-eos-eosio-chains-services-all-dapp-services --help```
+
+
 
 
 

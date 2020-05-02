@@ -4,16 +4,18 @@ Unit Testing
 Unit testing with Zeus is highly customizable and easy to configure.  The following example explains how to use the main helper functions to write your own test.
 
 ## Customize your own unit tests
-in tests/mycontract.spec.js
+in `zeus_boxes/tests/mycontract.spec.js`
 ```javascript
 require('mocha');
+const { requireBox } = require('@liquidapps/box-utils');
 const { assert } = require('chai'); // Using Assert style
-const { getCreateKeys } = require('../extensions/helpers/key-utils');
-const getDefaultArgs = require('../extensions/helpers/getDefaultArgs');
-const { getTestContract } = require('../extensions/tools/eos/utils');
-const artifacts = require('../extensions/tools/eos/artifacts');
-const deployer = require('../extensions/tools/eos/deployer');
-const { genAllocateDAPPTokens, readVRAMData } = require('../extensions/tools/eos/dapp-services');
+const { requireBox } = require('@liquidapps/box-utils');
+const { getCreateKeys } = requireBox('eos-keystore/helpers/key-utils');
+const getDefaultArgs = requireBox('seed-zeus-support/getDefaultArgs');
+const { getTestContract } = requireBox('seed-eos/tools/eos/utils');
+const artifacts =requireBox('seed-eos/tools/eos/artifacts');
+const deployer = requireBox('seed-eos/tools/eos/deployer');
+const { genAllocateDAPPTokens, readVRAMData } = requireBox('dapp-services/tools/eos/dapp-services');
 
 /*** UPDATE CONTRACT CODE ***/
 var contractCode = 'mycontract';
@@ -144,7 +146,7 @@ describe(`${contractCode} Contract`, () => {
 
 ## Helper Functions
 
-### getCreateKeys | [Code](https://github.com/liquidapps-io/zeus-sdk/blob/master/boxes/groups/eos-sdk/eos-keystore/extensions/helpers/key-utils.js#L22)
+### getCreateKeys | [Code](https://github.com/liquidapps-io/zeus-sdk/blob/master/boxes/groups/eos-sdk/eos-keystorehelpers/key-utils.js#L22)
 
 The `getCreateKeys` function is intended to create a new key pair in `~/.zeus/networks/development/accounts` if a key pair does not already exist for the account provided. The sub directory to `~/.zeus/network` can be any chain that you are developing on as well, e.g., `kylin`, `jungle`, `mainnet`.  If an account name has a contract deployed to it with the `deploy` function, then a key pair will automatically be assigned during the deployment.
 
@@ -153,11 +155,12 @@ The `getCreateKeys` function is intended to create a new key pair in `~/.zeus/ne
  * @param account - account name to generate or fetch keys for
  */
 
-const { getCreateKeys } = require('../extensions/helpers/key-utils');
+const { requireBox } = require('@liquidapps/box-utils');
+const { getCreateKeys } = requireBox('eos-keystore/helpers/key-utils');
 var keys = await getCreateKeys(account);
 ```
 
-### artifacts | [Code](https://github.com/liquidapps-io/zeus-sdk/blob/master/boxes/groups/eos-sdk/seed-eos/extensions/tools/eos/artifacts.js)
+### artifacts | [Code](https://github.com/liquidapps-io/zeus-sdk/blob/master/boxes/groups/eos-sdk/seed-eostools/eos/artifacts.js)
 
 The `artifacts` helper pulls the relevant contract files, such as the wasm / ABI, to be used within the unit test.
 
@@ -166,12 +169,13 @@ The `artifacts` helper pulls the relevant contract files, such as the wasm / ABI
  * @param f - contract name within the /contracts/eos directory
  */
 
-const artifacts = require('../extensions/tools/eos/artifacts');
+const { requireBox } = require('@liquidapps/box-utils');
+const artifacts =requireBox('seed-eos/tools/eos/artifacts');
 var contractCode = 'mycontract';
 var ctrt = artifacts.require(`./${contractCode}/`);
 ```
 
-### deployer | [Code](https://github.com/liquidapps-io/zeus-sdk/blob/master/boxes/groups/eos-sdk/seed-eos/extensions/tools/eos/deployer.js#L35)
+### deployer | [Code](https://github.com/liquidapps-io/zeus-sdk/blob/master/boxes/groups/eos-sdk/seed-eostools/eos/deployer.js#L35)
 
 The `deployer` function deploys a contract to an account based on the contract files and the account name passed.  You may also pass your own args, if not specified, the `getDefaultArgs()` function will be passed.
 
@@ -182,13 +186,14 @@ The `deployer` function deploys a contract to an account based on the contract f
  * @param [args=getDefaultArgs()] - arguments to be used for configuring the network's settings
  */
 
-const deployer = require('../extensions/tools/eos/deployer');
+const { requireBox } = require('@liquidapps/box-utils');
+const deployer = requireBox('seed-eos/tools/eos/deployer');
 var ctrt = artifacts.require(`./${contractCode}/`);
 const code = 'airairairair';
 var deployedContract = await deployer.deploy(ctrt, code);
 ```
 
-### genAllocateDAPPTokens | [Code](https://github.com/liquidapps-io/zeus-sdk/blob/master/boxes/groups/dapp-network/dapp-services/extensions/tools/eos/dapp-services.js#L14)
+### genAllocateDAPPTokens | [Code](https://github.com/liquidapps-io/zeus-sdk/blob/master/boxes/groups/dapp-network/dapp-servicestools/eos/dapp-services.js#L14)
 
 The `genAllocateDAPPTokens` function allocates DAPP tokens to the specified contract provided.  It also issues, selects a package, stakes, and updates auth to include `eosio.code`.
 
@@ -200,11 +205,12 @@ The `genAllocateDAPPTokens` function allocates DAPP tokens to the specified cont
  * @param [selectedPackage='default'] - package name to select, defaults to "default"
  */
 
-const { genAllocateDAPPTokens } = require('../extensions/tools/eos/dapp-services');
+const { requireBox } = require('@liquidapps/box-utils');
+const { genAllocateDAPPTokens } = requireBox('dapp-services/tools/eos/dapp-services');
 await genAllocateDAPPTokens(deployedContract, 'ipfs');
 ```
 
-### readVRAMData | [Code](https://github.com/liquidapps-io/zeus-sdk/blob/master/boxes/groups/dapp-network/dapp-services/extensions/tools/eos/dapp-services.js#L102)
+### readVRAMData | [Code](https://github.com/liquidapps-io/zeus-sdk/blob/master/boxes/groups/dapp-network/dapp-servicestools/eos/dapp-services.js#L102)
 
 The `readVRAMData` function makes a vRAM get table row call by providing the `contract`, `key`, `table`, and `scope` arguments.
 
@@ -216,7 +222,8 @@ The `readVRAMData` function makes a vRAM get table row call by providing the `co
  * @param scope - scope of dapp::multi_index container to read from
  */
 
-const { readVRAMData } = require('../extensions/tools/eos/dapp-services');
+const { requireBox } = require('@liquidapps/box-utils');
+const { readVRAMData } = requireBox('dapp-services/tools/eos/dapp-services');
 var tableRes = await readVRAMData({
     contract: 'airairairair',
     key: `AIRU`,
@@ -225,7 +232,7 @@ var tableRes = await readVRAMData({
 });
 ```
 
-### getTestContract | [Code](https://github.com/liquidapps-io/zeus-sdk/blob/master/boxes/groups/eos-sdk/seed-eos/extensions/tools/eos/utils.js#L275)
+### getTestContract | [Code](https://github.com/liquidapps-io/zeus-sdk/blob/master/boxes/groups/eos-sdk/seed-eostools/eos/utils.js#L275)
 
 The `getTestContract` function creates an EOSJS instance to be used for sending EOS transactions.
 
@@ -234,8 +241,9 @@ The `getTestContract` function creates an EOSJS instance to be used for sending 
  * @param code - account name to use in setting up 
  */
 
+const { requireBox } = require('@liquidapps/box-utils');
 const code = 'airairairair';
-const { getTestContract } = require('../extensions/tools/eos/utils');
+const { getTestContract } = requireBox('seed-eos/tools/eos/utils');
 testcontract = await getTestContract(code);
 await testcontract.create({
     issuer: code,

@@ -14,7 +14,6 @@ readfn-dapp-service
 * [`dapp-services`](dapp-services.md)
 * [`seed-utils`](seed-utils.md)
 * [`mocha`](mocha.md)
-* [`hooks-cpp-contracts`](hooks-cpp-contracts.md)
 
 
 
@@ -27,8 +26,8 @@ zeus unbox readfn-dapp-service
 
 
 
-## Zeus Command Extensions
-* ```zeus readfn  --help```
+
+
 
 
 

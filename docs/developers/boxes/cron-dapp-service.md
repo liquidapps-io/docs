@@ -13,7 +13,6 @@ cron-dapp-service
 ### Boxes
 * [`dapp-services`](dapp-services.md)
 * [`mocha`](mocha.md)
-* [`hooks-cpp-contracts`](hooks-cpp-contracts.md)
 ### npm packages
 * [`node-fetch`](http://npmjs.com/package/node-fetch)
 

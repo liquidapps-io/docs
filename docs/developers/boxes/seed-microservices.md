@@ -10,7 +10,7 @@ seed-microservices
 
 ## Dependencies
 ### Boxes
-* [`seed`](seed.md)
+* [`seed-zeus-support`](seed-zeus-support.md)
 * [`core-extensions`](core-extensions.md)
 ### npm packages
 * [`daemonize-process`](http://npmjs.com/package/daemonize-process)

@@ -27,8 +27,8 @@ zeus unbox secure-accounts-extensions
 zeus secure-account accountabc owner active
 ```
 
-## Zeus Command Extensions
-* ```zeus secure-account  --help```
+
+
 
 
 ## Models

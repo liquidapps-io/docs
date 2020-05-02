@@ -31,8 +31,8 @@ zeus migrate
 zeus migrate --no-reset
 ```
 
-## Zeus Command Extensions
-* ```zeus migrate  --help```
+
+
 
 
 

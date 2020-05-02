@@ -28,10 +28,9 @@ zeus unbox oracle-sql
 
 
 
-## Zeus Command Extensions
 
-### Subcommands
-* ```zeus start-localenv 10-remove-local-sqllite --help```
+
+
 
 
 

@@ -10,7 +10,7 @@ seed-frontends
 
 ## Dependencies
 ### Boxes
-* [`seed`](seed.md)
+* [`seed-zeus-support`](seed-zeus-support.md)
 * [`core-extensions`](core-extensions.md)
 
 
@@ -34,14 +34,9 @@ zeus deploy frontend main --storage-provider pprovider1 --storage-account test1 
 zeus run frontend main
 ```
 
-## Zeus Command Extensions
 
-### Subcommands
-* ```zeus build frontend --help```
 
-* ```zeus deploy frontend --help```
 
-* ```zeus run frontend --help```
 
 
 

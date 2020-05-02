@@ -53,9 +53,10 @@ nvm use 10.16.3
 ## Recommended eosio.cdt and eosio versions
 Automatically installed with `zeus unbox helloworld`
 
-* [eosio.cdt v1.7.0](https://github.com/EOSIO/eosio.cdt/releases/tag/v1.7.0)
-* [eosio v1.8.9](https://github.com/EOSIO/eos/releases/tag/v1.8.9)
+* [eosio.cdt v1.6.3](https://github.com/EOSIO/eosio.cdt/releases/tag/v1.6.3)
+* [eosio v2.0.5](https://github.com/EOSIO/eos/releases/tag/v2.0.5)
 
+*note our contracts are not yet compatible with eosio.cdt 1.7.0*
 
 ## Install Zeus
 
@@ -71,8 +72,9 @@ npm update -g @liquidapps/zeus-cmd
 
 ## Test
 ```bash
+mkdir helloworld; cd helloworld
+zeus box create
 zeus unbox helloworld
-cd helloworld
 zeus test -c
 ```
 
@@ -80,9 +82,11 @@ zeus test -c
 This box supports all DAPP Services and unit tests and is built to integrate your own DAPP Network logic.  When you run the command a sample unit test and smart contract will be created.
 ```bash
 mkdir mydapp; cd mydapp
-zeus unbox dapp --no-create-dir
+zeus box create
+zeus unbox dapp
 zeus create contract mycontract
 ```
+*contract is located in /zeus_boxes/contracts, test is located in /zeus_boxes/test*
 
 ## Try out LiquidApps's take on Elemental Battles:
 [http://elemental.liquidapps.io/](http://elemental.liquidapps.io/) | [code](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/sample/cardgame)
@@ -101,8 +105,9 @@ The game incorporates:
 
 To launch locally:
 ```bash
+mkdir cardgame; cd cardgame
+zeus box create
 zeus unbox cardgame
-cd cardgame
 zeus migrate
 zeus run frontend main
 ```
@@ -119,8 +124,9 @@ The game incorporates:
 
 To launch locally:
 ```bash
+mkdir chess; cd chess
+zeus box create
 zeus unbox chess
-cd chess
 zeus migrate
 zeus run frontend main
 ```
@@ -140,8 +146,9 @@ The game incorporates:
 
 To launch locally:
 ```bash
+mkdir portfolio; cd portfolio
+zeus box create
 zeus unbox portfolio
-cd portfolio
 zeus migrate
 zeus run frontend main
 ```
@@ -151,6 +158,7 @@ zeus run frontend main
 ## Samples Boxes
 
 ```bash
+zeus box create
 zeus unbox <INSERT_BOX>
 ```
 
@@ -164,7 +172,6 @@ zeus unbox <INSERT_BOX>
 * [contract-migrations-extensions](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/core/contract-migrations-extensions) - contract create/deployment command template, deploy contract and allocate DAPP tokens
 * [test-extensions](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/core/test-extensions) - provides logic to test smart contract with unit tests
 * [eos-extensions](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/eos-sdk/eos-extensions) - install eos/eosio.cdt, launch local nodeos, launch system contracts
-* [unbox-extensions](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/repos/unbox-extensions) - logic to unbox zeus boxes, list all boxes, and deploy a new box
 * [demux](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/microservices/demux) - install EOSIO's demux backend to capture events for contracts using the state-history plugin
 
 ### DAPP Services Boxes

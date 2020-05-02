@@ -13,7 +13,6 @@ liquidapps-deployment
 * [`all-dapp-services`](all-dapp-services.md)
 * [`coldtoken`](coldtoken.md)
 * [`microauctions`](microauctions.md)
-* [`hooks-cpp-contracts`](hooks-cpp-contracts.md)
 
 
 

@@ -4,11 +4,17 @@ latest
 ### [docs](https://docs.liquidapps.io/en/stable/)
 - add CoVax chain section for becoming BP or DSP
 - add example chains section of LiquidX chains
+- use eos 2.0.5
+- update documentation to support `zeus_boxes` refactor
 
 ### [@liquidapps/zeus-cmd](https://www.npmjs.com/package/@liquidapps/zeus-cmd)
 - use 8887 instead of 8889 for state history port to match DSP docs
 - skip `01-dapp-client.js` if built
 - add price feed example, price feed uses LiquidHarmony's oracles and LiquidScheduler's cron to fetch a price periodically and only use CPU when the price has changed from the last recorded price by more or less than 1%
+- add `'--eos-vm-oc-compile-threads=4'` and `--chain-threads=4` to local nodeos
+- update `zeus` to modularize logic into `zeus_boxes` directory making `zeus` more like `npm`, to create or unbox a new box start with `zeus box create [name]` then if you wish to unbox and existing box `zeus unbox <BOX>`
+- fixes
+    - if Mac, detect and skip `--eos-vm-oc-enable` flags as they are not supported
 
 ### [@liquidapps/dsp](https://www.npmjs.com/package/@liquidapps/dsp)
 - added warning to ensure `trace-history = true` set in nodeos `config.ini`

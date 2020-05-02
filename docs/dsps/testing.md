@@ -18,8 +18,9 @@ npm install -g @liquidapps/zeus-cmd
 ### Unbox coldtoken contract:
 
 ```bash
+mkdir coldtoken; cd coldtoken
+zeus box create
 zeus unbox coldtoken
-cd coldtoken
 ```
 
 ### Compile and deploy contract for testing:

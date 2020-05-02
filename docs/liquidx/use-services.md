@@ -20,9 +20,9 @@ Ensure that you add `@eosio.code` to the active permission level of the account.
 
 The side chain name is the account on the EOS mainnet that has registered the chain.  You may find what this contract is by asking a DSP, a BP, or the chain team itself.
 
-2 files must be added.  One to the `/liquidx/models/eosio-chains/` directory and one to the `/liquidx/models/liquidx-mappings/` directory.
+2 files must be added.  One to the `/zeus_boxes/liquidx/models/eosio-chains/` directory and one to the `/zeus_boxes/liquidx/models/liquidx-mappings/` directory.
 
-`/liquidx/models/liquidx-mappings/sidechain_name.dappservices.json` - this maps the dappservices account on the mainnet to the dappservicex account name on the new chain
+`/zeus_boxes/liquidx/models/liquidx-mappings/sidechain_name.dappservices.json` - this maps the dappservices account on the mainnet to the dappservicex account name on the new chain
 
 - sidechain_name - EOS mainnet account that has registered the chain
 - mainnet_account - dappservices account on EOS mainnet
@@ -36,7 +36,7 @@ The side chain name is the account on the EOS mainnet that has registered the ch
 }
 ```
 
-`/liquidx/models/eosio-chains/${CHAIN_ACCOUNT}.json` - this maps the chain's configuration details
+`/zeus_boxes/liquidx/models/eosio-chains/${CHAIN_ACCOUNT}.json` - this maps the chain's configuration details
 
  - dsp_port - port DSP gateway runs on
  - webhook_dapp_port - webhook port
@@ -68,16 +68,16 @@ The side chain name is the account on the EOS mainnet that has registered the ch
 
 ```bash
 npm i -g @liquidapps/zeus-cmd
+mkir liquidx; cd liquidx
 zeus unbox liquidx
-cd liquidx
 export MY_CONTRACT_NAME=
 zeus create contract $MY_CONTRACT_NAME
-cd contracts/eos
+cd zeus_boxes/contracts/eos
 # edit MY_CONTRACT_NAME.cpp
-cd ../../
+cd ../../../
 export SIDE_CHAIN_NAME=
 zeus compile --sidechain $SIDE_CHAIN_NAME
-cd contracts/eos
+cd zeus_boxes/contracts/eos
 export EOS_ENDPOINT=
 export ACCOUNT=
 cleos -u $EOS_ENDPOINT set contract $ACCOUNT $MY_CONTRACT_NAME

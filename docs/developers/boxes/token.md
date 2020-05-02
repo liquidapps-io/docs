@@ -13,7 +13,6 @@ token
 * [`mocha`](mocha.md)
 * [`seed-eos`](seed-eos.md)
 * [`seed-models`](seed-models.md)
-* [`hooks-cpp-contracts`](hooks-cpp-contracts.md)
 
 
 
@@ -33,10 +32,9 @@ zeus create token ...
 zeus migrate
 ```
 
-## Zeus Command Extensions
 
-### Subcommands
-* ```zeus create token --help```
+
+
 
 ## Models
 ### New Model Types

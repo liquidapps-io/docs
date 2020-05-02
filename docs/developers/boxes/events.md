@@ -26,10 +26,9 @@ zeus unbox events
 zeus create event
 ```
 
-## Zeus Command Extensions
 
-### Subcommands
-* ```zeus create event --help```
+
+
 
 ## Models
 ### New Model Types
