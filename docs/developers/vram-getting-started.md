@@ -57,6 +57,13 @@ my_table_struct mytable(othercntr,othercntr.value);
 ```
 This does require that the table struct and table name of the remote contract to be known, just as in regular multi_index. Remote tables can only be read, they cannot be modified. Remote table owners do not have to be staked to the same DSP as your contract.
 
+These same conditions apply for reading vram tables from contracts on other chains. This is achieved with the `warmupchain` and `cleanchain` actions. Similar to reading from other contracts, this may be done using some additional parameters:
+```
+my_table_struct mytable(othercntr,othercntr.value, 1024, 64, false, false, 0, chain);
+```
+Where `chain` is the name of the side chain as specified in the LiquidX chain model file.
+In the case of reading from the EOSIO mainnet, specify `chain` as 'mainnet'. 
+
 ## Add your contract logic
 in `zeus_boxes/contracts/eos/mycontract/mycontract.cpp`
 ```cpp
