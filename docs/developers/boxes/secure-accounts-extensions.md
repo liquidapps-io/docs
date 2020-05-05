@@ -8,8 +8,8 @@ secure-accounts-extensions
 
 
 
-## Dependencies
-### Boxes
+
+
 * [`seed-eos`](seed-eos.md)
 * [`seed-migrations`](seed-migrations.md)
 * [`seed-models`](seed-models.md)

@@ -8,8 +8,8 @@ framework-tests
 
 
 
-## Dependencies
-### Boxes
+
+
 * [`all-dapp-services`](all-dapp-services.md)
 * [`mocha`](mocha.md)
 * [`coldtoken`](coldtoken.md)

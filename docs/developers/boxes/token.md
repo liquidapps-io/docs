@@ -8,8 +8,8 @@ token
 
 
 
-## Dependencies
-### Boxes
+
+
 * [`mocha`](mocha.md)
 * [`seed-eos`](seed-eos.md)
 * [`seed-models`](seed-models.md)

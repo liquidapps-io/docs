@@ -8,8 +8,8 @@ seed-extensions
 
 
 
-## Dependencies
-### Boxes
+
+
 * [`seed-zeus-support`](seed-zeus-support.md)
 
 

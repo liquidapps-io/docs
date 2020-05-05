@@ -9,8 +9,8 @@ vcpu-dapp-service
 
 ## Service Documentation
 [VCPU](../../services/vcpu-service.md)
-## Dependencies
-### Boxes
+
+
 * [`dapp-services`](dapp-services.md)
 ### npm packages
 * [`assemblyscript`](http://npmjs.com/package/assemblyscript)

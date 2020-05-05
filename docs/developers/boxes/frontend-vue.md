@@ -8,8 +8,8 @@ frontend-vue
 
 
 
-## Dependencies
-### Boxes
+
+
 * [`frontend-transit`](frontend-transit.md)
 
 

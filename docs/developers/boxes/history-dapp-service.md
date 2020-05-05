@@ -9,8 +9,8 @@ history-dapp-service
 
 ## Service Documentation
 [LiquidArchive](../../services/history-service.md)
-## Dependencies
-### Boxes
+
+
 * [`dapp-services`](dapp-services.md)
 * [`seed-utils`](seed-utils.md)
 * [`mocha`](mocha.md)

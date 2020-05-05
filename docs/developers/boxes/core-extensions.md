@@ -8,8 +8,8 @@ core-extensions
 
 
 
-## Dependencies
-### Boxes
+
+
 * [`run-extensions`](run-extensions.md)
 * [`migrations-extensions`](migrations-extensions.md)
 * [`contract-migrations-extensions`](contract-migrations-extensions.md)
@@ -20,6 +20,7 @@ core-extensions
 * [`log-extensions`](log-extensions.md)
 * [`sync-builtin-boxes-extensions`](sync-builtin-boxes-extensions.md)
 * [`templates-emptycontract-eos-cpp`](templates-emptycontract-eos-cpp.md)
+* [`upgrade-extensions`](upgrade-extensions.md)
 
 
 

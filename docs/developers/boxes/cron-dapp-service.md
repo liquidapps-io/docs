@@ -9,8 +9,8 @@ cron-dapp-service
 
 ## Service Documentation
 [LiquidScheduler](../../services/cron-service.md)
-## Dependencies
-### Boxes
+
+
 * [`dapp-services`](dapp-services.md)
 * [`mocha`](mocha.md)
 ### npm packages

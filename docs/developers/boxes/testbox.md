@@ -8,8 +8,8 @@ testbox
 
 
 
-## Dependencies
-### Boxes
+
+
 * [`dapp-sample`](dapp-sample.md)
 * [`toolchain`](toolchain.md)
 * [`game-sample`](game-sample.md)

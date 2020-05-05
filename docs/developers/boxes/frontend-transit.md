@@ -8,8 +8,8 @@ frontend-transit
 
 
 
-## Dependencies
-### Boxes
+
+
 * [`seed-frontends`](seed-frontends.md)
 * [`core-extensions`](core-extensions.md)
 * [`frontend-main`](frontend-main.md)

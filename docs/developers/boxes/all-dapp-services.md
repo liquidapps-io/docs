@@ -8,8 +8,8 @@ all-dapp-services
 
 
 
-## Dependencies
-### Boxes
+
+
 * [`log-dapp-service`](log-dapp-service.md)
 * [`ipfs-dapp-service`](ipfs-dapp-service.md)
 * [`cron-dapp-service`](cron-dapp-service.md)

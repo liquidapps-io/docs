@@ -8,8 +8,8 @@ bancor-extensions
 
 
 
-## Dependencies
-### Boxes
+
+
 * [`seed-eos`](seed-eos.md)
 * [`seed-migrations`](seed-migrations.md)
 * [`secure-accounts-extensions`](secure-accounts-extensions.md)

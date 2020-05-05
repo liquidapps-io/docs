@@ -8,8 +8,8 @@ log-extensions
 
 
 
-## Dependencies
-### Boxes
+
+
 * [`seed-extensions`](seed-extensions.md)
 ### npm packages
 * [`winston`](http://npmjs.com/package/winston)

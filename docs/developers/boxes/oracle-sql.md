@@ -8,8 +8,8 @@ oracle-sql
 
 
 
-## Dependencies
-### Boxes
+
+
 * [`oracle-dapp-service`](oracle-dapp-service.md)
 ### npm packages
 * [`fs-extra`](http://npmjs.com/package/fs-extra)

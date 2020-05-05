@@ -9,8 +9,8 @@ storage-dapp-service
 
 ## Service Documentation
 [LiquidStorage](../../services/storage-service.md)
-## Dependencies
-### Boxes
+
+
 * [`dapp-services`](dapp-services.md)
 * [`seed-utils`](seed-utils.md)
 * [`mocha`](mocha.md)

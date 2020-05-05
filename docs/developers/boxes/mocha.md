@@ -8,8 +8,8 @@ mocha
 
 
 
-## Dependencies
-### Boxes
+
+
 * [`seed-tests`](seed-tests.md)
 ### npm packages
 * [`mocha`](http://npmjs.com/package/mocha)

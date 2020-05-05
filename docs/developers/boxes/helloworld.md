@@ -8,8 +8,8 @@ helloworld
 
 
 
-## Dependencies
-### Boxes
+
+
 * [`sample-eos-cpp`](sample-eos-cpp.md)
 
 

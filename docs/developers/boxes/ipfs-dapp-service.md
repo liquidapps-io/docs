@@ -9,8 +9,8 @@ ipfs-dapp-service
 
 ## Service Documentation
 [LiquidVRAM](../../services/ipfs-service.md)
-## Dependencies
-### Boxes
+
+
 * [`dapp-services`](dapp-services.md)
 * [`log-dapp-service`](log-dapp-service.md)
 * [`seed-utils-cleanup`](seed-utils-cleanup.md)

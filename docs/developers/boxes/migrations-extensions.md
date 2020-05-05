@@ -8,8 +8,8 @@ migrations-extensions
 
 
 
-## Dependencies
-### Boxes
+
+
 * [`localenv-extensions`](localenv-extensions.md)
 * [`seed-eos`](seed-eos.md)
 * [`zeus-eos`](zeus-eos.md)

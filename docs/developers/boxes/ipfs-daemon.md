@@ -8,8 +8,8 @@ ipfs-daemon
 
 
 
-## Dependencies
-### Boxes
+
+
 * [`events`](events.md)
 * [`seed-microservices`](seed-microservices.md)
 * [`seed-models`](seed-models.md)

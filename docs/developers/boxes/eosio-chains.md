@@ -8,8 +8,8 @@ eosio-chains
 
 
 
-## Dependencies
-### Boxes
+
+
 * [`dapp-services`](dapp-services.md)
 
 

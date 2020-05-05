@@ -8,8 +8,8 @@ liquidx
 
 
 
-## Dependencies
-### Boxes
+
+
 * [`eosio-chains`](eosio-chains.md)
 * [`all-dapp-services`](all-dapp-services.md)
 

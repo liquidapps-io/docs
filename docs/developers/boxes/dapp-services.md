@@ -8,8 +8,8 @@ dapp-services
 
 
 
-## Dependencies
-### Boxes
+
+
 * [`seed-zeus-support`](seed-zeus-support.md)
 * [`seed-microservices`](seed-microservices.md)
 * [`core-extensions`](core-extensions.md)

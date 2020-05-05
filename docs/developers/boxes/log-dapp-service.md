@@ -9,8 +9,8 @@ log-dapp-service
 
 ## Service Documentation
 [LiquidLog](../../services/log-service.md)
-## Dependencies
-### Boxes
+
+
 * [`dapp-services`](dapp-services.md)
 
 

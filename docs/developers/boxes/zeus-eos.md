@@ -8,8 +8,8 @@ zeus-eos
 
 
 
-## Dependencies
-### Boxes
+
+
 * [`seed-zeus-support`](seed-zeus-support.md)
 ### npm packages
 * [`eosjs@20.0.0`](http://npmjs.com/package/eosjs@20.0.0)

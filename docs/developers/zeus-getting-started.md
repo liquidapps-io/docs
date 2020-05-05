@@ -64,6 +64,16 @@ Automatically installed with `zeus unbox helloworld`
 npm install -g @liquidapps/zeus-cmd
 ```
 
+## Unbox
+
+The unbox command allows a user to unbox one or multiple boxes, similar to `npm install <MODULE> [MODULE2 ...]`.  A version may also be specified.
+
+```bash
+zeus unbox helloworld
+zeus unbox helloworld@1.0.1
+zeus unbox helloworld ipfs-dapp-service
+```
+
 ## Update
 
 ```bash
@@ -324,11 +334,17 @@ zeus box create <BOX_NAME>
 Zeus uses 2 mapping files to unbox boxes.  The `builtin-mapping.json` file is for boxes that are a part of the official zeus-sdk repo (located: `.../node_modules/@liquidapps/zeus-cmd/lib/resources/builtin-mapping.json`). This file only changes when Zeus is updated. There is also a local zeus box for modifying existing boxes from the `builtin-mapping.json` and adding new boxes.  If a box exists in both the builtin and the local mapping files, the local mapping file will be used.  To use the builtin box instead, you must remove the local version first.
 
 ```bash
-zeus box add <BOX_NAME> <URI>
-# zeus box add liquidx-jungle https://s3.us-east-2.amazonaws.com/liquidapps.artifacts/boxes/0a98835c75debf2f1d875be8be39591501b15352f7c017799d0ebf3342668d2c.zip
-# zeus list-boxes, will see new box under 'Local Boxes:'
-zeus box remove <BOX_NAME>
-# zeus box remove liquidx-jungle
+zeus box add <BOX_NAME> <VERSION> <URI>
+# zeus box add liquidx-jungle 1.0.1 https://s3.us-east-2.amazonaws.com/liquidapps.artifacts/boxes/0a98835c75debf2f1d875be8be39591501b15352f7c017799d0ebf3342668d2c.zip
+
+# to deploy helloworld box locally then add
+# zeus box deploy
+# zeus box add helloworld 1.0.1 file:///home/ubuntu/.zeus/boxes/helloworld/box.zip
+
+# to remove
+# zeus list-boxes # will see new box under 'Local Boxes:'
+zeus box remove <BOX_NAME> <VERSION>
+# zeus box remove liquidx-jungle 1.0.1
 # zeus list-boxes, will be gone
 ```
 
@@ -380,14 +396,6 @@ Lists all available zeus boxes that can be unboxed.
 ```bash
 zeus list-boxes
 ```
-
-### Update Boxes
-Updates zeus boxes for currently unboxed project
-
-```bash
-zeus update --boxes
-```
-
 
 ## Project structure
 ### Directory structure

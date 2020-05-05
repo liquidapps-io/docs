@@ -8,8 +8,8 @@ sync-builtin-boxes-extensions
 
 
 
-## Dependencies
-### Boxes
+
+
 * [`seed-extensions`](seed-extensions.md)
 
 

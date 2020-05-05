@@ -8,8 +8,8 @@ bancor-relay
 
 
 
-## Dependencies
-### Boxes
+
+
 * [`seed-eos`](seed-eos.md)
 * [`events`](events.md)
 * [`token`](token.md)

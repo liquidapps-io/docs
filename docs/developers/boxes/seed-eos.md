@@ -8,8 +8,8 @@ seed-eos
 
 
 
-## Dependencies
-### Boxes
+
+
 * [`eos-extensions`](eos-extensions.md)
 * [`zeus-eos`](zeus-eos.md)
 * [`eos-common`](eos-common.md)

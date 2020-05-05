@@ -9,8 +9,8 @@ dns-dapp-service
 
 ## Service Documentation
 [LiquidDNS](../../services/dns-service.md)
-## Dependencies
-### Boxes
+
+
 * [`dapp-services`](dapp-services.md)
 ### npm packages
 * [`dnsd`](http://npmjs.com/package/dnsd)

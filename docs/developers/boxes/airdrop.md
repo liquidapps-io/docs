@@ -8,8 +8,8 @@ airdrop
 
 
 
-## Dependencies
-### Boxes
+
+
 * [`oracle-dapp-service`](oracle-dapp-service.md)
 * [`readfn-dapp-service`](readfn-dapp-service.md)
 * [`token`](token.md)

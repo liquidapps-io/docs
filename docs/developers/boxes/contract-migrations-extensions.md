@@ -8,10 +8,10 @@ contract-migrations-extensions
 
 
 
-## Dependencies
-### Boxes
+
+
 * [`migrations-extensions`](migrations-extensions.md)
-* [`seed-models`](seed-models.md)
+* [`seed-extensions`](seed-extensions.md)
 
 
 

@@ -13,6 +13,11 @@ latest
 - add price feed example, price feed uses LiquidHarmony's oracles and LiquidScheduler's cron to fetch a price periodically and only use CPU when the price has changed from the last recorded price by more or less than 1%
 - add `'--eos-vm-oc-compile-threads=4'` and `--chain-threads=4` to local nodeos
 - update `zeus` to modularize logic into `zeus_boxes` directory making `zeus` more like `npm`, to create or unbox a new box start with `zeus box create [name]` then if you wish to unbox and existing box `zeus unbox <BOX>`
+- zeus now offers versioning of boxes
+    - zeus now offers optional `zeus unbox <BOX>@[VERSION]`
+    - can add and remove boxes with `zeus box add <BOX> [VERSION] [URI]` `zeus box remove <BOX> [VERSION]`
+    - to update an existing box, run `zeus unbox <BOX>@[VERSION]`, if no version specified, latest used, will unbox everything again with new version
+    - to only add new boxes, unbox after update with `--no-update`
 - fixes
     - if Mac, detect and skip `--eos-vm-oc-enable` flags as they are not supported
 

@@ -8,8 +8,8 @@ vram-reconstructor
 
 
 
-## Dependencies
-### Boxes
+
+
 * [`ipfs-dapp-service`](ipfs-dapp-service.md)
 ### npm packages
 * [`@dfuse/client`](http://npmjs.com/package/@dfuse/client)

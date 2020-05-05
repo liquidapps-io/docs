@@ -8,8 +8,8 @@ eos-extensions
 
 
 
-## Dependencies
-### Boxes
+
+
 * [`core-extensions`](core-extensions.md)
 ### npm packages
 * [`kill-port`](http://npmjs.com/package/kill-port)

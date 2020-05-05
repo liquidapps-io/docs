@@ -8,8 +8,8 @@ publish-extensions
 
 
 
-## Dependencies
-### Boxes
+
+
 * [`seed-extensions`](seed-extensions.md)
 * [`seed-models`](seed-models.md)
 

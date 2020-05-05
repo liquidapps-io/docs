@@ -8,8 +8,8 @@ eos-keystore
 
 
 
-## Dependencies
-### Boxes
+
+
 * [`seed-empty`](seed-empty.md)
 * [`mocha`](mocha.md)
 ### npm packages

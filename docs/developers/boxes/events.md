@@ -8,8 +8,8 @@ events
 
 
 
-## Dependencies
-### Boxes
+
+
 * [`seed-eos`](seed-eos.md)
 * [`core-extensions`](core-extensions.md)
 

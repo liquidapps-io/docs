@@ -8,8 +8,8 @@ oracle-vcpu
 
 
 
-## Dependencies
-### Boxes
+
+
 * [`oracle-dapp-service`](oracle-dapp-service.md)
 ### npm packages
 * [`assemblyscript`](http://npmjs.com/package/assemblyscript)

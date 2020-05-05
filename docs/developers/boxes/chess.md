@@ -8,8 +8,8 @@ chess
 
 
 
-## Dependencies
-### Boxes
+
+
 * [`mocha`](mocha.md)
 * [`seed-eos`](seed-eos.md)
 * [`seed-migrations`](seed-migrations.md)
