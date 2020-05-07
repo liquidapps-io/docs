@@ -22,6 +22,8 @@ liquidx
 * [`orcxtest`](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/dapp-network/liquidx/contracts/eos/orcxtest)
 * [`readfnxtest`](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/dapp-network/liquidx/contracts/eos/readfnxtest)
 * [`vaccountsx`](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/dapp-network/liquidx/contracts/eos/vaccountsx)
+* [`vaccntxrem`](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/dapp-network/liquidx/contracts/eos/vaccntxrem)
+* [`vaccntxremx`](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/dapp-network/liquidx/contracts/eos/vaccntxremx)
 * [`cronxtest`](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/dapp-network/liquidx/contracts/eos/cronxtest)
 * [`storagextest`](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/dapp-network/liquidx/contracts/eos/storagextest)
 ## Install

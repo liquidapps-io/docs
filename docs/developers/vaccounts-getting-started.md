@@ -90,11 +90,33 @@ CONTRACT_START()
   /* EACH ACTION MUST HAVE A STRUCT THAT DEFINES THE PAYLOAD SYNTAX TO BE PASSED */
   VACCOUNTS_APPLY(((dummy_action_hello)(hello))((dummy_action_hello)(hello2)))
   
-CONTRACT_END((init)(hello)(hello2)(regaccount)(xdcommit)(xvinit))
+CONTRACT_END((init)(hello)(hello2)(regaccount)(xdcommit)(xvinit)(xvauth))
 ```
 
 ## Use LiquidAccounts between contracts
-To enable the usage of LiquidAccounts between contracts, the subscriber contract (contract that wishes to use LiquidAccounts of another host contract) must add the `#define VACCOUNTS_SUBSCRIBER` definition to the smart contract.  The subscriber contract must also be staked to a DSP offering the LiquidAccounts service, but this DSP does not need to be the same DSP as the DSP providing services to the host contract.  In place of setting the `CHAIN_ID` with the `xvinit` action (detailed below), the account name of the host account providing the LiquidAccounts (not the DSP account) must be used in its place.
+To enable the usage of LiquidAccounts between contracts, the subscriber contract (contract that wishes to use LiquidAccounts of another host contract) must add the `#define VACCOUNTS_SUBSCRIBER` definition to the smart contract.  The subscriber contract must also be staked to a DSP offering the LiquidAccounts service, but this DSP does not need to be the same DSP as the DSP providing services to the host contract.  In place of setting the `CHAIN_ID` with the `xvinit` action (detailed below), the account name of the host account providing the LiquidAccounts (not the DSP account) must be used in its place. The subscriber contract may also subscribe to a "cross-chain host" in the same manner.
+
+## Use LiquidAccounts across chains
+To enable the usage of LiquidAccounts across chains, a "cross-chain host" must be deployed on each supported EOSIO chain. This "cross-chain host" will be configured to use the LiquidAccounts that have been registered on the "host chain" contract. To convert a LiquidAccount contract to a "cross-chain host" add the following defines to the contract:
+
+```cpp
+#define LIQUIDX
+#define USE_ADVANCED_IPFS
+#define VACCOUNTS_CROSSCHAIN
+```
+
+Optional:
+
+```cpp
+#define VACCOUNTS_CROSSCHAIN_NONCE_VARIANCE 5 // defaults to 5 if not defined
+```
+
+The `VACCOUNTS_CROSSCHAIN_NONCE_VARIANCE` is the difference of allowed variance from the calculated nonce at run time.  For example, if the calculated nonce is 10 and the variance is 5, then if a transactions is attempted with a nonce of 4 or less, the transaction will be rejected.  The variance's purpose is to allow leeway in the event that multiple accounts are using the sidechain's contract at the same time.  This allows the nonce to be outdated between the time the client pulls the nonce and pushes the transaction, potentially a few blocks in the future.
+
+and remove `(regaccount)` from the CONTRACT_END
+
+No changes are required to the LiquidAccount contract on the "host chain". All registration of new accounts must occur on the "host chain".
+The final step is to use the xvinit action with the parameters `chainid`, `hostchain`, and `hostcode`. When the host chain is the EOSIO mainnet, `hostchain` will be `mainnet`. If another chain is used as the host chain, use the chain name as specified in the LiquidX chain mapping. The `hostcode` is the account name of the LiquidAccounts contract.
 
 ## Compile
 
@@ -144,7 +166,13 @@ First you'll need to initialize the LiquidAccounts implementation with the `chai
 # kylin
 export CHAIN_ID=5fff1dae8dc8e2fc4d5b23b2c7665c97f9e9d8edf2b6485a86ba311c25639191
 cleos -u $DSP_ENDPOINT push action $KYLIN_TEST_ACCOUNT xvinit "[\"$CHAIN_ID\"]" -p $KYLIN_TEST_ACCOUNT
+# if using VACCOUNTS_CROSSCHAIN
+export CHAIN_ID=5fff1dae8dc8e2fc4d5b23b2c7665c97f9e9d8edf2b6485a86ba311c25639191
+export HOST_CHAIN=chainname
+export HOST_CODE=vaccnthost
+cleos -u $DSP_ENDPOINT push action $KYLIN_TEST_ACCOUNT xvinit "[\"$CHAIN_ID\",\"$HOST_CHAIN\",\"$HOST_CODE\"]" -p $KYLIN_TEST_ACCOUNT
 # if using VACCOUNTS_SUBSCRIBER
+export HOST_ACCOUNT_NAME=kylinhost
 cleos -u $DSP_ENDPOINT push action $KYLIN_TEST_ACCOUNT xvinit "[\"$HOST_ACCOUNT_NAME\"]" -p $KYLIN_TEST_ACCOUNT
 ```
 
