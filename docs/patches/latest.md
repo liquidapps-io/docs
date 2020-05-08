@@ -27,6 +27,7 @@ latest
 - add `DATABASE_TIMEOUT` to sample toml, adjust time before database connection times out
 - add `DEMUX_PROCESS_BLOCK_CHECKPOINT` to sample toml, amount of blocks to pass before updating database with last processed block
 - add `disabledServices` to ecosystem file to prevent pre-alpha services from being setup
+- add `dsp_account_permissions` option for each sidechain
 
 ### [LiquidAccount Service](https://docs.liquidapps.io/en/v2.0/services/vaccounts-service.html)
 - add cross chain support for LiquidAccounts using LiquidX
