@@ -11,7 +11,11 @@ LiquidScheduler Getting Started
 
 ```
 
-LiquidScheduler is an on chain cron solution for EOS based actions.  One use case would be setting up LiquidHarmony (oracle) fetches on a continual basis.  Another great place to understand the service is in the [unit tests](https://github.com/liquidapps-io/zeus-sdk/blob/master/boxes/groups/services/cron-dapp-service/test/cron.spec.js).
+LiquidScheduler is an on chain scheduling solution for EOS based actions.  LiquidScheduler takes a `name timer`, a `std::vector<char> payload` object, and an `uint32_t seconds` interval as its parameters.  Multiple timers may be used within the same contract.  For example, if a contract deals with multiple accounts, a timer can be set up for each account.  The `payload` parameter can be used to pass data to the `timer_callback` function which is used to run the scheduled task.  At the end of the `timer_callback` is a return response.  If the return is truthy, the task will reschedule again based on the interval passed, if it is false, the task will not be rescheduled. 
+
+One use case would be setting up LiquidHarmony (oracle) fetches on a continual basis.  An example of this can be seen in the [portfolio example](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/sample/portfolio) which fetches 3 prices on an infinite loop.
+
+Another great place to understand the service is in the [unit tests](https://github.com/liquidapps-io/zeus-sdk/blob/master/boxes/groups/services/cron-dapp-service/test/cron.spec.js).
 
 The price feed example uses LiquidHarmony web oracles and the LiquidScheduler to periodically update a price on chain only when the new price is more or less than 1% of the last updated price, conserving CPU by only running actions when necessary. See [here](price-feed)
 
@@ -48,16 +52,19 @@ The consumer contract is a great starting point for playing around with the Liqu
 #define CONTRACT_NAME() cronconsumer
 
 CONTRACT_START()
-  /* SETUP COUNTER TABLE FOR HOW MANY TIME TO REPEAT CRON */
+
   TABLE stat {
       uint64_t   counter = 0;
   };
-
   typedef eosio::singleton<"stat"_n, stat> stats_def;
-  /* CONFIGURE LOGIC FOR EACH CRON TASK */
-  bool timer_callback(name timer, std::vector<char> payload, uint32_t seconds){
 
-    stats_def statstable(_self, _self.value);
+  TABLE payloadtbl {
+      string   payload = "";
+  };
+  typedef eosio::singleton<"payloadtbl"_n, payloadtbl> payload_def;
+  
+  bool timer_callback(name timer, std::vector<char> payload, uint32_t seconds){
+    stats_def statstable(_self, timer.value);
     stat newstats;
     if(!statstable.exists()){
       statstable.set(newstats, _self);
@@ -65,20 +72,45 @@ CONTRACT_START()
     else{
       newstats = statstable.get();
     }
+    if(payload.size() > 0) {
+      payload_def payloadtable(_self, timer.value);
+      payloadtbl newpayload;
+      string payload_string(payload.begin(), payload.end());
+      newpayload.payload = payload_string;
+      payloadtable.set(newpayload, _self);
+      return false;
+    }
     newstats.counter++;
     statstable.set(newstats, _self);
-
     // reschedule
-    /* CAN return true TO CREATE INFINITE LOOP */
-    return (newstats.counter < 10);
+    return (newstats.counter < 45);
+    // for infinite loop, return true
   }
-  /*  */
- [[eosio::action]] void testschedule() {
-    std::vector<char> payload;
-    /* SCHEDULE TIMER WITH 2 BEING SECONDS BETWEEN EACH CRON */
-    schedule_timer(_self, payload, 2);
+
+  // test scheduling timer scoped to _self with 2s interval
+  [[eosio::action]] void testschedule() {
+      // optional payload for data to be passed to timer_callback
+      std::vector<char> payload;
+      schedule_timer(_self, payload, 2);
   }
-CONTRACT_END((testschedule))
+
+  // test multiple timers by scoping each timer by account with 2s interval
+  [[eosio::action]] void multitimer(name account) {
+      // optional payload for data to be passed to timer_callback
+      std::vector<char> payload;
+      schedule_timer(account, payload, 2);
+  }
+
+  // remove timer by scope
+  [[eosio::action]] void removetimer(name account) {
+      remove_timer(account);
+  }
+
+  // test passing payload to timer_callback
+  [[eosio::action]] void testpayload(name account, std::vector<char> payload, uint32_t seconds) {
+      schedule_timer(account, payload, seconds);
+  }
+CONTRACT_END((testschedule)(multitimer)(removetimer)(testpayload))
 ```
 
 ## Compile
@@ -135,9 +167,10 @@ curl --request POST \
   --data '{"code":"account_name","table":"stat","scope":"account_name"}'
 ```
 
-### testschedule
+### Test actions
 ```bash
-cleos -u $DSP_ENDPOINT push action $KYLIN_TEST_ACCOUNT testschedule "[\"\"]" -p $KYLIN_TEST_ACCOUNT
+# setup scheduling task to run 45 times for multiple timers/accounts
+cleos -u $DSP_ENDPOINT push action $KYLIN_TEST_ACCOUNT testschedule '[INTERVAL]' -p $KYLIN_TEST_ACCOUNT
 ```
 
 ### Custom eosio assertion message
