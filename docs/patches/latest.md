@@ -56,5 +56,6 @@ latest
 - run exponential backoff forever, was 10 retries max
 - add `shouldAbort` `eosio::check` handler for rescheduling cron without CPU
 
-### [Dapp Client](https://docs.liquidapps.io/en/v2.0/developers/dapp-client.html)
+### [@liquidapps/dapp-client](https://www.npmjs.com/package/@liquidapps/dapp-client)
+- patch new secondary index RPC API support
 - updated Dapp Client to support cross chain Liquid Accounts
