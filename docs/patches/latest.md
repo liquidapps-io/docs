@@ -24,6 +24,8 @@ latest
 ### [@liquidapps/dsp](https://www.npmjs.com/package/@liquidapps/dsp)
 - added warning to ensure `trace-history = true` set in nodeos `config.ini`
 - add how many blocks behind the head block in demux heartbeat
+- fixes
+    - handle `TypeError: Cannot read property 'this_block' of undefined` in demux
 - add `DATABASE_TIMEOUT` to sample toml, adjust time before database connection times out
 - add `DEMUX_PROCESS_BLOCK_CHECKPOINT` to sample toml, amount of blocks to pass before updating database with last processed block
 - add `disabledServices` to ecosystem file to prevent pre-alpha services from being setup
