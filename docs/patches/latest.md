@@ -6,6 +6,10 @@ latest
 - add example chains section of LiquidX chains
 - use eos 2.0.5
 - update documentation to support `zeus_boxes` refactor
+- add `chain-threads=8` `eos-vm-oc-compile-threads=2` to nodeos example `config.ini` in docs
+- add [LiquidStorage section](../developers/storage-getting-started)
+- update [LiquidAccounts section](../developers/vaccounts-getting-started)
+- update [LiquidVRAM section](../developers/vram-getting-started)
 
 ### [@liquidapps/zeus-cmd](https://www.npmjs.com/package/@liquidapps/zeus-cmd)
 - use 8887 instead of 8889 for state history port to match DSP docs
@@ -29,6 +33,7 @@ latest
 - add `DATABASE_TIMEOUT` to sample toml, adjust time before database connection times out
 - add `DEMUX_PROCESS_BLOCK_CHECKPOINT` to sample toml, amount of blocks to pass before updating database with last processed block
 - add `disabledServices` to ecosystem file to prevent pre-alpha services from being setup
+- add `DEMUX_MAX_MEMORY_MB` option to ecosystem file to set maximum amount of memory that can be used by demux
 - add `dsp_account_permissions` option for each sidechain
 
 ### [LiquidAccount Service](https://docs.liquidapps.io/en/v2.0/services/vaccounts-service.html)
@@ -41,11 +46,6 @@ latest
 - add dapp-client examples for `get_uri.ts`, `unpin_public_file.ts`, `upload_archive_to_liquidstorage.ts`, `upload_file_to_liquidstorage.ts`, `upload_public_file_from_vaccount.ts`
 - add sidechain storage unit test
 - add `zeus storage upload <ACCOUNT_NAME> package.json <ACCOUNT_PRIVATE_KEY>` and `zeus storage unpin <ACCOUNT_NAME> <IPFS_URI_RETURNED_ABOVE> <ACCOUNT_PRIVATE_KEY>` zeus commands
-
-### [docs](https://docs.liquidapps.io/en/stable/)
-- add [LiquidStorage section](../developers/storage-getting-started)
-- update [LiquidAccounts section](../developers/vaccounts-getting-started)
-- update [LiquidVRAM section](../developers/vram-getting-started)
 
 ### [LiquidHarmony Service](https://docs.liquidapps.io/en/stable/developers/harmony-getting-started.html)
 - add check to ensure each DSP only returns one oracle response
