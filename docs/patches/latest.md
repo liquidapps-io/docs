@@ -56,6 +56,11 @@ latest
 - add `Oracle minimum threshold check` unit test
 - reduce oracle retries to 10 from 100
 - add `shouldAbort` `eosio::check` handler for aborting oracle service request
+- add `echo` oracle, which uses the same structure as `http` or `https` however the uri is replaced with a desired return value. This return value must be a base64 encoded string. 
+    - `echo`: Mimics a GET request that returns text
+    - `echo+json`: Mimics a GET request that returns JSON
+    - `echo+post`: Mimics a POST request that returns text
+    - `echo+post+json`: Mimics a POST request that returns JSON 
 
 ### [LiquidScheduler Service](https://docs.liquidapps.io/en/stable/developers/cron-getting-started.html)
 - run exponential backoff forever, was 10 retries max

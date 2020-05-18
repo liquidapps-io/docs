@@ -15,6 +15,7 @@ oracle-dapp-service
 * [`mocha`](mocha.md)
 * [`seed-utils-cleanup`](seed-utils-cleanup.md)
 * [`oracle-web`](oracle-web.md)
+* [`oracle-echo`](oracle-echo.md)
 * [`oracle-self-history`](oracle-self-history.md)
 * [`oracle-random`](oracle-random.md)
 * [`oracle-sister-chain`](oracle-sister-chain.md)

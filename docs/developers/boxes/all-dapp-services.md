@@ -29,6 +29,7 @@ all-dapp-services
 * [`oracle-random`](oracle-random.md)
 * [`oracle-sql`](oracle-sql.md)
 * [`oracle-vcpu`](oracle-vcpu.md)
+* [`oracle-echo`](oracle-echo.md)
 
 
 
