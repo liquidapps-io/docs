@@ -7,6 +7,7 @@ latest
 ### [docs](https://docs.liquidapps.io/en/stable/)
 - add CoVax chain section for becoming BP or DSP
 - add example chains section of LiquidX chains
+- add [EOS Block Producer Benchmarks](https://www.alohaeos.com/tools/benchmarks#networkId=21&timeframeId=2) | courtesy of [Aloha EOS](https://www.alohaeos.com/)
 - use eos 2.0.5
 - update documentation to support `zeus_boxes` refactor
 - add `chain-threads=8` `eos-vm-oc-compile-threads=2` to nodeos example `config.ini` in docs
