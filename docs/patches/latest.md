@@ -1,6 +1,9 @@
 latest
 ========
 
+**breaking changes**
+- all unboxed `zeus` boxes will need to be re-unboxed to support the new `zeus_boxes` architecture
+
 ### [docs](https://docs.liquidapps.io/en/stable/)
 - add CoVax chain section for becoming BP or DSP
 - add example chains section of LiquidX chains
@@ -28,13 +31,13 @@ latest
 ### [@liquidapps/dsp](https://www.npmjs.com/package/@liquidapps/dsp)
 - added warning to ensure `trace-history = true` set in nodeos `config.ini`
 - add how many blocks behind the head block in demux heartbeat
-- fixes
-    - handle `TypeError: Cannot read property 'this_block' of undefined` in demux
 - add `DATABASE_TIMEOUT` to sample toml, adjust time before database connection times out
 - add `DEMUX_PROCESS_BLOCK_CHECKPOINT` to sample toml, amount of blocks to pass before updating database with last processed block
 - add `disabledServices` to ecosystem file to prevent pre-alpha services from being setup
 - add `DEMUX_MAX_MEMORY_MB` option to ecosystem file to set maximum amount of memory that can be used by demux
 - add `dsp_account_permissions` option for each sidechain
+- fixes
+    - handle `TypeError: Cannot read property 'this_block' of undefined` in demux
 
 ### [LiquidAccount Service](https://docs.liquidapps.io/en/v2.0/services/vaccounts-service.html)
 - add cross chain support for LiquidAccounts using LiquidX
