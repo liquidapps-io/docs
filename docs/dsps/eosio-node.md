@@ -97,6 +97,8 @@ mv snapshots/$SNAPFILE snapshots/boot.bin
 
 ## Configuration
 
+**Please note that it is crucial that all of the following configuration flags are set.  If any are missing, it will likely cause issues with running tht DSP software.**
+
 ```bash
 cd $HOME/.local/share/eosio/nodeos/config
 
