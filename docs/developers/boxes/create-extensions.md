@@ -8,8 +8,8 @@ create-extensions
 
 
 
-## Dependencies
-### Boxes
+
+
 * [`seed-extensions`](seed-extensions.md)
 * [`seed-models`](seed-models.md)
 
@@ -23,8 +23,8 @@ zeus unbox create-extensions
 
 
 
-## Zeus Command Extensions
-* ```zeus create  --help```
+
+
 
 
 

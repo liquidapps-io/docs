@@ -9,13 +9,12 @@ ipfs-dapp-service
 
 ## Service Documentation
 [LiquidVRAM](../../services/ipfs-service.md)
-## Dependencies
-### Boxes
+
+
 * [`dapp-services`](dapp-services.md)
 * [`log-dapp-service`](log-dapp-service.md)
 * [`seed-utils-cleanup`](seed-utils-cleanup.md)
 * [`mocha`](mocha.md)
-* [`hooks-cpp-contracts`](hooks-cpp-contracts.md)
 ### npm packages
 * [`ipfs-api`](http://npmjs.com/package/ipfs-api)
 * [`lru-cache`](http://npmjs.com/package/lru-cache)
@@ -32,9 +31,8 @@ zeus unbox ipfs-dapp-service
 
 
 
-## Zeus Command Extensions
-* ```zeus backup-table  --help```
-* ```zeus get-table.row  --help```
+
+
 
 
 
@@ -50,7 +48,7 @@ zeus unbox ipfs-dapp-service
   "prettyName": "LiquidVRAM",
   "stage": "Stable",
   "description": "Virtual Memory Service",
-  "version": "1.4",
+  "version": "1.5",
   "commands": {
     "commit": {
       "blocking": false,
@@ -132,6 +130,36 @@ zeus unbox ipfs-dapp-service
         "uris": "vector<std::string>"
       }
     },
+    "warmupchain": {
+      "blocking": true,
+      "request": {
+        "shard": "uint32_t",
+        "code": "name",
+        "table": "name",
+        "chain": "name",
+        "scope": "uint64_t",
+        "index_position": "uint8_t",
+        "key": "checksum256",
+        "keysize": "uint8_t"
+      },
+      "callback": {
+        "shard": "uint32_t",
+        "code": "name",
+        "table": "name",
+        "chain": "name",
+        "size": "uint32_t",
+        "uris": "vector<std::string>",
+        "data": "vector<vector<char>>"
+      },
+      "signal": {
+        "shard": "uint32_t",
+        "code": "name",
+        "table": "name",
+        "chain": "name",
+        "size": "uint32_t",
+        "uris": "vector<std::string>"
+      }
+    },
     "cleanuprow": {
       "blocking": false,
       "request": {
@@ -142,6 +170,28 @@ zeus unbox ipfs-dapp-service
         "uris": "vector<string>"
       },
       "signal": {
+        "size": "uint32_t",
+        "uris": "vector<string>"
+      }
+    },
+    "cleanchain": {
+      "blocking": false,
+      "request": {
+        "uris": "vector<string>"
+      },
+      "callback": {
+        "shard": "uint32_t",
+        "code": "name",
+        "table": "name",
+        "chain": "name",
+        "size": "uint32_t",
+        "uris": "vector<string>"
+      },
+      "signal": {
+        "shard": "uint32_t",
+        "code": "name",
+        "table": "name",
+        "chain": "name",
         "size": "uint32_t",
         "uris": "vector<string>"
       }

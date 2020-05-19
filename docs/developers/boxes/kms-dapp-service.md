@@ -9,8 +9,8 @@ kms-dapp-service
 
 ## Service Documentation
 [LiquidKMS](../../services/kms-service.md)
-## Dependencies
-### Boxes
+
+
 * [`dapp-services`](dapp-services.md)
 
 

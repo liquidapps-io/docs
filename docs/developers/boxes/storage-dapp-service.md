@@ -9,12 +9,11 @@ storage-dapp-service
 
 ## Service Documentation
 [LiquidStorage](../../services/storage-service.md)
-## Dependencies
-### Boxes
+
+
 * [`dapp-services`](dapp-services.md)
 * [`seed-utils`](seed-utils.md)
 * [`mocha`](mocha.md)
-* [`hooks-cpp-contracts`](hooks-cpp-contracts.md)
 * [`auth-dapp-service`](auth-dapp-service.md)
 * [`ipfs-dapp-service`](ipfs-dapp-service.md)
 * [`vaccounts-dapp-service`](vaccounts-dapp-service.md)
@@ -31,12 +30,9 @@ zeus unbox storage-dapp-service
 
 
 
-## Zeus Command Extensions
-* ```zeus storage  --help```
-### Subcommands
-* ```zeus storage unpin --help```
 
-* ```zeus storage upload --help```
+
+
 
 
 

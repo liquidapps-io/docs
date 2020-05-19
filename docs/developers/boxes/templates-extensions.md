@@ -8,8 +8,8 @@ templates-extensions
 
 
 
-## Dependencies
-### Boxes
+
+
 * [`seed-extensions`](seed-extensions.md)
 * [`seed-models`](seed-models.md)
 ### npm packages
@@ -27,8 +27,8 @@ zeus unbox templates-extensions
 
 
 
-## Zeus Command Extensions
-* ```zeus scaffold  --help```
+
+
 
 
 ## Models

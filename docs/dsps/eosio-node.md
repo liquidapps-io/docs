@@ -14,7 +14,7 @@ A non block / non full history node is required for the DSP API to interact with
 
 ```bash
 # nodeos versions 1.8+ and 2.0+ are supported
-VERSION=2.0.4
+VERSION=2.0.5
 ```
 
 ### Ubuntu 18.04
@@ -128,6 +128,8 @@ access-control-allow-credentials = false
 verbose-http-errors = true
 http-threads=8
 net-threads=8
+chain-threads=8
+eos-vm-oc-compile-threads=2
 trace-history-debug-mode = true
 trace-history = true
 plugin = eosio::producer_plugin

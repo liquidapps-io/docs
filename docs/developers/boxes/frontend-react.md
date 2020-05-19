@@ -8,8 +8,8 @@ frontend-react
 
 
 
-## Dependencies
-### Boxes
+
+
 * [`frontend-transit`](frontend-transit.md)
 
 

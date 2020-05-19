@@ -8,12 +8,11 @@ sample-eos-cpp
 
 
 
-## Dependencies
-### Boxes
+
+
 * [`mocha`](mocha.md)
 * [`seed-eos`](seed-eos.md)
 * [`seed-migrations`](seed-migrations.md)
-* [`hooks-cpp-contracts`](hooks-cpp-contracts.md)
 * [`eos-common`](eos-common.md)
 
 

@@ -9,9 +9,10 @@ Code located [here](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/
 To download and run the unit test the price feed with zeus simply run:
 
 ```bash
+mkdir pricefeed; cd pricefeed
 # npm install -g @liquidapps/zeus-cmd
+zeus box create
 zeus unbox pricefeed
-cd pricefeed
 zeus test -c
 ```
 

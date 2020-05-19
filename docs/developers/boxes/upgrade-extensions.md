@@ -8,8 +8,8 @@ upgrade-extensions
 
 
 
-## Dependencies
-### Boxes
+
+
 * [`seed-extensions`](seed-extensions.md)
 
 
@@ -25,8 +25,8 @@ zeus unbox upgrade-extensions
 zeus upgrade
 ```
 
-## Zeus Command Extensions
-* ```zeus upgrade  --help```
+
+
 
 
 

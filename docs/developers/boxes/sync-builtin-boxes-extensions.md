@@ -8,8 +8,8 @@ sync-builtin-boxes-extensions
 
 
 
-## Dependencies
-### Boxes
+
+
 * [`seed-extensions`](seed-extensions.md)
 
 
@@ -22,8 +22,8 @@ zeus unbox sync-builtin-boxes-extensions
 
 
 
-## Zeus Command Extensions
-* ```zeus sync-builtin-boxes  --help```
+
+
 
 
 

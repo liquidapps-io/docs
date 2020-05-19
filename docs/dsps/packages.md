@@ -2,6 +2,9 @@ Packages
 ========
 
 ## Register
+
+These json files are primarily used by DSP portals to display information.
+
 ### Prepare and host dsp.json 
 ```JSON
 {
@@ -72,6 +75,8 @@ Packages
 
 ### Register Package
 
+Packages are needed for consumers to stake to in order for DAPP Service Providers to provide services.
+
 **Warning: packages are read only and can't be disabled yet.**
 
 * [Mainnet DSP packages](https://bloks.io/account/dappservices?loadContract=true&tab=Tables&account=dappservices&scope=dappservices&limit=100&table=package)
@@ -102,7 +107,7 @@ export DSP_ENDPOINT=https://acme-dsp.com
 # package json uri is the link to your package's information, this is customizable without a required syntax
 export PACKAGE_JSON_URI=https://acme-dsp.com/package1.dsp-package.json
 
-cd $(readlink -f `which setup-dsp` | xargs dirname)
+cd $(readlink -f `which setup-dsp` | xargs dirname)/../..
 zeus register dapp-service-provider-package \
     $PACKAGE $DSP_ACCOUNT $PACKAGE_ID \
     --key $DSP_PRIVATE_KEY \

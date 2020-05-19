@@ -8,8 +8,8 @@ migrations-extensions
 
 
 
-## Dependencies
-### Boxes
+
+
 * [`localenv-extensions`](localenv-extensions.md)
 * [`seed-eos`](seed-eos.md)
 * [`zeus-eos`](zeus-eos.md)
@@ -31,8 +31,8 @@ zeus migrate
 zeus migrate --no-reset
 ```
 
-## Zeus Command Extensions
-* ```zeus migrate  --help```
+
+
 
 
 

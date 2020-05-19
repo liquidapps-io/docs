@@ -8,8 +8,8 @@ all-dapp-services
 
 
 
-## Dependencies
-### Boxes
+
+
 * [`log-dapp-service`](log-dapp-service.md)
 * [`ipfs-dapp-service`](ipfs-dapp-service.md)
 * [`cron-dapp-service`](cron-dapp-service.md)
@@ -29,6 +29,7 @@ all-dapp-services
 * [`oracle-random`](oracle-random.md)
 * [`oracle-sql`](oracle-sql.md)
 * [`oracle-vcpu`](oracle-vcpu.md)
+* [`oracle-echo`](oracle-echo.md)
 
 
 

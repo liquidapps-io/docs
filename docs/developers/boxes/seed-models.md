@@ -8,9 +8,9 @@ seed-models
 
 
 
-## Dependencies
-### Boxes
-* [`seed`](seed.md)
+
+
+* [`seed-zeus-support`](seed-zeus-support.md)
 ### npm packages
 * [`js-yaml`](http://npmjs.com/package/js-yaml)
 

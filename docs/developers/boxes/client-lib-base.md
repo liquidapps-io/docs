@@ -8,8 +8,8 @@ client-lib-base
 
 
 
-## Dependencies
-### Boxes
+
+
 * [`seed-eos`](seed-eos.md)
 * [`seed-zeus-support`](seed-zeus-support.md)
 

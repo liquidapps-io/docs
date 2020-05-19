@@ -8,8 +8,8 @@ oracle-web
 
 
 
-## Dependencies
-### Boxes
+
+
 * [`oracle-dapp-service`](oracle-dapp-service.md)
 
 

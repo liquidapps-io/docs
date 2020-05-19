@@ -8,8 +8,8 @@ sample-zeus-extension
 
 
 
-## Dependencies
-### Boxes
+
+
 * [`seed-extensions`](seed-extensions.md)
 
 
@@ -22,11 +22,9 @@ zeus unbox sample-zeus-extension
 
 
 
-## Zeus Command Extensions
-* ```zeus sample-cmd  --help```
-* ```zeus sample-parentcmd  --help```
-### Subcommands
-* ```zeus sample-parentcmd sample-subcmd --help```
+
+
+
 
 
 

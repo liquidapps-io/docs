@@ -9,13 +9,13 @@ oracle-dapp-service
 
 ## Service Documentation
 [LiquidHarmony](../../services/oracle-service.md)
-## Dependencies
-### Boxes
+
+
 * [`dapp-services`](dapp-services.md)
 * [`mocha`](mocha.md)
 * [`seed-utils-cleanup`](seed-utils-cleanup.md)
-* [`hooks-cpp-contracts`](hooks-cpp-contracts.md)
 * [`oracle-web`](oracle-web.md)
+* [`oracle-echo`](oracle-echo.md)
 * [`oracle-self-history`](oracle-self-history.md)
 * [`oracle-random`](oracle-random.md)
 * [`oracle-sister-chain`](oracle-sister-chain.md)

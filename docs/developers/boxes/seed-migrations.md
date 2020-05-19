@@ -8,8 +8,8 @@ seed-migrations
 
 
 
-## Dependencies
-### Boxes
+
+
 * [`seed-extensions`](seed-extensions.md)
 
 

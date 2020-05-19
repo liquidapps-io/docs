@@ -8,8 +8,8 @@ airdrop
 
 
 
-## Dependencies
-### Boxes
+
+
 * [`oracle-dapp-service`](oracle-dapp-service.md)
 * [`readfn-dapp-service`](readfn-dapp-service.md)
 * [`token`](token.md)
@@ -50,22 +50,9 @@ zeus airdrop init myairdrop
 zeus airdrop cleanup myairdrop
 ```
 
-## Zeus Command Extensions
-* ```zeus airdrop  --help```
-### Subcommands
-* ```zeus airdrop cleanup --help```
 
-* ```zeus airdrop create --help```
 
-* ```zeus airdrop download-snapshot --help```
 
-* ```zeus airdrop init --help```
-
-* ```zeus airdrop notify --help```
-
-* ```zeus airdrop populate-entries --help```
-
-* ```zeus airdrop transform-snapshot --help```
 
 ## Models
 ### New Model Types

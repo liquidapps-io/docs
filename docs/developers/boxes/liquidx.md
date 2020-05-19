@@ -8,8 +8,8 @@ liquidx
 
 
 
-## Dependencies
-### Boxes
+
+
 * [`eosio-chains`](eosio-chains.md)
 * [`all-dapp-services`](all-dapp-services.md)
 
@@ -22,6 +22,8 @@ liquidx
 * [`orcxtest`](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/dapp-network/liquidx/contracts/eos/orcxtest)
 * [`readfnxtest`](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/dapp-network/liquidx/contracts/eos/readfnxtest)
 * [`vaccountsx`](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/dapp-network/liquidx/contracts/eos/vaccountsx)
+* [`vaccntxrem`](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/dapp-network/liquidx/contracts/eos/vaccntxrem)
+* [`vaccntxremx`](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/dapp-network/liquidx/contracts/eos/vaccntxremx)
 * [`cronxtest`](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/dapp-network/liquidx/contracts/eos/cronxtest)
 * [`storagextest`](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/dapp-network/liquidx/contracts/eos/storagextest)
 ## Install
@@ -31,13 +33,9 @@ zeus unbox liquidx
 
 
 
-## Zeus Command Extensions
-* ```zeus create-liquidx-mapping  --help```
-* ```zeus link-sidechain-dsp  --help```
-### Subcommands
-* ```zeus start-localenv 20-b-eos-eosio-chains-dapp-services --help```
 
-* ```zeus start-localenv 21-b-eos-eosio-chains-services-all-dapp-services --help```
+
+
 
 
 

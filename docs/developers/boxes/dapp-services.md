@@ -8,16 +8,15 @@ dapp-services
 
 
 
-## Dependencies
-### Boxes
-* [`seed`](seed.md)
+
+
+* [`seed-zeus-support`](seed-zeus-support.md)
 * [`seed-microservices`](seed-microservices.md)
 * [`core-extensions`](core-extensions.md)
 * [`demux`](demux.md)
 * [`seed-eos`](seed-eos.md)
 * [`events`](events.md)
 * [`seed-models`](seed-models.md)
-* [`hooks-cpp-contracts`](hooks-cpp-contracts.md)
 * [`mocha`](mocha.md)
 * [`client-lib-base`](client-lib-base.md)
 * [`ipfs-daemon`](ipfs-daemon.md)
@@ -49,20 +48,9 @@ zeus unbox dapp-services
 
 
 
-## Zeus Command Extensions
 
-### Subcommands
-* ```zeus compile dapp-services-eos --help```
 
-* ```zeus dapp-service-provider claim --help```
 
-* ```zeus register dapp-service-provider-package --help```
-
-* ```zeus run dapp-services-node --help```
-
-* ```zeus start-localenv 20-a-eos-local-dapp-services --help```
-
-* ```zeus start-localenv 21-a-eos-local-services-all-dapp-services --help```
 
 ## Models
 ### New Model Types

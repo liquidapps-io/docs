@@ -8,8 +8,8 @@ log-extensions
 
 
 
-## Dependencies
-### Boxes
+
+
 * [`seed-extensions`](seed-extensions.md)
 ### npm packages
 * [`winston`](http://npmjs.com/package/winston)
@@ -26,8 +26,8 @@ zeus unbox log-extensions
 zeus log docker-log
 ```
 
-## Zeus Command Extensions
-* ```zeus log  --help```
+
+
 
 
 

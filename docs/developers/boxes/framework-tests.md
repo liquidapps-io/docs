@@ -8,14 +8,13 @@ framework-tests
 
 
 
-## Dependencies
-### Boxes
+
+
 * [`all-dapp-services`](all-dapp-services.md)
 * [`mocha`](mocha.md)
 * [`coldtoken`](coldtoken.md)
 * [`vgrab`](vgrab.md)
 * [`microauctions`](microauctions.md)
-* [`hooks-cpp-contracts`](hooks-cpp-contracts.md)
 
 
 

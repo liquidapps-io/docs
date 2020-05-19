@@ -8,10 +8,10 @@ contract-migrations-extensions
 
 
 
-## Dependencies
-### Boxes
+
+
 * [`migrations-extensions`](migrations-extensions.md)
-* [`seed-models`](seed-models.md)
+* [`seed-extensions`](seed-extensions.md)
 
 
 
@@ -30,10 +30,9 @@ zeus migrate
 zeus migrate --no-reset
 ```
 
-## Zeus Command Extensions
 
-### Subcommands
-* ```zeus create contract-deployment --help```
+
+
 
 ## Models
 ### New Model Types

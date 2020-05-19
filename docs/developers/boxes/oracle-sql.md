@@ -8,8 +8,8 @@ oracle-sql
 
 
 
-## Dependencies
-### Boxes
+
+
 * [`oracle-dapp-service`](oracle-dapp-service.md)
 ### npm packages
 * [`fs-extra`](http://npmjs.com/package/fs-extra)
@@ -28,10 +28,9 @@ zeus unbox oracle-sql
 
 
 
-## Zeus Command Extensions
 
-### Subcommands
-* ```zeus start-localenv 10-remove-local-sqllite --help```
+
+
 
 
 

@@ -8,8 +8,8 @@ test-extensions
 
 
 
-## Dependencies
-### Boxes
+
+
 * [`seed-extensions`](seed-extensions.md)
 
 
@@ -25,8 +25,8 @@ zeus unbox test-extensions
 zeus test -c
 ```
 
-## Zeus Command Extensions
-* ```zeus test  --help```
+
+
 
 
 

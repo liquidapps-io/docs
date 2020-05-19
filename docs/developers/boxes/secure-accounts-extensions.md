@@ -8,8 +8,8 @@ secure-accounts-extensions
 
 
 
-## Dependencies
-### Boxes
+
+
 * [`seed-eos`](seed-eos.md)
 * [`seed-migrations`](seed-migrations.md)
 * [`seed-models`](seed-models.md)
@@ -27,8 +27,8 @@ zeus unbox secure-accounts-extensions
 zeus secure-account accountabc owner active
 ```
 
-## Zeus Command Extensions
-* ```zeus secure-account  --help```
+
+
 
 
 ## Models

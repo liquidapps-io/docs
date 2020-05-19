@@ -8,13 +8,11 @@ templates-dsp-service
 
 
 
-## Dependencies
-### Boxes
-* [`hooks-npm`](hooks-npm.md)
+
+
 * [`mocha`](mocha.md)
 * [`seed-eos`](seed-eos.md)
 * [`seed-migrations`](seed-migrations.md)
-* [`hooks-cpp-contracts`](hooks-cpp-contracts.md)
 * [`eos-common`](eos-common.md)
 * [`dapp-services`](dapp-services.md)
 * [`seed-models`](seed-models.md)
@@ -33,10 +31,9 @@ zeus unbox templates-dsp-service
 zeus create dsp-service someservice
 ```
 
-## Zeus Command Extensions
 
-### Subcommands
-* ```zeus create dsp-service --help```
+
+
 
 
 

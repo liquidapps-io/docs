@@ -8,10 +8,9 @@ eos-keystore
 
 
 
-## Dependencies
-### Boxes
+
+
 * [`seed-empty`](seed-empty.md)
-* [`hooks-npm`](hooks-npm.md)
 * [`mocha`](mocha.md)
 ### npm packages
 * [`crypto`](http://npmjs.com/package/crypto)
@@ -33,12 +32,9 @@ zeus unbox eos-keystore
 zeus unbox sample-eos-cpp
 ```
 
-## Zeus Command Extensions
-* ```zeus key  --help```
-### Subcommands
-* ```zeus key export --help```
 
-* ```zeus key import --help```
+
+
 
 
 

@@ -8,8 +8,8 @@ bancor-formulas
 
 
 
-## Dependencies
-### Boxes
+
+
 * [`seed-eos`](seed-eos.md)
 
 

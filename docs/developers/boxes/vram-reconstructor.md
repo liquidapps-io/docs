@@ -8,8 +8,8 @@ vram-reconstructor
 
 
 
-## Dependencies
-### Boxes
+
+
 * [`ipfs-dapp-service`](ipfs-dapp-service.md)
 ### npm packages
 * [`@dfuse/client`](http://npmjs.com/package/@dfuse/client)
@@ -30,10 +30,9 @@ zeus unbox vram-reconstructor
 
 
 
-## Zeus Command Extensions
 
-### Subcommands
-* ```zeus start-localenv 99-custom-deployment --help```
+
+
 
 
 

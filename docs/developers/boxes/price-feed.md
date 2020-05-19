@@ -8,8 +8,8 @@ price-feed
 
 
 
-## Dependencies
-### Boxes
+
+
 * [`oracle-dapp-service`](oracle-dapp-service.md)
 * [`cron-dapp-service`](cron-dapp-service.md)
 

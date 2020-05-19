@@ -9,11 +9,10 @@ cron-dapp-service
 
 ## Service Documentation
 [LiquidScheduler](../../services/cron-service.md)
-## Dependencies
-### Boxes
+
+
 * [`dapp-services`](dapp-services.md)
 * [`mocha`](mocha.md)
-* [`hooks-cpp-contracts`](hooks-cpp-contracts.md)
 ### npm packages
 * [`node-fetch`](http://npmjs.com/package/node-fetch)
 

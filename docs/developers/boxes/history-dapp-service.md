@@ -9,12 +9,11 @@ history-dapp-service
 
 ## Service Documentation
 [LiquidArchive](../../services/history-service.md)
-## Dependencies
-### Boxes
+
+
 * [`dapp-services`](dapp-services.md)
 * [`seed-utils`](seed-utils.md)
 * [`mocha`](mocha.md)
-* [`hooks-cpp-contracts`](hooks-cpp-contracts.md)
 
 
 
@@ -26,12 +25,9 @@ zeus unbox history-dapp-service
 
 
 
-## Zeus Command Extensions
-* ```zeus history  --help```
-### Subcommands
-* ```zeus history get --help```
 
-* ```zeus history subscribe --help```
+
+
 
 
 

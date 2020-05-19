@@ -9,12 +9,11 @@ vaccounts-dapp-service
 
 ## Service Documentation
 [LiquidAccounts](../../services/vaccounts-service.md)
-## Dependencies
-### Boxes
+
+
 * [`dapp-services`](dapp-services.md)
 * [`seed-utils`](seed-utils.md)
 * [`mocha`](mocha.md)
-* [`hooks-cpp-contracts`](hooks-cpp-contracts.md)
 * [`ipfs-dapp-service`](ipfs-dapp-service.md)
 * [`log-dapp-service`](log-dapp-service.md)
 ### npm packages
@@ -32,10 +31,9 @@ zeus unbox vaccounts-dapp-service
 
 
 
-## Zeus Command Extensions
-* ```zeus vaccounts  --help```
-### Subcommands
-* ```zeus vaccounts push-action --help```
+
+
+
 
 
 

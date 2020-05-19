@@ -26,15 +26,18 @@ In order to access/modify vRam entries certain data may need to be loaded into R
 This box supports all DAPP Services and unit tests and is built to integrate your own vRAM logic.
 ```bash
 mkdir mydapp; cd mydapp
-zeus unbox dapp --no-create-dir
+zeus box create
+zeus unbox dapp
 zeus create contract mycontract
 ```
+*contract is located in /zeus_boxes/contracts, test is located in /zeus_boxes/test*
 
 ## Or use one of our template contracts
 ```bash
+mkdir coldtoken; cd coldtoken
+zeus box create
 # unbox coldtoken contract and all dependencies
 zeus unbox coldtoken
-cd coldtoken
 # unit test coldtoken contract locally
 zeus test -c
 ```
@@ -54,8 +57,15 @@ my_table_struct mytable(othercntr,othercntr.value);
 ```
 This does require that the table struct and table name of the remote contract to be known, just as in regular multi_index. Remote tables can only be read, they cannot be modified. Remote table owners do not have to be staked to the same DSP as your contract.
 
+These same conditions apply for reading vram tables from contracts on other chains. This is achieved with the `warmupchain` and `cleanchain` actions. Similar to reading from other contracts, this may be done using some additional parameters:
+```
+my_table_struct mytable(othercntr,othercntr.value, 1024, 64, false, false, 0, chain);
+```
+Where `chain` is the name of the side chain as specified in the LiquidX chain model file.
+In the case of reading from the EOSIO mainnet, specify `chain` as 'mainnet'. 
+
 ## Add your contract logic
-in contracts/eos/mycontract/mycontract.cpp
+in `zeus_boxes/contracts/eos/mycontract/mycontract.cpp`
 ```cpp
 #pragma once
 
@@ -188,7 +198,7 @@ Mandatory env variables:
 # account name vRAM table exists on
 export CONTRACT_NAME= 
 # run script
-node utils/ipfs-service/get-table
+node zeus_boxes/ipfs-dapp-service/utils/ipfs-service/get-table
 ```
 
 Optional env variables (if using non-local nodeos / IPFS instance):
@@ -215,11 +225,12 @@ Steps to produce `/ipfs-dapp-service/test1-test-table.json` file below:
 
 ```bash
 npm i -g @liquidapps/zeus-cmd
+mkdir ipfs-dapp-service; cd ipfs-dapp-service
+zeus box create
 zeus unbox ipfs-dapp-service
-cd ipfs-dapp-service
 zeus test -c
 export CONTRACT_NAME=test1
-node utils/ipfs-service/get-table
+node zeus_boxes/ipfs-dapp-service/utils/ipfs-service/get-table
 ```
 
 Expected output `/ipfs-dapp-service/test1-test-table.json`:
@@ -280,7 +291,7 @@ Mandatory env variables:
 export CONTRACT_NAME=
 export SCOPE=
 export TABLE_NAME=
-node utils/ipfs-service/get-ordered-keys
+node zeus_boxes/ipfs-dapp-service/utils/ipfs-service/get-ordered-keys
 ```
 
 Optional env variables (if using non-local nodeos / IPFS instance):
@@ -303,13 +314,14 @@ Steps to produce console logged output below:
 
 ```bash
 npm i -g @liquidapps/zeus-cmd
+mkdir ipfs-dapp-service; cd ipfs-dapp-service
+zeus box create
 zeus unbox ipfs-dapp-service
-cd ipfs-dapp-service
 zeus test -c
 export CONTRACT_NAME=test1
 export SCOPE=test1
 export TABLE_NAME=test
-node utils/ipfs-service/get-ordered-keys
+node zeus_boxes/ipfs-dapp-service/utils/ipfs-service/get-ordered-keys
 ```
 
 Expected output:

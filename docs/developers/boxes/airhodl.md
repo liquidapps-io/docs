@@ -8,8 +8,8 @@ airhodl
 
 
 
-## Dependencies
-### Boxes
+
+
 * [`ipfs-dapp-service`](ipfs-dapp-service.md)
 
 

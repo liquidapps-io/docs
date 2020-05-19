@@ -9,12 +9,11 @@ auth-dapp-service
 
 ## Service Documentation
 [LiquidAuthenticator](../../services/auth-service.md)
-## Dependencies
-### Boxes
+
+
 * [`dapp-services`](dapp-services.md)
 * [`seed-utils`](seed-utils.md)
 * [`mocha`](mocha.md)
-* [`hooks-cpp-contracts`](hooks-cpp-contracts.md)
 
 
 

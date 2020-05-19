@@ -24,10 +24,10 @@ After both accounts are created, the `dappservicex.cpp` contract must be set to 
 
 ```bash
 npm i -g @liquidapps/zeus-cmd
+mkdir liquidx; cd liquidx
 zeus unbox liquidx
-cd liquidx
 zeus compile
-cd contracts/eos
+cd zeus_boxes/contracts/eos
 ```
 
 Ensure that you add `dappservicex@eosio.code` to the active permission level of the account.

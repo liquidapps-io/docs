@@ -8,15 +8,14 @@ bancor-relay
 
 
 
-## Dependencies
-### Boxes
+
+
 * [`seed-eos`](seed-eos.md)
 * [`events`](events.md)
 * [`token`](token.md)
 * [`mocha`](mocha.md)
 * [`bancor-network`](bancor-network.md)
 * [`eos-common`](eos-common.md)
-* [`hooks-cpp-contracts`](hooks-cpp-contracts.md)
 
 
 

@@ -8,8 +8,8 @@ eoscraft
 
 
 
-## Dependencies
-### Boxes
+
+
 * [`eoscraft-frontend`](eoscraft-frontend.md)
 * [`craft`](craft.md)
 
