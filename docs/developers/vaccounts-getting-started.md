@@ -105,6 +105,8 @@ To enable the usage of LiquidAccounts across chains, a "cross-chain host" must b
 #define VACCOUNTS_CROSSCHAIN
 ```
 
+and remove `(regaccount)` from the CONTRACT_END
+
 Optional:
 
 ```cpp
@@ -112,8 +114,6 @@ Optional:
 ```
 
 The `VACCOUNTS_CROSSCHAIN_NONCE_VARIANCE` is the difference of allowed variance from the calculated nonce at run time.  For example, if the calculated nonce is 10 and the variance is 5, then if a transactions is attempted with a nonce of 4 or less, the transaction will be rejected.  The variance's purpose is to allow leeway in the event that multiple accounts are using the sidechain's contract at the same time.  This allows the nonce to be outdated between the time the client pulls the nonce and pushes the transaction, potentially a few blocks in the future.
-
-and remove `(regaccount)` from the CONTRACT_END
 
 No changes are required to the LiquidAccount contract on the "host chain". All registration of new accounts must occur on the "host chain".
 The final step is to use the xvinit action with the parameters `chainid`, `hostchain`, and `hostcode`. When the host chain is the EOSIO mainnet, `hostchain` will be `mainnet`. If another chain is used as the host chain, use the chain name as specified in the LiquidX chain mapping. The `hostcode` is the account name of the LiquidAccounts contract.
