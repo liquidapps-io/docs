@@ -23,10 +23,9 @@ zeus unbox client-lib-base
 
 
 
-## Zeus Command Extensions
 
-### Subcommands
-* ```zeus start-localenv 01-dapp-client --help```
+
+
 
 
 
