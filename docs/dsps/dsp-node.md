@@ -110,3 +110,11 @@ exit
 7|readfn-d | 2019-06-03T00:46:50: readfn listening on port 13141!
 
 ```
+
+### All logs may be monitored with this script:
+
+```bash
+#! /bin/bash
+
+tail -f /root/.pm2/logs/*log* ~/.nvm/versions/node/$(node -v)/lib/node_modules/@liquidapps/dsp/zeus_boxes/dapp-services-deploy/logs/*log*
+```
