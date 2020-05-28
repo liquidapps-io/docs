@@ -5,8 +5,6 @@ To obtain a Block Producer account on CoVax, reach out in the CoVax Telegram cha
 
 Hyperion: [https://covax.eosrio.io/v2/docs/index.html](https://covax.eosrio.io/v2/docs/index.html) | courtesy of [`eosriobrazil`](https://eosrio.io/)
 
-[Block Explorer](https://local.bloks.io/?nodeUrl=covax.eosdsp.com&coreSymbol=COVAX&systemDomain=eosio&hyperionUrl=https%3A%2F%2Fcovax.eosdsp.com) | courtesy of [EOSUSA](https://bp.eosusa.news/)
-
 [Block Producer Scorecard](https://validate.eosnation.io/covax/producers/) | courtesy of [EOS Nation](https://eosnation.io/)
 
 [EOS Block Producer Benchmarks](https://www.alohaeos.com/tools/benchmarks#networkId=21&timeframeId=2) | courtesy of [Aloha EOS](https://www.alohaeos.com/)

@@ -5,8 +5,6 @@ The CoVax chain utilizes the LiquidX technology to enable DAPP Network services 
 
 To obtain a DAPP Service Provider account on CoVax, reach out in the CoVax Telegram channel: [https://t.me/CoVaxApp](https://t.me/CoVaxApp).
 
-[Block Explorer](https://local.bloks.io/?nodeUrl=covax.eosdsp.com&coreSymbol=COVAX&systemDomain=eosio&hyperionUrl=https%3A%2F%2Fcovax.eosdsp.com) | courtesy of [EOSUSA](https://bp.eosusa.news/)
-
 Guide:
 
 - [Update config.toml file](#update-config-toml-file) update config.toml environment variable file with the CoVax chain sidechain section

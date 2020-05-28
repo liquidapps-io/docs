@@ -26,6 +26,7 @@ latest
     - can add and remove boxes with `zeus box add <BOX> [VERSION] [URI]` `zeus box remove <BOX> [VERSION]`
     - to update an existing box, run `zeus unbox <BOX>@[VERSION]`, if no version specified, latest used, will unbox everything again with new version
     - to only add new boxes, unbox after update with `--no-update`
+- add `zeus start-localenv --phase 01-dapp-client` --phase option to target start a specific phase of the localenv
 - fixes
     - if Mac, detect and skip `--eos-vm-oc-enable` flags as they are not supported
 
