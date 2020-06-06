@@ -6,6 +6,7 @@ latest
 ### [docs](https://docs.liquidapps.io/en/stable/)
 
 ### [@liquidapps/zeus-cmd](https://www.npmjs.com/package/@liquidapps/zeus-cmd)
+- add `testfetch` price feed action / unit test for only using LiquidHarmony oracles for price feed fetch
 
 ### [@liquidapps/dsp](https://www.npmjs.com/package/@liquidapps/dsp)
 - fixes
