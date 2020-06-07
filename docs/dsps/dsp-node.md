@@ -51,9 +51,6 @@ exit
 sudo su -
 cd $(readlink -f `which setup-dsp` | xargs dirname)
 setup-dsp
-systemctl stop dsp
-systemctl start dsp
-systemctl enable dsp
 exit
 ```
 
