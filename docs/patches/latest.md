@@ -13,10 +13,14 @@ latest
 - throw error if package not enabled for DSP services
 
 ### [@liquidapps/dapp-client](https://www.npmjs.com/package/@liquidapps/dapp-client)
+- patch new secondary index RPC API support
+- updated Dapp Client to support cross chain Liquid Accounts
 
 ## DSP Services:
 
 ### [LiquidAccount Service](https://docs.liquidapps.io/en/v2.0/services/vaccounts-service.html)
+- add cross chain support for LiquidAccounts using LiquidX
+- add time to live option for zeus vaccounts push-action command
 
 ### [LiquidVRAM Service](https://docs.liquidapps.io/en/stable/services/ipfs-service.html)
 
