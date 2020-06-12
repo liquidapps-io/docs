@@ -23,11 +23,16 @@ export DSP_ENDPOINT=http://kylin-dsp-2.liquidapps.io
 ```bash
 export CHUNK_SIZE= # defaults to 5
 export TABLE= # defaults to ipfsentry or oracleentry by detecting from contract
+# if using dfuse
+export DFUSE_PUSH_ENABLE=true
+export DFUSE_API_KEY="" # long-lived API key, see https://docs.dfuse.io/guides/core-concepts/authentication/, e.g. (server_abcdef123123123000000000000000000)
+export DFUSE_PUSH_GUARANTEE="in-block" # handoff:1, handoffs:2, handoffs:3, irreversible
+export DFUSE_NETWORK="mainnet"
 ```
 
 Then run with:
 
 ```bash
 sudo find / -name cleanup.js
-node /root/.nvm/versions/node/v10.16.0/lib/node_modules/@liquidapps/dsp/utils/cleanup.js
+node /root/.nvm/versions/node/v10.16.3/lib/node_modules/@liquidapps/dsp/zeus_boxes/seed-utils-cleanup/utils/cleanup.js
 ```

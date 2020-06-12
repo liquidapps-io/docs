@@ -19,7 +19,7 @@ exit
 
 #### Ubuntu/Debian
 ```bash
-sudo apt install -y make cmake build-essential python npm git
+sudo apt install -y make cmake build-essential python npm git node-typescript
 ```
 
 #### Centos/Fedora/AWS Linux:
@@ -50,6 +50,7 @@ exit
 ```bash
 sudo su -
 cd $(readlink -f `which setup-dsp` | xargs dirname)
+tsc zeus_boxes/dfuse/
 setup-dsp
 exit
 ```
