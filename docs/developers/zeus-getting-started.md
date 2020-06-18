@@ -93,7 +93,7 @@ This box supports all DAPP Services and unit tests and is built to integrate you
 ```bash
 mkdir mydapp; cd mydapp
 zeus box create
-zeus unbox dapp
+zeus unbox all-dapp-services
 zeus create contract mycontract
 ```
 *contract is located in /zeus_boxes/contracts, test is located in /zeus_boxes/test*
