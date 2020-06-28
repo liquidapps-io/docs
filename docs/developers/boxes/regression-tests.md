@@ -20,6 +20,7 @@ regression-tests
 * [`chess`](chess.md)
 * [`liquidx`](liquidx.md)
 * [`combined`](combined.md)
+* [`tokenpeg`](tokenpeg.md)
 
 
 
