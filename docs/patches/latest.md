@@ -8,6 +8,7 @@ latest
 ### [docs](https://docs.liquidapps.io/en/stable/)
 - document ability to use dfuse for cleanup script
 - add typescript compile step for dfuse
+- add `zeus box create` section to zeus getting started section
 
 ### [@liquidapps/zeus-cmd](https://www.npmjs.com/package/@liquidapps/zeus-cmd)
 - add `testfetch` price feed action / unit test for only using LiquidHarmony oracles for price feed fetch
