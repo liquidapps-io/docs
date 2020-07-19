@@ -29,6 +29,7 @@ latest
 - add `zeus start-localenv --phase 01-dapp-client` --phase option to target start a specific phase of the localenv
 - fixes
     - if Mac, detect and skip `--eos-vm-oc-enable` flags as they are not supported
+    - fix endpoint link for `replay-contract.js` file
 
 ### [@liquidapps/dsp](https://www.npmjs.com/package/@liquidapps/dsp)
 - added warning to ensure `trace-history = true` set in nodeos `config.ini`
