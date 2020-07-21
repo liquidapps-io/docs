@@ -132,6 +132,7 @@ chain-threads=8
 eos-vm-oc-compile-threads=2
 trace-history-debug-mode = true
 trace-history = true
+http-max-response-time-ms = 500
 plugin = eosio::producer_plugin
 plugin = eosio::chain_plugin
 plugin = eosio::chain_api_plugin

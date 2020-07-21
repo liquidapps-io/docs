@@ -14,6 +14,7 @@ latest
 - add [LiquidStorage section](../developers/storage-getting-started)
 - update [LiquidAccounts section](../developers/vaccounts-getting-started)
 - update [LiquidVRAM section](../developers/vram-getting-started)
+- add `http-max-response-time-ms = 500` to config.ini settings to avoid `deadline 2020-07-20T18:07:39.110 exceeded by 10us` error
 
 ### [@liquidapps/zeus-cmd](https://www.npmjs.com/package/@liquidapps/zeus-cmd)
 - use 8887 instead of 8889 for state history port to match DSP docs
