@@ -17,8 +17,8 @@ cleos wallet create --file wallet_password.pwd
 
 # Create account and import key
 curl http://faucet-kylin.blockzone.net/create/$ACCOUNT > keys.json
-export ACTIVE_PRIVATE_KEY=`cat keys.json | jq -e '.keys.active_key.private'`
-export ACTIVE_PUBLIC_KEY=`cat keys.json | jq -e '.keys.active_key.public'`
+export ACTIVE_PRIVATE_KEY=`cat keys.json | jq -e '.data.account.active.privateKey'`
+export ACTIVE_PUBLIC_KEY=`cat keys.json | jq -e '.data.account.active.publicKey'`
 cleos wallet import --private-key $ACTIVE_PRIVATE_KEY
 # if this does not work, import key directly
 
