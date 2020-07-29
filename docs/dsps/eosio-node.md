@@ -59,7 +59,7 @@ mkdir $HOME/.local/share/eosio/nodeos/config -p
 ```
 
 ### Snapshots
-If you would like an up to date snapshot, please visit: [snapshots.eosnation.io](https://snapshots.eosnation.io/) and find the latest snapshot for the chain you are using.  You will want to unpack the file and store it here with the following file name: `$HOME/.local/share/eosio/nodeos/data/snapshots/boot.bin`.  EOS Node tools many also be used for mainnet: [https://eosnode.tools/snapshots](https://eosnode.tools/snapshots)
+If you would like an up to date snapshot, please visit: [snapshots.eosnation.io](https://snapshots.eosnation.io/) and find the latest snapshot for the chain you are using.  You will want to unpack the file and store it here with the following file name: `$HOME/.local/share/eosio/nodeos/data/snapshots/boot.bin`.
 
 ### Kylin
 ```bash
