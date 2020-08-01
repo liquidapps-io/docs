@@ -40,6 +40,7 @@ The dapp-client library makes it easier to interact with the DAPP Network's core
 * curl
 * cmake
 * make
+* git
 
 ### Use node version manager to install node
 
