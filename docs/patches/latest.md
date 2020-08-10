@@ -23,6 +23,7 @@ latest
     - add `debug` to dfuse section to enable dfuse debug logs 
 - if dsp `head_block` set to 0, dsp will pull head block from `get_info` RPC call automatically for demux
 - throw error if package not enabled for DSP services
+- enable cleanup script support for sidechain
 - fixes
     - add better error handling to CONFIRMING USAGE
 
