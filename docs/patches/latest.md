@@ -9,6 +9,7 @@ latest
 - document ability to use dfuse for cleanup script
 - add typescript compile step for dfuse
 - add `zeus box create` section to zeus getting started section
+- update LiquidStorage upload file example with new params
 
 ### [@liquidapps/zeus-cmd](https://www.npmjs.com/package/@liquidapps/zeus-cmd)
 - add `testfetch` price feed action / unit test for only using LiquidHarmony oracles for price feed fetch
@@ -45,6 +46,8 @@ latest
 ### [LiquidVRAM Service](https://docs.liquidapps.io/en/stable/services/ipfs-service.html)
 
 ### [LiquidStorage Service](https://docs.liquidapps.io/en/stable/services/storage-service.html)
+- configure options object to be passed, updated unit test
+    - add optional `rawLeaves` IPFS client option for backend API, example, and `client-library`
 
 ### [LiquidHarmony Service](https://docs.liquidapps.io/en/stable/developers/harmony-getting-started.html)
 
