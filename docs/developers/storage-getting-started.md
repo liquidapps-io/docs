@@ -197,16 +197,10 @@ const getClient = () => createClient( { network:"kylin", httpEndpoint: endpoint,
     const data = Buffer.from("a great success", "utf8");
     const key = "YOUR_ACTIVE_PRIVATE_KEY_HERE";
     const permission = "active";
-    const options = {
-      // if true, DAG leaves will contain raw file data and not be wrapped in a protobuf
-      rawLeaves: true
-    };
     const response = await service.upload_public_file(
         data,
         key,
-        permission,
-        null,
-        options
+        permission
     );
     console.log(`response uri: ${response.uri}`);
 })().catch((e) => { console.log(e); });

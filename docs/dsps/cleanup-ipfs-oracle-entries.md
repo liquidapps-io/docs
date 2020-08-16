@@ -9,25 +9,16 @@ The cleanup script will auto detect which table to cleanup `ipfsentry` or `oracl
 
 - `CONTRACT` contract to clean IPFS / oracle entries
 - `DSP_ENDPOINT` the DSP's endpoint that you staked to for IPFS and/or Oracle services
-- `TABLE` specify table name to be cleaed: (ipfs (vRAM) table: `ipfsentry` or oracle table: `oracleentry`)
 
 ```bash
 export CONTRACT=lqdportfolio
 export DSP_ENDPOINT=http://kylin-dsp-2.liquidapps.io
 ```
 
-### Sidechain:
-
-If cleaning an account on a sidechain, must add the following environment variables. 
-
-- `SIDECHAIN` if using a sidechain, must specify sidechain name (sidechain names can be found [here](../liquidx/example-chains))
-- `SIDECHAIN_DSP_PORT` if using a sidechain, must specify sidechain DSP's port
-- `DSP_LIQUIDX_CONTRACT` the liquidx contract name must be set `liquidx.dsp` on mainnet if cleaning a sidechain
-- `NODEOS_MAINNET_ENDPOINT` set mainnet nodeos endpoint
-
 ### Optional:
 
 - `CHUNK_SIZE` represents the number of async requests for cleanups to send to the DSP at a time
+- `TABLE` type is auto detected based on the contract name (ipfs table: `ipfsentry` or oracle table: `oracleentry`), if a contract has both tables, you will use this variable to target both
 
 ```bash
 export CHUNK_SIZE= # defaults to 5
