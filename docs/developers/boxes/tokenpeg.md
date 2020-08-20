@@ -10,9 +10,7 @@ tokenpeg
 
 
 
-* [`oracle-dapp-service`](oracle-dapp-service.md)
-* [`cron-dapp-service`](cron-dapp-service.md)
-* [`liquidx`](liquidx.md)
+* [`link`](link.md)
 
 
 
@@ -24,9 +22,9 @@ tokenpeg
 zeus unbox tokenpeg
 ```
 ## Examples
-### Test token peg
+### test tokenpeg
 ```bash
-zeus compile && zeus test token peg
+zeus compile && zeus test tokenpeg
 ```
 
 

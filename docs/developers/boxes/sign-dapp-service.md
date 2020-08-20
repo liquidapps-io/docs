@@ -15,7 +15,7 @@ sign-dapp-service
 * [`seed-utils`](seed-utils.md)
 * [`mocha`](mocha.md)
 ### npm packages
-* [`web3@1.0.0-beta.36`](http://npmjs.com/package/web3@1.0.0-beta.36)
+* [`web3`](http://npmjs.com/package/web3)
 * [`ganache-cli`](http://npmjs.com/package/ganache-cli)
 * [`truffle-contract`](http://npmjs.com/package/truffle-contract)
 * [`ethereumjs-tx`](http://npmjs.com/package/ethereumjs-tx)
