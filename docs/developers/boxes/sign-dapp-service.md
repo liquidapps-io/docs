@@ -18,7 +18,6 @@ sign-dapp-service
 * [`web3`](http://npmjs.com/package/web3)
 * [`ganache-cli`](http://npmjs.com/package/ganache-cli)
 * [`truffle-contract`](http://npmjs.com/package/truffle-contract)
-* [`ethereumjs-tx`](http://npmjs.com/package/ethereumjs-tx)
 
 ## Contracts
 * [`signer`](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/services/sign-dapp-service/contracts/eos/signer)
