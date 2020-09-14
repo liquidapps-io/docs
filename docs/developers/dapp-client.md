@@ -22,6 +22,10 @@ Then pass your desired arguments to the creator function
     * network: specify your network of choice: mainnet, kylin, jungle 
     * httpEndpoint: you may also specify an endpoint to use instead of our defaults
     * fetch: pass a fetch reference as needed
+    // if using dfuse
+    * dfuse_key: Dfuse API key
+    * dfuse_guarantee: Dfuse Push Guarantee(in-block, handoff:1, handoffs:2, handoffs:3, irreversible)
+    * dfuse_network: Dfuse Network ( mainnet, testnet (eosio testnet), kylin, worbli, wax)
 */
 
 export const getClient = async() => {

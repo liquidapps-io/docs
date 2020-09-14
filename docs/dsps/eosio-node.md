@@ -59,7 +59,7 @@ mkdir $HOME/.local/share/eosio/nodeos/config -p
 ```
 
 ### Snapshots
-If you would like an up to date snapshot, please visit: [snapshots.eosnation.io](https://snapshots.eosnation.io/) and find the latest snapshot for the chain you are using.  You will want to unpack the file and store it here with the following file name: `$HOME/.local/share/eosio/nodeos/data/snapshots/boot.bin`.
+If you would like an up to date snapshot, please visit: [snapshots.eosnation.io](https://snapshots.eosnation.io/) and find the latest snapshot for the chain you are using.  You will want to unpack the file and store it here with the following file name: `$HOME/.local/share/eosio/nodeos/data/snapshots/boot.bin`.  EOS Node tools many also be used for mainnet: [https://eosnode.tools/snapshots](https://eosnode.tools/snapshots)
 
 ### Kylin
 ```bash
@@ -132,7 +132,6 @@ chain-threads=8
 eos-vm-oc-compile-threads=2
 trace-history-debug-mode = true
 trace-history = true
-http-max-response-time-ms = 500
 plugin = eosio::producer_plugin
 plugin = eosio::chain_plugin
 plugin = eosio::chain_api_plugin

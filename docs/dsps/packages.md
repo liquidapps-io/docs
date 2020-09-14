@@ -164,6 +164,9 @@ Using cleos:
 cleos -u $DSP_ENDPOINT push action dappservices modifypkg "[\"$DSP_ACCOUNT\",\"$PACKAGE_ID\",\"ipfsservice1\",\"$DSP_ENDPOINT\",\"https://acme-dsp.com/modified-package1.dsp-package.json\"]" -p $DSP_ACCOUNT@active
 ```
 
+#### Enable/Disable Package:
+A package may be disabled or enabled by using the `disablepkg` or `enablepkg` on the [`dappservices`](https://bloks.io/account/dappservices) contract.  If a package is disabled, the consumer will no longer be able to utilize DSP services for that package.
+
 ### Update cost per action in QUOTA
 The `pricepkg` action on the `dappservices` contract allows a DSP to set how much QUOTA to bill for per action.  For example, a DSP could decide to charge 0.0002 QUOTA per vRAM warmup.  The default for each action is 0.0001 QUOTA.  The billable actions for all services may be found in the `zeus-sdk/boxes/groups/services/SERVICE_NAME-dapp-service/models/dapp-services/SERVICE_NAME.json`, for example: [vRAM](https://github.com/liquidapps-io/zeus-sdk/blob/master/boxes/groups/services/ipfs-dapp-service/models/dapp-services/ipfs.json).
 

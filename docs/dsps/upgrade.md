@@ -7,6 +7,7 @@ Link: [sample-config.toml](https://raw.githubusercontent.com/liquidapps-io/zeus-
 
 ```bash
 sudo su -
+systemctl stop dsp
 systemctl stop ipfs
 systemctl stop nodeos
 # if changes to sample-config.toml syntax:
@@ -28,7 +29,20 @@ sudo find / -name sample-config.toml
 setup-dsp
 systemctl start nodeos
 systemctl start ipfs
+systemctl start dsp
 exit
 ```
 
 If a DSP is not updating properly, you may try `pm2 restart all` to restart all processes.
+
+### Script for updating:
+
+```bash
+#! /bin/bash
+systemctl stop dsp
+pm2 del all
+pm2 kill
+npm uninstall -g @liquidapps/dsp
+npm i -g @liquidapps/dsp --unsafe-perm=true
+cd $(readlink -f `which setup-dsp` | xargs dirname)
+```

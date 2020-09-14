@@ -55,9 +55,6 @@ Once this has been configured, the environment variables for the DSP can be upda
 
 ```bash
 systemctl stop dsp
-cd $(readlink -f `which setup-dsp` | xargs dirname)
-# compile dfuse typescript
-tsc zeus_boxes/dfuse/
 setup-dsp
 systemctl start dsp
 ```
