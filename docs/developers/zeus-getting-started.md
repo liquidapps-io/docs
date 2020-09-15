@@ -40,6 +40,7 @@ The dapp-client library makes it easier to interact with the DAPP Network's core
 * curl
 * cmake
 * make
+* git
 
 ### Use node version manager to install node
 
@@ -64,20 +65,11 @@ Automatically installed with `zeus unbox helloworld`
 npm install -g @liquidapps/zeus-cmd
 ```
 
-## Create Zeus box
-
-Before unboxing an existing box or creating a new box, the command `zeus box create` must be run.  This is intended to act like `npm init`.  The command creates a boilerplate `zeus-box.json` file as well as a `package.json` file.  Once this command is run, a box may be unboxed.
-
-```bash
-zeus box create
-```
-
 ## Unbox
 
 The unbox command allows a user to unbox one or multiple boxes, similar to `npm install <MODULE> [MODULE2 ...]`.  A version may also be specified.
 
 ```bash
-zeus box create
 zeus unbox helloworld
 zeus unbox helloworld@1.0.1
 zeus unbox helloworld ipfs-dapp-service
@@ -102,7 +94,7 @@ This box supports all DAPP Services and unit tests and is built to integrate you
 ```bash
 mkdir mydapp; cd mydapp
 zeus box create
-zeus unbox dapp
+zeus unbox all-dapp-services
 zeus create contract mycontract
 ```
 *contract is located in /zeus_boxes/contracts, test is located in /zeus_boxes/test*
@@ -329,6 +321,13 @@ zeus key export <ACCOUNT_NAME>
 --password # password to decrypt the keypair
 --vaccount # bool whether account is a LiquidAccount
 # default: false
+```
+
+### Create a new box
+Creates a new directory with an empty `zeus-config.json` file.
+
+```bash
+zeus box create <BOX_NAME>
 ```
 
 

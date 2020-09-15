@@ -43,7 +43,19 @@ zeus test -c
 ```
 
 ## Advanced features
-To use advanced multi index features include `#define USE_ADVANCED_IPFS` at the top of the contract file while following the steps below. If you have already deployed a contract that does not use advanced features, do not add this line, as it is not backwards compatible.
+To use advanced multi index features include `#define USE_ADVANCED_IPFS` at the top of the contract file while following the steps below. If you have already deployed a contract that does not use advanced features, do not add this line, as it is not backwards compatible. With this addition, the primary key may be `uint32`, `uint64`, `uint128`, and `checksum256`.
+
+Example implementation:
+
+```cpp
+TABLE bigentry {
+  checksum256 id;
+  uint64_t sometestnumber;
+  checksum256 primary_key()const {return id;}
+};
+
+typedef dapp::advanced_multi_index<"test2"_n, bigentry, checksum256> testindex_big_t;
+```
 
 Another feature of the advanced multi index is `warmuprow` and `cleanuprow` actions. The `warmuprow` action allows for faster warmups for IPFS actions.  The warmup process is where data is fetched and loaded into RAM to be used.  Previously each RAM entry touched would require 3 separate warmup actions, now this can be done within 1 action. The `cleanuprow` action removes all the data entries created by the `warmuprow` in the case that a rollback is required.
 
