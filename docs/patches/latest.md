@@ -10,6 +10,8 @@ latest
 - add typescript compile step for dfuse
 - add `zeus box create` section to zeus getting started section
 - update LiquidStorage upload file example with new params
+- add `eth_keys_per_consumer = [{ETH_PRIVATE_KEY_CONSUMER1:PRIVATE_KEY_HERE}, {ETH_PRIVATE_KEY_CONSUMER2:PRIVATE_KEY_HERE}]` to toml
+- prevent non-broadcast action from being broadcast
 
 ### [@liquidapps/zeus-cmd](https://www.npmjs.com/package/@liquidapps/zeus-cmd)
 - add `testfetch` price feed action / unit test for only using LiquidHarmony oracles for price feed fetch
