@@ -13,6 +13,7 @@ latest
 
 ### [@liquidapps/zeus-cmd](https://www.npmjs.com/package/@liquidapps/zeus-cmd)
 - add `testfetch` price feed action / unit test for only using LiquidHarmony oracles for price feed fetch
+- add `enablepkg` command to dappservices unit tests
 
 ### [@liquidapps/dsp](https://www.npmjs.com/package/@liquidapps/dsp)
 - add option to use dfuse web socket and dfuse push_transaction guarantee in place of demux state history node on main DSP instance and supported side chains
@@ -27,6 +28,7 @@ latest
 - enable cleanup script support for sidechain
 - fixes
     - add better error handling to CONFIRMING USAGE
+    - fix `0xANON` payer empty object issue
 
 ### [@liquidapps/dapp-client](https://www.npmjs.com/package/@liquidapps/dapp-client)
 - patch new secondary index RPC API support
