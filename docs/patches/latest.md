@@ -53,6 +53,7 @@ latest
 ### [LiquidVRAM Service](https://docs.liquidapps.io/en/stable/services/ipfs-service.html)
 
 ### [LiquidStorage Service](https://docs.liquidapps.io/en/stable/services/storage-service.html)
+- add small / large photo and small video upload and read unit tests to LiquidStorage
 - configure options object to be passed, updated unit test
     - add optional `rawLeaves` IPFS client option for backend API, example, and `client-library`
 
