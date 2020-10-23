@@ -29,8 +29,10 @@ latest
 - if dsp `head_block` set to 0, dsp will pull head block from `get_info` RPC call automatically for demux
 - throw error if package not enabled for DSP services
 - enable cleanup script support for sidechain
+- add `authorization` option under dfuse to use the EOS Nation community edition: https://t.me/dfusece | https://eos.dfuse.eosnation.io/
 - fixes
     - add better error handling to CONFIRMING USAGE
+    - fix replay contract script to enable DSPs to replay contract vRAM/IPFS data to populate a new IPFS instance
     - fix `0xANON` payer empty object issue
 
 ### [@liquidapps/dapp-client](https://www.npmjs.com/package/@liquidapps/dapp-client)
