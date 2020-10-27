@@ -30,6 +30,7 @@ latest
 - throw error if package not enabled for DSP services
 - enable cleanup script support for sidechain
 - add `authorization` option under dfuse to use the EOS Nation community edition: https://t.me/dfusece | https://eos.dfuse.eosnation.io/
+- add `max_request_retries` option to config.toml, specifies how many times to retry a blocking DSP actions such as an IPFS warmup or oracle request
 - fixes
     - add better error handling to CONFIRMING USAGE
     - fix replay contract script to enable DSPs to replay contract vRAM/IPFS data to populate a new IPFS instance
