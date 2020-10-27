@@ -15,6 +15,7 @@ latest
 
 ### [@liquidapps/zeus-cmd](https://www.npmjs.com/package/@liquidapps/zeus-cmd)
 - add `testfetch` price feed action / unit test for only using LiquidHarmony oracles for price feed fetch
+- add unit test for 0s unstake time dappservices
 - copy contracts and test folder to root so that `zeus_boxes` directory can be git ignored 
 - add `enablepkg` command to dappservices unit tests
 
