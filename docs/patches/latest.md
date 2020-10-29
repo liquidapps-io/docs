@@ -41,6 +41,8 @@ latest
 - add unit test for 0s unstake time dappservices
 - copy contracts and test folder to root so that `zeus_boxes` directory can be git ignored 
 - add `enablepkg` command to dappservices unit tests
+- fixes
+    - add `parseFloat` to `test rewards` `dappservices` unit test
 
 ### [@liquidapps/dsp](https://www.npmjs.com/package/@liquidapps/dsp)
 - add option to use dfuse web socket and dfuse push_transaction guarantee in place of demux state history node on main DSP instance and supported side chains
