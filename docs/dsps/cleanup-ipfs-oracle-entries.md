@@ -10,10 +10,13 @@ The cleanup script will auto detect which table to cleanup `ipfsentry` or `oracl
 - `CONTRACT` contract to clean IPFS / oracle entries
 - `DSP_ENDPOINT` the DSP's endpoint that you staked to for IPFS and/or Oracle services
 - `TABLE` specify table name to be cleaed: (ipfs (vRAM) table: `ipfsentry` or oracle table: `oracleentry`)
+- `DSP_ALLOW_API_NON_BROADCAST` enables the `/event` DSP API endpoint to accept non-blocking service events such as xcommits.
 
 ```bash
 export CONTRACT=lqdportfolio
 export DSP_ENDPOINT=http://kylin-dsp-2.liquidapps.io
+export TABLE=ipfsentry
+export DSP_ALLOW_API_NON_BROADCAST=true
 ```
 
 ### Sidechain:

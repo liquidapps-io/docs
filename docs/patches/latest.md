@@ -12,6 +12,7 @@ latest
 - update LiquidStorage upload file example with new params
 - add `eth_keys_per_consumer = [{ETH_PRIVATE_KEY_CONSUMER1:PRIVATE_KEY_HERE}, {ETH_PRIVATE_KEY_CONSUMER2:PRIVATE_KEY_HERE}]` to toml
 - prevent non-broadcast action from being broadcast
+- add sidechain section to replay contract
 
 ### [@liquidapps/zeus-cmd](https://www.npmjs.com/package/@liquidapps/zeus-cmd)
 - add `testfetch` price feed action / unit test for only using LiquidHarmony oracles for price feed fetch
@@ -31,6 +32,7 @@ latest
 - throw error if package not enabled for DSP services
 - enable cleanup script support for sidechain
 - add `authorization` option under dfuse to use the EOS Nation community edition: https://t.me/dfusece | https://eos.dfuse.eosnation.io/
+- add `replay-contract-hyperion.js` | thank you to Christoph Michel
 - add `max_request_retries` option to config.toml, specifies how many times to retry a blocking DSP actions such as an IPFS warmup or oracle request
 - fixes
     - add better error handling to CONFIRMING USAGE

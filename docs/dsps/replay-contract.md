@@ -7,6 +7,8 @@ To do this you will need to sign up for an API key from [dfuse.io](https://www.d
 
 There are some mandatory and optional environment variables.
 
+Hyperion may also be used thanks to Christoph Michel: [replay-contract-hyperion.js](https://github.com/liquidapps-io/zeus-sdk/blob/master/boxes/groups/services/ipfs-dapp-service/utils/ipfs-service/replay-contract-hyperion.js)
+
 ### Mandatory:
 
 ```bash
@@ -14,7 +16,17 @@ export DFUSE_API_KEY=
 # contract to replay
 export CONTRACT=
 export NODEOS_CHAINID="aca376f206b8fc25a6ed44dbdc66547c36c6c33e3a119ffbeaef943642f0e906" # < mainnet | kylin > "5fff1dae8dc8e2fc4d5b23b2c7665c97f9e9d8edf2b6485a86ba311c25639191"
+export DSP_ALLOW_API_NON_BROADCAST=true # enables the `/event` DSP API endpoint to accept non-blocking service events such as xcommits.
 ```
+
+### Sidechain:
+
+If replaying an account on a sidechain, must add the following environment variables. 
+
+- `SIDECHAIN` if using a sidechain, must specify sidechain name (sidechain names can be found [here](../liquidx/example-chains))
+- `SIDECHAIN_DSP_PORT` if using a sidechain, must specify sidechain DSP's port
+- `DSP_LIQUIDX_CONTRACT` the liquidx contract name must be set `liquidx.dsp` on mainnet if cleaning a sidechain
+- `NODEOS_MAINNET_ENDPOINT` set mainnet nodeos endpoint
 
 ### Optional:
 
@@ -32,6 +44,8 @@ Once you've set those, simply run with:
 ```bash
 sudo find / -name replay-contract.js
 node /root/.nvm/versions/node/v10.16.0/lib/node_modules/@liquidapps/dsp/utils/ipfs-service/replay-contract.js
+# or hyperion
+node /root/.nvm/versions/node/v10.16.0/lib/node_modules/@liquidapps/dsp/utils/ipfs-service/replay-contract-hyperion.js
 
 # sent 6513 saved 7725.26KB 6.42KB/s Block:77756949
 ```
