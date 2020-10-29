@@ -1,11 +1,33 @@
 latest
 ========
 
+**DAPP Token Inflation Tuning**
+### [Packages](https://docs.liquidapps.io/en/v2.0/dsps/packages.html)
+- it is now possible for the community to actively tune the DAPP Token Inflation rate
+- this inflation tuning is facilitated by DSP's creating new packages that have a configurable desired inflation rate. any changes to the DAPP Token's inflation rate is in effect for all providers
+- all existing packages retain the default annual inflation rate of 2.71%
+- a new package may select any rate between 0.0 and 5.0%
+- DAPP Token holders participate in the tuning mechanism by staking to packages that have an inflation rate they support
+- the final inflation rate is calculated as a weighted average of DAPP staked to specific inflation rates
+- a new table `packagext` has been added to store a packages selected inflation rate and quota cost for actions, which is indexed by `package_id`, `service`, and `provider`
+- the DAPP token inflation rate is recalculated with every `stake` and `refund` action
+- package inflation rates may not be changed after they are registered
+
 **breaking changes**
 - to use new dfuse push_transaction, must compile consumer contract with new version of dappservices contract
 - if DSP package is not enabled in package table, signaled with boolean "1", then service will throw error on DSP, DSP package may be enabled with the `enablepkg` command: https://bloks.io/account/dappservices?loadContract=true&tab=Actions&account=dappservices&scope=dappservices&limit=100&action=enablepkg
 
 ### [docs](https://docs.liquidapps.io/en/stable/)
+- add CoVax chain section for becoming BP or DSP
+- add example chains section of LiquidX chains
+- add [EOS Block Producer Benchmarks](https://www.alohaeos.com/tools/benchmarks#networkId=21&timeframeId=2) | courtesy of [Aloha EOS](https://www.alohaeos.com/)
+- use eos 2.0.5
+- update documentation to support `zeus_boxes` refactor
+- add `chain-threads=8` `eos-vm-oc-compile-threads=2` to nodeos example `config.ini` in docs
+- add [LiquidStorage section](../developers/storage-getting-started)
+- update [LiquidAccounts section](../developers/vaccounts-getting-started)
+- update [LiquidVRAM section](../developers/vram-getting-started)
+- add `get_table_packagext` and `get_table_packagext_by_package_service_provider` to dapp-client section
 - document ability to use dfuse for cleanup script
 - add typescript compile step for dfuse
 - add `zeus box create` section to zeus getting started section
@@ -64,3 +86,10 @@ latest
 ### [LiquidHarmony Service](https://docs.liquidapps.io/en/stable/developers/harmony-getting-started.html)
 
 ### [LiquidScheduler Service](https://docs.liquidapps.io/en/stable/developers/cron-getting-started.html)
+- run exponential backoff forever, was 10 retries max
+- add `shouldAbort` `eosio::check` handler for rescheduling cron without CPU
+
+### [@liquidapps/dapp-client](https://www.npmjs.com/package/@liquidapps/dapp-client)
+- patch new secondary index RPC API support
+- updated Dapp Client to support cross chain Liquid Accounts
+- add `get_table_packagext` and `get_table_packagext_by_package_service_provider` examples and logic to client 
