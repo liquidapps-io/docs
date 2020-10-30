@@ -32,3 +32,15 @@ exit
 ```
 
 If a DSP is not updating properly, you may try `pm2 restart all` to restart all processes.
+
+### Script for updating:
+
+```bash
+#! /bin/bash
+systemctl stop dsp
+pm2 del all
+pm2 kill
+npm uninstall -g @liquidapps/dsp
+npm i -g @liquidapps/dsp --unsafe-perm=true
+cd $(readlink -f `which setup-dsp` | xargs dirname)
+```

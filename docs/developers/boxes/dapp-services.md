@@ -14,6 +14,7 @@ dapp-services
 * [`seed-microservices`](seed-microservices.md)
 * [`core-extensions`](core-extensions.md)
 * [`demux`](demux.md)
+* [`dfuse`](dfuse.md)
 * [`seed-eos`](seed-eos.md)
 * [`events`](events.md)
 * [`seed-models`](seed-models.md)
@@ -21,6 +22,7 @@ dapp-services
 * [`client-lib-base`](client-lib-base.md)
 * [`ipfs-daemon`](ipfs-daemon.md)
 ### npm packages
+* [`@dfuse/client`](http://npmjs.com/package/@dfuse/client)
 * [`big-integer`](http://npmjs.com/package/big-integer)
 * [`bytebuffer`](http://npmjs.com/package/bytebuffer)
 * [`cors`](http://npmjs.com/package/cors)
@@ -37,6 +39,7 @@ dapp-services
 * [`pg`](http://npmjs.com/package/pg)
 * [`minipass@2.7.0`](http://npmjs.com/package/minipass@2.7.0)
 * [`sqlite3`](http://npmjs.com/package/sqlite3)
+* [`promise.allsettled`](http://npmjs.com/package/promise.allsettled)
 
 ## Contracts
 * [`dappservices`](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/dapp-network/dapp-services/contracts/eos/dappservices)

@@ -21,6 +21,7 @@ Developers
    developers/cron-getting-started
    developers/storage-getting-started
    developers/price-feed
+   developers/token-bridge
    developers/contract-logs
    developers/macros
    developers/unit-testing

@@ -17,6 +17,7 @@ ipfs-dapp-service
 * [`mocha`](mocha.md)
 ### npm packages
 * [`ipfs-api`](http://npmjs.com/package/ipfs-api)
+* [`bignumber.js`](http://npmjs.com/package/bignumber.js)
 * [`lru-cache`](http://npmjs.com/package/lru-cache)
 * [`dfuse-eoshttp-js`](http://npmjs.com/package/dfuse-eoshttp-js)
 * [`node-fetch`](http://npmjs.com/package/node-fetch)

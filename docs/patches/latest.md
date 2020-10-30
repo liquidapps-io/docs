@@ -2,9 +2,11 @@ latest
 ========
 
 **breaking changes**
-- all unboxed `zeus` boxes will need to be re-unboxed to support the new `zeus_boxes` architecture
+- to use new dfuse push_transaction, must compile consumer contract with new version of dappservices contract
+- if DSP package is not enabled in package table, signaled with boolean "1", then service will throw error on DSP, DSP package may be enabled with the `enablepkg` command: https://bloks.io/account/dappservices?loadContract=true&tab=Actions&account=dappservices&scope=dappservices&limit=100&action=enablepkg
 
 ### [docs](https://docs.liquidapps.io/en/stable/)
+<<<<<<< HEAD
 - add CoVax chain section for becoming BP or DSP
 - add example chains section of LiquidX chains
 - add [EOS Block Producer Benchmarks](https://www.alohaeos.com/tools/benchmarks#networkId=21&timeframeId=2) | courtesy of [Aloha EOS](https://www.alohaeos.com/)
@@ -34,45 +36,53 @@ latest
 - fixes
     - if Mac, detect and skip `--eos-vm-oc-enable` flags as they are not supported
     - fix endpoint link for `replay-contract.js` file
+=======
+- document ability to use dfuse for cleanup script
+- add typescript compile step for dfuse
+- add `zeus box create` section to zeus getting started section
+- update LiquidStorage upload file example with new params
+
+### [@liquidapps/zeus-cmd](https://www.npmjs.com/package/@liquidapps/zeus-cmd)
+- add `testfetch` price feed action / unit test for only using LiquidHarmony oracles for price feed fetch
+- add `enablepkg` command to dappservices unit tests
+>>>>>>> feature/DAPP2-500-assert-if-package-not-enabled-
 
 ### [@liquidapps/dsp](https://www.npmjs.com/package/@liquidapps/dsp)
-- added warning to ensure `trace-history = true` set in nodeos `config.ini`
-- add how many blocks behind the head block in demux heartbeat
-- add `DATABASE_TIMEOUT` to sample toml, adjust time before database connection times out
-- add `DEMUX_PROCESS_BLOCK_CHECKPOINT` to sample toml, amount of blocks to pass before updating database with last processed block
-- add `disabledServices` to ecosystem file to prevent pre-alpha services from being setup
-- add `DEMUX_MAX_MEMORY_MB` option to ecosystem file to set maximum amount of memory that can be used by demux
-- add `dsp_account_permissions` option for each sidechain
+- add option to use dfuse web socket and dfuse push_transaction guarantee in place of demux state history node on main DSP instance and supported side chains
+    - this enables a DSP to not use a SHiP node and to instead read on chain events from dfuse and to push transactions using dfuse's push_guarantee making transactions more reliable, a free API key is suitable enough to support low levels of traffic
+    - to use the dfuse backend, under the new dfuse section of the toml file, set `enable` to true and provide an api key
+    - to use the dfuse push guarantee, set the `push_enable` to true and provide a dfuse api key
+    - to use both, enable both
+    - add dfuse section `network` to toml, select supported dfuse network: testnet (eosio testnet), kylin, worbli, wax
+    - add `debug` to dfuse section to enable dfuse debug logs 
+- if dsp `head_block` set to 0, dsp will pull head block from `get_info` RPC call automatically for demux
+- throw error if package not enabled for DSP services
+- enable cleanup script support for sidechain
 - fixes
-    - handle `TypeError: Cannot read property 'this_block' of undefined` in demux
-
-### [LiquidAccount Service](https://docs.liquidapps.io/en/v2.0/services/vaccounts-service.html)
-- add cross chain support for LiquidAccounts using LiquidX
-
-### [LiquidVRAM Service](https://docs.liquidapps.io/en/stable/services/ipfs-service.html)
-- add cross chain reading of vRAM table data
-
-### [LiquidStorage Service](https://docs.liquidapps.io/en/stable/services/storage-service.html)
-- add dapp-client examples for `get_uri.ts`, `unpin_public_file.ts`, `upload_archive_to_liquidstorage.ts`, `upload_file_to_liquidstorage.ts`, `upload_public_file_from_vaccount.ts`
-- add sidechain storage unit test
-- add `zeus storage upload <ACCOUNT_NAME> package.json <ACCOUNT_PRIVATE_KEY>` and `zeus storage unpin <ACCOUNT_NAME> <IPFS_URI_RETURNED_ABOVE> <ACCOUNT_PRIVATE_KEY>` zeus commands
-
-### [LiquidHarmony Service](https://docs.liquidapps.io/en/stable/developers/harmony-getting-started.html)
-- add check to ensure each DSP only returns one oracle response
-- add hook to assert on oracle fetch before geturi is fired
-- add `Oracle minimum threshold check` unit test
-- reduce oracle retries to 10 from 100
-- add `shouldAbort` `eosio::check` handler for aborting oracle service request
-- add `echo` oracle, which uses the same structure as `http` or `https` however the uri is replaced with a desired return value. This return value must be a base64 encoded string. 
-    - `echo`: Mimics a GET request that returns text
-    - `echo+json`: Mimics a GET request that returns JSON
-    - `echo+post`: Mimics a POST request that returns text
-    - `echo+post+json`: Mimics a POST request that returns JSON 
-
-### [LiquidScheduler Service](https://docs.liquidapps.io/en/stable/developers/cron-getting-started.html)
-- run exponential backoff forever, was 10 retries max
-- add `shouldAbort` `eosio::check` handler for rescheduling cron without CPU
+    - add better error handling to CONFIRMING USAGE
+    - fix `0xANON` payer empty object issue
 
 ### [@liquidapps/dapp-client](https://www.npmjs.com/package/@liquidapps/dapp-client)
 - patch new secondary index RPC API support
 - updated Dapp Client to support cross chain Liquid Accounts
+- add dfuse as option for dapp client, able to pass API key, push guarantee, and network
+
+### dappservices contract
+- added required service pending console output to assertion message as dfuse does not return pending console output
+- added always false assert service pending console output to assertion message as dfuse does not return pending console output
+
+## DSP Services:
+
+### [LiquidAccount Service](https://docs.liquidapps.io/en/v2.0/services/vaccounts-service.html)
+- add cross chain support for LiquidAccounts using LiquidX
+- add time to live option for zeus vaccounts push-action command
+
+### [LiquidVRAM Service](https://docs.liquidapps.io/en/stable/services/ipfs-service.html)
+
+### [LiquidStorage Service](https://docs.liquidapps.io/en/stable/services/storage-service.html)
+- configure options object to be passed, updated unit test
+    - add optional `rawLeaves` IPFS client option for backend API, example, and `client-library`
+
+### [LiquidHarmony Service](https://docs.liquidapps.io/en/stable/developers/harmony-getting-started.html)
+
+### [LiquidScheduler Service](https://docs.liquidapps.io/en/stable/developers/cron-getting-started.html)

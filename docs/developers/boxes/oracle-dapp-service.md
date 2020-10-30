@@ -19,6 +19,7 @@ oracle-dapp-service
 * [`oracle-self-history`](oracle-self-history.md)
 * [`oracle-random`](oracle-random.md)
 * [`oracle-sister-chain`](oracle-sister-chain.md)
+* [`oracle-ethereum`](oracle-ethereum.md)
 ### npm packages
 * [`node-fetch`](http://npmjs.com/package/node-fetch)
 

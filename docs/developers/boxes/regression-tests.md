@@ -17,9 +17,9 @@ regression-tests
 * [`vgrab`](vgrab.md)
 * [`deepfreeze`](deepfreeze.md)
 * [`airdrop`](airdrop.md)
-* [`chess`](chess.md)
 * [`liquidx`](liquidx.md)
 * [`combined`](combined.md)
+* [`sign-dapp-service`](sign-dapp-service.md)
 
 
 

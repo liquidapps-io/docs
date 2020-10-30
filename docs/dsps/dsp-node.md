@@ -19,7 +19,7 @@ exit
 
 #### Ubuntu/Debian
 ```bash
-sudo apt install -y make cmake build-essential python npm git
+sudo apt install -y make cmake build-essential python npm git node-typescript
 ```
 
 #### Centos/Fedora/AWS Linux:
@@ -50,6 +50,7 @@ exit
 ```bash
 sudo su -
 cd $(readlink -f `which setup-dsp` | xargs dirname)
+tsc zeus_boxes/dfuse/
 setup-dsp
 exit
 ```
@@ -106,4 +107,12 @@ exit
 /root/.pm2/logs/readfn-dapp-service-node-out.log last 15 lines:
 7|readfn-d | 2019-06-03T00:46:50: readfn listening on port 13141!
 
+```
+
+### All logs may be monitored with this script:
+
+```bash
+#! /bin/bash
+
+tail -f /root/.pm2/logs/*log* ~/.nvm/versions/node/$(node -v)/lib/node_modules/@liquidapps/dsp/zeus_boxes/dapp-services-deploy/logs/*log*
 ```

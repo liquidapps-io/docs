@@ -30,6 +30,7 @@ all-dapp-services
 * [`oracle-sql`](oracle-sql.md)
 * [`oracle-vcpu`](oracle-vcpu.md)
 * [`oracle-echo`](oracle-echo.md)
+* [`sign-dapp-service`](sign-dapp-service.md)
 
 
 

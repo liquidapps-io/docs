@@ -65,11 +65,20 @@ Automatically installed with `zeus unbox helloworld`
 npm install -g @liquidapps/zeus-cmd
 ```
 
+## Create Zeus box
+
+Before unboxing an existing box or creating a new box, the command `zeus box create` must be run.  This is intended to act like `npm init`.  The command creates a boilerplate `zeus-box.json` file as well as a `package.json` file.  Once this command is run, a box may be unboxed.
+
+```bash
+zeus box create
+```
+
 ## Unbox
 
 The unbox command allows a user to unbox one or multiple boxes, similar to `npm install <MODULE> [MODULE2 ...]`.  A version may also be specified.
 
 ```bash
+zeus box create
 zeus unbox helloworld
 zeus unbox helloworld@1.0.1
 zeus unbox helloworld ipfs-dapp-service
@@ -321,13 +330,6 @@ zeus key export <ACCOUNT_NAME>
 --password # password to decrypt the keypair
 --vaccount # bool whether account is a LiquidAccount
 # default: false
-```
-
-### Create a new box
-Creates a new directory with an empty `zeus-config.json` file.
-
-```bash
-zeus box create <BOX_NAME>
 ```
 
 

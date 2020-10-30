@@ -1,15 +1,15 @@
-LiquidHarmony Getting Started
+LiquidHarmony Oracles Getting Started
 ====================
 
 ```
- _      _             _     _ _    _                                        
-| |    (_)           (_)   | | |  | |                                       
-| |     _  __ _ _   _ _  __| | |__| | __ _ _ __ _ __ ___   ___  _ __  _   _ 
-| |    | |/ _` | | | | |/ _` |  __  |/ _` | '__| '_ ` _ \ / _ \| '_ \| | | |
-| |____| | (_| | |_| | | (_| | |  | | (_| | |  | | | | | | (_) | | | | |_| |
-|______|_|\__, |\__,_|_|\__,_|_|  |_|\__,_|_|  |_| |_| |_|\___/|_| |_|\__, |
-             | |                                                       __/ |
-             |_|                                                      |___/ 
+  _      _             _     _ _    _                                           ____                 _           
+ | |    (_)           (_)   | | |  | |                                         / __ \               | |          
+ | |     _  __ _ _   _ _  __| | |__| | __ _ _ __ _ __ ___   ___  _ __  _   _  | |  | |_ __ __ _  ___| | ___  ___ 
+ | |    | |/ _` | | | | |/ _` |  __  |/ _` | '__| '_ ` _ \ / _ \| '_ \| | | | | |  | | '__/ _` |/ __| |/ _ \/ __|
+ | |____| | (_| | |_| | | (_| | |  | | (_| | |  | | | | | | (_) | | | | |_| | | |__| | | | (_| | (__| |  __/\__ \
+ |______|_|\__, |\__,_|_|\__,_|_|  |_|\__,_|_|  |_| |_| |_|\___/|_| |_|\__, |  \____/|_|  \__,_|\___|_|\___||___/
+              | |                                                       __/ |                                    
+              |_|                                                      |___/                                     
 
 ```
 
@@ -51,17 +51,21 @@ zeus test -c
 ## Creating an Oracle Request URI
 Each of the following oracle request types comes equipped with its own syntax that gets encoded with `Buffer.from("<URI HERE>", 'utf8')`.  The following guide will explain the syntax to generate your URI.  Each URI should be passed through the buffer as plaintext is not accepted.
 
-- HTTP(S) Get & Post: `https://ipfs.io/ipfs/Qmaisz6NMhDB51cCvNWa1GMS7LU1pAxdF4Ld6Ft9kZEP2a` - simply add the full URL path
-- HTTP(S)+JSON Get: `https+json://name/api.github.com/users/tmuskal` - prepend your uri with `https+json`, then specify the key mapping path of your desired data point, in the example, the `name` key is used as the requested data point.  To request nested values beneath the first layer of keys, simple separate the desired data point with a `.`, e.g., `name.value`.  Then add the path to your desired data point: `api.github.com/users/tmuskal`.  Note you may use `http+json` or `https+json`.
-- HTTP(S)+JSON Post: `https+post+json://timestamp/${body}/nodes.get-scatter.com:443/v1/chain/get_block` - where body is `const body = Buffer.from('{"block_num_or_id":"36568000"}').toString('base64')`.  In this example you specify the type of request: `https+post+json` then the key mapping `timestamp` then the body of the POST request, encoded in base64, then the URL path `nodes.get-scatter.com:443/v1/chain/get_block`.
-- ECHO Get: `echo://${returnvalue}` - where return value is a `base64` string. `const returnvalue = Buffer.from("My return value").toString('base64')`
-- ECHO+JSON Get: `echo+json://name/${returnvalue}`, `const returnvalue = Buffer.from('{"name":"Tal Muskal"}').toString('base64')`
-- ECHO+JSON Post: `echo+post+json://timestamp/${body}/${content}` - where body is `const body = Buffer.from('{"block_num_or_id":"36568000"}').toString('base64')`.  In this example you specify the type of request: `echo+post+json` then the key mapping `timestamp` then the body of the POST request, encoded in base64, then the URL path `const content = Buffer.from('{"timestamp":"2019-01-09T18:20:23.000"}').toString('base64');`.
-- Nodeos History Get: `self_history://${code}/0/0/0/action_trace.act.data.account` - where code is `const code = 'test1';`
-- IBC Block Fetch: `sister_chain_block://bos/10000000/transaction_mroot` - the `sister_chain_block` specifies the type of oracle request, followed by the chain of choice `bos` then the requested data point.
-- Oracle XIBC: `foreign_chain://ethereum/history/0x100/result.transactionsRoot` - here the `foreign_chain` oracle type is used followed by the foreign chain of choice: `ethereum`, the type of data point (`block_number`, `history`, `balance`, `storage`).  To see other blockchain data point options, see [this file](https://github.com/liquidapps-io/zeus-sdk/blob/master/boxes/groups/oracles/oracle-foreign-chain/services/oracle-dapp-service-node/protocols/foreign_chain.js). Then the required data parameter is passed `0x100` followed by the object key mapping `result.transactionsRoot`.
+- [HTTP(S) Get & Post](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/oracles/oracle-web): `https://ipfs.io/ipfs/Qmaisz6NMhDB51cCvNWa1GMS7LU1pAxdF4Ld6Ft9kZEP2a` - simply add the full URL path
+- [HTTP(S)+JSON Get](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/oracles/oracle-web): `https+json://name/api.github.com/users/tmuskal` - prepend your uri with `https+json`, then specify the key mapping path of your desired data point, in the example, the `name` key is used as the requested data point.  To request nested values beneath the first layer of keys, simple separate the desired data point with a `.`, e.g., `name.value`.  Then add the path to your desired data point: `api.github.com/users/tmuskal`.  Note you may use `http+json` or `https+json`.
+- [HTTP(S)+JSON Post](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/oracles/oracle-web): `https+post+json://timestamp/${body}/nodes.get-scatter.com:443/v1/chain/get_block` - where body is `const body = Buffer.from('{"block_num_or_id":"36568000"}').toString('base64')`.  In this example you specify the type of request: `https+post+json` then the key mapping `timestamp` then the body of the POST request, encoded in base64, then the URL path `nodes.get-scatter.com:443/v1/chain/get_block`.
+- [ECHO Get](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/oracles/oracle-echo): `echo://${returnvalue}` - where return value is a `base64` string. `const returnvalue = Buffer.from("My return value").toString('base64')`
+- [ECHO+JSON Get](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/oracles/oracle-echo): `echo+json://name/${returnvalue}`, `const returnvalue = Buffer.from('{"name":"Tal Muskal"}').toString('base64')`
+- [ECHO+JSON Post](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/oracles/oracle-echo): `echo+post+json://timestamp/${body}/${content}` - where body is `const body = Buffer.from('{"block_num_or_id":"36568000"}').toString('base64')`.  In this example you specify the type of request: `echo+post+json` then the key mapping `timestamp` then the body of the POST request, encoded in base64, then the URL path `const content = Buffer.from('{"timestamp":"2019-01-09T18:20:23.000"}').toString('base64');`.
+- [Nodeos History Get](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/oracles/oracle-self-history): `self_history://${code}/0/0/0/action_trace.act.data.account` - where code is `const code = 'test1';`
+- [Sister Chain Fetch](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/oracles/oracle-sister-chain): `sister_chain_block://bos/10000000/transaction_mroot` - the `sister_chain_block` specifies the type of oracle request, followed by the chain of choice `bos` then the requested data point.
+- [Foreign Chain Fetch](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/oracles/oracle-foreign-chain): `foreign_chain://ethereum/history/0x100/result.transactionsRoot` - here the `foreign_chain` oracle type is used followed by the foreign chain of choice: `ethereum`, the type of data point (`block_number`, `history`, `balance`, `storage`).  To see other blockchain data point options, see [this file](https://github.com/liquidapps-io/zeus-sdk/blob/master/boxes/groups/oracles/oracle-foreign-chain/services/oracle-dapp-service-node/protocols/foreign_chain.js). Then the required data parameter is passed `0x100` followed by the object key mapping `result.transactionsRoot`.
   - You may also see more examples in the [unit test](https://github.com/liquidapps-io/zeus-sdk/blob/master/boxes/groups/oracles/oracle-foreign-chain/test/oracle-foreign-chain.spec.js)
-- Wolfram Alpha: `wolfram_alpha://What is the average air speed velocity of a laden swallow?` - here the `wolfram_alpha` oracle type is used followed by the question: `What is the average air speed velocity of a laden swallow?`.
+- [Wolfram Alpha](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/oracles/oracle-wolframalpha): `wolfram_alpha://What is the average air speed velocity of a laden swallow?` - here the `wolfram_alpha` oracle type is used followed by the question: `What is the average air speed velocity of a laden swallow?`.
+- [Random Number](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/oracles/oracle-random): `random://1024` - this will fetch a random number from 0-1024
+- [Stockfish](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/oracles/oracle-stockfish): chess engine AI: `stockfish://${fen}` by adding the fen (`Forsyth–Edwards Notation`), an AI chess move will be returned
+- [SQL](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/oracles/oracle-sql): see [unit test](https://github.com/liquidapps-io/zeus-sdk/blob/master/boxes/groups/oracles/oracle-sql/test/oracle-sql.spec.js)
+
 
 ## LiquidHarmony Consumer Example Contract used in unit tests
 in `zeus_boxes/contracts/eos/oracleconsumer/oracleconsumer.cpp`
