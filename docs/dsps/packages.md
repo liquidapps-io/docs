@@ -106,6 +106,8 @@ export QUOTA="1.0000"
 export DSP_ENDPOINT=https://acme-dsp.com
 # package json uri is the link to your package's information, this is customizable without a required syntax
 export PACKAGE_JSON_URI=https://acme-dsp.com/package1.dsp-package.json
+# The annual inflation rate of the DAPP token may be tuned by the community. This is done by DSP's specifying a desired inflation rate during package registration. All existing packages default to the original annual inflation rate of 2.71%
+export ANNUAL_INFLATION=2.71
 
 cd $(readlink -f `which setup-dsp` | xargs dirname)/../..
 zeus register dapp-service-provider-package \
@@ -117,7 +119,8 @@ zeus register dapp-service-provider-package \
     --network $EOS_CHAIN \
     --api-endpoint $DSP_ENDPOINT \
     --package-json-uri $PACKAGE_JSON_URI \
-    --min-unstake-period $MIN_UNSTAKE_PERIOD
+    --min-unstake-period $MIN_UNSTAKE_PERIOD \
+    --inflation $ANNUAL_INFLATION
 ```
 
 ### Or in cleos:
@@ -131,7 +134,8 @@ export SERVICE=ipfsservice1
 export QUOTA="1.0000 QUOTA"
 export MIN_STAKE_QUANTITY="10.0000 DAPP"
 export EOS_ENDPOINT=https://kylin-dsp-2.liquidapps.io # or mainnet: https://api.eosnewyork.io
-cleos -u $EOS_ENDPOINT push action dappservices regpkg "{\"newpackage\":{\"api_endpoint\":\"$DSP_ENDPOINT\",\"enabled\":0,\"id\":0,\"min_stake_quantity\":\"$MIN_STAKE_QUANTITY\",\"min_unstake_period\":\"$MIN_UNSTAKE_PERIOD\",\"package_id\":\"$PACKAGE_ID\",\"package_json_uri\":\"$PACKAGE_JSON_URI\",\"package_period\":\"$PACKAGE_PERIOD\",\"provider\":\"$DSP_ACCOUNT\",\"quota\":\"$QUOTA\",\"service\":\"$SERVICE\"}}" -p $DSP_ACCOUNT
+cleos -u $EOS_ENDPOINT push action dappservices regpkg "{\"newpackage\":{\"api_endpoint\":\"$DSP_ENDPOINT\",\"enabled\":0,\"id\":0,\"min_stake_quantity\":\"$MIN_STAKE_QUANTITY\",\"min_unstake_period\":\"$MIN_UNSTAKE_PERIOD\",\"package_id\":\"$PACKAGE_ID\",\"package_json_uri\":\"$PACKAGE_JSON_URI\",\"package_period\":\"$PACKAGE_PERIOD\",\"provider\":\"$DSP_ACCOUNT\",\"quota\":\"$QUOTA\",\"service\":\"$SERVICE\"},
+\"annual_inflation\":$ANNUAL_INFLATION}" -p $DSP_ACCOUNT
 ```
 
 Example service contract name for LiquidAccounts: https://github.com/liquidapps-io/zeus-sdk/blob/master/boxes/groups/services/vaccounts-dapp-service/models/dapp-services/vaccounts.json#L7

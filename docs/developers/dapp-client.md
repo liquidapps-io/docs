@@ -327,6 +327,41 @@ for (const row of response.rows) {
 }
 ```
 
+##### [get_table_packagext](https://github.com/liquidapps-io/zeus-sdk/blob/master/boxes/groups/dapp-network/client-lib-base/client/examples/get_table_packagext.ts) - returns a packages selected inflation rate and quota cost for actions
+
+```javascript
+/*
+    
+    dappNetwork.get_table_packagext
+    * [limit] - optional limit for how many packages to return
+
+*/
+
+const response = await (await getClient()).dappNetwork.get_table_packagext({ limit: 500 });
+for (const row of response.rows) {
+    console.log(row);
+}
+```
+
+##### [get_table_packagext_by_package_service_provider](https://github.com/liquidapps-io/zeus-sdk/blob/master/boxes/groups/dapp-network/client-lib-base/client/examples/get_table_packagext_by_package_service_provider.ts) - returns DSP packagext entries that match the package and dsp service provided
+
+```javascript
+/*
+    
+    dappNetwork.get_table_packagext_by_package_service_provider
+    * package name
+    * service name - service names are listed under the services section of the docs as the Contract name
+    * DSP name
+    * [limit] - optional limit for how many packages to return
+
+*/
+
+const response = await (await getClient()).dappNetwork.get_table_packagext_by_package_service_provider('package1', 'ipfsservice1', 'heliosselene', { limit: 500 });
+for (const row of response.rows) {
+    console.log(row);
+}
+```
+
 ##### [get_table_refunds](https://github.com/liquidapps-io/zeus-sdk/blob/master/boxes/groups/dapp-network/client-lib-base/client/examples/get_table_refunds.ts) - returns refund table details for account name specified
 
 ```javascript
