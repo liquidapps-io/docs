@@ -7,7 +7,6 @@ Link: [sample-config.toml](https://raw.githubusercontent.com/liquidapps-io/zeus-
 
 ```bash
 sudo su -
-systemctl stop dsp
 systemctl stop ipfs
 systemctl stop nodeos
 # if changes to sample-config.toml syntax:
@@ -29,7 +28,6 @@ sudo find / -name sample-config.toml
 setup-dsp
 systemctl start nodeos
 systemctl start ipfs
-systemctl start dsp
 exit
 ```
 

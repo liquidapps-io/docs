@@ -28,6 +28,26 @@ latest
 - update [LiquidAccounts section](../developers/vaccounts-getting-started)
 - update [LiquidVRAM section](../developers/vram-getting-started)
 - add `get_table_packagext` and `get_table_packagext_by_package_service_provider` to dapp-client section
+- add `http-max-response-time-ms = 500` to config.ini settings to avoid `deadline 2020-07-20T18:07:39.110 exceeded by 10us` error
+- add supported primary key types for `dapp::advanced_multi_index`
+- add example of instantiating `dapp::advanced_multi_index`
+- support new Kylin account creation query
+
+### [@liquidapps/zeus-cmd](https://www.npmjs.com/package/@liquidapps/zeus-cmd)
+- use 8887 instead of 8889 for state history port to match DSP docs
+- skip `01-dapp-client.js` if built
+- add price feed example, price feed uses LiquidHarmony's oracles and LiquidScheduler's cron to fetch a price periodically and only use CPU when the price has changed from the last recorded price by more or less than 1%
+- add `'--eos-vm-oc-compile-threads=4'` and `--chain-threads=4` to local nodeos
+- update `zeus` to modularize logic into `zeus_boxes` directory making `zeus` more like `npm`, to create or unbox a new box start with `zeus box create [name]` then if you wish to unbox and existing box `zeus unbox <BOX>`
+- zeus now offers versioning of boxes
+    - zeus now offers optional `zeus unbox <BOX>@[VERSION]`
+    - can add and remove boxes with `zeus box add <BOX> [VERSION] [URI]` `zeus box remove <BOX> [VERSION]`
+    - to update an existing box, run `zeus unbox <BOX>@[VERSION]`, if no version specified, latest used, will unbox everything again with new version
+    - to only add new boxes, unbox after update with `--no-update`
+- add `zeus start-localenv --phase 01-dapp-client` --phase option to target start a specific phase of the localenv
+- fixes
+    - if Mac, detect and skip `--eos-vm-oc-enable` flags as they are not supported
+    - fix endpoint link for `replay-contract.js` file
 - document ability to use dfuse for cleanup script
 - add typescript compile step for dfuse
 - add `zeus box create` section to zeus getting started section
