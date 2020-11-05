@@ -81,6 +81,7 @@ latest
 - add `liquidstorage_upload_limit` to config.toml, allows specification of Liquidstorage upload size limit
 - fixes
     - add better error handling to CONFIRMING USAGE
+    - fix async/await procesFn issue
     - fix replay contract script to enable DSPs to replay contract vRAM/IPFS data to populate a new IPFS instance
     - fix `0xANON` payer empty object issue
 
