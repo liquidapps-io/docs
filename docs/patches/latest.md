@@ -89,6 +89,7 @@ latest
 - patch new secondary index RPC API support
 - updated Dapp Client to support cross chain Liquid Accounts
 - add dfuse as option for dapp client, able to pass API key, push guarantee, and network
+- add push_transaction push guarantee function to lib
 
 ### dappservices contract
 - added required service pending console output to assertion message as dfuse does not return pending console output

@@ -61,9 +61,49 @@ Finally, setup the service you would like to interact along with your smart cont
 })().catch((e) => { console.log(e); });
 ```
 
-Here is a full list of service options.  There are DAPP Network service extensions and [`dappservices`](https://bloks.io/account/dappservices) / [`dappairhodl1`](https://bloks.io/account/dappairhodl1) RAM row calls.
+Here is a full list of service options.  The library comes with a push_guarantee function, similar to dfuse's push guarantee, it accepts `in-block`, `handoffs:1-3`, or `irreversible`.  There are DAPP Network service extensions and [`dappservices`](https://bloks.io/account/dappservices) / [`dappairhodl1`](https://bloks.io/account/dappairhodl1) RAM row calls.
 
 ### DAPP Network service extensions
+
+#### Push Guarantee
+
+Retry time between push guarantee verification can be set with the `DAPP_CLIENT_PUSH_TRANSACTION_SLEEP` environment variable, defaults to 10ms.
+
+```javascript
+/*
+    getClient()
+    * service name: ipfs
+    * contract name
+
+    service.push_action - push guarantee for transaction
+    * endpoint - nodeos endpoint
+    * account - action contract name
+    * actor - account signing transaction
+    * action - action name
+    * data - action data
+    * private_key - actor's private key
+
+*/
+
+const endpoint = 'http://kylin-dsp-2.liquidapps.io';
+const account = 'dappservices';
+const actor = 'vacctstst123';
+const action = 'transfer';
+const data = {
+    from: 'vacctstst123',
+    to: 'natdeveloper',
+    quantity: '1.0000 DAPP',
+    memo: ''
+};
+const private_key = '5JMUyaQ4qw6Zt816B1kWJjgRA5cdEE6PhCb2BW45rU8GBEDa1RC';
+const response = await (await getClient()).dappNetwork.push_action(endpoint, account, actor, action, data, private_key, {
+    push_guarantee: 'in-block'
+    // push_guarantee: 'handoffs:1'
+    // push_guarantee: 'handoffs:2'
+    // push_guarantee: 'handoffs:3'
+    // push_guarantee: 'irreversible'
+});
+```
 
 #### [vRAM - IPFS](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/services/ipfs-dapp-service)
 
