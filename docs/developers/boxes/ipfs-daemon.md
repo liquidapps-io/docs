@@ -15,7 +15,6 @@ ipfs-daemon
 * [`seed-models`](seed-models.md)
 ### npm packages
 * [`ipfs`](http://npmjs.com/package/ipfs)
-* [`go-ipfs-dep`](http://npmjs.com/package/go-ipfs-dep)
 * [`ipfsd-ctl`](http://npmjs.com/package/ipfsd-ctl)
 
 
