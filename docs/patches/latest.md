@@ -79,6 +79,7 @@ latest
 - add `replay-contract-hyperion.js` | thank you to Christoph Michel
 - add `max_request_retries` option to config.toml, specifies how many times to retry a blocking DSP actions such as an IPFS warmup or oracle request
 - add `liquidstorage_upload_limit` to config.toml, allows specification of Liquidstorage upload size limit
+- add [https://www.npmjs.com/package/eosio-push-guarantee](https://www.npmjs.com/package/eosio-push-guarantee) to DSP eos-wrapper.js
 - fixes
     - add better error handling to CONFIRMING USAGE
     - fix async/await procesFn issue

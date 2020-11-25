@@ -17,6 +17,7 @@ seed-eos
 * [`eos-keystore`](eos-keystore.md)
 ### npm packages
 * [`async/queue`](http://npmjs.com/package/async/queue)
+* [`eosio-push-guarantee`](http://npmjs.com/package/eosio-push-guarantee)
 * [`mkdirp`](http://npmjs.com/package/mkdirp)
 * [`which`](http://npmjs.com/package/which)
 
