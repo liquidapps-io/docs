@@ -78,8 +78,11 @@ latest
 - add `authorization` option under dfuse to use the EOS Nation community edition: https://t.me/dfusece | https://eos.dfuse.eosnation.io/
 - add `replay-contract-hyperion.js` | thank you to Christoph Michel
 - add `max_request_retries` option to config.toml, specifies how many times to retry a blocking DSP actions such as an IPFS warmup or oracle request
+- add `liquidstorage_upload_limit` to config.toml, allows specification of Liquidstorage upload size limit
+- add [https://www.npmjs.com/package/eosio-push-guarantee](https://www.npmjs.com/package/eosio-push-guarantee) to DSP eos-wrapper.js
 - fixes
     - add better error handling to CONFIRMING USAGE
+    - fix async/await procesFn issue
     - fix replay contract script to enable DSPs to replay contract vRAM/IPFS data to populate a new IPFS instance
     - fix `0xANON` payer empty object issue
 
@@ -87,6 +90,7 @@ latest
 - patch new secondary index RPC API support
 - updated Dapp Client to support cross chain Liquid Accounts
 - add dfuse as option for dapp client, able to pass API key, push guarantee, and network
+- add push_transaction push guarantee function to lib
 
 ### dappservices contract
 - added required service pending console output to assertion message as dfuse does not return pending console output

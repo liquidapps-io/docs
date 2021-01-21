@@ -16,6 +16,7 @@ seed-eos
 * [`eosio-system-contracts`](eosio-system-contracts.md)
 * [`eos-keystore`](eos-keystore.md)
 ### npm packages
+* [`eosio-push-guarantee`](http://npmjs.com/package/eosio-push-guarantee)
 * [`mkdirp`](http://npmjs.com/package/mkdirp)
 * [`which`](http://npmjs.com/package/which)
 
