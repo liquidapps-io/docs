@@ -12,8 +12,8 @@ dapp
 
 * [`templates-emptycontract-eos-cpp`](templates-emptycontract-eos-cpp.md)
 * [`frontend-react`](frontend-react.md)
-### npm packages
-* [`js-yaml`](http://npmjs.com/package/js-yaml)
+
+
 
 
 ## Install
