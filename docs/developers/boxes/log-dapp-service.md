@@ -37,6 +37,7 @@ zeus unbox log-dapp-service
 {
   "name": "log",
   "port": 13110,
+  "alt": 26220,
   "contract": "logservices1",
   "prettyName": "LiquidLog",
   "stage": "Beta",

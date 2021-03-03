@@ -39,6 +39,7 @@ zeus unbox vcpu-dapp-service
 {
   "name": "vcpu",
   "port": 13386,
+  "alt": 26772,
   "prettyName": "VCPU",
   "description": "DSP Hosted Computation Service",
   "stage": "PoC",

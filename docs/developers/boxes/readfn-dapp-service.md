@@ -39,6 +39,7 @@ zeus unbox readfn-dapp-service
 {
   "name": "readfn",
   "port": 13141,
+  "alt": 26282,
   "contract": "readfndspsvc",
   "prettyName": "LiquidLens",
   "stage": "Alpha",

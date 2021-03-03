@@ -45,6 +45,7 @@ zeus unbox ipfs-dapp-service
 {
   "name": "ipfs",
   "port": 13115,
+  "alt": 26230,
   "contract": "ipfsservice1",
   "prettyName": "LiquidVRAM",
   "stage": "Stable",

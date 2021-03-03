@@ -44,6 +44,7 @@ zeus unbox vaccounts-dapp-service
 {
   "name": "vaccounts",
   "port": 13129,
+  "alt": 26258,
   "prettyName": "LiquidAccounts",
   "stage": "Beta",
   "version": "0.9",

@@ -41,6 +41,7 @@ zeus unbox sign-dapp-service
 {
   "name": "sign",
   "port": 13128,
+  "alt": 26256,
   "contract": "signfndspsvc",
   "prettyName": "LiquidLink",
   "stage": "Alpha",

@@ -39,6 +39,7 @@ zeus unbox auth-dapp-service
 {
   "name": "auth",
   "port": 13127,
+  "alt": 26254,
   "contract": "authfndspsvc",
   "prettyName": "LiquidAuthenticator",
   "stage": "Alpha",
