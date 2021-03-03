@@ -12,11 +12,16 @@ Hyperion may also be used thanks to Christoph Michel: [replay-contract-hyperion.
 ### Mandatory:
 
 ```bash
-export DFUSE_API_KEY=
 # contract to replay
 export CONTRACT=
 export NODEOS_CHAINID="aca376f206b8fc25a6ed44dbdc66547c36c6c33e3a119ffbeaef943642f0e906" # < mainnet | kylin > "5fff1dae8dc8e2fc4d5b23b2c7665c97f9e9d8edf2b6485a86ba311c25639191"
 export DSP_ALLOW_API_NON_BROADCAST=true # enables the `/event` DSP API endpoint to accept non-blocking service events such as xcommits.
+export DSP_ENDPOINT=
+# using Dfuse?
+export DFUSE_API_KEY=
+# using Hyperion?
+export HYPERION_ENDPOINT=https://eos.hyperion.eosrio.io
+export HYPERION_SORT_DIRECTION=asc # can also be desc, ascending starts from first block, descending starts from head block of chains
 ```
 
 ### Sidechain:
