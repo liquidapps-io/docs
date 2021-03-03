@@ -14,6 +14,7 @@ vcpu-dapp-service
 * [`dapp-services`](dapp-services.md)
 ### npm packages
 * [`assemblyscript`](http://npmjs.com/package/assemblyscript)
+* [`esm`](http://npmjs.com/package/esm)
 * [`node-fetch`](http://npmjs.com/package/node-fetch)
 
 ## Contracts
