@@ -25,9 +25,10 @@ zeus unbox eos-extensions
 zeus start-localenv
 ```
 
+## Zeus Command Extensions
 
-
-
+### Subcommands
+* ```zeus permission upsert-dsp-permission --help```
 
 
 

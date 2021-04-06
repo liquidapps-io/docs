@@ -20,7 +20,7 @@ const { genAllocateDAPPTokens, readVRAMData } = requireBox('dapp-services/tools/
 /*** UPDATE CONTRACT CODE ***/
 var contractCode = 'mycontract';
 var ctrt = artifacts.require(`./${contractCode}/`);
-const delay = ms => new Promise(res => setTimeout(res, ms));
+const { awaitTable, getTable, delay } = requireBox('seed-tests/lib/index');
 
 describe(`${contractCode} Contract`, () => {
   var testcontract;

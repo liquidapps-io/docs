@@ -45,6 +45,7 @@ zeus unbox oracle-dapp-service
 {
   "name": "oracle",
   "port": 13112,
+  "alt": 26224,
   "contract": "oracleservic",
   "prettyName": "LiquidHarmony",
   "stage": "Beta",

@@ -7,7 +7,7 @@ To do this you will need to sign up for an API key from [dfuse.io](https://www.d
 
 There are some mandatory and optional environment variables.
 
-Hyperion may also be used thanks to Christoph Michel: [replay-contract-hyperion.js](https://github.com/liquidapps-io/zeus-sdk/blob/master/boxes/groups/services/ipfs-dapp-service/utils/ipfs-service/replay-contract-hyperion.js)
+Hyperion may also be used thanks to Christoph Michel: [replay-contract-hyperion.js](https://github.com/liquidapps-io/zeus-sdk/blob/master/boxes/groups/services/ipfs-dapp-service/utils/ipfs-service/replay-contract-hyperion.js). List of endpoints here: [https://hyperion.docs.eosrio.io/endpoint/](https://hyperion.docs.eosrio.io/endpoint/), status of endpoint (UP/DOWN) here: [https://bloks.io/hyperion](https://bloks.io/hyperion)
 
 ### Mandatory:
 

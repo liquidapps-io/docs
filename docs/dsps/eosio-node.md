@@ -14,7 +14,7 @@ A non block / non full history node is required for the DSP API to interact with
 
 ```bash
 # nodeos versions 1.8+ and 2.0+ are supported
-VERSION=2.0.5
+VERSION=2.0.11
 ```
 
 ### Ubuntu 18.04

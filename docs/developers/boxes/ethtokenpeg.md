@@ -15,7 +15,6 @@ ethtokenpeg
 * [`sign-dapp-service`](sign-dapp-service.md)
 * [`link`](link.md)
 * [`eth-extensions`](eth-extensions.md)
-* [`ethmessagebridge`](ethmessagebridge.md)
 
 
 

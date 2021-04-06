@@ -11,7 +11,6 @@ oracle-ethereum
 
 
 * [`oracle-dapp-service`](oracle-dapp-service.md)
-* [`storage-dapp-service`](storage-dapp-service.md)
 ### npm packages
 * [`web3`](http://npmjs.com/package/web3)
 
