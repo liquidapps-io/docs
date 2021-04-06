@@ -38,6 +38,7 @@ zeus unbox cron-dapp-service
 {
   "name": "cron",
   "port": 13131,
+  "alt": 26262,
   "contract": "cronservices",
   "prettyName": "LiquidScheduler",
   "stage": "beta",

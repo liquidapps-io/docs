@@ -17,7 +17,7 @@ sign-dapp-service
 ### npm packages
 * [`web3`](http://npmjs.com/package/web3)
 * [`ganache-cli`](http://npmjs.com/package/ganache-cli)
-* [`truffle-contract`](http://npmjs.com/package/truffle-contract)
+* [`@truffle/contract`](http://npmjs.com/package/@truffle/contract)
 
 ## Contracts
 * [`signer`](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/services/sign-dapp-service/contracts/eos/signer)
@@ -41,6 +41,7 @@ zeus unbox sign-dapp-service
 {
   "name": "sign",
   "port": 13128,
+  "alt": 26256,
   "contract": "signfndspsvc",
   "prettyName": "LiquidLink",
   "stage": "Alpha",

@@ -38,6 +38,7 @@ zeus unbox history-dapp-service
 {
   "name": "history",
   "port": 13143,
+  "alt": 26286,
   "contract": "historyservc",
   "prettyName": "LiquidArchive",
   "stage": "WIP",

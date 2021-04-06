@@ -43,6 +43,7 @@ zeus unbox storage-dapp-service
 {
   "name": "storage",
   "port": 13142,
+  "alt": 26284,
   "contract": "liquidstorag",
   "prettyName": "LiquidStorage",
   "stage": "Beta",

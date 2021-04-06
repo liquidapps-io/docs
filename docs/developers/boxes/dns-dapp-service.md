@@ -38,6 +38,7 @@ zeus unbox dns-dapp-service
 {
   "name": "dns",
   "port": 13284,
+  "alt": 26568,
   "prettyName": "LiquidDNS",
   "description": "DSP Hosted DNS Service",
   "stage": "WIP",

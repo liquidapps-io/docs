@@ -3,119 +3,67 @@ latest
 
 **DAPP Token Inflation Tuning**
 ### [Packages](https://docs.liquidapps.io/en/v2.0/dsps/packages.html)
-- it is now possible for the community to actively tune the DAPP Token Inflation rate
-- this inflation tuning is facilitated by DSP's creating new packages that have a configurable desired inflation rate. any changes to the DAPP Token's inflation rate is in effect for all providers
-- all existing packages retain the default annual inflation rate of 2.71%
-- a new package may select any rate between 0.0 and 5.0%
-- DAPP Token holders participate in the tuning mechanism by staking to packages that have an inflation rate they support
-- the final inflation rate is calculated as a weighted average of DAPP staked to specific inflation rates
-- a new table `packagext` has been added to store a packages selected inflation rate and quota cost for actions, which is indexed by `package_id`, `service`, and `provider`
-- the DAPP token inflation rate is recalculated with every `stake` and `refund` action
-- package inflation rates may not be changed after they are registered
 
-**breaking changes**
-- to use new dfuse push_transaction, must compile consumer contract with new version of dappservices contract
-- if DSP package is not enabled in package table, signaled with boolean "1", then service will throw error on DSP, DSP package may be enabled with the `enablepkg` command: https://bloks.io/account/dappservices?loadContract=true&tab=Actions&account=dappservices&scope=dappservices&limit=100&action=enablepkg
+**deprecation notice**
+deprecating official support for node version 10, new support for 12 for zeus/dsp
 
 ### [docs](https://docs.liquidapps.io/en/stable/)
-- add CoVax chain section for becoming BP or DSP
-- add example chains section of LiquidX chains
-- add [EOS Block Producer Benchmarks](https://www.alohaeos.com/tools/benchmarks#networkId=21&timeframeId=2) | courtesy of [Aloha EOS](https://www.alohaeos.com/)
-- use eos 2.0.5
-- update documentation to support `zeus_boxes` refactor
-- add `chain-threads=8` `eos-vm-oc-compile-threads=2` to nodeos example `config.ini` in docs
-- add [LiquidStorage section](../developers/storage-getting-started)
-- update [LiquidAccounts section](../developers/vaccounts-getting-started)
-- update [LiquidVRAM section](../developers/vram-getting-started)
-- add `get_table_packagext` and `get_table_packagext_by_package_service_provider` to dapp-client section
-- add `http-max-response-time-ms = 500` to config.ini settings to avoid `deadline 2020-07-20T18:07:39.110 exceeded by 10us` error
-- add supported primary key types for `dapp::advanced_multi_index`
-- add example of instantiating `dapp::advanced_multi_index`
-- support new Kylin account creation query
 
 ### [@liquidapps/zeus-cmd](https://www.npmjs.com/package/@liquidapps/zeus-cmd)
-- use 8887 instead of 8889 for state history port to match DSP docs
-- skip `01-dapp-client.js` if built
-- add price feed example, price feed uses LiquidHarmony's oracles and LiquidScheduler's cron to fetch a price periodically and only use CPU when the price has changed from the last recorded price by more or less than 1%
-- add `'--eos-vm-oc-compile-threads=4'` and `--chain-threads=4` to local nodeos
-- update `zeus` to modularize logic into `zeus_boxes` directory making `zeus` more like `npm`, to create or unbox a new box start with `zeus box create [name]` then if you wish to unbox and existing box `zeus unbox <BOX>`
-- zeus now offers versioning of boxes
-    - zeus now offers optional `zeus unbox <BOX>@[VERSION]`
-    - can add and remove boxes with `zeus box add <BOX> [VERSION] [URI]` `zeus box remove <BOX> [VERSION]`
-    - to update an existing box, run `zeus unbox <BOX>@[VERSION]`, if no version specified, latest used, will unbox everything again with new version
-    - to only add new boxes, unbox after update with `--no-update`
-- add `zeus start-localenv --phase 01-dapp-client` --phase option to target start a specific phase of the localenv
+- add flag `zeus test tokenpeg --services "oracle,cron,ipfs"` flag `--services` allows pretty name for each service specified in the models folder of that service, to be spun up for use in testing or creating an environment.  This speeds up unit testing time drastically.
+- add `--abi-serializer-max-time-ms=100` to local nodeos for unit testing to avoid occasional serialization errors
+- add command `zeus upsert-dsp-permission <endpoint> <contract> <key> <providers> <services>` to automatically configure DSP settings for service actions
+- enforce `MESSAGE_RECEIVED_HOOK`, `MESSAGE_RECEIVED_FAILURE_HOOK`, `MESSAGE_RECEIPT_HOOK`, `MESSAGE_RECEIPT_FAILURE_HOOK` handlers be set for eosio link library
+- add `fbatches` table to record failed batches in eosio link library
+- add code comments to eosio link library
+- add example failure hooks from above to `linkconsumer.cpp` and `linkconsumerx.cpp`
+- add failure hooks to `ethtokenpeg.cpp` & `tokenpeg/x.cpp`, both bridges now handle the automatic return of funds if the transfer, post LIB or finality check, falls outside of the `LINK_PROCESSING_TIMEOUT` window
+- add code comments to `tokenpeg` contracts
+- add unit tests for tokenpeg if sidechain or mainnet destination account does not exist, auto refund
+- add getTable, awaitTable, and delay to seed-tests box for unit testing
+- using eosio-push-guarantee library for unit testing, default in-block push guarantee
+- enable gnache wrapped compiling eth with `zeus compile --phase "eth"`
 - fixes
-    - if Mac, detect and skip `--eos-vm-oc-enable` flags as they are not supported
-    - fix endpoint link for `replay-contract.js` file
-- document ability to use dfuse for cleanup script
-- add typescript compile step for dfuse
-- add `zeus box create` section to zeus getting started section
-- update LiquidStorage upload file example with new params
-- add `eth_keys_per_consumer = [{ETH_PRIVATE_KEY_CONSUMER1:PRIVATE_KEY_HERE}, {ETH_PRIVATE_KEY_CONSUMER2:PRIVATE_KEY_HERE}]` to toml
-- prevent non-broadcast action from being broadcast
-- add sidechain section to replay contract
-
-### [@liquidapps/zeus-cmd](https://www.npmjs.com/package/@liquidapps/zeus-cmd)
-- add `testfetch` price feed action / unit test for only using LiquidHarmony oracles for price feed fetch
-- add unit test for 0s unstake time dappservices
-- copy contracts and test folder to root so that `zeus_boxes` directory can be git ignored 
-- add `enablepkg` command to dappservices unit tests
-- fixes
-    - add `parseFloat` to `test rewards` `dappservices` unit test
+    - 2nd DSP for LiquidHarmony assigned correct port and running as internal node
 
 ### [@liquidapps/dsp](https://www.npmjs.com/package/@liquidapps/dsp)
-- add option to use dfuse web socket and dfuse push_transaction guarantee in place of demux state history node on main DSP instance and supported side chains
-    - this enables a DSP to not use a SHiP node and to instead read on chain events from dfuse and to push transactions using dfuse's push_guarantee making transactions more reliable, a free API key is suitable enough to support low levels of traffic
-    - to use the dfuse backend, under the new dfuse section of the toml file, set `enable` to true and provide an api key
-    - to use the dfuse push guarantee, set the `push_enable` to true and provide a dfuse api key
-    - to use both, enable both
-    - add dfuse section `network` to toml, select supported dfuse network: testnet (eosio testnet), kylin, worbli, wax
-    - add `debug` to dfuse section to enable dfuse debug logs 
-- if dsp `head_block` set to 0, dsp will pull head block from `get_info` RPC call automatically for demux
-- throw error if package not enabled for DSP services
-- enable cleanup script support for sidechain
-- add `authorization` option under dfuse to use the EOS Nation community edition: https://t.me/dfusece | https://eos.dfuse.eosnation.io/
-- add `replay-contract-hyperion.js` | thank you to Christoph Michel
-- add `max_request_retries` option to config.toml, specifies how many times to retry a blocking DSP actions such as an IPFS warmup or oracle request
-- add `liquidstorage_upload_limit` to config.toml, allows specification of Liquidstorage upload size limit
-- add [https://www.npmjs.com/package/eosio-push-guarantee](https://www.npmjs.com/package/eosio-push-guarantee) to DSP eos-wrapper.js
+- add `verbose_logs` setting for `config.toml` config file for DSP, enables verbose logs for DSP related services
+- add `max_request_retries`, max retries to fetch an oracle request or ipfs warmup, or any other blocking DSP service action, default 10
+- add `dsp_push_guarantee_per_service`, allows push guarantee to be set per service, default none
+- add better logs in general for DSP services
+- prevent duplicate attempt at DSP oracle trx
+- allow multiple oracle requests within a transaction
+- add demux `eidosonecoin` & `gravyhftdefi` contract blacklists to ignore trxs to not slow down demux
+- add gnache logs to `/logs` folder for DSP/Zeus
+- add `broadcast_event_timeout` to toml for timeout for DSPs not responding
+- using eosio-push-guarantee library for default push guarantee of in-block
 - fixes
-    - add better error handling to CONFIRMING USAGE
-    - fix async/await procesFn issue
-    - fix replay contract script to enable DSPs to replay contract vRAM/IPFS data to populate a new IPFS instance
-    - fix `0xANON` payer empty object issue
+    - patch assembly script install for vcpu service
+    - encodedKeys backwards compatibility fix
+    - downgrade IPFS to static version 0.54.2 because of compatibility issues with latest versions
+    - fix hyperion replay script, now searches over 24 hour periods, performs all commits, then moves to next 24 hour period
 
 ### [@liquidapps/dapp-client](https://www.npmjs.com/package/@liquidapps/dapp-client)
-- patch new secondary index RPC API support
-- updated Dapp Client to support cross chain Liquid Accounts
-- add dfuse as option for dapp client, able to pass API key, push guarantee, and network
-- add push_transaction push guarantee function to lib
 
 ### dappservices contract
-- added required service pending console output to assertion message as dfuse does not return pending console output
-- added always false assert service pending console output to assertion message as dfuse does not return pending console output
 
 ## DSP Services:
 
 ### [LiquidAccount Service](https://docs.liquidapps.io/en/v2.0/services/vaccounts-service.html)
-- add cross chain support for LiquidAccounts using LiquidX
-- add time to live option for zeus vaccounts push-action command
 
 ### [LiquidVRAM Service](https://docs.liquidapps.io/en/stable/services/ipfs-service.html)
+- improve logging
 
 ### [LiquidStorage Service](https://docs.liquidapps.io/en/stable/services/storage-service.html)
-- add small / large photo and small video upload and read unit tests to LiquidStorage
-- configure options object to be passed, updated unit test
-    - add optional `rawLeaves` IPFS client option for backend API, example, and `client-library`
 
 ### [LiquidHarmony Service](https://docs.liquidapps.io/en/stable/developers/harmony-getting-started.html)
+- add unit test for 1/2 DSPs being down
+- add dsp / zeus logs for displaying what URIs are being fetched
+- add test/smart contract action for multiple oracle requests within one transaction
+- fixes
+    - fix issue with oracle transaction failing if 1 or more DSP non-responsive
 
 ### [LiquidScheduler Service](https://docs.liquidapps.io/en/stable/developers/cron-getting-started.html)
-- run exponential backoff forever, was 10 retries max
-- add `shouldAbort` `eosio::check` handler for rescheduling cron without CPU
+- add `testabort` action and unit test for ensuring contract aborts transaction
+- add multiple log handlers for rescheduling crons if a trx fails because the destination account for a bridge transfer does not exist, a duplicate trx error occurs, or a `required service` error message is received from a failed oracle transaction that was unable to process the request, or other broadcast service
 
-### [@liquidapps/dapp-client](https://www.npmjs.com/package/@liquidapps/dapp-client)
-- patch new secondary index RPC API support
-- updated Dapp Client to support cross chain Liquid Accounts
-- add `get_table_packagext` and `get_table_packagext_by_package_service_provider` examples and logic to client 

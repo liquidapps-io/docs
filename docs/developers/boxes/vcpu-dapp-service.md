@@ -13,7 +13,7 @@ vcpu-dapp-service
 
 * [`dapp-services`](dapp-services.md)
 ### npm packages
-* [`assemblyscript`](http://npmjs.com/package/assemblyscript)
+* [`@assemblyscript/loader`](http://npmjs.com/package/@assemblyscript/loader)
 * [`node-fetch`](http://npmjs.com/package/node-fetch)
 
 ## Contracts
@@ -38,6 +38,7 @@ zeus unbox vcpu-dapp-service
 {
   "name": "vcpu",
   "port": 13386,
+  "alt": 26772,
   "prettyName": "VCPU",
   "description": "DSP Hosted Computation Service",
   "stage": "PoC",
