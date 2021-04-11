@@ -49,6 +49,17 @@ zeus create contract somecontract
     "contractname"
   ]
 }
+```,#### [templates/simplecontract-eos-cpp.json](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/templates/templates-emptycontract-eos-cpp/models/templates/simplecontract-eos-cpp.json)
+```json
+{
+  "name": "simplecontract-eos-cpp",
+  "args": [
+    "contractname"
+  ],
+  "optionals": [
+    "contractname"
+  ]
+}
 ```
 
 ## [Source](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/templates/templates-emptycontract-eos-cpp)
