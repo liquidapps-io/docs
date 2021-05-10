@@ -20,7 +20,7 @@ registry
 
 
 ## Contracts
-* [`registry`](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/eos-framework/registry/contracts/eos/registry)
+* [`registry`](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/sample/registry/contracts/eos/registry)
 ## Install
 ```bash
 zeus unbox registry
@@ -41,5 +41,5 @@ zeus test -c
 
 
 ## Tests 
-* [registry.spec.js](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/eos-framework/registry/test/registry.spec.js)
-## [Source](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/eos-framework/registry)
+* [registry.spec.js](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/sample/registry/test/registry.spec.js)
+## [Source](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/sample/registry)

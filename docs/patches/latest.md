@@ -1,49 +1,41 @@
 latest
 ========
 
-**DAPP Token Inflation Tuning**
-### [Packages](https://docs.liquidapps.io/en/v2.0/dsps/packages.html)
-
-**deprecation notice**
-deprecating official support for node version 10, new support for 12 for zeus/dsp
-
 ### [docs](https://docs.liquidapps.io/en/stable/)
 
 ### [@liquidapps/zeus-cmd](https://www.npmjs.com/package/@liquidapps/zeus-cmd)
-- add flag `zeus test tokenpeg --services "oracle,cron,ipfs"` flag `--services` allows pretty name for each service specified in the models folder of that service, to be spun up for use in testing or creating an environment.  This speeds up unit testing time drastically.
-- add `--abi-serializer-max-time-ms=100` to local nodeos for unit testing to avoid occasional serialization errors
-- add command `zeus upsert-dsp-permission <endpoint> <contract> <key> <providers> <services>` to automatically configure DSP settings for service actions
-- enforce `MESSAGE_RECEIVED_HOOK`, `MESSAGE_RECEIVED_FAILURE_HOOK`, `MESSAGE_RECEIPT_HOOK`, `MESSAGE_RECEIPT_FAILURE_HOOK` handlers be set for eosio link library
-- add `fbatches` table to record failed batches in eosio link library
-- add code comments to eosio link library
-- add example failure hooks from above to `linkconsumer.cpp` and `linkconsumerx.cpp`
-- add failure hooks to `ethtokenpeg.cpp` & `tokenpeg/x.cpp`, both bridges now handle the automatic return of funds if the transfer, post LIB or finality check, falls outside of the `LINK_PROCESSING_TIMEOUT` window
-- add code comments to `tokenpeg` contracts
-- add unit tests for tokenpeg if sidechain or mainnet destination account does not exist, auto refund
-- add getTable, awaitTable, and delay to seed-tests box for unit testing
-- using eosio-push-guarantee library for unit testing, default in-block push guarantee
-- enable gnache wrapped compiling eth with `zeus compile --phase "eth"`
-- fixes
-    - 2nd DSP for LiquidHarmony assigned correct port and running as internal node
+- use simple eos example in gitpod, create a simple eosio contract with 1 command, test in under 10 seconds with zeus test, and migrate within 15 seconds to kylin or another network : )
+- add network to zeus contract deployment to allow deployments to each multiple networks
+- enable flexible migration of contracts to other networks `zeus migrate --creator natdeveloper --network=development`, e.g., deploys all migrations for creator natdeveloper on development
+- allow only specific services to be run with `--services "cron,ipfs,oracle"`, etc, add to start-localenv
+- add `zeus start-localenv --kill` to kill all existing nodes and processes
+- add `zeus start-localenv --enable-features` which runs the latest eosio contracts and enables EOSIO features such as bill first auth, etc.
+- add `zeus start-localenv --single-chain` to only run the provisioning chain if say a box like tokenpeg in unboxed, so you're not running additional nodeos instances
+- add `zeus start-localenv --basic-env` which spins up the most basic nodeos env
+- allow `zeus migrate CONTRACT_NAME`
+- move working contracts dir from `./zeus_boxes/contracts` to `./contracts`
+- move sql logs to `./logs` folder
+- update eosio contracts to latest, still access legacy contracts if not using `--enable-features`, add rex
+- add `--plugin eosio::producer_api_plugin` and `--plugin eosio::chain_plugin` to local tests
+- update to 1.8.0-rc2 default eosio.cdt install, 1.7 has boost errors that appear to be on b1's side
+- allow contracts keys to be fetched automatically if not supplied to deployer
+- add jungle3 network option, update kylin endpoint
+- add initial transfer for created accounts
+- don't run IPFS node if not needed
+- update self history unit test
+- update ethtokenpeg contract to issue then transfer
+- add various command console logs and emojis : )
+- add `getTestAccountName` to unit test library
+- add `testinterval` and `rminterval` actions to cronconsumer unit test and example contract
+- add simple contract template `zeus create contract mycontract --template=simplecontract `
 
 ### [@liquidapps/dsp](https://www.npmjs.com/package/@liquidapps/dsp)
-- add `verbose_logs` setting for `config.toml` config file for DSP, enables verbose logs for DSP related services
-- add `max_request_retries`, max retries to fetch an oracle request or ipfs warmup, or any other blocking DSP service action, default 10
-- add `dsp_push_guarantee_per_service`, allows push guarantee to be set per service, default none
-- add better logs in general for DSP services
-- prevent duplicate attempt at DSP oracle trx
-- allow multiple oracle requests within a transaction
-- add demux `eidosonecoin` & `gravyhftdefi` contract blacklists to ignore trxs to not slow down demux
-- add gnache logs to `/logs` folder for DSP/Zeus
-- add `broadcast_event_timeout` to toml for timeout for DSPs not responding
-- using eosio-push-guarantee library for default push guarantee of in-block
-- fixes
-    - patch assembly script install for vcpu service
-    - encodedKeys backwards compatibility fix
-    - downgrade IPFS to static version 0.54.2 because of compatibility issues with latest versions
-    - fix hyperion replay script, now searches over 24 hour periods, performs all commits, then moves to next 24 hour period
+- reduce default `DSP_BACKOFF_EXPONENT` from 1.5 to 1.1
 
 ### [@liquidapps/dapp-client](https://www.npmjs.com/package/@liquidapps/dapp-client)
+
+### [@liquidapps/box-utils](https://www.npmjs.com/package/@liquidapps/box-utils)
+- support existing boxes to create local directory
 
 ### dappservices contract
 
@@ -52,18 +44,17 @@ deprecating official support for node version 10, new support for 12 for zeus/ds
 ### [LiquidAccount Service](https://docs.liquidapps.io/en/v2.0/services/vaccounts-service.html)
 
 ### [LiquidVRAM Service](https://docs.liquidapps.io/en/stable/services/ipfs-service.html)
-- improve logging
 
 ### [LiquidStorage Service](https://docs.liquidapps.io/en/stable/services/storage-service.html)
 
 ### [LiquidHarmony Service](https://docs.liquidapps.io/en/stable/developers/harmony-getting-started.html)
-- add unit test for 1/2 DSPs being down
-- add dsp / zeus logs for displaying what URIs are being fetched
-- add test/smart contract action for multiple oracle requests within one transaction
-- fixes
-    - fix issue with oracle transaction failing if 1 or more DSP non-responsive
 
 ### [LiquidScheduler Service](https://docs.liquidapps.io/en/stable/developers/cron-getting-started.html)
-- add `testabort` action and unit test for ensuring contract aborts transaction
-- add multiple log handlers for rescheduling crons if a trx fails because the destination account for a bridge transfer does not exist, a duplicate trx error occurs, or a `required service` error message is received from a failed oracle transaction that was unable to process the request, or other broadcast service
+- add interval service for running real realiable crons, crons stored in postgresql and fetched when DSP starts, `interval`, and `rminterval`
+- upgrade sign service to beta stage
 
+### LiquidLink Service
+- add additional checks for external requests and undocumented models
+
+### Link Library
+- update EOSIO side to use new intervals to handle crons

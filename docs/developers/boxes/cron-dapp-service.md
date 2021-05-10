@@ -61,6 +61,35 @@ zeus unbox cron-dapp-service
         "timer": "name",
         "seconds": "uint32_t"
       }
+    },
+    "interval": {
+      "blocking": false,
+      "request": {
+        "timer": "name",
+        "payload": "std::vector<char>",
+        "seconds": "uint32_t"
+      },
+      "callback": {
+        "timer": "name",
+        "payload": "std::vector<char>",
+        "seconds": "uint32_t"
+      },
+      "signal": {
+        "timer": "name",
+        "seconds": "uint32_t"
+      }
+    },
+    "rminterval": {
+      "blocking": false,
+      "request": {
+        "timer": "name"
+      },
+      "callback": {
+        "timer": "name"
+      },
+      "signal": {
+        "timer": "name"
+      }
     }
   }
 }
