@@ -44,8 +44,8 @@ zeus unbox sign-dapp-service
   "alt": 26256,
   "contract": "signfndspsvc",
   "prettyName": "LiquidLink",
-  "stage": "Alpha",
-  "version": "0.5",
+  "stage": "Beta",
+  "version": "0.9",
   "description": "IBC MultiSig Service",
   "commands": {
     "signtrx": {
