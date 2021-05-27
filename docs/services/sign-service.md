@@ -21,5 +21,5 @@ Beta
 ### signtrx
 ### sgcleanup
 ## Tests 
-* [sign.spec.js](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/services/sign-dapp-service/test/sign.spec.js)
+* [signer.spec.js](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/services/sign-dapp-service/test/signer.spec.js)
 
