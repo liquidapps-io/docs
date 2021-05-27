@@ -93,5 +93,5 @@ zeus unbox sign-dapp-service
 }
 ```
 ## Tests 
-* [sign.spec.js](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/services/sign-dapp-service/test/sign.spec.js)
+* [signer.spec.js](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/services/sign-dapp-service/test/signer.spec.js)
 ## [Source](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/services/sign-dapp-service)

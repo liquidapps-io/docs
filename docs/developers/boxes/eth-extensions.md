@@ -12,8 +12,10 @@ eth-extensions
 
 * [`core-extensions`](core-extensions.md)
 ### npm packages
-* [`solc`](http://npmjs.com/package/solc)
 * [`glob`](http://npmjs.com/package/glob)
+* [`openzeppelin-solidity`](http://npmjs.com/package/openzeppelin-solidity)
+* [`truffle`](http://npmjs.com/package/truffle)
+* [`zeppelin-solidity`](http://npmjs.com/package/zeppelin-solidity)
 
 
 ## Install
