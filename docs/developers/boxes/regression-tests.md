@@ -20,7 +20,6 @@ regression-tests
 * [`liquidx`](liquidx.md)
 * [`combined`](combined.md)
 * [`sign-dapp-service`](sign-dapp-service.md)
-* [`tokenpeg`](tokenpeg.md)
 
 
 
