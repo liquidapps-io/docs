@@ -12,6 +12,7 @@ ipfs-dapp-service
 
 
 * [`dapp-services`](dapp-services.md)
+* [`splitter`](splitter.md)
 * [`log-dapp-service`](log-dapp-service.md)
 * [`seed-utils-cleanup`](seed-utils-cleanup.md)
 * [`mocha`](mocha.md)
