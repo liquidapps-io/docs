@@ -1,5 +1,5 @@
 
-portfolio
+anchor
 ====================
 
 
@@ -24,11 +24,10 @@ portfolio
 
 
 
-## Contracts
-* [`liquidportfolio`](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/sample/portfolio/contracts/eos/liquidportfolio)
+
 ## Install
 ```bash
-zeus unbox portfolio
+zeus unbox anchor
 ```
 ## Examples
 ### Deploy contract
@@ -62,4 +61,4 @@ zeus deploy frontend main --ipfs --register portfolio
 
 
 
-## [Source](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/sample/portfolio)
+## [Source](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/sample/anchor)

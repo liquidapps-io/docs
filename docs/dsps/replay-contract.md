@@ -41,7 +41,7 @@ export DFUSE_ENDPOINT= # defaults to 'mainnet.eos.dfuse.io', can set to `kylin.e
 export BLOCK_COUNT_PER_QUERY= # defaults to 1000000
 export NODEOS_SECURED= # defaults to true
 export NODEOS_HOST= # defaults to localhost
-export NODEOS_PORT= # defaults to 13115
+export NODEOS_PORT= # defaults to 13015
 ```
 
 Once you've set those, simply run with:
