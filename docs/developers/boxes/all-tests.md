@@ -23,6 +23,7 @@ all-tests
 * [`ethtokenpeg`](ethtokenpeg.md)
 * [`binancetokenpeg`](binancetokenpeg.md)
 * [`atomictokenpeg`](atomictokenpeg.md)
+* [`atomiccolpeg`](atomiccolpeg.md)
 * [`portfolio`](portfolio.md)
 * [`price-feed`](price-feed.md)
 * [`simple-assets-peg`](simple-assets-peg.md)

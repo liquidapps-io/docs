@@ -1,6 +1,8 @@
 Getting started
 ===============
 
+### These docs are deprecated, please see new docs here: [https://liquidapps.gitbook.io/](https://liquidapps.gitbook.io/)
+
 ## Overview
 [Overview](overview)
 

@@ -17,6 +17,7 @@ ipfs-daemon
 * [`go-ipfs`](http://npmjs.com/package/go-ipfs)
 * [`ipfs`](http://npmjs.com/package/ipfs)
 * [`ipfsd-ctl`](http://npmjs.com/package/ipfsd-ctl)
+* [`ipfs-http-client`](http://npmjs.com/package/ipfs-http-client)
 
 
 ## Install

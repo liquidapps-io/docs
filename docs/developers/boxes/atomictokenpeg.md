@@ -15,6 +15,7 @@ atomictokenpeg
 * [`sign-dapp-service`](sign-dapp-service.md)
 * [`link`](link.md)
 * [`eth-extensions`](eth-extensions.md)
+* [`atomicassets`](atomicassets.md)
 
 
 
@@ -22,7 +23,6 @@ atomictokenpeg
 * [`atomictokenpeg`](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/sample/atomictokenpeg/contracts/eos/atomictokenpeg)
 * [`atomictokenpegeosio`](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/sample/atomictokenpeg/contracts/eos/atomictokenpegeosio)
 * [`atomictokenpegxeosio`](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/sample/atomictokenpeg/contracts/eos/atomictokenpegxeosio)
-* [`atomicassets`](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/sample/atomictokenpeg/contracts/eos/atomicassets)
 ## Install
 ```bash
 zeus unbox atomictokenpeg
