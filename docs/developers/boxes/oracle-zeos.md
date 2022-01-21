@@ -1,5 +1,5 @@
 
-zeos
+oracle-zeos
 ====================
 
 
@@ -18,7 +18,7 @@ zeos
 
 ## Install
 ```bash
-zeus unbox zeos
+zeus unbox oracle-zeos
 ```
 
 
@@ -33,4 +33,4 @@ zeus unbox zeos
 
 
 
-## [Source](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/oracles/zeos)
+## [Source](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/oracles/oracle-zeos)
