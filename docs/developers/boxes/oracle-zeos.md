@@ -32,5 +32,6 @@ zeus unbox oracle-zeos
 
 
 
-
+## Tests 
+* [zeos.spec.js](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/oracles/oracle-zeos/test/zeos.spec.js)
 ## [Source](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/oracles/oracle-zeos)
