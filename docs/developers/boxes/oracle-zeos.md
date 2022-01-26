@@ -10,6 +10,7 @@ oracle-zeos
 
 
 
+* [`ipfs-dapp-service`](ipfs-dapp-service.md)
 * [`oracle-dapp-service`](oracle-dapp-service.md)
 ### npm packages
 * [`node-fetch`](http://npmjs.com/package/node-fetch)
