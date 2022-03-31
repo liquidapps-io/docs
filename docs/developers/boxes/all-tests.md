@@ -10,7 +10,6 @@ all-tests
 
 
 
-* [`helloworld`](helloworld.md)
 * [`all-dapp-services`](all-dapp-services.md)
 * [`airhodl`](airhodl.md)
 * [`coldtoken`](coldtoken.md)
