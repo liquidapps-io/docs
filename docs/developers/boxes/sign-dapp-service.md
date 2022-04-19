@@ -18,6 +18,7 @@ sign-dapp-service
 * [`web3`](http://npmjs.com/package/web3)
 * [`ganache-cli`](http://npmjs.com/package/ganache-cli)
 * [`@truffle/contract`](http://npmjs.com/package/@truffle/contract)
+* [`ethers-aws-kms-signer`](http://npmjs.com/package/ethers-aws-kms-signer)
 
 ## Contracts
 * [`signer`](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/services/sign-dapp-service/contracts/eos/signer)
@@ -93,5 +94,6 @@ zeus unbox sign-dapp-service
 }
 ```
 ## Tests 
+* [signer-kms.spec.js](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/services/sign-dapp-service/test/signer-kms.spec.js)
 * [signer.spec.js](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/services/sign-dapp-service/test/signer.spec.js)
 ## [Source](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/services/sign-dapp-service)
