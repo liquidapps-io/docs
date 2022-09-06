@@ -44,11 +44,13 @@ zeus create contract somecontract
   "name": "emptycontract-eos-cpp",
   "args": [
     "contractname",
-    "templateName"
+    "templateName",
+    "legacyCdt"
   ],
   "optionals": [
     "contractname",
-    "templateName"
+    "templateName",
+    "legacyCdt"
   ]
 }
 ```,#### [templates/helloevent-eos-cpp.json](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/templates/templates-emptycontract-eos-cpp/models/templates/helloevent-eos-cpp.json)
@@ -57,11 +59,13 @@ zeus create contract somecontract
   "name": "helloevent-eos-cpp",
   "args": [
     "contractname",
-    "templateName"
+    "templateName",
+    "legacyCdt"
   ],
   "optionals": [
     "contractname",
-    "templateName"
+    "templateName",
+    "legacyCdt"
   ]
 }
 ```,#### [templates/simplecontract-eos-cpp.json](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/templates/templates-emptycontract-eos-cpp/models/templates/simplecontract-eos-cpp.json)
@@ -70,11 +74,13 @@ zeus create contract somecontract
   "name": "simplecontract-eos-cpp",
   "args": [
     "contractname",
-    "templateName"
+    "templateName",
+    "legacyCdt"
   ],
   "optionals": [
     "contractname",
-    "templateName"
+    "templateName",
+    "legacyCdt"
   ]
 }
 ```

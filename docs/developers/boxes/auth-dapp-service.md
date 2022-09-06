@@ -42,8 +42,8 @@ zeus unbox auth-dapp-service
   "alt": 26254,
   "contract": "authfndspsvc",
   "prettyName": "LiquidAuthenticator",
-  "stage": "Alpha",
-  "version": "0.5",
+  "stage": "Beta",
+  "version": "0.9",
   "description": "Authentication of offchain APIs and services using EOSIO permissions and contract",
   "commands": {
     "authusage": {
@@ -74,6 +74,5 @@ zeus unbox auth-dapp-service
 }
 ```
 ## Tests 
-* [auth-client.spec.js](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/services/auth-dapp-service/test/auth-client.spec.js)
 * [authenticator.spec.js](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/services/auth-dapp-service/test/authenticator.spec.js)
 ## [Source](https://github.com/liquidapps-io/zeus-sdk/tree/master/boxes/groups/services/auth-dapp-service)

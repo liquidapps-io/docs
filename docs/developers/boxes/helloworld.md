@@ -10,7 +10,7 @@ helloworld
 
 
 
-* [`sample-eos-cpp`](sample-eos-cpp.md)
+* [`templates-emptycontract-eos-cpp`](templates-emptycontract-eos-cpp.md)
 
 
 
