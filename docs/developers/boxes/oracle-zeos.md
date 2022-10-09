@@ -12,6 +12,7 @@ oracle-zeos
 
 * [`ipfs-dapp-service`](ipfs-dapp-service.md)
 * [`oracle-dapp-service`](oracle-dapp-service.md)
+* [`storage-dapp-service`](storage-dapp-service.md)
 ### npm packages
 * [`node-fetch`](http://npmjs.com/package/node-fetch)
 * [`@liquidapps/dapp-client`](http://npmjs.com/package/@liquidapps/dapp-client)

@@ -132,7 +132,7 @@ zeus test -c
 
 ## Deploy Contract
 ```bash
-export DSP_ENDPOINT=https://kylin-dsp-2.liquidapps.io
+export DSP_ENDPOINT=https://kylin-dsp-1.liquidapps.io
 export KYLIN_TEST_ACCOUNT=<ACCOUNT_NAME>
 export KYLIN_TEST_PUBLIC_KEY=<ACTIVE_PUBLIC_KEY>
 # Buy RAM:
@@ -202,12 +202,12 @@ Push LiquidAccount actions easily with zeus's wrapper of the `dapp-client` libra
 You also have the ability to store your private keys with or without encryption.  If you choose to encrypt, you can pass the `--encrypted` flag when creating a new account to store the keys.  You can provide a password by command line, or with the flag `--password`.  If you use the account again, zeus will look for the key based on what network you are operating on.  If it finds it, it will use that key to sign and prompt for a password if needed.
 
 ```bash
-zeus vaccounts push-action <CONTRACT> <ACTION> <PAYLOAD> --dsp-url https://kylin-dsp-2.liquidapps.io
+zeus vaccounts push-action <CONTRACT> <ACTION> <PAYLOAD> --dsp-url https://kylin-dsp-1.liquidapps.io
 
 # optional flags:
 
 --dsp-url # url to DAPP Service Provider's API endpoint
-# default: https://kylin-dsp-2.liquidapps.io
+# default: https://kylin-dsp-1.liquidapps.io
 --private-key # LiquidAccount private key, can be provided or auto generated
 # will be auto generated and stored in the storage path if not provided
 --encrypted # Encrypt the LiquidAccount keys with a password
@@ -220,7 +220,7 @@ zeus vaccounts push-action <CONTRACT> <ACTION> <PAYLOAD> --dsp-url https://kylin
 
 # Example:
 zeus vaccounts push-action test1v regaccount '{"vaccount":"vaccount1"}'
-zeus vaccounts push-action vacctstst123 regaccount '{"vaccount":"vaccount2"}' --private-key 5KJL... -u https://kylin-dsp-2.liquidapps.io
+zeus vaccounts push-action vacctstst123 regaccount '{"vaccount":"vaccount2"}' --private-key 5KJL... -u https://kylin-dsp-1.liquidapps.io
 zeus vaccounts push-action vacctstst123 regaccount '{"vaccount":"vaccount3"}' -u http://kylin-dsp-2.liquidapps.io/ --encrypted --network=kylin --password=password
 ```
 
