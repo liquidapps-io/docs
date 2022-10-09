@@ -133,7 +133,7 @@ zeus test -c
 
 ## Deploy Contract
 ```bash
-export DSP_ENDPOINT=https://kylin-dsp-2.liquidapps.io
+export DSP_ENDPOINT=https://kylin-dsp-1.liquidapps.io
 export KYLIN_TEST_ACCOUNT=<ACCOUNT_NAME>
 export KYLIN_TEST_PUBLIC_KEY=<ACTIVE_PUBLIC_KEY>
 # Buy RAM:

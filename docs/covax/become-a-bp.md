@@ -131,7 +131,7 @@ nodeos \
 --http-validate-host=false \
 --verbose-http-errors \
 --enable-stale-production \
---wasm-runtime=eos-vm \
+--wasm-runtime=eos-vm-jit \
 --eos-vm-oc-enable \
 --p2p-peer-address eosnode-covax.liquidapps.io:9876 \
 --p2p-peer-address node1.eosdsp.com:9888 \
@@ -175,7 +175,7 @@ nodeos \
 --http-validate-host=false \
 --verbose-http-errors \
 --enable-stale-production \
---wasm-runtime=eos-vm \
+--wasm-runtime=eos-vm-jit \
 --eos-vm-oc-enable \
 --p2p-peer-address eosnode-covax.liquidapps.io:9876 \
 --p2p-peer-address node1.eosdsp.com:9888 \
@@ -241,7 +241,7 @@ nodeos \
 --http-validate-host=false \
 --verbose-http-errors \
 --enable-stale-production \
---wasm-runtime=eos-vm \
+--wasm-runtime=eos-vm-jit \
 --eos-vm-oc-enable \
 --hard-replay-blockchain \
 --p2p-peer-address eosnode-covax.liquidapps.io:9876 \

@@ -133,7 +133,7 @@ export SERVICE=ipfsservice1
 # zeus command automatically adds QUOTA / DAPP, so we must add it here
 export QUOTA="1.0000 QUOTA"
 export MIN_STAKE_QUANTITY="10.0000 DAPP"
-export EOS_ENDPOINT=https://kylin-dsp-2.liquidapps.io # or mainnet: https://api.eosnewyork.io
+export EOS_ENDPOINT=https://kylin-dsp-1.liquidapps.io # or mainnet: https://api.eosnewyork.io
 cleos -u $EOS_ENDPOINT push action dappservices regpkg "{\"newpackage\":{\"api_endpoint\":\"$DSP_ENDPOINT\",\"enabled\":0,\"id\":0,\"min_stake_quantity\":\"$MIN_STAKE_QUANTITY\",\"min_unstake_period\":\"$MIN_UNSTAKE_PERIOD\",\"package_id\":\"$PACKAGE_ID\",\"package_json_uri\":\"$PACKAGE_JSON_URI\",\"package_period\":\"$PACKAGE_PERIOD\",\"provider\":\"$DSP_ACCOUNT\",\"quota\":\"$QUOTA\",\"service\":\"$SERVICE\"},
 \"annual_inflation\":$ANNUAL_INFLATION}" -p $DSP_ACCOUNT
 ```

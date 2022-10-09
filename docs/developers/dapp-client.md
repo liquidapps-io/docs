@@ -77,7 +77,7 @@ const fetch = require('node-fetch');                                    // node 
 const { TextEncoder, TextDecoder } = require('util');                   // node only; native TextEncoder/Decoder
 const defaultPrivateKey = "5JMUyaQ4qw6Zt816B1kWJjgRA5cdEE6PhCb2BW45rU8GBEDa1RC"; // bob
 const signatureProvider = new JsSignatureProvider([defaultPrivateKey]);
-const rpc = new JsonRpc('https://kylin-dsp-2.liquidapps.io', { fetch });
+const rpc = new JsonRpc('https://kylin-dsp-1.liquidapps.io', { fetch });
 const api = new Api({ rpc, signatureProvider, textDecoder: new TextDecoder(), textEncoder: new TextEncoder() });
 
 (async () => {
@@ -235,8 +235,8 @@ const response = await service.push_liquid_account_transaction(
 const response = await (await getClient()).dappNetwork.get_package_info( "cardgame1112", "accountless1" );
 console.log(response);
 // {
-//     api: 'https://kylin-dsp-2.liquidapps.io',
-//     package_json_uri: 'https://kylin-dsp-2.liquidapps.io/liquidaccts2.dsp-package.json',
+//     api: 'https://kylin-dsp-1.liquidapps.io',
+//     package_json_uri: 'https://kylin-dsp-1.liquidapps.io/liquidaccts2.dsp-package.json',
 //     package_id: 'liquidaccts2',
 //     service: 'accountless1',
 //     provider: 'heliosselene',
@@ -355,8 +355,8 @@ for (const row of response.rows) {
     console.log(row);
     // {
     //     id: 9,
-    //     api_endpoint: 'https://kylin-dsp-2.liquidapps.io',
-    //     package_json_uri: 'https://kylin-dsp-2.liquidapps.io/package1.dsp-package.json',
+    //     api_endpoint: 'https://kylin-dsp-1.liquidapps.io',
+    //     package_json_uri: 'https://kylin-dsp-1.liquidapps.io/package1.dsp-package.json',
     //     package_id: 'package1',
     //     service: 'ipfsservice1',
     //     provider: 'heliosselene',
@@ -387,8 +387,8 @@ for (const row of response.rows) {
     console.log(row);
     // {
     //     id: 9,
-    //     api_endpoint: 'https://kylin-dsp-2.liquidapps.io',
-    //     package_json_uri: 'https://kylin-dsp-2.liquidapps.io/package1.dsp-package.json',
+    //     api_endpoint: 'https://kylin-dsp-1.liquidapps.io',
+    //     package_json_uri: 'https://kylin-dsp-1.liquidapps.io/package1.dsp-package.json',
     //     package_id: 'package1',
     //     service: 'ipfsservice1',
     //     provider: 'heliosselene',

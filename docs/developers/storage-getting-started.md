@@ -122,7 +122,7 @@ zeus test -c
 
 ## Deploy Contract
 ```bash
-export DSP_ENDPOINT=https://kylin-dsp-2.liquidapps.io
+export DSP_ENDPOINT=https://kylin-dsp-1.liquidapps.io
 export KYLIN_TEST_ACCOUNT=<ACCOUNT_NAME>
 export KYLIN_TEST_PUBLIC_KEY=<ACTIVE_PUBLIC_KEY>
 # Buy RAM:
@@ -189,7 +189,7 @@ node test.js
 ```js
 const { createClient } = require('@liquidapps/dapp-client');
 const fetch = require('isomorphic-fetch');
-const endpoint = "https://kylin-dsp-2.liquidapps.io";
+const endpoint = "https://kylin-dsp-1.liquidapps.io";
 const getClient = () => createClient( { network:"kylin", httpEndpoint: endpoint, fetch });
 
 (async () => {
@@ -227,7 +227,7 @@ To fetch data, the following example can be used:
 const fetch = require("node-fetch");
 
 (async () => {
-    let res = await fetch('https://kylin-dsp-2.liquidapps.io/v1/dsp/liquidstorag/get_uri', {
+    let res = await fetch('https://kylin-dsp-1.liquidapps.io/v1/dsp/liquidstorag/get_uri', {
       method: 'POST',
       mode: 'cors',
       body: JSON.stringify({ uri: "ipfs://zb2rhX28fttoDTUhpmHBgQa2PzjL1N3XUDaL9rZvx8dLZseji" })
